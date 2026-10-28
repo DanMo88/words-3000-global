@@ -262,7 +262,12 @@
    "num": "pl",
    "flag": "flags/pl.svg",
    "pick": "Wybierz swój język",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "pt",
