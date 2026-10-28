@@ -1,0 +1,48 @@
+{
+  "id": "/words-3000-global/",
+  "name": "English 3000 Words",
+  "short_name": "3000 Words",
+  "lang": "en",
+  "dir": "auto",
+  "start_url": "/words-3000-global/?source=pwa",
+  "scope": "/words-3000-global/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f6ff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "description": "Learn the 3000 most important American English words (Oxford 3000, A1–B2) in your own language.",
+  "categories": [
+    "education"
+  ]
+}
