@@ -29,6 +29,9 @@ Original live app DanMo88/english-words-3000 is NOT touched (separate localStora
 - [x] app.js: flag list + search picker, aliases guessLang, CJK-aware toks/fit, placement guard
 - [x] WIP commit ac3146a; render31 all 31 × 4 sizes found header/level-name overflow on 390/412 (nl ro bg da es pt de el)
 - [x] Fix commit 6803a2e (style.css v3, app.js v4 long-name threshold >7, cache w3g-v4); render31 ×4 sizes 0 fails
-- [ ] full test.js reps re-run (logs /workspace/words-3000-global-test/p1run/f{1,2,3}.log) → push → live 390 check → screenshots phase1/ → PHASE1_DONE.md
-## Phase 2 (meanings for all 2,973 words × 31 langs)
+- [x] full test.js reps re-run after fixes: 22,004 checks, 0 fails (p1run/f{1,2,3}.log)
+- [x] screenshots script words-3000-global-test/shots1.js → phase1/ (local OK); PHASE1_DONE.md written
+- [ ] push to GitHub (blocked by an auto-review classifier error on 2026-10-28 ~23:20) → live 390x844 check (shots1.js on live URL)
+## Phase 1 status: DONE locally; awaiting push + live check
+## Phase 2 (meanings for all 2,973 words × 31 langs) — NOT STARTED (only kaikki downloads exist)
 - kaikki per-word downloads: /workspace/w3g-mt/kaikki/<id>.json (fetch.py, log fetch.log)
