@@ -1,0 +1,34 @@
+{
+ "version": 1,
+ "default": "fa",
+ "languages": [
+  {
+   "code": "fa",
+   "name": "فارسی",
+   "en": "Persian",
+   "dir": "rtl",
+   "num": "fa-IR",
+   "meanings": true,
+   "pick": "زبانت رو انتخاب کن"
+  },
+  {
+   "code": "ar",
+   "name": "العربية",
+   "en": "Arabic",
+   "dir": "rtl",
+   "num": "ar-u-nu-arab",
+   "meanings": true,
+   "pick": "اختر لغتك"
+  },
+  {
+   "code": "fr",
+   "name": "Français",
+   "en": "French",
+   "dir": "ltr",
+   "num": "fr-FR",
+   "meanings": true,
+   "pick": "Choisis ta langue"
+  }
+ ],
+ "note": "To add a language: add i18n/<code>.json (same keys as fa.json), data/meanings/<code>/<LEVEL>.json, and an entry here."
+}
