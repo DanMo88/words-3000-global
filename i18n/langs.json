@@ -197,7 +197,12 @@
    "num": "it",
    "flag": "flags/it.svg",
    "pick": "Scegli la tua lingua",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "ja",
