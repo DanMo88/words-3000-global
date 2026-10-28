@@ -39,8 +39,8 @@ Original live app DanMo88/english-words-3000 is NOT touched (separate localStora
 ## Phase 2: word meanings (2,973 words per language)
 
 Done (all 4 levels enabled in i18n/langs.json; see tools/p2/DONE.txt): fa, de, fr, es, ar, ru, tr, it, nl, pl
-Next: any of the remaining languages below (SW cache is w3g-v5; bump it when you ship the next batch)
-Remaining after that: af bg zh hr cs da nl fi el he hi hu id it ja ko nb pl pt ro sv th uk vi
+Next: pt, uk (dictionary fetch for these was blocked in the last run; pt has 239/2973 dumps, uk 0), then the rest below. SW cache is w3g-v6; bump it when you ship the next batch.
+Remaining: af bg zh hr cs da fi el he hi hu id ja ko nb pt ro sv th uk vi
 
 How to resume for language L:
 1. Fetch dictionary dumps: `python3 /workspace/w3g-mt/gfetch2.py L` (writes /workspace/w3g-mt/gdict/L/<id>.json, skips existing).
