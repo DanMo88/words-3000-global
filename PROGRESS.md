@@ -27,6 +27,8 @@ Original live app DanMo88/english-words-3000 is NOT touched (separate localStora
 - [x] tools/ui/<code>.txt → tools/build_ui.py → i18n/<code>.json (129 keys incl. "search"); fa/ar/fr edited directly as JSON
 - [x] fonts: tools/build_fonts.py → fonts/w3g-{latin,hebrew,thai,deva}.woff2 + w3g-fonts.css (unicode-range); CJK = system fonts. RERUN after Phase 2 meanings!
 - [x] app.js: flag list + search picker, aliases guessLang, CJK-aware toks/fit, placement guard
-- [ ] Phase-1 tests (test.js reps fa ar he zh ja hi th ru de ×4 sizes; render check all 31) → push → PHASE1_DONE.md
+- [x] WIP commit ac3146a; render31 all 31 × 4 sizes found header/level-name overflow on 390/412 (nl ro bg da es pt de el)
+- [x] Fix commit 6803a2e (style.css v3, app.js v4 long-name threshold >7, cache w3g-v4); render31 ×4 sizes 0 fails
+- [ ] full test.js reps re-run (logs /workspace/words-3000-global-test/p1run/f{1,2,3}.log) → push → live 390 check → screenshots phase1/ → PHASE1_DONE.md
 ## Phase 2 (meanings for all 2,973 words × 31 langs)
 - kaikki per-word downloads: /workspace/w3g-mt/kaikki/<id>.json (fetch.py, log fetch.log)
