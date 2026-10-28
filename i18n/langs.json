@@ -242,7 +242,12 @@
    "num": "nb",
    "flag": "flags/no.svg",
    "pick": "Velg språket ditt",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "fa",
