@@ -101,7 +101,7 @@ const vibrate = ms => { try { navigator.vibrate && navigator.vibrate(ms); } catc
 function prefetchLesson(ids) { ids.forEach(id => { [A(id), AX(id)].concat(W[id].img ? [IMG(id)] : []).forEach(u => fetch(u).catch(() => {})); }); }
 
 /* ---------- helpers ---------- */
-function screen(html) { clearTimers(); $app.innerHTML = '<div class="screen">' + html + '</div>'; }
+function screen(html) { clearTimers(); document.querySelectorAll('.toast').forEach(x => x.remove()); $app.innerHTML = '<div class="screen">' + html + '</div>'; }
 function bindX(fn) { const x = $app.querySelector('.x'); if (x) x.onclick = fn; }
 const exHtml = w => { const re = new RegExp('\\b(' + w.w.replace(/[^A-Za-z ]/g, '.').split(' ')[0].slice(0, Math.max(3, w.w.length - 2)) + '[a-z]*)', 'i'); return esc(w.ex).replace(re, '<mark>$1</mark>'); };
 const lvName = lv => t('lv' + lv);
