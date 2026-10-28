@@ -87,7 +87,12 @@
    "num": "da",
    "flag": "flags/dk.svg",
    "pick": "Vælg dit sprog",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "nl",
