@@ -132,7 +132,12 @@
    "num": "de",
    "flag": "flags/de.svg",
    "pick": "Wähle deine Sprache",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "el",
