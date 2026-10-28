@@ -97,7 +97,12 @@
    "num": "nl",
    "flag": "flags/nl.svg",
    "pick": "Kies je taal",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "fi",
