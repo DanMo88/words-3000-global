@@ -187,7 +187,7 @@ function home() {
     <div class="prog"><div class="row"><span>${t('totalProgress')}</span><b>${t('wordsOfTotal', { a: learned, b: TOTAL })}</b></div>
       <div class="bar"><i style="width:${Math.max(learned / TOTAL * 100, learned ? 1 : 0)}%"></i></div></div>
     <div class="levels">${LEVEL_IDS.map(lv => { const L = LV[lv]; const n = L ? L.count : 0, done = L ? learnedIn(lv) : 0, ok = L && L.available;
-      const lw = Math.max(...lvName(lv).split(/[\s-]+/).map(vlen)), long = lw > 8;
+      const lw = Math.max(...lvName(lv).split(/[\s-]+/).map(vlen)), long = lw > 7;
       return `<button class="lvl ${lv} ${rec === lv ? 'rec' : ''} ${ok ? '' : 'soon'} ${long ? 'long' : ''}" data-lv="${lv}">
         <div class="lt"><span class="code">${lv}</span><span class="nm"${lw > 12 ? ` style="font-size:min(clamp(13px,2dvh,18px),${(58 / lw).toFixed(2)}vw)"` : ''}>${lvName(lv)}${rec === lv ? '<br>' + t('recommended') : ''}</span></div>
         <div><div class="meta"><span>${ok ? t('nLessons', { n: L.lessons.length }) : t('soon')}</span><span>${N(done)}/${N(n)}</span></div>
