@@ -377,7 +377,12 @@
    "num": "uk",
    "flag": "flags/ua.svg",
    "pick": "Обери свою мову",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "vi",
