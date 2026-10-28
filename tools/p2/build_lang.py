@@ -22,7 +22,7 @@ for k, v in POS.items():
         except Exception: pass
 POS['bye']['pos'] = 'INTJ'
 # never allow vulgar senses
-VULGAR = re.compile(r'\b(baise[rs]?|putain|merde|salope|bite|chatte|ficken|fick|schei(ß|ss)e|arsch|follar|coger|puta|mierda|polla|coño|блядь|хуй|ебать|трахать|жопа|сука|sik(mek|tir)?|orospu|amcık|göt|نيك|جماع|عاهرة|قحبة)\b', re.I)
+VULGAR = re.compile(r'\b(baise[rs]?|putain|merde|salope|bite|chatte|ficken|fick|schei(ß|ss)e|arsch|follar|coger|puta|mierda|polla|coño|блядь|хуй|ебать|трахать|жопа|сука|(?-i:sik(mek|tir)?)|orospu|amcık|göt|نيك|جماع|عاهرة|قحبة)\b', re.I)
 def load_tsv(p, col=1):
     out = {}
     if os.path.exists(p):
