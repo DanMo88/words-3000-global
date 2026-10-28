@@ -96,6 +96,7 @@ for lv, li, i in ids:
             m = SEP1.join(head)
             sec = [x for x in sec if not (toks(x) & (used | toks(m))) and bare(x) != enw]
             if sec and len(m) + len(sec[0]) <= 34: m = m + SEP2 + sec[0]
+    if lang == 'fr': m = re.sub(r' ([!?])', '\u00a0\\1', m)  # French: no-break space before ! ?
     out[i] = m; src[i] = s; by_lesson.setdefault((lv, li), []).append(i)
 # validate
 bad = []
