@@ -16,3 +16,6 @@ Original live app DanMo88/english-words-3000 is NOT touched (separate localStora
 - [x] run3 re-test after fixes: 12,092 checks, 0 fails
 - [ ] gh repo create DanMo88/words-3000-global --public, push, enable Pages (main /)
 - [ ] live smoke test + final screenshots (390x844) → report
+- [x] Repo created + pushed, Pages live https://danmo88.github.io/words-3000-global/ ; live 390x844 run 3,023 checks 0 fails; SW + offline OK
+- [x] Fix: toast cleared on screen change (app.js?v=2, cache w3g-v2)
+- [ ] final live re-test + screenshots in /workspace/words-3000-global-test/final
