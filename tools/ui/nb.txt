@@ -1,0 +1,122 @@
+_meaningLang|norsk
+appName|3000 ord
+appSub|Amerikansk engelsk · Oxford 3000
+docTitle|3000 engelske ord
+install|📲 Installer
+installTitle|Installer appen på mobilen eller datamaskinen
+streakTitle|Dager på rad
+settings|Innstillinger
+totalProgress|Total fremgang
+wordsOfTotal|{a} / {b} ord
+lvA1|Nybegynner
+lvA2|Grunnleggende
+lvB1|Middels
+lvB2|Øvre middels
+recommended|⭐ Anbefalt
+nLessons|{"one":"{n} leksjon","other":"{n} leksjoner"}
+soon|Snart
+toolReview|Dagens repetisjon
+toolHard|Vanskelige ord
+toolQuick|60 sek repetisjon
+placeBtn|🎯 Nivåtest
+placeResult| · resultat: {lv}
+placeDuration| (2 minutter)
+back|Tilbake
+exit|Avslutt
+lessonN|Leksjon {n}
+start|Start
+lessonsProgress|{a}/{b} leksjoner
+pageOf|Side {a} av {b}
+notTranslated|Oversettelse kommer
+notTranslatedMsg|Ordene i denne leksjonen er ikke oversatt til {lang} ennå. De kommer snart.
+replay|Spill av igjen
+roundInfo|Leksjon {n} · runde {r} av {t}
+inOrder|· i rekkefølge
+shuffled|· tilfeldig
+startQuiz|Start quizen ✓
+next|Neste →
+confirmExit|Forlate leksjonen? Fremgangen din i denne leksjonen blir ikke lagret.
+qMeaning|Hva betyr dette ordet?
+qEnglish|Hva er det engelske ordet?
+qListen|Lytt og velg betydningen
+score|⚡ Poeng:
+placementHead|🎯 Nivå
+correctOf|{a}/{b} riktige
+fbOk|✓ Bra! 
+fbTimeout|⏱ Tiden er ute — 
+lessonDone|{title} fullført!
+lessonDoneText|Disse ordene kommer tilbake til repetisjon i morgen og etter 3, 7 og 21 dager, så du husker dem for alltid.
+statAccuracy|Treffsikkerhet
+statWrong|Feil
+statMinutes|Minutter
+nextLesson|Neste leksjon →
+backToLessons|Tilbake til leksjonene
+backHome|Tilbake til start
+nextDueTomorrow|Neste repetisjon: i morgen
+nextDueDays|{"one":"Neste repetisjon: om {n} dag","other":"Neste repetisjon: om {n} dager"}
+reviewTitle|🔁 Dagens repetisjon
+reviewNoneToday|Ingenting å repetere i dag – supert!
+reviewNoneYet|Fullfør først en leksjon,<br>så kommer ordene tilbake hit for repetisjon.
+nWords|{"one":"{n} ord","other":"{n} ord"}
+reviewList|Disse ordene skal repeteres i dag{more}:
+reviewFirst30| (de første 30)
+reviewStart|Start repetisjonen
+reviewDone|Repetisjonen er ferdig!
+reviewDoneText|Ord du svarte riktig på kommer tilbake senere; de du svarte feil på kommer i morgen.
+statFirstTry|Riktig første gang
+statNeedPractice|Må øves
+hardTitle|💪 Mine vanskelige ord
+hardEmpty|Du har ingen vanskelige ord ennå.<br>Hvert ord du svarer feil på 2 ganger eller mer havner her, så du kan øve mer.
+hardPractice|Øv på vanskelige ord
+hardDone|Treningen er ferdig!
+hardDoneText|Hvert riktige svar flytter ordet et steg lenger unna listen over vanskelige ord.
+statRight|Riktige
+statStillHard|Fortsatt vanskelige
+practiceAgain|Øv igjen
+quickTitle|⚡ Rask repetisjon
+quickTitleLong|⚡ Repetisjon på 60 sekunder
+quickEmpty|Fullfør først en leksjon,<br>så kan du her svare på så mange ord som mulig på 60 sekunder.
+quickIntro|Du har 60 sekunder.<br>Svar riktig på så mange spørsmål som mulig!
+quickRecord|Rekorden din: {n}
+quickGo|Kjør!
+newRecord|Ny rekord!
+timeUp|Tiden er ute!
+quickResult|{"one":"{n} riktig svar på 60 sekunder.","other":"{n} riktige svar på 60 sekunder."}
+statRecord|Rekord
+again|Igjen
+placeTitle|🎯 Nivåtest
+welcome|Velkommen! 👋
+placeIntro|Omtrent 2 minutter.<br>Et engelsk ord vises – velg betydningen på norsk.<br>Vi starter på A1, og svarer du godt, går vi opp et nivå.
+placeStart|Start testen
+placeSkip|Hopp over, jeg velger selv
+placeLevel|Anbefalt nivå:
+placeLevelText|{name} – start på dette nivået.<br>Nivåene er ikke låst; du kan velge et annet når som helst.
+goLevel|Gå til nivå {lv} →
+loadError|Feil ved lasting. Sjekk internett og åpne appen på nytt.
+chooseLang|Velg språket ditt
+chooseLangSub|Menyer og ordbetydninger vises på dette språket.
+continue|Fortsett →
+appLanguage|🌐 Appens språk
+settingsNote|Fremgangen din slettes ikke når du bytter språk.
+search|Søk etter språk…
+dlgNote|Etter installering åpnes «{name}» som en app fra startskjermen, og fremgangen din blir lagret.
+dlgOk|OK
+dlgIosTitle|📲 Installer på iPhone
+dlgIosSafari1|Trykk på del-knappen {share} i Safari.
+dlgIosSafari2|Rull ned og velg {a}.
+dlgIosSafari3|Trykk på {a}: app-ikonet vises på startskjermen.
+dlgIosOther1|Åpne denne siden i {a} (på iPhone kan du bare installere fra Safari).
+dlgIosOther2|Trykk på del-knappen {share}.
+dlgIosOther3|Trykk på {a} og deretter {b}.
+dlgAndroidTitle|📲 Installer på Android
+dlgAndroid1|Åpne menyen {a} i Chrome.
+dlgAndroid2|Trykk på {a} eller {b}.
+dlgAndroid3|Bekreft for å installere appen.
+dlgMacTitle|💻 Installer på Mac
+dlgMac1|Åpne menyen {a} i Safari.
+dlgMac2|Klikk på {a} og bekreft med {b}.
+dlgPcTitle|💻 Installer på datamaskinen
+dlgFirefox1|Firefox støtter ikke installering av nettapper.
+dlgFirefox2|Åpne denne siden i {a} eller {b} og klikk på «Installer».
+dlgPc1|Klikk på installeringsikonet {a} i adresselinjen,
+dlgPc2|eller velg {b} i menyen {a}.

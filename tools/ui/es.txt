@@ -1,0 +1,122 @@
+_meaningLang|español
+appName|3000 palabras
+appSub|Inglés americano · Oxford 3000
+docTitle|3000 palabras en inglés
+install|📲 Instalar
+installTitle|Instala la app en tu móvil o computadora
+streakTitle|Días seguidos
+settings|Ajustes
+totalProgress|Progreso total
+wordsOfTotal|{a} / {b} palabras
+lvA1|Principiante
+lvA2|Básico
+lvB1|Intermedio
+lvB2|Intermedio alto
+recommended|⭐ Recomendado
+nLessons|{"one":"{n} lección","other":"{n} lecciones"}
+soon|Pronto
+toolReview|Repaso de hoy
+toolHard|Palabras difíciles
+toolQuick|Repaso 60 s
+placeBtn|🎯 Prueba de nivel
+placeResult| · resultado: {lv}
+placeDuration| (2 minutos)
+back|Volver
+exit|Salir
+lessonN|Lección {n}
+start|Empezar
+lessonsProgress|{a}/{b} lecciones
+pageOf|Página {a} de {b}
+notTranslated|Traducción pronto
+notTranslatedMsg|Las palabras de esta lección aún no están traducidas al {lang}. Llegarán pronto.
+replay|Escuchar otra vez
+roundInfo|Lección {n} · ronda {r} de {t}
+inOrder|· en orden
+shuffled|· al azar
+startQuiz|Empezar la prueba ✓
+next|Siguiente →
+confirmExit|¿Salir de la lección? No se guardará tu progreso en esta lección.
+qMeaning|¿Qué significa esta palabra?
+qEnglish|¿Cuál es la palabra en inglés?
+qListen|Escucha y elige el significado
+score|⚡ Puntos:
+placementHead|🎯 Nivel
+correctOf|{a}/{b} correctas
+fbOk|✓ ¡Muy bien! 
+fbTimeout|⏱ Se acabó el tiempo — 
+lessonDone|¡{title} completada!
+lessonDoneText|Estas palabras volverán para repasarlas mañana y dentro de 3, 7 y 21 días, para que se queden en tu memoria para siempre.
+statAccuracy|Precisión
+statWrong|Errores
+statMinutes|Minutos
+nextLesson|Siguiente lección →
+backToLessons|Volver a las lecciones
+backHome|Volver al inicio
+nextDueTomorrow|Próximo repaso: mañana
+nextDueDays|{"one":"Próximo repaso: en {n} día","other":"Próximo repaso: en {n} días"}
+reviewTitle|🔁 Repaso de hoy
+reviewNoneToday|¡Hoy no tienes nada que repasar, genial!
+reviewNoneYet|Primero termina una lección,<br>después las palabras volverán aquí para repasarlas.
+nWords|{"one":"{n} palabra","other":"{n} palabras"}
+reviewList|Hoy toca repasar estas palabras{more}:
+reviewFirst30| (las 30 primeras)
+reviewStart|Empezar el repaso
+reviewDone|¡Repaso terminado!
+reviewDoneText|Las palabras que acertaste volverán más tarde; las que fallaste volverán mañana.
+statFirstTry|Bien a la primera
+statNeedPractice|Por practicar
+hardTitle|💪 Mis palabras difíciles
+hardEmpty|Todavía no tienes palabras difíciles.<br>Cada palabra que falles 2 veces o más aparecerá aquí para practicarla más.
+hardPractice|Practicar palabras difíciles
+hardDone|¡Práctica terminada!
+hardDoneText|Cada respuesta correcta aleja la palabra un paso de la lista de difíciles.
+statRight|Correctas
+statStillHard|Aún difíciles
+practiceAgain|Practicar otra vez
+quickTitle|⚡ Repaso rápido
+quickTitleLong|⚡ Repaso rápido de 60 s
+quickEmpty|Primero termina una lección,<br>después responde aquí todas las palabras que puedas en 60 segundos.
+quickIntro|Tienes 60 segundos.<br>¡Responde bien todas las preguntas que puedas!
+quickRecord|Tu récord: {n}
+quickGo|¡Vamos!
+newRecord|¡Nuevo récord!
+timeUp|¡Se acabó el tiempo!
+quickResult|{"one":"{n} respuesta correcta en 60 segundos.","other":"{n} respuestas correctas en 60 segundos."}
+statRecord|Récord
+again|Otra vez
+placeTitle|🎯 Prueba de nivel
+welcome|¡Bienvenido! 👋
+placeIntro|Unos 2 minutos.<br>Aparece una palabra en inglés: elige su significado en español.<br>Empezamos en A1 y, si respondes bien, subimos de nivel.
+placeStart|Empezar la prueba
+placeSkip|Saltar, elijo yo el nivel
+placeLevel|Nivel recomendado:
+placeLevelText|{name} — empieza en este nivel.<br>Los niveles no están bloqueados; puedes elegir otro cuando quieras.
+goLevel|Ir al nivel {lv} →
+loadError|Error de carga. Revisa tu conexión y vuelve a abrir la app.
+chooseLang|Elige tu idioma
+chooseLangSub|Los menús y los significados se mostrarán en este idioma.
+continue|Continuar →
+appLanguage|🌐 Idioma de la app
+settingsNote|Cambiar de idioma no borra tu progreso.
+search|Buscar idioma…
+dlgNote|Después de instalarla, «{name}» se abre como una app desde la pantalla de inicio y tu progreso queda guardado.
+dlgOk|Vale
+dlgIosTitle|📲 Instalar en iPhone
+dlgIosSafari1|En Safari, toca el botón Compartir {share}.
+dlgIosSafari2|Desliza hacia abajo y elige {a}.
+dlgIosSafari3|Toca {a}: el icono de la app aparecerá en la pantalla de inicio.
+dlgIosOther1|Abre esta página en {a} (en iPhone solo se puede instalar desde Safari).
+dlgIosOther2|Toca el botón Compartir {share}.
+dlgIosOther3|Toca {a} y luego {b}.
+dlgAndroidTitle|📲 Instalar en Android
+dlgAndroid1|Abre el menú {a} de Chrome.
+dlgAndroid2|Toca {a} o {b}.
+dlgAndroid3|Confirma para instalar la app.
+dlgMacTitle|💻 Instalar en Mac
+dlgMac1|En Safari, abre el menú {a}.
+dlgMac2|Haz clic en {a} y confirma con {b}.
+dlgPcTitle|💻 Instalar en la computadora
+dlgFirefox1|Firefox no permite instalar apps web.
+dlgFirefox2|Abre esta página en {a} o {b} y pulsa «Instalar».
+dlgPc1|En la barra de direcciones, haz clic en el icono de instalar {a},
+dlgPc2|o en el menú {a} elige {b}.

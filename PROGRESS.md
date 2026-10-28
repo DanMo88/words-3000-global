@@ -20,3 +20,13 @@ Original live app DanMo88/english-words-3000 is NOT touched (separate localStora
 - [x] Fix: toast cleared on screen change (app.js?v=2, cache w3g-v2)
 - [x] final live re-test (3,023 checks, 0 fails) + screenshots in /workspace/words-3000-global-test/final
 ## Status: SAMPLE DONE — waiting for Daniel's feedback (next: more languages / full fr+ar meanings / Play Store build)
+
+# 31 LANGUAGES (task from 2026-10-28 21:12)
+## Phase 1 (UI + flags + fonts + picker)
+- [x] i18n/langs.json: 31 languages (flags/…svg, aliases); Persian = flags/ir-lion-sun.svg (Wikimedia "State flag of Iran (1964–1980)"), Arabic = flags/arab.svg (Arab League), Portuguese = Brazil flag; others from flag-icons 7.6 (MIT)
+- [x] tools/ui/<code>.txt → tools/build_ui.py → i18n/<code>.json (129 keys incl. "search"); fa/ar/fr edited directly as JSON
+- [x] fonts: tools/build_fonts.py → fonts/w3g-{latin,hebrew,thai,deva}.woff2 + w3g-fonts.css (unicode-range); CJK = system fonts. RERUN after Phase 2 meanings!
+- [x] app.js: flag list + search picker, aliases guessLang, CJK-aware toks/fit, placement guard
+- [ ] Phase-1 tests (test.js reps fa ar he zh ja hi th ru de ×4 sizes; render check all 31) → push → PHASE1_DONE.md
+## Phase 2 (meanings for all 2,973 words × 31 langs)
+- kaikki per-word downloads: /workspace/w3g-mt/kaikki/<id>.json (fetch.py, log fetch.log)

@@ -1,0 +1,122 @@
+_meaningLang|română
+appName|3000 de cuvinte
+appSub|Engleză americană · Oxford 3000
+docTitle|3000 de cuvinte în engleză
+install|📲 Instalează
+installTitle|Instalează aplicația pe telefon sau calculator
+streakTitle|Zile la rând
+settings|Setări
+totalProgress|Progres total
+wordsOfTotal|Cuvinte: {a} / {b}
+lvA1|Începător
+lvA2|Elementar
+lvB1|Intermediar
+lvB2|Intermediar superior
+recommended|⭐ Recomandat
+nLessons|{"one":"{n} lecție","few":"{n} lecții","other":"{n} de lecții"}
+soon|În curând
+toolReview|Recapitulare
+toolHard|Cuvinte grele
+toolQuick|60 de secunde
+placeBtn|🎯 Test de nivel
+placeResult| · rezultat: {lv}
+placeDuration| (2 minute)
+back|Înapoi
+exit|Ieși
+lessonN|Lecția {n}
+start|Începe
+lessonsProgress|Lecții: {a}/{b}
+pageOf|Pagina {a} din {b}
+notTranslated|Traducere în curând
+notTranslatedMsg|Cuvintele din această lecție nu sunt încă traduse în {lang}. Vor apărea în curând.
+replay|Ascultă din nou
+roundInfo|Lecția {n} · runda {r} din {t}
+inOrder|· în ordine
+shuffled|· amestecat
+startQuiz|Începe testul ✓
+next|Înainte →
+confirmExit|Ieși din lecție? Progresul din această lecție nu va fi salvat.
+qMeaning|Ce înseamnă acest cuvânt?
+qEnglish|Care este cuvântul în engleză?
+qListen|Ascultă și alege sensul
+score|⚡ Puncte:
+placementHead|🎯 Nivel
+correctOf|Corecte: {a}/{b}
+fbOk|✓ Bravo! 
+fbTimeout|⏱ Timpul a expirat — 
+lessonDone|{title} terminată!
+lessonDoneText|Aceste cuvinte vor reveni la recapitulare mâine și după 3, 7 și 21 de zile, ca să le ții minte pentru totdeauna.
+statAccuracy|Precizie
+statWrong|Greșeli
+statMinutes|Minute
+nextLesson|Lecția următoare →
+backToLessons|Înapoi la lecții
+backHome|Înapoi la început
+nextDueTomorrow|Următoarea recapitulare: mâine
+nextDueDays|{"one":"Următoarea recapitulare: peste {n} zi","few":"Următoarea recapitulare: peste {n} zile","other":"Următoarea recapitulare: peste {n} de zile"}
+reviewTitle|🔁 Recapitularea de azi
+reviewNoneToday|Azi nu ai nimic de recapitulat, super!
+reviewNoneYet|Mai întâi termină o lecție,<br>apoi cuvintele vor reveni aici la recapitulare.
+nWords|{"one":"{n} cuvânt","few":"{n} cuvinte","other":"{n} de cuvinte"}
+reviewList|Aceste cuvinte trebuie recapitulate azi{more}:
+reviewFirst30| (primele 30)
+reviewStart|Începe recapitularea
+reviewDone|Recapitulare terminată!
+reviewDoneText|Cuvintele la care ai răspuns corect vor reveni mai târziu, iar cele greșite chiar mâine.
+statFirstTry|Corecte din prima
+statNeedPractice|De exersat
+hardTitle|💪 Cuvintele mele grele
+hardEmpty|Încă nu ai cuvinte grele.<br>Orice cuvânt greșit de 2 ori sau mai mult ajunge aici, ca să-l exersezi mai mult.
+hardPractice|Exersează cuvintele grele
+hardDone|Antrenament terminat!
+hardDoneText|Fiecare răspuns corect îndepărtează cuvântul cu un pas de lista celor grele.
+statRight|Corecte
+statStillHard|Încă grele
+practiceAgain|Exersează din nou
+quickTitle|⚡ Recapitulare rapidă
+quickTitleLong|⚡ Recapitulare în 60 de secunde
+quickEmpty|Mai întâi termină o lecție,<br>apoi aici răspunde la cât mai multe cuvinte în 60 de secunde.
+quickIntro|Ai 60 de secunde.<br>Răspunde corect la cât mai multe întrebări!
+quickRecord|Recordul tău: {n}
+quickGo|Start!
+newRecord|Record nou!
+timeUp|Timpul a expirat!
+quickResult|Răspunsuri corecte în 60 de secunde: {n}
+statRecord|Record
+again|Din nou
+placeTitle|🎯 Test de nivel
+welcome|Bun venit! 👋
+placeIntro|Cam 2 minute.<br>Apare un cuvânt în engleză – alege sensul lui în română.<br>Începem de la A1 și, dacă răspunzi bine, urcăm la nivelul următor.
+placeStart|Începe testul
+placeSkip|Sari peste, aleg eu nivelul
+placeLevel|Nivel recomandat:
+placeLevelText|{name} – începe de la acest nivel.<br>Nivelurile nu sunt blocate; poți alege altul oricând.
+goLevel|Mergi la nivelul {lv} →
+loadError|Eroare la încărcare. Verifică internetul și redeschide aplicația.
+chooseLang|Alege-ți limba
+chooseLangSub|Meniurile și sensurile cuvintelor vor fi afișate în această limbă.
+continue|Continuă →
+appLanguage|🌐 Limba aplicației
+settingsNote|Schimbarea limbii nu îți șterge progresul.
+search|Caută o limbă…
+dlgNote|După instalare, „{name}” se deschide ca o aplicație de pe ecranul principal, iar progresul tău rămâne salvat.
+dlgOk|Bine
+dlgIosTitle|📲 Instalare pe iPhone
+dlgIosSafari1|În Safari, atinge butonul Partajează {share}.
+dlgIosSafari2|Derulează în jos și alege {a}.
+dlgIosSafari3|Atinge {a}: pictograma aplicației apare pe ecranul principal.
+dlgIosOther1|Deschide această pagină în {a} (pe iPhone instalarea se poate face doar din Safari).
+dlgIosOther2|Atinge butonul Partajează {share}.
+dlgIosOther3|Atinge {a}, apoi {b}.
+dlgAndroidTitle|📲 Instalare pe Android
+dlgAndroid1|Deschide meniul {a} din Chrome.
+dlgAndroid2|Atinge {a} sau {b}.
+dlgAndroid3|Confirmă pentru a instala aplicația.
+dlgMacTitle|💻 Instalare pe Mac
+dlgMac1|În Safari, deschide meniul {a}.
+dlgMac2|Dă clic pe {a} și confirmă cu {b}.
+dlgPcTitle|💻 Instalare pe calculator
+dlgFirefox1|Firefox nu permite instalarea aplicațiilor web.
+dlgFirefox2|Deschide această pagină în {a} sau {b} și apasă „Instalează”.
+dlgPc1|În bara de adrese, dă clic pe pictograma de instalare {a}
+dlgPc2|sau alege {b} din meniul {a}.

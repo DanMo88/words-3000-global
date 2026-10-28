@@ -1,0 +1,122 @@
+_meaningLang|한국어
+appName|3000 단어
+appSub|미국 영어 · Oxford 3000
+docTitle|영어 단어 3000
+install|📲 설치
+installTitle|휴대폰이나 컴퓨터에 앱 설치
+streakTitle|연속 학습일
+settings|설정
+totalProgress|전체 진도
+wordsOfTotal|{a} / {b} 단어
+lvA1|입문
+lvA2|초급
+lvB1|중급
+lvB2|중상급
+recommended|⭐ 추천
+nLessons|{n}개 레슨
+soon|곧 공개
+toolReview|오늘의 복습
+toolHard|어려운 단어
+toolQuick|60초 복습
+placeBtn|🎯 레벨 테스트
+placeResult| · 결과: {lv}
+placeDuration| (2분)
+back|뒤로
+exit|나가기
+lessonN|레슨 {n}
+start|시작
+lessonsProgress|{a}/{b} 레슨
+pageOf|{a} / {b} 페이지
+notTranslated|번역 준비 중
+notTranslatedMsg|이 레슨의 단어는 아직 {lang}로 번역되지 않았어요. 곧 추가됩니다.
+replay|다시 듣기
+roundInfo|레슨 {n} · {r}/{t} 라운드
+inOrder|· 순서대로
+shuffled|· 무작위
+startQuiz|퀴즈 시작 ✓
+next|다음 →
+confirmExit|레슨에서 나갈까요? 이 레슨의 진도는 저장되지 않아요.
+qMeaning|이 단어의 뜻은?
+qEnglish|영어 단어는 무엇일까요?
+qListen|듣고 뜻을 고르세요
+score|⚡ 점수:
+placementHead|🎯 레벨
+correctOf|정답 {a}/{b}
+fbOk|✓ 잘했어요! 
+fbTimeout|⏱ 시간 초과 — 
+lessonDone|{title} 완료!
+lessonDoneText|이 단어들은 내일, 그리고 3일, 7일, 21일 뒤에 복습하러 다시 나와서 오래오래 기억에 남아요.
+statAccuracy|정확도
+statWrong|오답
+statMinutes|분
+nextLesson|다음 레슨 →
+backToLessons|레슨 목록으로
+backHome|홈으로
+nextDueTomorrow|다음 복습: 내일
+nextDueDays|다음 복습: {n}일 후
+reviewTitle|🔁 오늘의 복습
+reviewNoneToday|오늘은 복습할 단어가 없어요. 최고예요!
+reviewNoneYet|먼저 레슨을 하나 끝내면<br>단어들이 복습하러 여기로 돌아와요.
+nWords|{n}개 단어
+reviewList|오늘 복습할 단어예요{more}:
+reviewFirst30| (처음 30개)
+reviewStart|복습 시작
+reviewDone|복습 완료!
+reviewDoneText|맞힌 단어는 나중에, 틀린 단어는 내일 다시 나와요.
+statFirstTry|한 번에 정답
+statNeedPractice|연습 필요
+hardTitle|💪 내 어려운 단어
+hardEmpty|아직 어려운 단어가 없어요.<br>2번 이상 틀린 단어는 여기에 모여서 더 연습할 수 있어요.
+hardPractice|어려운 단어 연습
+hardDone|연습 완료!
+hardDoneText|정답을 맞힐 때마다 그 단어는 어려운 단어 목록에서 한 걸음 멀어져요.
+statRight|정답
+statStillHard|아직 어려움
+practiceAgain|다시 연습
+quickTitle|⚡ 빠른 복습
+quickTitleLong|⚡ 60초 빠른 복습
+quickEmpty|먼저 레슨을 하나 끝내면<br>여기서 60초 동안 최대한 많은 단어에 답할 수 있어요.
+quickIntro|60초가 주어져요.<br>최대한 많이 맞혀 보세요!
+quickRecord|내 기록: {n}
+quickGo|시작!
+newRecord|새 기록!
+timeUp|시간 초과!
+quickResult|60초 동안 {n}개 정답을 맞혔어요.
+statRecord|기록
+again|다시
+placeTitle|🎯 레벨 테스트
+welcome|환영해요! 👋
+placeIntro|약 2분 걸려요.<br>영어 단어가 나오면 한국어 뜻을 고르세요.<br>A1부터 시작해서 잘 맞히면 다음 레벨로 올라가요.
+placeStart|테스트 시작
+placeSkip|건너뛰고 직접 고를게요
+placeLevel|추천 레벨:
+placeLevelText|{name} — 이 레벨부터 시작하세요.<br>레벨은 잠겨 있지 않아서 언제든 다른 레벨을 고를 수 있어요.
+goLevel|{lv} 레벨로 →
+loadError|불러오기 오류. 인터넷을 확인하고 앱을 다시 열어 주세요.
+chooseLang|언어를 선택하세요
+chooseLangSub|메뉴와 단어 뜻이 이 언어로 표시돼요.
+continue|계속 →
+appLanguage|🌐 앱 언어
+settingsNote|언어를 바꿔도 진도는 지워지지 않아요.
+search|언어 검색…
+dlgNote|설치하면 “{name}”이(가) 홈 화면에서 앱처럼 열리고 진도도 저장돼요.
+dlgOk|확인
+dlgIosTitle|📲 iPhone에 설치
+dlgIosSafari1|Safari에서 공유 버튼 {share}을(를) 누르세요.
+dlgIosSafari2|아래로 스크롤해서 {a}을(를) 선택하세요.
+dlgIosSafari3|{a}을(를) 누르면 홈 화면에 앱 아이콘이 생겨요.
+dlgIosOther1|이 페이지를 {a}에서 여세요 (iPhone에서는 Safari로만 설치할 수 있어요).
+dlgIosOther2|공유 버튼 {share}을(를) 누르세요.
+dlgIosOther3|{a}을(를) 누른 다음 {b}을(를) 누르세요.
+dlgAndroidTitle|📲 Android에 설치
+dlgAndroid1|Chrome의 {a} 메뉴를 여세요.
+dlgAndroid2|{a} 또는 {b}을(를) 누르세요.
+dlgAndroid3|확인하면 앱이 설치돼요.
+dlgMacTitle|💻 Mac에 설치
+dlgMac1|Safari에서 {a} 메뉴를 여세요.
+dlgMac2|{a}을(를) 클릭하고 {b}(으)로 확인하세요.
+dlgPcTitle|💻 컴퓨터에 설치
+dlgFirefox1|Firefox는 웹 앱 설치를 지원하지 않아요.
+dlgFirefox2|이 페이지를 {a} 또는 {b}에서 열고 “설치”를 누르세요.
+dlgPc1|주소창의 설치 아이콘 {a}을(를) 클릭하거나
+dlgPc2|{a} 메뉴에서 {b}을(를) 선택하세요.

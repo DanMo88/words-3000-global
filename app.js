@@ -11,12 +11,14 @@ const $app = document.getElementById('app');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const pick = a => a[Math.random() * a.length | 0];
-const fitM = t => { const m = Math.max(...t.split(/[\s،؛,;/]+/).map(x => x.replace(/\u200c/g, '').length)); return m > 7 ? ` style="font-size:min(var(--fs),${(130 / m).toFixed(1)}vw)"` : ''; };
+// visual length: CJK/Hangul glyphs are ~2x as wide as Arabic/Latin letters
+const vlen = x => [...x.replace(/\u200c/g, '')].reduce((s, ch) => s + (ch.codePointAt(0) >= 0x1100 && !/[\u0E00-\u0E7F]/.test(ch) ? 1.9 : 1), 0);
+const fitM = t => { const m = Math.max(...t.split(/[\s،؛,;/，、；]+/).map(vlen)); return m > 7 ? ` style="font-size:min(var(--fs),${(130 / m).toFixed(1)}vw)"` : ''; };
 const fitO = t => t.length > 9 ? ` style="font-size:min(var(--fs),${(66 / t.length).toFixed(1)}vw)"` : '';
 const fitW = t => t.length > 8 ? ` style="font-size:min(var(--fs),${(128 / t.length).toFixed(1)}vw)"` : '';
 
 /* ---------- i18n ---------- */
-let LANGS = [], LANG = null, L10N = {}, NF = new Intl.NumberFormat('en'), PR = new Intl.PluralRules('en');
+let LANGS = [], ALIASES = {}, LANG = null, L10N = {}, NF = new Intl.NumberFormat('en'), PR = new Intl.PluralRules('en');
 const M = {};            // id -> meaning in the current native language
 const N = n => NF.format(n);
 function t(key, vars) {
@@ -77,7 +79,7 @@ function nextDueText() {
   return days === 1 ? t('nextDueTomorrow') : t('nextDueDays', { n: days });
 }
 // meanings overlap -> never offer as distractor
-const toks = m => m.replace(/\(.*?\)/g, '').split(/[،؛,;]/).map(s => s.trim()).filter(Boolean);
+const toks = m => m.replace(/\(.*?\)|（.*?）/g, '').split(/[،؛,;，、；]/).map(s => s.trim()).filter(Boolean);
 const clash = (a, b) => { const ta = toks(M[a]), tb = toks(M[b]); return M[a] === M[b] || ta.some(x => tb.includes(x)) || W[a].w.toLowerCase() === W[b].w.toLowerCase(); };
 
 /* ---------- audio (one element = reliable on iPhone) ---------- */
@@ -119,7 +121,7 @@ function applyLang(code) {
   NF = new Intl.NumberFormat(li.num || LANG); PR = new Intl.PluralRules(LANG);
   return Promise.all([
     fetch('i18n/' + LANG + '.json?v=' + VERSION).then(r => r.json()).then(j => { L10N = j; }),
-    Promise.all(LEVEL_IDS.filter(lv => LV[lv] && LV[lv].available).map(lv => fetch('data/meanings/' + LANG + '/' + lv + '.json?v=' + VERSION).then(r => r.ok ? r.json() : {}).catch(() => ({})))).then(arr => {
+    Promise.all(LEVEL_IDS.filter(lv => LV[lv] && LV[lv].available && (!li.meanings || li.meanings.includes(lv))).map(lv => fetch('data/meanings/' + LANG + '/' + lv + '.json?v=' + VERSION).then(r => r.ok ? r.json() : {}).catch(() => ({})))).then(arr => {
       Object.keys(M).forEach(k => delete M[k]); arr.forEach(o => Object.assign(M, o));
     })
   ]).then(() => {
@@ -127,12 +129,25 @@ function applyLang(code) {
     const mt = document.querySelector('meta[name="apple-mobile-web-app-title"]'); if (mt) mt.content = '3000 Words';
   });
 }
+const fold = x => String(x).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 function langGrid(sel) {
-  return `<div class="langs">${LANGS.map(l => `<button class="lang ${l.code === sel ? 'sel' : ''}" data-code="${l.code}" lang="${l.code}" dir="${l.dir}"><b>${esc(l.name)}</b><small class="en">${esc(l.en)}</small>${l.code === sel ? '<i>✓</i>' : ''}</button>`).join('')}</div>`;
+  return `<div class="lsearch"><span>🔍</span><input id="lq" type="search" autocomplete="off" spellcheck="false" placeholder="${esc(L10N.search || 'Search…')}" aria-label="${esc(L10N.search || 'Search')}"></div>
+    <div class="langs" id="langs">${LANGS.map(l => `<button class="lang ${l.code === sel ? 'sel' : ''}" data-code="${l.code}" data-q="${esc(fold(l.name + ' ' + l.en + ' ' + l.code))}">
+      <img class="flag" src="${l.flag}" alt="" width="40" height="30" loading="lazy" decoding="async">
+      <span class="lt2"><b lang="${l.code}" dir="${l.dir}"${!/\s/.test(l.name) && vlen(l.name) > 8 ? ' class="lg"' : ''}>${esc(l.name)}</b><small class="en">${esc(l.en)}</small></span>${l.code === sel ? '<i>✓</i>' : ''}</button>`).join('')}</div>`;
+}
+function bindLangGrid(onPick) {
+  const q = document.getElementById('lq'), box = document.getElementById('langs');
+  q.oninput = () => { const v = fold(q.value.trim()); box.querySelectorAll('.lang').forEach(b => { b.hidden = !!v && !b.dataset.q.includes(v); }); };
+  box.querySelectorAll('.lang').forEach(b => b.onclick = () => onPick(b.dataset.code));
+  const cur = box.querySelector('.lang.sel'); if (cur) { const top = cur.offsetTop - box.offsetTop - box.clientHeight / 2 + cur.offsetHeight / 2; box.scrollTop = Math.max(0, top); }
 }
 function guessLang() {
-  const prefs = (navigator.languages || [navigator.language || '']).map(x => String(x).toLowerCase().split('-')[0]);
-  for (const p of prefs) if (langInfo(p)) return p;
+  const prefs = (navigator.languages || [navigator.language || '']).map(x => String(x).toLowerCase());
+  for (const p of prefs) {
+    const base = p.split('-')[0];
+    for (const c of [ALIASES[p], ALIASES[base], p, base]) if (c && langInfo(c)) return c;
+  }
   return null;
 }
 function langPicker(onDone) {
@@ -141,12 +156,11 @@ function langPicker(onDone) {
   const draw = () => {
     const li = langInfo(sel);
     document.documentElement.dir = li ? li.dir : 'ltr'; document.documentElement.lang = sel || 'en';
-    screen(`<div class="picker-head"><div class="globe">🌐</div><h1 class="en">Choose your language</h1>
-      <p>${LANGS.map(l => `<span lang="${l.code}" dir="${l.dir}">${esc(l.pick)}</span>`).join(' · ')}</p></div>
+    screen(`<div class="picker-head"><h1><span class="globe">🌐</span> <span class="en">Choose your language</span></h1>
+      ${li ? `<p lang="${li.code}" dir="${li.dir}">${esc(li.pick)}</p>` : '<p class="en">English 3000 Words · American English</p>'}</div>
       ${langGrid(sel)}
-      <div class="foot en">English 3000 Words · American English · Oxford 3000</div>
       <button class="btn" id="go" ${sel ? '' : 'disabled'}>${sel ? esc(L10N._lang === sel ? t('continue') : '…') : '→'}</button>`);
-    $app.querySelectorAll('.lang').forEach(b => b.onclick = () => { sel = b.dataset.code; applyLang(sel).then(draw); });
+    bindLangGrid(code => { sel = code; applyLang(sel).then(draw); });
     document.getElementById('go').onclick = () => { if (!sel) return; S.lang = sel; save(); applyLang(sel).then(onDone); };
   };
   if (sel) applyLang(sel).then(draw); else draw();
@@ -159,7 +173,7 @@ function settingsScreen() {
     <div class="foot">${t('settingsNote')}</div>
     <button class="btn" id="home">${t('backHome')}</button>`);
   bindX(home); document.getElementById('home').onclick = home;
-  $app.querySelectorAll('.lang').forEach(b => b.onclick = () => { S.lang = b.dataset.code; save(); applyLang(S.lang).then(settingsScreen); });
+  bindLangGrid(code => { S.lang = code; save(); applyLang(S.lang).then(settingsScreen); });
 }
 
 /* ---------- home ---------- */
@@ -169,13 +183,13 @@ function home() {
   const rec = S.placement && S.placement.level;
   screen(`
     <div class="home-head"><div class="logo">${t('appName')}<small>${t('appSub')}</small></div>
-      <div class="hd-r"><button class="inst pwa-install" data-install title="${esc(t('installTitle'))}">${t('install')}</button><div class="streak" title="${esc(t('streakTitle'))}">🔥 ${N(streakNow())}</div><button class="gear" id="tSet" aria-label="${esc(t('settings'))}">⚙️</button></div></div>
+      <div class="hd-r"><button class="inst pwa-install" data-install title="${esc(t('installTitle'))}"><span class="ii">📲</span><span class="it">${t('install').replace(/^📲\s*/u, '')}</span></button><div class="streak" title="${esc(t('streakTitle'))}">🔥 ${N(streakNow())}</div><button class="gear" id="tSet" aria-label="${esc(t('settings'))}">⚙️</button></div></div>
     <div class="prog"><div class="row"><span>${t('totalProgress')}</span><b>${t('wordsOfTotal', { a: learned, b: TOTAL })}</b></div>
       <div class="bar"><i style="width:${Math.max(learned / TOTAL * 100, learned ? 1 : 0)}%"></i></div></div>
     <div class="levels">${LEVEL_IDS.map(lv => { const L = LV[lv]; const n = L ? L.count : 0, done = L ? learnedIn(lv) : 0, ok = L && L.available;
-      const long = Math.max(...lvName(lv).split(/\s+/).map(x => x.length)) > 9;
+      const lw = Math.max(...lvName(lv).split(/[\s-]+/).map(vlen)), long = lw > 8;
       return `<button class="lvl ${lv} ${rec === lv ? 'rec' : ''} ${ok ? '' : 'soon'} ${long ? 'long' : ''}" data-lv="${lv}">
-        <div class="lt"><span class="code">${lv}</span><span class="nm">${lvName(lv)}${rec === lv ? '<br>' + t('recommended') : ''}</span></div>
+        <div class="lt"><span class="code">${lv}</span><span class="nm"${lw > 12 ? ` style="font-size:min(clamp(13px,2dvh,18px),${(58 / lw).toFixed(2)}vw)"` : ''}>${lvName(lv)}${rec === lv ? '<br>' + t('recommended') : ''}</span></div>
         <div><div class="meta"><span>${ok ? t('nLessons', { n: L.lessons.length }) : t('soon')}</span><span>${N(done)}/${N(n)}</span></div>
         <div class="bar"><i style="width:${n ? Math.max(done / n * 100, done ? 2 : 0) : 0}%"></i></div></div></button>`; }).join('')}</div>
     <div class="tools">
@@ -457,6 +471,7 @@ function placementIntro(first) {
 function runPlacement() {
   // only levels with enough words translated into the current language take part
   const avail = LEVEL_IDS.filter(lv => LV[lv] && LV[lv].available && Object.keys(W).filter(id => W[id].level === lv && has(id)).length >= PQ);
+  if (!avail.length) { home(); toast(t('notTranslatedMsg', { lang: L10N._meaningLang || LANG })); return; }
   const per = {}; avail.forEach(lv => per[lv] = { asked: 0, right: 0, ids: shuffle(Object.keys(W).filter(id => W[id].level === lv && has(id))).slice(0, PQ) });
   let li = 0, lastId = null, result = null;
   runQuiz({ mode: 'placement', noMiss: true, pool: [],
@@ -495,7 +510,7 @@ fetch('data/index.json').then(r => r.json()).then(ix => {
   TOTAL = ix.total; VERSION = ix.version;
   ix.levels.forEach(l => LV[l.id] = { id: l.id, count: l.count, available: false, lessons: [] });
   return Promise.all([
-    fetch('i18n/langs.json?v=' + ix.version).then(r => r.json()).then(j => { LANGS = j.languages; }),
+    fetch('i18n/langs.json?v=' + ix.version).then(r => r.json()).then(j => { LANGS = j.languages; ALIASES = j.aliases || {}; }),
     ...ix.levels.filter(l => l.available).map(l => fetch('data/' + l.id + '.json?v=' + ix.version).then(r => r.json()).then(d => {
       const L = LV[l.id]; L.available = true; L.lessons = d.lessons.map((ls, li) => ls.map(([id, w, ex, img]) => { W[id] = { id, w, ex, img: !!img, level: l.id, li }; return id; }));
     }))]);

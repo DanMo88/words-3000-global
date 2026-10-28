@@ -1,0 +1,122 @@
+_meaningLang|hrvatski
+appName|3000 riječi
+appSub|Američki engleski · Oxford 3000
+docTitle|3000 engleskih riječi
+install|📲 Instaliraj
+installTitle|Instaliraj aplikaciju na mobitel ili računalo
+streakTitle|Dana zaredom
+settings|Postavke
+totalProgress|Ukupni napredak
+wordsOfTotal|Riječi: {a} / {b}
+lvA1|Početni
+lvA2|Osnovni
+lvB1|Srednji
+lvB2|Viši srednji
+recommended|⭐ Preporučeno
+nLessons|{"one":"{n} lekcija","few":"{n} lekcije","other":"{n} lekcija"}
+soon|Uskoro
+toolReview|Ponavljanje
+toolHard|Teške riječi
+toolQuick|60 sekundi
+placeBtn|🎯 Test razine
+placeResult| · rezultat: {lv}
+placeDuration| (2 minute)
+back|Natrag
+exit|Izlaz
+lessonN|Lekcija {n}
+start|Kreni
+lessonsProgress|Lekcije: {a}/{b}
+pageOf|Stranica {a} od {b}
+notTranslated|Prijevod uskoro
+notTranslatedMsg|Riječi iz ove lekcije još nisu prevedene na {lang}. Stižu uskoro.
+replay|Ponovno reproduciraj
+roundInfo|Lekcija {n} · krug {r} od {t}
+inOrder|· redom
+shuffled|· nasumično
+startQuiz|Započni kviz ✓
+next|Dalje →
+confirmExit|Napustiti lekciju? Napredak u ovoj lekciji neće se spremiti.
+qMeaning|Što znači ova riječ?
+qEnglish|Koja je to riječ na engleskom?
+qListen|Poslušaj i odaberi značenje
+score|⚡ Bodovi:
+placementHead|🎯 Razina
+correctOf|Točno: {a}/{b}
+fbOk|✓ Bravo! 
+fbTimeout|⏱ Vrijeme je isteklo — 
+lessonDone|{title} završena!
+lessonDoneText|Ove riječi vratit će se na ponavljanje sutra te nakon 3, 7 i 21 dan, da ti zauvijek ostanu u pamćenju.
+statAccuracy|Točnost
+statWrong|Pogreške
+statMinutes|Minute
+nextLesson|Sljedeća lekcija →
+backToLessons|Natrag na lekcije
+backHome|Natrag na početak
+nextDueTomorrow|Sljedeće ponavljanje: sutra
+nextDueDays|{"one":"Sljedeće ponavljanje: za {n} dan","few":"Sljedeće ponavljanje: za {n} dana","other":"Sljedeće ponavljanje: za {n} dana"}
+reviewTitle|🔁 Današnje ponavljanje
+reviewNoneToday|Danas nema ničega za ponavljanje, super!
+reviewNoneYet|Najprije završi lekciju,<br>a onda će se riječi vratiti ovamo na ponavljanje.
+nWords|{"one":"{n} riječ","few":"{n} riječi","other":"{n} riječi"}
+reviewList|Ove riječi treba danas ponoviti{more}:
+reviewFirst30| (prvih 30)
+reviewStart|Započni ponavljanje
+reviewDone|Ponavljanje gotovo!
+reviewDoneText|Riječi koje si točno odgovorio vratit će se kasnije, a pogrešne već sutra.
+statFirstTry|Točno iz prve
+statNeedPractice|Za vježbu
+hardTitle|💪 Moje teške riječi
+hardEmpty|Još nemaš teških riječi.<br>Svaka riječ u kojoj pogriješiš 2 ili više puta stiže ovamo da je više vježbaš.
+hardPractice|Vježbaj teške riječi
+hardDone|Vježba gotova!
+hardDoneText|Svaki točan odgovor udaljava riječ korak od popisa teških riječi.
+statRight|Točno
+statStillHard|Još teške
+practiceAgain|Vježbaj ponovno
+quickTitle|⚡ Brzo ponavljanje
+quickTitleLong|⚡ Ponavljanje u 60 sekundi
+quickEmpty|Najprije završi lekciju,<br>a onda ovdje odgovori na što više riječi u 60 sekundi.
+quickIntro|Imaš 60 sekundi.<br>Točno odgovori na što više pitanja!
+quickRecord|Tvoj rekord: {n}
+quickGo|Kreni!
+newRecord|Novi rekord!
+timeUp|Vrijeme je isteklo!
+quickResult|Točnih odgovora u 60 sekundi: {n}
+statRecord|Rekord
+again|Ponovno
+placeTitle|🎯 Test razine
+welcome|Dobro došao! 👋
+placeIntro|Oko 2 minute.<br>Pojavit će se engleska riječ – odaberi njezino značenje na hrvatskom.<br>Krećemo od A1, a ako budeš dobro odgovarao, idemo na višu razinu.
+placeStart|Započni test
+placeSkip|Preskoči, sam ću odabrati
+placeLevel|Preporučena razina:
+placeLevelText|{name} – počni od ove razine.<br>Razine nisu zaključane; drugu možeš odabrati kad god želiš.
+goLevel|Idi na razinu {lv} →
+loadError|Pogreška pri učitavanju. Provjeri internet i ponovno otvori aplikaciju.
+chooseLang|Odaberi svoj jezik
+chooseLangSub|Izbornici i značenja riječi prikazivat će se na ovom jeziku.
+continue|Nastavi →
+appLanguage|🌐 Jezik aplikacije
+settingsNote|Promjenom jezika ne gubiš napredak.
+search|Traži jezik…
+dlgNote|Nakon instalacije „{name}” se otvara kao aplikacija s početnog zaslona, a tvoj napredak ostaje spremljen.
+dlgOk|U redu
+dlgIosTitle|📲 Instalacija na iPhone
+dlgIosSafari1|U Safariju dodirni gumb za dijeljenje {share}.
+dlgIosSafari2|Pomakni se prema dolje i odaberi {a}.
+dlgIosSafari3|Dodirni {a} – ikona aplikacije pojavit će se na početnom zaslonu.
+dlgIosOther1|Otvori ovu stranicu u {a} (na iPhoneu se može instalirati samo iz Safarija).
+dlgIosOther2|Dodirni gumb za dijeljenje {share}.
+dlgIosOther3|Dodirni {a}, a zatim {b}.
+dlgAndroidTitle|📲 Instalacija na Android
+dlgAndroid1|Otvori izbornik {a} u Chromeu.
+dlgAndroid2|Dodirni {a} ili {b}.
+dlgAndroid3|Potvrdi instalaciju aplikacije.
+dlgMacTitle|💻 Instalacija na Mac
+dlgMac1|U Safariju otvori izbornik {a}.
+dlgMac2|Klikni {a} i potvrdi s {b}.
+dlgPcTitle|💻 Instalacija na računalo
+dlgFirefox1|Firefox ne podržava instaliranje web-aplikacija.
+dlgFirefox2|Otvori ovu stranicu u {a} ili {b} i klikni „Instaliraj”.
+dlgPc1|U adresnoj traci klikni ikonu za instalaciju {a}
+dlgPc2|ili u izborniku {a} odaberi {b}.

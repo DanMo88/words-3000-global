@@ -1,0 +1,122 @@
+_meaningLang|हिन्दी
+appName|3000 शब्द
+appSub|अमेरिकन अंग्रेज़ी · Oxford 3000
+docTitle|अंग्रेज़ी के 3000 शब्द
+install|📲 इंस्टॉल करें
+installTitle|ऐप को फ़ोन या कंप्यूटर पर इंस्टॉल करें
+streakTitle|लगातार दिन
+settings|सेटिंग्स
+totalProgress|कुल प्रगति
+wordsOfTotal|{a} / {b} शब्द
+lvA1|शुरुआती
+lvA2|बुनियादी
+lvB1|मध्यम
+lvB2|उच्च मध्यम
+recommended|⭐ सुझाया गया
+nLessons|{"one":"{n} पाठ","other":"{n} पाठ"}
+soon|जल्द ही
+toolReview|आज का दोहराव
+toolHard|कठिन शब्द
+toolQuick|60 सेकंड
+placeBtn|🎯 लेवल टेस्ट
+placeResult| · नतीजा: {lv}
+placeDuration| (2 मिनट)
+back|वापस
+exit|बाहर निकलें
+lessonN|पाठ {n}
+start|शुरू करें
+lessonsProgress|{a}/{b} पाठ
+pageOf|पेज {a} / {b}
+notTranslated|अनुवाद जल्द
+notTranslatedMsg|इस पाठ के शब्दों का {lang} में अनुवाद अभी नहीं हुआ है। जल्द ही आएगा।
+replay|फिर से सुनें
+roundInfo|पाठ {n} · राउंड {r} / {t}
+inOrder|· क्रम से
+shuffled|· बेतरतीब
+startQuiz|क्विज़ शुरू करें ✓
+next|आगे →
+confirmExit|पाठ से बाहर निकलें? इस पाठ की प्रगति सेव नहीं होगी।
+qMeaning|इस शब्द का मतलब क्या है?
+qEnglish|अंग्रेज़ी शब्द कौन-सा है?
+qListen|सुनें और मतलब चुनें
+score|⚡ स्कोर:
+placementHead|🎯 लेवल
+correctOf|{a}/{b} सही
+fbOk|✓ शाबाश! 
+fbTimeout|⏱ समय खत्म — 
+lessonDone|{title} पूरा हुआ!
+lessonDoneText|ये शब्द कल, फिर 3, 7 और 21 दिन बाद दोहराने के लिए लौटेंगे, ताकि हमेशा याद रहें।
+statAccuracy|सटीकता
+statWrong|गलतियाँ
+statMinutes|मिनट
+nextLesson|अगला पाठ →
+backToLessons|पाठों की सूची पर लौटें
+backHome|होम पर लौटें
+nextDueTomorrow|अगला दोहराव: कल
+nextDueDays|{"one":"अगला दोहराव: {n} दिन बाद","other":"अगला दोहराव: {n} दिन बाद"}
+reviewTitle|🔁 आज का दोहराव
+reviewNoneToday|आज दोहराने को कुछ नहीं, बढ़िया!
+reviewNoneYet|पहले एक पाठ पूरा करें,<br>फिर शब्द यहाँ दोहराने के लिए लौटेंगे।
+nWords|{"one":"{n} शब्द","other":"{n} शब्द"}
+reviewList|इन शब्दों को आज दोहराना है{more}:
+reviewFirst30| (पहले 30)
+reviewStart|दोहराव शुरू करें
+reviewDone|दोहराव पूरा!
+reviewDoneText|जो शब्द सही हुए वे बाद में लौटेंगे, और जो गलत हुए वे कल फिर आएँगे।
+statFirstTry|पहली बार में सही
+statNeedPractice|अभ्यास चाहिए
+hardTitle|💪 मेरे कठिन शब्द
+hardEmpty|अभी आपके पास कोई कठिन शब्द नहीं है।<br>जिस शब्द में आप 2 या ज़्यादा बार गलती करेंगे, वह यहाँ अभ्यास के लिए आएगा।
+hardPractice|कठिन शब्दों का अभ्यास
+hardDone|अभ्यास पूरा!
+hardDoneText|हर सही जवाब शब्द को कठिन शब्दों की सूची से एक कदम दूर ले जाता है।
+statRight|सही
+statStillHard|अब भी कठिन
+practiceAgain|फिर से अभ्यास करें
+quickTitle|⚡ झटपट दोहराव
+quickTitleLong|⚡ 60 सेकंड का दोहराव
+quickEmpty|पहले एक पाठ पूरा करें,<br>फिर यहाँ 60 सेकंड में जितने हो सकें उतने शब्दों के जवाब दें।
+quickIntro|आपके पास 60 सेकंड हैं।<br>जितने हो सकें उतने सवालों के सही जवाब दें!
+quickRecord|आपका रिकॉर्ड: {n}
+quickGo|शुरू!
+newRecord|नया रिकॉर्ड!
+timeUp|समय खत्म!
+quickResult|{"one":"60 सेकंड में {n} सही जवाब।","other":"60 सेकंड में {n} सही जवाब।"}
+statRecord|रिकॉर्ड
+again|फिर से
+placeTitle|🎯 लेवल टेस्ट
+welcome|स्वागत है! 👋
+placeIntro|लगभग 2 मिनट।<br>एक अंग्रेज़ी शब्द आएगा – उसका हिन्दी मतलब चुनें।<br>हम A1 से शुरू करेंगे, और अच्छे जवाब देने पर अगले लेवल पर जाएँगे।
+placeStart|टेस्ट शुरू करें
+placeSkip|छोड़ें, मैं खुद लेवल चुनूँगा
+placeLevel|सुझाया गया लेवल:
+placeLevelText|{name} — इसी लेवल से शुरू करें।<br>लेवल लॉक नहीं हैं; आप कभी भी दूसरा लेवल चुन सकते हैं।
+goLevel|लेवल {lv} पर जाएँ →
+loadError|लोड करने में गड़बड़ी। इंटरनेट जाँचें और ऐप फिर से खोलें।
+chooseLang|अपनी भाषा चुनें
+chooseLangSub|मेन्यू और शब्दों के मतलब इसी भाषा में दिखेंगे।
+continue|आगे बढ़ें →
+appLanguage|🌐 ऐप की भाषा
+settingsNote|भाषा बदलने से आपकी प्रगति नहीं मिटती।
+search|भाषा खोजें…
+dlgNote|इंस्टॉल करने के बाद “{name}” होम स्क्रीन से ऐप की तरह खुलेगा और आपकी प्रगति सेव रहेगी।
+dlgOk|ठीक है
+dlgIosTitle|📲 iPhone पर इंस्टॉल करें
+dlgIosSafari1|Safari में शेयर बटन {share} दबाएँ।
+dlgIosSafari2|नीचे स्क्रॉल करें और {a} चुनें।
+dlgIosSafari3|{a} दबाएँ: ऐप का आइकन होम स्क्रीन पर आ जाएगा।
+dlgIosOther1|यह पेज {a} में खोलें (iPhone पर इंस्टॉल सिर्फ़ Safari से होता है)।
+dlgIosOther2|शेयर बटन {share} दबाएँ।
+dlgIosOther3|{a} और फिर {b} दबाएँ।
+dlgAndroidTitle|📲 Android पर इंस्टॉल करें
+dlgAndroid1|Chrome का {a} मेन्यू खोलें।
+dlgAndroid2|{a} या {b} दबाएँ।
+dlgAndroid3|ऐप इंस्टॉल करने के लिए पुष्टि करें।
+dlgMacTitle|💻 Mac पर इंस्टॉल करें
+dlgMac1|Safari में {a} मेन्यू खोलें।
+dlgMac2|{a} पर क्लिक करें और {b} से पुष्टि करें।
+dlgPcTitle|💻 कंप्यूटर पर इंस्टॉल करें
+dlgFirefox1|Firefox वेब ऐप इंस्टॉल करने की सुविधा नहीं देता।
+dlgFirefox2|यह पेज {a} या {b} में खोलें और “इंस्टॉल करें” दबाएँ।
+dlgPc1|एड्रेस बार में इंस्टॉल आइकन {a} पर क्लिक करें,
+dlgPc2|या {a} मेन्यू से {b} चुनें।
