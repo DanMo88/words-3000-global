@@ -292,7 +292,12 @@
    "num": "es",
    "flag": "flags/es.svg",
    "pick": "Elige tu idioma",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "sv",
