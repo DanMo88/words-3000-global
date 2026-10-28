@@ -287,7 +287,12 @@
    "num": "pt-BR",
    "flag": "flags/br.svg",
    "pick": "Escolha seu idioma",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "ro",
