@@ -38,8 +38,8 @@ Original live app DanMo88/english-words-3000 is NOT touched (separate localStora
 
 ## Phase 2: word meanings (2,973 words per language)
 
-Done (all 4 levels enabled in i18n/langs.json; see tools/p2/DONE.txt): fa, de, fr, es, ar
-In progress / next: ru, tr
+Done (all 4 levels enabled in i18n/langs.json; see tools/p2/DONE.txt): fa, de, fr, es, ar, ru, tr
+Next: any of the remaining languages below (SW cache is w3g-v5; bump it when you ship the next batch)
 Remaining after that: af bg zh hr cs da nl fi el he hi hu id it ja ko nb pl pt ro sv th uk vi
 
 How to resume for language L:
