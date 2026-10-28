@@ -282,7 +282,12 @@
    "num": "ru",
    "flag": "flags/ru.svg",
    "pick": "Выбери свой язык",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "es",
@@ -327,7 +332,12 @@
    "num": "tr",
    "flag": "flags/tr.svg",
    "pick": "Dilini seç",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "uk",
