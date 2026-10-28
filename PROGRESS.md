@@ -18,4 +18,5 @@ Original live app DanMo88/english-words-3000 is NOT touched (separate localStora
 - [ ] live smoke test + final screenshots (390x844) → report
 - [x] Repo created + pushed, Pages live https://danmo88.github.io/words-3000-global/ ; live 390x844 run 3,023 checks 0 fails; SW + offline OK
 - [x] Fix: toast cleared on screen change (app.js?v=2, cache w3g-v2)
-- [ ] final live re-test + screenshots in /workspace/words-3000-global-test/final
+- [x] final live re-test (3,023 checks, 0 fails) + screenshots in /workspace/words-3000-global-test/final
+## Status: SAMPLE DONE — waiting for Daniel's feedback (next: more languages / full fr+ar meanings / Play Store build)
