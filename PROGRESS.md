@@ -35,3 +35,18 @@ Original live app DanMo88/english-words-3000 is NOT touched (separate localStora
 ## Phase 1 status: DONE (live)
 ## Phase 2 (meanings for all 2,973 words × 31 langs) — NOT STARTED (only kaikki downloads exist)
 - kaikki per-word downloads: /workspace/w3g-mt/kaikki/<id>.json (fetch.py, log fetch.log)
+
+## Phase 2: word meanings (2,973 words per language)
+
+Done (all 4 levels enabled in i18n/langs.json; see tools/p2/DONE.txt): fa, de, fr, es, ar
+In progress / next: ru, tr
+Remaining after that: af bg zh hr cs da nl fi el he hi hu id it ja ko nb pl pt ro sv th uk vi
+
+How to resume for language L:
+1. Fetch dictionary dumps: `python3 /workspace/w3g-mt/gfetch2.py L` (writes /workspace/w3g-mt/gdict/L/<id>.json, skips existing).
+2. Build: `python3 tools/p2/build_lang.py L` (must report BAD 0). Overrides go in tools/p2/L.tsv (id TAB meaning).
+3. Review: `python3 tools/p2/lowconf.py L` and `python3 tools/p2/lowconf.py L 0 2000 --hi`; `tools/p2/show.py L hard|fn|rand`. Fix into L.tsv, rebuild.
+4. Fonts: `python3 tools/build_fonts.py` then `python3 tools/check_glyphs.py` (GLYPHS OK).
+5. `python3 tools/p2/finish_lang.py L` (enables levels, bumps data/index.json version, logs DONE.txt), then commit and push.
+Never commit a language's data/meanings/L before it has been reviewed (restore with `git checkout -- data/meanings/L`).
+Caveat: meanings are machine-dictionary based with manual review, not native-speaker checked. Arabic verbs are mostly past-tense citation form (the 130 original samples use present tense).
