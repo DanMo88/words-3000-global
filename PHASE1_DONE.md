@@ -15,6 +15,9 @@ Commits: ac3146a (31-language WIP), 6803a2e (layout fixes, style.css?v=3, app.js
 - Found & fixed: header (install/streak/gear) pushed off-screen and level names clipped on tall phones for nl ro bg da es pt de el
   (dvh-scaled fonts now capped by vw; long-name stacking threshold >7 letters; ro title slightly smaller)
 
+## Live check (390x844, https://danmo88.github.io/words-3000-global/, SW w3g-v4)
+- render31 all 31 langs: 310 checks, 0 fails, no console errors; test.js he+zh full flow: 826 checks, 0 fails
+
 ## Screenshots (390x844): words-3000-global-test/phase1/
 picker-top, picker-scrolled, picker-search, persian-card-lion-sun (+ persian-card-context, ir-lion-sun-flag-zoom), home-zh, home-hi, home-he, home-th, settings-th
 

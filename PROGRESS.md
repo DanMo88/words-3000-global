@@ -31,7 +31,7 @@ Original live app DanMo88/english-words-3000 is NOT touched (separate localStora
 - [x] Fix commit 6803a2e (style.css v3, app.js v4 long-name threshold >7, cache w3g-v4); render31 ×4 sizes 0 fails
 - [x] full test.js reps re-run after fixes: 22,004 checks, 0 fails (p1run/f{1,2,3}.log)
 - [x] screenshots script words-3000-global-test/shots1.js → phase1/ (local OK); PHASE1_DONE.md written
-- [ ] push to GitHub (blocked by an auto-review classifier error on 2026-10-28 ~23:20) → live 390x844 check (shots1.js on live URL)
-## Phase 1 status: DONE locally; awaiting push + live check
+- [x] pushed 5143ddd; live serves w3g-v4; live 390x844: render31 all 31 langs 310 checks 0 fails (render31-live.js, p1run/live-r31-*.log), test.js he+zh 826 checks 0 fails; live screenshots in words-3000-global-test/phase1/
+## Phase 1 status: DONE (live)
 ## Phase 2 (meanings for all 2,973 words × 31 langs) — NOT STARTED (only kaikki downloads exist)
 - kaikki per-word downloads: /workspace/w3g-mt/kaikki/<id>.json (fetch.py, log fetch.log)
