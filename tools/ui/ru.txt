@@ -1,0 +1,122 @@
+_meaningLang|русский
+appName|3000 слов
+appSub|Американский английский · Oxford 3000
+docTitle|3000 английских слов
+install|📲 Установить
+installTitle|Установить приложение на телефон или компьютер
+streakTitle|Дней подряд
+settings|Настройки
+totalProgress|Общий прогресс
+wordsOfTotal|Слова: {a} / {b}
+lvA1|Начальный
+lvA2|Базовый
+lvB1|Средний
+lvB2|Выше среднего
+recommended|⭐ Рекомендуем
+nLessons|{"one":"{n} урок","few":"{n} урока","many":"{n} уроков","other":"{n} урока"}
+soon|Скоро
+toolReview|Повторение
+toolHard|Трудные слова
+toolQuick|60 секунд
+placeBtn|🎯 Тест на уровень
+placeResult| · результат: {lv}
+placeDuration| (2 минуты)
+back|Назад
+exit|Выйти
+lessonN|Урок {n}
+start|Начать
+lessonsProgress|Уроки: {a}/{b}
+pageOf|Стр. {a} из {b}
+notTranslated|Перевод скоро
+notTranslatedMsg|Слова этого урока ещё не переведены на {lang}. Скоро появятся.
+replay|Прослушать ещё раз
+roundInfo|Урок {n} · круг {r} из {t}
+inOrder|· по порядку
+shuffled|· вперемешку
+startQuiz|Начать тест ✓
+next|Далее →
+confirmExit|Выйти из урока? Прогресс этого урока не сохранится.
+qMeaning|Что значит это слово?
+qEnglish|Какое это слово по-английски?
+qListen|Послушай и выбери значение
+score|⚡ Очки:
+placementHead|🎯 Уровень
+correctOf|Верно: {a}/{b}
+fbOk|✓ Отлично! 
+fbTimeout|⏱ Время вышло — 
+lessonDone|{title} пройден!
+lessonDoneText|Эти слова вернутся на повторение завтра, а потом через 3, 7 и 21 день, чтобы остаться в памяти навсегда.
+statAccuracy|Точность
+statWrong|Ошибки
+statMinutes|Минуты
+nextLesson|Следующий урок →
+backToLessons|К списку уроков
+backHome|На главную
+nextDueTomorrow|Следующее повторение: завтра
+nextDueDays|{"one":"Следующее повторение: через {n} день","few":"Следующее повторение: через {n} дня","many":"Следующее повторение: через {n} дней","other":"Следующее повторение: через {n} дня"}
+reviewTitle|🔁 Повторение на сегодня
+reviewNoneToday|Сегодня повторять нечего — отлично!
+reviewNoneYet|Сначала пройди урок,<br>потом слова вернутся сюда на повторение.
+nWords|{"one":"{n} слово","few":"{n} слова","many":"{n} слов","other":"{n} слова"}
+reviewList|Эти слова нужно повторить сегодня{more}:
+reviewFirst30| (первые 30)
+reviewStart|Начать повторение
+reviewDone|Повторение завершено!
+reviewDoneText|Слова, на которые ты ответил верно, вернутся позже, а ошибочные — уже завтра.
+statFirstTry|Верно с первого раза
+statNeedPractice|Нужно повторить
+hardTitle|💪 Мои трудные слова
+hardEmpty|У тебя пока нет трудных слов.<br>Каждое слово, в котором ты ошибёшься 2 раза или больше, попадёт сюда для тренировки.
+hardPractice|Тренировать трудные слова
+hardDone|Тренировка окончена!
+hardDoneText|Каждый верный ответ отодвигает слово на шаг от списка трудных.
+statRight|Верно
+statStillHard|Ещё трудные
+practiceAgain|Ещё раз
+quickTitle|⚡ Быстрое повторение
+quickTitleLong|⚡ Повторение за 60 секунд
+quickEmpty|Сначала пройди урок,<br>потом здесь ответь на как можно больше слов за 60 секунд.
+quickIntro|У тебя 60 секунд.<br>Ответь правильно на как можно больше вопросов!
+quickRecord|Твой рекорд: {n}
+quickGo|Старт!
+newRecord|Новый рекорд!
+timeUp|Время вышло!
+quickResult|Верных ответов за 60 секунд: {n}
+statRecord|Рекорд
+again|Ещё раз
+placeTitle|🎯 Тест на уровень
+welcome|Добро пожаловать! 👋
+placeIntro|Около 2 минут.<br>Появится английское слово — выбери его значение по-русски.<br>Начнём с A1, а если будешь отвечать хорошо, перейдём на уровень выше.
+placeStart|Начать тест
+placeSkip|Пропустить, выберу сам
+placeLevel|Рекомендуемый уровень:
+placeLevelText|{name} — начни с этого уровня.<br>Уровни не заблокированы: можешь выбрать другой в любой момент.
+goLevel|К уровню {lv} →
+loadError|Ошибка загрузки. Проверь интернет и открой приложение снова.
+chooseLang|Выбери свой язык
+chooseLangSub|Меню и значения слов будут на этом языке.
+continue|Продолжить →
+appLanguage|🌐 Язык приложения
+settingsNote|При смене языка прогресс сохраняется.
+search|Поиск языка…
+dlgNote|После установки «{name}» откроется как приложение с главного экрана, а твой прогресс сохранится.
+dlgOk|Понятно
+dlgIosTitle|📲 Установка на iPhone
+dlgIosSafari1|В Safari нажми кнопку «Поделиться» {share}.
+dlgIosSafari2|Прокрути вниз и выбери {a}.
+dlgIosSafari3|Нажми {a} — значок приложения появится на главном экране.
+dlgIosOther1|Открой эту страницу в {a} (на iPhone установка возможна только из Safari).
+dlgIosOther2|Нажми кнопку «Поделиться» {share}.
+dlgIosOther3|Нажми {a}, затем {b}.
+dlgAndroidTitle|📲 Установка на Android
+dlgAndroid1|Открой меню {a} в Chrome.
+dlgAndroid2|Нажми {a} или {b}.
+dlgAndroid3|Подтверди установку приложения.
+dlgMacTitle|💻 Установка на Mac
+dlgMac1|В Safari открой меню {a}.
+dlgMac2|Нажми {a} и подтверди кнопкой {b}.
+dlgPcTitle|💻 Установка на компьютер
+dlgFirefox1|Firefox не поддерживает установку веб-приложений.
+dlgFirefox2|Открой эту страницу в {a} или {b} и нажми «Установить».
+dlgPc1|Нажми значок установки {a} в адресной строке
+dlgPc2|или выбери в меню {a} пункт {b}.

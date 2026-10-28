@@ -1,0 +1,122 @@
+_meaningLang|עברית
+appName|3000 מילים
+appSub|אנגלית אמריקאית · Oxford 3000
+docTitle|3000 מילים באנגלית
+install|📲 התקנה
+installTitle|התקנת האפליקציה בטלפון או במחשב
+streakTitle|ימים ברצף
+settings|הגדרות
+totalProgress|התקדמות כוללת
+wordsOfTotal|{a} / {b} מילים
+lvA1|מתחילים
+lvA2|בסיסי
+lvB1|בינוני
+lvB2|בינוני-גבוה
+recommended|⭐ מומלץ
+nLessons|{"one":"שיעור אחד","two":"{n} שיעורים","other":"{n} שיעורים"}
+soon|בקרוב
+toolReview|חזרה יומית
+toolHard|מילים קשות
+toolQuick|חזרה 60 שנ׳
+placeBtn|🎯 מבחן רמה
+placeResult| · תוצאה: {lv}
+placeDuration| (2 דקות)
+back|חזרה
+exit|יציאה
+lessonN|שיעור {n}
+start|התחל
+lessonsProgress|{a}/{b} שיעורים
+pageOf|עמוד {a} מתוך {b}
+notTranslated|תרגום בקרוב
+notTranslatedMsg|המילים בשיעור הזה עדיין לא תורגמו ל{lang}. הן יגיעו בקרוב.
+replay|השמע שוב
+roundInfo|שיעור {n} · סבב {r} מתוך {t}
+inOrder|· לפי הסדר
+shuffled|· מעורבב
+startQuiz|התחל את המבחן ✓
+next|הבא ←
+confirmExit|לצאת מהשיעור? ההתקדמות בשיעור הזה לא תישמר.
+qMeaning|מה פירוש המילה?
+qEnglish|מהי המילה באנגלית?
+qListen|הקשב ובחר את הפירוש
+score|⚡ ניקוד:
+placementHead|🎯 רמה
+correctOf|{a}/{b} נכונות
+fbOk|✓ כל הכבוד! 
+fbTimeout|⏱ נגמר הזמן — 
+lessonDone|{title} הושלם!
+lessonDoneText|המילים האלה יחזרו לחזרה מחר, ואחר כך אחרי 3, 7 ו־21 ימים, כדי שיישארו בזיכרון לתמיד.
+statAccuracy|דיוק
+statWrong|טעויות
+statMinutes|דקות
+nextLesson|השיעור הבא ←
+backToLessons|חזרה לרשימת השיעורים
+backHome|חזרה למסך הבית
+nextDueTomorrow|החזרה הבאה: מחר
+nextDueDays|{"two":"החזרה הבאה: בעוד יומיים","other":"החזרה הבאה: בעוד {n} ימים"}
+reviewTitle|🔁 חזרה יומית
+reviewNoneToday|אין היום מה לחזור, מעולה!
+reviewNoneYet|קודם סיים שיעור,<br>ואז המילים יחזרו לכאן לחזרה.
+nWords|{"one":"מילה אחת","two":"{n} מילים","other":"{n} מילים"}
+reviewList|את המילים האלה צריך לחזור היום{more}:
+reviewFirst30| (30 הראשונות)
+reviewStart|התחל חזרה
+reviewDone|החזרה הסתיימה!
+reviewDoneText|מילים שענית עליהן נכון יחזרו מאוחר יותר, ומילים שטעית בהן יחזרו מחר.
+statFirstTry|נכון בפעם הראשונה
+statNeedPractice|צריך תרגול
+hardTitle|💪 המילים הקשות שלי
+hardEmpty|עדיין אין לך מילים קשות.<br>כל מילה שתטעה בה פעמיים או יותר תגיע לכאן כדי שתתרגל אותה יותר.
+hardPractice|תרגול מילים קשות
+hardDone|התרגול הסתיים!
+hardDoneText|כל תשובה נכונה מרחיקה את המילה צעד אחד מרשימת המילים הקשות.
+statRight|נכון
+statStillHard|עדיין קשות
+practiceAgain|תרגל שוב
+quickTitle|⚡ חזרה מהירה
+quickTitleLong|⚡ חזרה מהירה ב־60 שניות
+quickEmpty|קודם סיים שיעור,<br>ואז כאן תענה על כמה שיותר מילים ב־60 שניות.
+quickIntro|יש לך 60 שניות.<br>ענה נכון על כמה שיותר שאלות!
+quickRecord|השיא שלך: {n}
+quickGo|יאללה!
+newRecord|שיא חדש!
+timeUp|נגמר הזמן!
+quickResult|תשובות נכונות ב־60 שניות: {n}
+statRecord|שיא
+again|שוב
+placeTitle|🎯 מבחן רמה
+welcome|ברוך הבא! 👋
+placeIntro|בערך 2 דקות.<br>תופיע מילה באנגלית – בחר את הפירוש שלה בעברית.<br>מתחילים מ־A1, ואם תענה טוב, נעלה רמה.
+placeStart|התחל מבחן
+placeSkip|דלג, אבחר רמה בעצמי
+placeLevel|הרמה המומלצת:
+placeLevelText|{name} – התחל מהרמה הזאת.<br>הרמות לא נעולות; אפשר לבחור רמה אחרת בכל זמן.
+goLevel|לרמה {lv} ←
+loadError|שגיאה בטעינה. בדוק את החיבור לאינטרנט ופתח שוב את האפליקציה.
+chooseLang|בחר את השפה שלך
+chooseLangSub|התפריטים ופירושי המילים יוצגו בשפה הזאת.
+continue|המשך ←
+appLanguage|🌐 שפת האפליקציה
+settingsNote|החלפת שפה לא מוחקת את ההתקדמות שלך.
+search|חיפוש שפה…
+dlgNote|אחרי ההתקנה, „{name}“ ייפתח כאפליקציה ממסך הבית וההתקדמות שלך תישמר.
+dlgOk|אישור
+dlgIosTitle|📲 התקנה באייפון
+dlgIosSafari1|ב־Safari הקש על כפתור השיתוף {share}.
+dlgIosSafari2|גלול למטה ובחר {a}.
+dlgIosSafari3|הקש על {a} – סמל האפליקציה יופיע במסך הבית.
+dlgIosOther1|פתח את הדף ב־{a} (באייפון אפשר להתקין רק מ־Safari).
+dlgIosOther2|הקש על כפתור השיתוף {share}.
+dlgIosOther3|הקש על {a} ואז על {b}.
+dlgAndroidTitle|📲 התקנה באנדרואיד
+dlgAndroid1|פתח את התפריט {a} של Chrome.
+dlgAndroid2|הקש על {a} או {b}.
+dlgAndroid3|אשר כדי להתקין את האפליקציה.
+dlgMacTitle|💻 התקנה במק
+dlgMac1|ב־Safari פתח את התפריט {a}.
+dlgMac2|לחץ על {a} ואשר עם {b}.
+dlgPcTitle|💻 התקנה במחשב
+dlgFirefox1|Firefox לא תומך בהתקנת אפליקציות ווב.
+dlgFirefox2|פתח את הדף ב־{a} או ב־{b} ולחץ על „התקנה“.
+dlgPc1|בשורת הכתובת לחץ על סמל ההתקנה {a},
+dlgPc2|או בתפריט {a} בחר {b}.

@@ -1,0 +1,122 @@
+_meaningLang|polski
+appName|3000 słów
+appSub|Amerykański angielski · Oxford 3000
+docTitle|3000 angielskich słów
+install|📲 Zainstaluj
+installTitle|Zainstaluj aplikację na telefonie lub komputerze
+streakTitle|Dni z rzędu
+settings|Ustawienia
+totalProgress|Postęp ogólny
+wordsOfTotal|Słowa: {a} / {b}
+lvA1|Początkujący
+lvA2|Podstawowy
+lvB1|Średni
+lvB2|Wyższy średni
+recommended|⭐ Polecany
+nLessons|{"one":"{n} lekcja","few":"{n} lekcje","many":"{n} lekcji","other":"{n} lekcji"}
+soon|Wkrótce
+toolReview|Powtórka
+toolHard|Trudne słowa
+toolQuick|60 sekund
+placeBtn|🎯 Test poziomujący
+placeResult| · wynik: {lv}
+placeDuration| (2 minuty)
+back|Wstecz
+exit|Wyjdź
+lessonN|Lekcja {n}
+start|Start
+lessonsProgress|Lekcje: {a}/{b}
+pageOf|Strona {a} z {b}
+notTranslated|Tłumaczenie wkrótce
+notTranslatedMsg|Słowa z tej lekcji nie są jeszcze przetłumaczone na {lang}. Pojawią się wkrótce.
+replay|Odtwórz ponownie
+roundInfo|Lekcja {n} · runda {r} z {t}
+inOrder|· po kolei
+shuffled|· losowo
+startQuiz|Zacznij quiz ✓
+next|Dalej →
+confirmExit|Wyjść z lekcji? Postęp w tej lekcji nie zostanie zapisany.
+qMeaning|Co znaczy to słowo?
+qEnglish|Jakie to słowo po angielsku?
+qListen|Posłuchaj i wybierz znaczenie
+score|⚡ Punkty:
+placementHead|🎯 Poziom
+correctOf|Dobrze: {a}/{b}
+fbOk|✓ Brawo! 
+fbTimeout|⏱ Czas minął — 
+lessonDone|{title} ukończona!
+lessonDoneText|Te słowa wrócą do powtórki jutro, a potem po 3, 7 i 21 dniach, żeby zostały w pamięci na zawsze.
+statAccuracy|Trafność
+statWrong|Błędy
+statMinutes|Minuty
+nextLesson|Następna lekcja →
+backToLessons|Wróć do lekcji
+backHome|Wróć do startu
+nextDueTomorrow|Następna powtórka: jutro
+nextDueDays|{"one":"Następna powtórka: za {n} dzień","few":"Następna powtórka: za {n} dni","many":"Następna powtórka: za {n} dni","other":"Następna powtórka: za {n} dnia"}
+reviewTitle|🔁 Dzisiejsza powtórka
+reviewNoneToday|Dziś nie ma nic do powtórki, super!
+reviewNoneYet|Najpierw ukończ lekcję,<br>potem słowa wrócą tu do powtórki.
+nWords|{"one":"{n} słowo","few":"{n} słowa","many":"{n} słów","other":"{n} słowa"}
+reviewList|Te słowa trzeba dziś powtórzyć{more}:
+reviewFirst30| (pierwsze 30)
+reviewStart|Zacznij powtórkę
+reviewDone|Powtórka skończona!
+reviewDoneText|Słowa, na które odpowiedziałeś dobrze, wrócą później, a błędne — już jutro.
+statFirstTry|Dobrze za 1. razem
+statNeedPractice|Do ćwiczenia
+hardTitle|💪 Moje trudne słowa
+hardEmpty|Nie masz jeszcze trudnych słów.<br>Każde słowo, w którym pomylisz się 2 razy lub więcej, trafi tutaj, żebyś mógł je poćwiczyć.
+hardPractice|Ćwicz trudne słowa
+hardDone|Trening skończony!
+hardDoneText|Każda dobra odpowiedź oddala słowo o krok od listy trudnych.
+statRight|Dobrze
+statStillHard|Wciąż trudne
+practiceAgain|Ćwicz jeszcze raz
+quickTitle|⚡ Szybka powtórka
+quickTitleLong|⚡ Powtórka w 60 sekund
+quickEmpty|Najpierw ukończ lekcję,<br>potem odpowiedz tu na jak najwięcej słów w 60 sekund.
+quickIntro|Masz 60 sekund.<br>Odpowiedz dobrze na jak najwięcej pytań!
+quickRecord|Twój rekord: {n}
+quickGo|Start!
+newRecord|Nowy rekord!
+timeUp|Czas minął!
+quickResult|Dobre odpowiedzi w 60 sekund: {n}
+statRecord|Rekord
+again|Jeszcze raz
+placeTitle|🎯 Test poziomujący
+welcome|Witaj! 👋
+placeIntro|Około 2 minut.<br>Pojawi się angielskie słowo — wybierz jego znaczenie po polsku.<br>Zaczynamy od A1, a jeśli dobrze ci pójdzie, przejdziemy wyżej.
+placeStart|Zacznij test
+placeSkip|Pomiń, sam wybiorę poziom
+placeLevel|Polecany poziom:
+placeLevelText|{name} — zacznij od tego poziomu.<br>Poziomy nie są zablokowane; w każdej chwili możesz wybrać inny.
+goLevel|Przejdź do poziomu {lv} →
+loadError|Błąd ładowania. Sprawdź internet i otwórz aplikację ponownie.
+chooseLang|Wybierz swój język
+chooseLangSub|Menu i znaczenia słów będą w tym języku.
+continue|Dalej →
+appLanguage|🌐 Język aplikacji
+settingsNote|Zmiana języka nie usuwa postępów.
+search|Szukaj języka…
+dlgNote|Po instalacji „{name}” otworzy się jak aplikacja z ekranu głównego, a twoje postępy zostaną zapisane.
+dlgOk|OK
+dlgIosTitle|📲 Instalacja na iPhonie
+dlgIosSafari1|W Safari stuknij przycisk Udostępnij {share}.
+dlgIosSafari2|Przewiń w dół i wybierz {a}.
+dlgIosSafari3|Stuknij {a} — ikona aplikacji pojawi się na ekranie głównym.
+dlgIosOther1|Otwórz tę stronę w {a} (na iPhonie instalacja działa tylko z Safari).
+dlgIosOther2|Stuknij przycisk Udostępnij {share}.
+dlgIosOther3|Stuknij {a}, a potem {b}.
+dlgAndroidTitle|📲 Instalacja na Androidzie
+dlgAndroid1|Otwórz menu {a} w Chrome.
+dlgAndroid2|Stuknij {a} lub {b}.
+dlgAndroid3|Potwierdź, aby zainstalować aplikację.
+dlgMacTitle|💻 Instalacja na Macu
+dlgMac1|W Safari otwórz menu {a}.
+dlgMac2|Kliknij {a} i potwierdź przyciskiem {b}.
+dlgPcTitle|💻 Instalacja na komputerze
+dlgFirefox1|Firefox nie obsługuje instalowania aplikacji internetowych.
+dlgFirefox2|Otwórz tę stronę w {a} lub {b} i kliknij „Zainstaluj”.
+dlgPc1|Kliknij ikonę instalacji {a} na pasku adresu
+dlgPc2|albo wybierz {b} z menu {a}.

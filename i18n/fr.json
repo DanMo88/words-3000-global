@@ -138,5 +138,6 @@
  "dlgFirefox1": "Firefox ne permet pas d'installer les applis web.",
  "dlgFirefox2": "Ouvre cette page dans {a} ou {b} et clique sur « Installer ».",
  "dlgPc1": "Dans la barre d'adresse, clique sur l'icône d'installation {a},",
- "dlgPc2": "ou, dans le menu {a}, choisis {b}."
+ "dlgPc2": "ou, dans le menu {a}, choisis {b}.",
+ "search": "Rechercher une langue…"
 }

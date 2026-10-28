@@ -1,15 +1,28 @@
 {
- "version": 1,
- "default": "fa",
+ "version": 2,
+ "default": "en",
+ "note": "To add a language: add i18n/<code>.json (same keys as fa.json), data/meanings/<code>/<LEVEL>.json, a flag in flags/, and an entry here.",
+ "aliases": {
+  "no": "nb",
+  "nn": "nb",
+  "iw": "he",
+  "in": "id",
+  "zh-hans": "zh",
+  "zh-cn": "zh",
+  "zh-sg": "zh",
+  "pt-pt": "pt",
+  "pt-br": "pt"
+ },
  "languages": [
   {
-   "code": "fa",
-   "name": "فارسی",
-   "en": "Persian",
-   "dir": "rtl",
-   "num": "fa-IR",
-   "meanings": true,
-   "pick": "زبانت رو انتخاب کن"
+   "code": "af",
+   "name": "Afrikaans",
+   "en": "Afrikaans",
+   "dir": "ltr",
+   "num": "af",
+   "flag": "flags/za.svg",
+   "pick": "Kies jou taal",
+   "meanings": []
   },
   {
    "code": "ar",
@@ -17,8 +30,84 @@
    "en": "Arabic",
    "dir": "rtl",
    "num": "ar-u-nu-arab",
-   "meanings": true,
-   "pick": "اختر لغتك"
+   "flag": "flags/arab.svg",
+   "pick": "اختر لغتك",
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
+  },
+  {
+   "code": "bg",
+   "name": "Български",
+   "en": "Bulgarian",
+   "dir": "ltr",
+   "num": "bg",
+   "flag": "flags/bg.svg",
+   "pick": "Избери своя език",
+   "meanings": []
+  },
+  {
+   "code": "zh",
+   "name": "简体中文",
+   "en": "Chinese (Simplified)",
+   "dir": "ltr",
+   "num": "zh-CN",
+   "flag": "flags/cn.svg",
+   "pick": "选择你的语言",
+   "meanings": []
+  },
+  {
+   "code": "hr",
+   "name": "Hrvatski",
+   "en": "Croatian",
+   "dir": "ltr",
+   "num": "hr",
+   "flag": "flags/hr.svg",
+   "pick": "Odaberi svoj jezik",
+   "meanings": []
+  },
+  {
+   "code": "cs",
+   "name": "Čeština",
+   "en": "Czech",
+   "dir": "ltr",
+   "num": "cs",
+   "flag": "flags/cz.svg",
+   "pick": "Vyber si jazyk",
+   "meanings": []
+  },
+  {
+   "code": "da",
+   "name": "Dansk",
+   "en": "Danish",
+   "dir": "ltr",
+   "num": "da",
+   "flag": "flags/dk.svg",
+   "pick": "Vælg dit sprog",
+   "meanings": []
+  },
+  {
+   "code": "nl",
+   "name": "Nederlands",
+   "en": "Dutch",
+   "dir": "ltr",
+   "num": "nl",
+   "flag": "flags/nl.svg",
+   "pick": "Kies je taal",
+   "meanings": []
+  },
+  {
+   "code": "fi",
+   "name": "Suomi",
+   "en": "Finnish",
+   "dir": "ltr",
+   "num": "fi",
+   "flag": "flags/fi.svg",
+   "pick": "Valitse kielesi",
+   "meanings": []
   },
   {
    "code": "fr",
@@ -26,9 +115,229 @@
    "en": "French",
    "dir": "ltr",
    "num": "fr-FR",
-   "meanings": true,
-   "pick": "Choisis ta langue"
+   "flag": "flags/fr.svg",
+   "pick": "Choisis ta langue",
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
+  },
+  {
+   "code": "de",
+   "name": "Deutsch",
+   "en": "German",
+   "dir": "ltr",
+   "num": "de",
+   "flag": "flags/de.svg",
+   "pick": "Wähle deine Sprache",
+   "meanings": []
+  },
+  {
+   "code": "el",
+   "name": "Ελληνικά",
+   "en": "Greek",
+   "dir": "ltr",
+   "num": "el",
+   "flag": "flags/gr.svg",
+   "pick": "Διάλεξε τη γλώσσα σου",
+   "meanings": []
+  },
+  {
+   "code": "he",
+   "name": "עברית",
+   "en": "Hebrew",
+   "dir": "rtl",
+   "num": "he",
+   "flag": "flags/il.svg",
+   "pick": "בחר את השפה שלך",
+   "meanings": []
+  },
+  {
+   "code": "hi",
+   "name": "हिन्दी",
+   "en": "Hindi",
+   "dir": "ltr",
+   "num": "hi-IN",
+   "flag": "flags/in.svg",
+   "pick": "अपनी भाषा चुनें",
+   "meanings": []
+  },
+  {
+   "code": "hu",
+   "name": "Magyar",
+   "en": "Hungarian",
+   "dir": "ltr",
+   "num": "hu",
+   "flag": "flags/hu.svg",
+   "pick": "Válaszd ki a nyelved",
+   "meanings": []
+  },
+  {
+   "code": "id",
+   "name": "Bahasa Indonesia",
+   "en": "Indonesian",
+   "dir": "ltr",
+   "num": "id",
+   "flag": "flags/id.svg",
+   "pick": "Pilih bahasamu",
+   "meanings": []
+  },
+  {
+   "code": "it",
+   "name": "Italiano",
+   "en": "Italian",
+   "dir": "ltr",
+   "num": "it",
+   "flag": "flags/it.svg",
+   "pick": "Scegli la tua lingua",
+   "meanings": []
+  },
+  {
+   "code": "ja",
+   "name": "日本語",
+   "en": "Japanese",
+   "dir": "ltr",
+   "num": "ja",
+   "flag": "flags/jp.svg",
+   "pick": "言語を選んでください",
+   "meanings": []
+  },
+  {
+   "code": "ko",
+   "name": "한국어",
+   "en": "Korean",
+   "dir": "ltr",
+   "num": "ko",
+   "flag": "flags/kr.svg",
+   "pick": "언어를 선택하세요",
+   "meanings": []
+  },
+  {
+   "code": "nb",
+   "name": "Norsk bokmål",
+   "en": "Norwegian (Bokmål)",
+   "dir": "ltr",
+   "num": "nb",
+   "flag": "flags/no.svg",
+   "pick": "Velg språket ditt",
+   "meanings": []
+  },
+  {
+   "code": "fa",
+   "name": "فارسی",
+   "en": "Persian",
+   "dir": "rtl",
+   "num": "fa-IR",
+   "flag": "flags/ir-lion-sun.svg",
+   "pick": "زبانت رو انتخاب کن",
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
+  },
+  {
+   "code": "pl",
+   "name": "Polski",
+   "en": "Polish",
+   "dir": "ltr",
+   "num": "pl",
+   "flag": "flags/pl.svg",
+   "pick": "Wybierz swój język",
+   "meanings": []
+  },
+  {
+   "code": "pt",
+   "name": "Português",
+   "en": "Portuguese",
+   "dir": "ltr",
+   "num": "pt-BR",
+   "flag": "flags/br.svg",
+   "pick": "Escolha seu idioma",
+   "meanings": []
+  },
+  {
+   "code": "ro",
+   "name": "Română",
+   "en": "Romanian",
+   "dir": "ltr",
+   "num": "ro",
+   "flag": "flags/ro.svg",
+   "pick": "Alege-ți limba",
+   "meanings": []
+  },
+  {
+   "code": "ru",
+   "name": "Русский",
+   "en": "Russian",
+   "dir": "ltr",
+   "num": "ru",
+   "flag": "flags/ru.svg",
+   "pick": "Выбери свой язык",
+   "meanings": []
+  },
+  {
+   "code": "es",
+   "name": "Español",
+   "en": "Spanish",
+   "dir": "ltr",
+   "num": "es",
+   "flag": "flags/es.svg",
+   "pick": "Elige tu idioma",
+   "meanings": []
+  },
+  {
+   "code": "sv",
+   "name": "Svenska",
+   "en": "Swedish",
+   "dir": "ltr",
+   "num": "sv",
+   "flag": "flags/se.svg",
+   "pick": "Välj ditt språk",
+   "meanings": []
+  },
+  {
+   "code": "th",
+   "name": "ไทย",
+   "en": "Thai",
+   "dir": "ltr",
+   "num": "th",
+   "flag": "flags/th.svg",
+   "pick": "เลือกภาษาของคุณ",
+   "meanings": []
+  },
+  {
+   "code": "tr",
+   "name": "Türkçe",
+   "en": "Turkish",
+   "dir": "ltr",
+   "num": "tr",
+   "flag": "flags/tr.svg",
+   "pick": "Dilini seç",
+   "meanings": []
+  },
+  {
+   "code": "uk",
+   "name": "Українська",
+   "en": "Ukrainian",
+   "dir": "ltr",
+   "num": "uk",
+   "flag": "flags/ua.svg",
+   "pick": "Обери свою мову",
+   "meanings": []
+  },
+  {
+   "code": "vi",
+   "name": "Tiếng Việt",
+   "en": "Vietnamese",
+   "dir": "ltr",
+   "num": "vi",
+   "flag": "flags/vn.svg",
+   "pick": "Chọn ngôn ngữ của bạn",
+   "meanings": []
   }
- ],
- "note": "To add a language: add i18n/<code>.json (same keys as fa.json), data/meanings/<code>/<LEVEL>.json, and an entry here."
+ ]
 }

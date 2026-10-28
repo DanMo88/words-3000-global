@@ -1,0 +1,122 @@
+_meaningLang|български
+appName|3000 думи
+appSub|Американски английски · Oxford 3000
+docTitle|3000 английски думи
+install|📲 Инсталирай
+installTitle|Инсталирай приложението на телефона или компютъра
+streakTitle|Поредни дни
+settings|Настройки
+totalProgress|Общ напредък
+wordsOfTotal|{a} / {b} думи
+lvA1|Начинаещ
+lvA2|Основен
+lvB1|Среден
+lvB2|Над средния
+recommended|⭐ Препоръчано
+nLessons|{"one":"{n} урок","other":"{n} урока"}
+soon|Скоро
+toolReview|Преговор
+toolHard|Трудни думи
+toolQuick|60 секунди
+placeBtn|🎯 Тест за ниво
+placeResult| · резултат: {lv}
+placeDuration| (2 минути)
+back|Назад
+exit|Изход
+lessonN|Урок {n}
+start|Начало
+lessonsProgress|Уроци: {a}/{b}
+pageOf|Стр. {a} от {b}
+notTranslated|Преводът идва скоро
+notTranslatedMsg|Думите от този урок още не са преведени на {lang}. Скоро ще бъдат.
+replay|Пусни отново
+roundInfo|Урок {n} · кръг {r} от {t}
+inOrder|· по ред
+shuffled|· разбъркано
+startQuiz|Започни теста ✓
+next|Напред →
+confirmExit|Да излезеш ли от урока? Напредъкът в този урок няма да бъде запазен.
+qMeaning|Какво означава тази дума?
+qEnglish|Коя е английската дума?
+qListen|Слушай и избери значението
+score|⚡ Точки:
+placementHead|🎯 Ниво
+correctOf|Верни: {a}/{b}
+fbOk|✓ Браво! 
+fbTimeout|⏱ Времето изтече — 
+lessonDone|{title} е завършен!
+lessonDoneText|Тези думи ще се върнат за преговор утре и след 3, 7 и 21 дни, за да останат в паметта ти завинаги.
+statAccuracy|Точност
+statWrong|Грешки
+statMinutes|Минути
+nextLesson|Следващ урок →
+backToLessons|Към уроците
+backHome|Към началото
+nextDueTomorrow|Следващ преговор: утре
+nextDueDays|{"one":"Следващ преговор: след {n} ден","other":"Следващ преговор: след {n} дни"}
+reviewTitle|🔁 Преговор за днес
+reviewNoneToday|Днес няма нищо за преговор, супер!
+reviewNoneYet|Първо завърши урок,<br>после думите ще се върнат тук за преговор.
+nWords|{"one":"{n} дума","other":"{n} думи"}
+reviewList|Тези думи трябва да се преговорят днес{more}:
+reviewFirst30| (първите 30)
+reviewStart|Започни преговора
+reviewDone|Преговорът приключи!
+reviewDoneText|Думите, на които отговори вярно, ще се върнат по-късно, а грешните – още утре.
+statFirstTry|Вярно от първия път
+statNeedPractice|За упражнение
+hardTitle|💪 Моите трудни думи
+hardEmpty|Все още нямаш трудни думи.<br>Всяка дума, в която сгрешиш 2 или повече пъти, ще се появи тук, за да я упражняваш.
+hardPractice|Упражни трудните думи
+hardDone|Тренировката приключи!
+hardDoneText|Всеки верен отговор отдалечава думата с една стъпка от списъка с трудни думи.
+statRight|Верни
+statStillHard|Още трудни
+practiceAgain|Упражни пак
+quickTitle|⚡ Бърз преговор
+quickTitleLong|⚡ Преговор за 60 секунди
+quickEmpty|Първо завърши урок,<br>после тук отговори на колкото можеш повече думи за 60 секунди.
+quickIntro|Имаш 60 секунди.<br>Отговори вярно на колкото можеш повече въпроси!
+quickRecord|Твоят рекорд: {n}
+quickGo|Старт!
+newRecord|Нов рекорд!
+timeUp|Времето изтече!
+quickResult|Верни отговори за 60 секунди: {n}
+statRecord|Рекорд
+again|Пак
+placeTitle|🎯 Тест за ниво
+welcome|Добре дошъл! 👋
+placeIntro|Около 2 минути.<br>Появява се английска дума – избери значението ѝ на български.<br>Започваме от A1 и ако отговаряш добре, минаваме на по-високо ниво.
+placeStart|Започни теста
+placeSkip|Пропусни, ще избера сам
+placeLevel|Препоръчано ниво:
+placeLevelText|{name} – започни от това ниво.<br>Нивата не са заключени; можеш да избереш друго по всяко време.
+goLevel|Към ниво {lv} →
+loadError|Грешка при зареждане. Провери интернета и отвори приложението отново.
+chooseLang|Избери своя език
+chooseLangSub|Менютата и значенията на думите ще са на този език.
+continue|Продължи →
+appLanguage|🌐 Език на приложението
+settingsNote|Смяната на езика не изтрива напредъка ти.
+search|Търси език…
+dlgNote|След инсталиране „{name}“ се отваря като приложение от началния екран и напредъкът ти остава запазен.
+dlgOk|Добре
+dlgIosTitle|📲 Инсталиране на iPhone
+dlgIosSafari1|В Safari докосни бутона за споделяне {share}.
+dlgIosSafari2|Превърти надолу и избери {a}.
+dlgIosSafari3|Докосни {a} – иконата на приложението ще се появи на началния екран.
+dlgIosOther1|Отвори тази страница в {a} (на iPhone инсталирането е възможно само от Safari).
+dlgIosOther2|Докосни бутона за споделяне {share}.
+dlgIosOther3|Докосни {a}, а после {b}.
+dlgAndroidTitle|📲 Инсталиране на Android
+dlgAndroid1|Отвори менюто {a} на Chrome.
+dlgAndroid2|Докосни {a} или {b}.
+dlgAndroid3|Потвърди, за да инсталираш приложението.
+dlgMacTitle|💻 Инсталиране на Mac
+dlgMac1|В Safari отвори менюто {a}.
+dlgMac2|Щракни върху {a} и потвърди с {b}.
+dlgPcTitle|💻 Инсталиране на компютър
+dlgFirefox1|Firefox не поддържа инсталиране на уеб приложения.
+dlgFirefox2|Отвори тази страница в {a} или {b} и натисни „Инсталирай“.
+dlgPc1|Щракни върху иконата за инсталиране {a} в адресната лента
+dlgPc2|или избери {b} от менюто {a}.

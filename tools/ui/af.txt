@@ -1,0 +1,122 @@
+_meaningLang|Afrikaans
+appName|3000 woorde
+appSub|Amerikaanse Engels · Oxford 3000
+docTitle|3000 Engelse woorde
+install|📲 Installeer
+installTitle|Installeer die app op jou foon of rekenaar
+streakTitle|Dae aaneen
+settings|Instellings
+totalProgress|Totale vordering
+wordsOfTotal|{a} / {b} woorde
+lvA1|Beginner
+lvA2|Basies
+lvB1|Intermediêr
+lvB2|Hoër intermediêr
+recommended|⭐ Aanbeveel
+nLessons|{"one":"{n} les","other":"{n} lesse"}
+soon|Binnekort
+toolReview|Hersien vandag
+toolHard|Moeilike woorde
+toolQuick|60 s-hersiening
+placeBtn|🎯 Vlaktoets
+placeResult| · uitslag: {lv}
+placeDuration| (2 minute)
+back|Terug
+exit|Verlaat
+lessonN|Les {n}
+start|Begin
+lessonsProgress|{a}/{b} lesse
+pageOf|Bladsy {a} van {b}
+notTranslated|Vertaling kom binnekort
+notTranslatedMsg|Die woorde van hierdie les is nog nie in {lang} vertaal nie. Dit kom binnekort.
+replay|Speel weer
+roundInfo|Les {n} · rondte {r} van {t}
+inOrder|· in volgorde
+shuffled|· gemeng
+startQuiz|Begin die toets ✓
+next|Volgende →
+confirmExit|Verlaat die les? Jou vordering in hierdie les sal nie gestoor word nie.
+qMeaning|Wat beteken hierdie woord?
+qEnglish|Wat is die Engelse woord?
+qListen|Luister en kies die betekenis
+score|⚡ Punte:
+placementHead|🎯 Vlak
+correctOf|{a}/{b} reg
+fbOk|✓ Mooi so! 
+fbTimeout|⏱ Tyd is om — 
+lessonDone|{title} klaar!
+lessonDoneText|Hierdie woorde kom môre, en ná 3, 7 en 21 dae terug vir hersiening sodat jy dit nooit vergeet nie.
+statAccuracy|Akkuraatheid
+statWrong|Foute
+statMinutes|Minute
+nextLesson|Volgende les →
+backToLessons|Terug na die lesse
+backHome|Terug na tuis
+nextDueTomorrow|Volgende hersiening: môre
+nextDueDays|{"one":"Volgende hersiening: oor {n} dag","other":"Volgende hersiening: oor {n} dae"}
+reviewTitle|🔁 Hersien vandag
+reviewNoneToday|Niks om vandag te hersien nie, fantasties!
+reviewNoneYet|Voltooi eers 'n les,<br>dan kom die woorde hier terug vir hersiening.
+nWords|{"one":"{n} woord","other":"{n} woorde"}
+reviewList|Hierdie woorde moet vandag hersien word{more}:
+reviewFirst30| (die eerste 30)
+reviewStart|Begin hersiening
+reviewDone|Hersiening klaar!
+reviewDoneText|Woorde wat jy reg gehad het kom later terug; dié wat jy verkeerd gehad het, kom môre terug.
+statFirstTry|Eerste keer reg
+statNeedPractice|Moet oefen
+hardTitle|💪 My moeilike woorde
+hardEmpty|Jy het nog geen moeilike woorde nie.<br>Elke woord wat jy 2 keer of meer verkeerd kry, kom hier sodat jy dit meer kan oefen.
+hardPractice|Oefen moeilike woorde
+hardDone|Oefening klaar!
+hardDoneText|Elke regte antwoord skuif die woord 'n stap verder van die moeilike lys af.
+statRight|Reg
+statStillHard|Nog moeilik
+practiceAgain|Oefen weer
+quickTitle|⚡ Vinnige hersiening
+quickTitleLong|⚡ 60-sekonde-hersiening
+quickEmpty|Voltooi eers 'n les,<br>dan beantwoord jy hier soveel woorde as moontlik in 60 sekondes.
+quickIntro|Jy het 60 sekondes.<br>Beantwoord soveel vrae as moontlik reg!
+quickRecord|Jou rekord: {n}
+quickGo|Begin!
+newRecord|Nuwe rekord!
+timeUp|Tyd is om!
+quickResult|{"one":"{n} regte antwoord in 60 sekondes.","other":"{n} regte antwoorde in 60 sekondes."}
+statRecord|Rekord
+again|Weer
+placeTitle|🎯 Vlaktoets
+welcome|Welkom! 👋
+placeIntro|Omtrent 2 minute.<br>'n Engelse woord verskyn – kies die Afrikaanse betekenis.<br>Ons begin by A1 en as jy goed antwoord, gaan ons 'n vlak hoër.
+placeStart|Begin die toets
+placeSkip|Slaan oor, ek kies self
+placeLevel|Aanbevole vlak:
+placeLevelText|{name} – begin op hierdie vlak.<br>Die vlakke is nie gesluit nie; jy kan enige tyd 'n ander vlak kies.
+goLevel|Gaan na vlak {lv} →
+loadError|Fout met laai. Kyk jou internet na en maak die app weer oop.
+chooseLang|Kies jou taal
+chooseLangSub|Kieslyste en woordbetekenisse sal in hierdie taal gewys word.
+continue|Gaan voort →
+appLanguage|🌐 App-taal
+settingsNote|Jou vordering bly gestoor as jy van taal verander.
+search|Soek 'n taal…
+dlgNote|Ná installering maak “{name}” soos 'n app vanaf jou tuisskerm oop, en jou vordering bly gestoor.
+dlgOk|Reg so
+dlgIosTitle|📲 Installeer op iPhone
+dlgIosSafari1|Tik in Safari op die deelknoppie {share}.
+dlgIosSafari2|Rol af en kies {a}.
+dlgIosSafari3|Tik op {a}: die app-ikoon verskyn op jou tuisskerm.
+dlgIosOther1|Maak hierdie bladsy in {a} oop (op iPhone kan jy net deur Safari installeer).
+dlgIosOther2|Tik op die deelknoppie {share}.
+dlgIosOther3|Tik op {a} en dan op {b}.
+dlgAndroidTitle|📲 Installeer op Android
+dlgAndroid1|Maak Chrome se kieslys {a} oop.
+dlgAndroid2|Tik op {a} of {b}.
+dlgAndroid3|Bevestig om die app te installeer.
+dlgMacTitle|💻 Installeer op Mac
+dlgMac1|Maak in Safari die kieslys {a} oop.
+dlgMac2|Klik op {a} en bevestig met {b}.
+dlgPcTitle|💻 Installeer op rekenaar
+dlgFirefox1|Firefox ondersteun nie die installering van webapps nie.
+dlgFirefox2|Maak hierdie bladsy in {a} of {b} oop en klik op “Installeer”.
+dlgPc1|Klik in die adresbalk op die installeer-ikoon {a},
+dlgPc2|of kies {b} in die kieslys {a}.

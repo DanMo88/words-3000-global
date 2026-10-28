@@ -1,0 +1,122 @@
+_meaningLang|中文
+appName|3000 词
+appSub|美式英语 · Oxford 3000
+docTitle|3000 个英语单词
+install|📲 安装
+installTitle|把应用安装到手机或电脑
+streakTitle|连续天数
+settings|设置
+totalProgress|总进度
+wordsOfTotal|{a} / {b} 个单词
+lvA1|入门
+lvA2|基础
+lvB1|中级
+lvB2|中高级
+recommended|⭐ 推荐
+nLessons|{n} 课
+soon|即将推出
+toolReview|今日复习
+toolHard|难词
+toolQuick|60 秒复习
+placeBtn|🎯 水平测试
+placeResult| · 结果：{lv}
+placeDuration|（2 分钟）
+back|返回
+exit|退出
+lessonN|第 {n} 课
+start|开始
+lessonsProgress|{a}/{b} 课
+pageOf|第 {a} 页，共 {b} 页
+notTranslated|翻译即将推出
+notTranslatedMsg|本课单词还没有翻译成{lang}，即将推出。
+replay|再听一遍
+roundInfo|第 {n} 课 · 第 {r}/{t} 轮
+inOrder|· 按顺序
+shuffled|· 随机
+startQuiz|开始测验 ✓
+next|下一个 →
+confirmExit|要退出本课吗？本课的进度不会保存。
+qMeaning|这个词是什么意思？
+qEnglish|对应的英文单词是哪个？
+qListen|听一听，选出意思
+score|⚡ 得分：
+placementHead|🎯 水平
+correctOf|答对 {a}/{b}
+fbOk|✓ 太棒了！
+fbTimeout|⏱ 时间到 — 
+lessonDone|{title} 完成！
+lessonDoneText|这些单词会在明天以及 3 天、7 天和 21 天后回来复习，让你永远记住。
+statAccuracy|正确率
+statWrong|错误
+statMinutes|分钟
+nextLesson|下一课 →
+backToLessons|返回课程列表
+backHome|返回首页
+nextDueTomorrow|下次复习：明天
+nextDueDays|下次复习：{n} 天后
+reviewTitle|🔁 今日复习
+reviewNoneToday|今天没有要复习的，太好了！
+reviewNoneYet|先完成一课，<br>之后单词会回到这里供你复习。
+nWords|{n} 个单词
+reviewList|今天需要复习这些单词{more}：
+reviewFirst30|（前 30 个）
+reviewStart|开始复习
+reviewDone|复习完成！
+reviewDoneText|答对的单词会晚些再出现，答错的明天就会回来。
+statFirstTry|一次答对
+statNeedPractice|需要练习
+hardTitle|💪 我的难词
+hardEmpty|你还没有难词。<br>答错 2 次或以上的单词会出现在这里，方便你多加练习。
+hardPractice|练习难词
+hardDone|练习完成！
+hardDoneText|每答对一次，这个词就离难词列表远一步。
+statRight|答对
+statStillHard|仍然难
+practiceAgain|再练一次
+quickTitle|⚡ 快速复习
+quickTitleLong|⚡ 60 秒快速复习
+quickEmpty|先完成一课，<br>然后在这里用 60 秒答出尽可能多的单词。
+quickIntro|你有 60 秒。<br>尽量多答对题目！
+quickRecord|你的纪录：{n}
+quickGo|开始！
+newRecord|新纪录！
+timeUp|时间到！
+quickResult|60 秒内答对 {n} 题。
+statRecord|纪录
+again|再来
+placeTitle|🎯 水平测试
+welcome|欢迎！👋
+placeIntro|大约 2 分钟。<br>会出现一个英语单词，请选出它的中文意思。<br>从 A1 开始，答得好就进入更高级别。
+placeStart|开始测试
+placeSkip|跳过，我自己选级别
+placeLevel|推荐级别：
+placeLevelText|{name} — 从这个级别开始吧。<br>级别没有锁定，你随时可以选择其他级别。
+goLevel|前往 {lv} 级 →
+loadError|加载出错。请检查网络后重新打开应用。
+chooseLang|选择你的语言
+chooseLangSub|菜单和单词释义将以这种语言显示。
+continue|继续 →
+appLanguage|🌐 应用语言
+settingsNote|切换语言不会清除你的进度。
+search|搜索语言…
+dlgNote|安装后，“{name}”会像应用一样从主屏幕打开，你的进度也会保留。
+dlgOk|好的
+dlgIosTitle|📲 在 iPhone 上安装
+dlgIosSafari1|在 Safari 中点按分享按钮 {share}。
+dlgIosSafari2|向下滚动并选择 {a}。
+dlgIosSafari3|点按 {a}，应用图标就会出现在主屏幕上。
+dlgIosOther1|用 {a} 打开此页面（在 iPhone 上只能通过 Safari 安装）。
+dlgIosOther2|点按分享按钮 {share}。
+dlgIosOther3|点按 {a}，然后点按 {b}。
+dlgAndroidTitle|📲 在 Android 上安装
+dlgAndroid1|打开 Chrome 的 {a} 菜单。
+dlgAndroid2|点按 {a} 或 {b}。
+dlgAndroid3|确认以安装应用。
+dlgMacTitle|💻 在 Mac 上安装
+dlgMac1|在 Safari 中打开 {a} 菜单。
+dlgMac2|点击 {a}，然后点 {b} 确认。
+dlgPcTitle|💻 在电脑上安装
+dlgFirefox1|Firefox 不支持安装网页应用。
+dlgFirefox2|请用 {a} 或 {b} 打开此页面，然后点击“安装”。
+dlgPc1|点击地址栏中的安装图标 {a}，
+dlgPc2|或在 {a} 菜单中选择 {b}。

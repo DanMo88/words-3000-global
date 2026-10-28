@@ -1,0 +1,122 @@
+_meaningLang|češtiny
+appName|3000 slov
+appSub|Americká angličtina · Oxford 3000
+docTitle|3000 anglických slov
+install|📲 Instalovat
+installTitle|Nainstaluj si aplikaci do telefonu nebo počítače
+streakTitle|Dní v řadě
+settings|Nastavení
+totalProgress|Celkový pokrok
+wordsOfTotal|Slova: {a} / {b}
+lvA1|Začátečník
+lvA2|Základní
+lvB1|Středně pokročilý
+lvB2|Vyšší středně pokročilý
+recommended|⭐ Doporučeno
+nLessons|{"one":"{n} lekce","few":"{n} lekce","many":"{n} lekce","other":"{n} lekcí"}
+soon|Brzy
+toolReview|Opakování
+toolHard|Těžká slova
+toolQuick|60 sekund
+placeBtn|🎯 Rozřazovací test
+placeResult| · výsledek: {lv}
+placeDuration| (2 minuty)
+back|Zpět
+exit|Ukončit
+lessonN|Lekce {n}
+start|Začít
+lessonsProgress|Lekce: {a}/{b}
+pageOf|Strana {a} z {b}
+notTranslated|Překlad brzy
+notTranslatedMsg|Slova této lekce zatím nejsou přeložena do {lang}. Brzy budou.
+replay|Přehrát znovu
+roundInfo|Lekce {n} · kolo {r} z {t}
+inOrder|· popořadě
+shuffled|· náhodně
+startQuiz|Spustit kvíz ✓
+next|Další →
+confirmExit|Opustit lekci? Pokrok v této lekci se neuloží.
+qMeaning|Co znamená toto slovo?
+qEnglish|Jak se to řekne anglicky?
+qListen|Poslouchej a vyber význam
+score|⚡ Body:
+placementHead|🎯 Úroveň
+correctOf|Správně: {a}/{b}
+fbOk|✓ Výborně! 
+fbTimeout|⏱ Čas vypršel — 
+lessonDone|{title} hotová!
+lessonDoneText|Tato slova se vrátí k opakování zítra a pak za 3, 7 a 21 dní, aby ti zůstala v paměti navždy.
+statAccuracy|Přesnost
+statWrong|Chyby
+statMinutes|Minuty
+nextLesson|Další lekce →
+backToLessons|Zpět na lekce
+backHome|Zpět na úvod
+nextDueTomorrow|Další opakování: zítra
+nextDueDays|{"one":"Další opakování: za {n} den","few":"Další opakování: za {n} dny","many":"Další opakování: za {n} dne","other":"Další opakování: za {n} dní"}
+reviewTitle|🔁 Dnešní opakování
+reviewNoneToday|Dnes nemáš co opakovat, skvělé!
+reviewNoneYet|Nejdřív dokonči lekci,<br>pak se sem slova vrátí k opakování.
+nWords|{"one":"{n} slovo","few":"{n} slova","many":"{n} slova","other":"{n} slov"}
+reviewList|Tato slova je dnes potřeba zopakovat{more}:
+reviewFirst30| (prvních 30)
+reviewStart|Začít opakování
+reviewDone|Opakování hotovo!
+reviewDoneText|Slova, která jsi měl správně, se vrátí později; ta chybná už zítra.
+statFirstTry|Správně napoprvé
+statNeedPractice|K procvičení
+hardTitle|💪 Moje těžká slova
+hardEmpty|Zatím nemáš žádná těžká slova.<br>Každé slovo, ve kterém se spleteš 2krát nebo víckrát, se objeví tady, abys ho mohl víc procvičit.
+hardPractice|Procvičit těžká slova
+hardDone|Trénink hotov!
+hardDoneText|Každá správná odpověď posune slovo o krok dál od seznamu těžkých.
+statRight|Správně
+statStillHard|Stále těžká
+practiceAgain|Procvičit znovu
+quickTitle|⚡ Rychlé opakování
+quickTitleLong|⚡ Opakování za 60 sekund
+quickEmpty|Nejdřív dokonči lekci,<br>pak tu za 60 sekund odpovíš na co nejvíc slov.
+quickIntro|Máš 60 sekund.<br>Odpověz správně na co nejvíc otázek!
+quickRecord|Tvůj rekord: {n}
+quickGo|Start!
+newRecord|Nový rekord!
+timeUp|Čas vypršel!
+quickResult|Správné odpovědi za 60 sekund: {n}
+statRecord|Rekord
+again|Znovu
+placeTitle|🎯 Rozřazovací test
+welcome|Vítej! 👋
+placeIntro|Asi 2 minuty.<br>Objeví se anglické slovo — vyber jeho význam v češtině.<br>Začneme na A1, a když se ti bude dařit, půjdeme o úroveň výš.
+placeStart|Začít test
+placeSkip|Přeskočit, vyberu si sám
+placeLevel|Doporučená úroveň:
+placeLevelText|{name} — začni na této úrovni.<br>Úrovně nejsou zamčené; kdykoli si můžeš vybrat jinou.
+goLevel|Na úroveň {lv} →
+loadError|Chyba načítání. Zkontroluj internet a otevři aplikaci znovu.
+chooseLang|Vyber si jazyk
+chooseLangSub|Nabídky a významy slov se zobrazí v tomto jazyce.
+continue|Pokračovat →
+appLanguage|🌐 Jazyk aplikace
+settingsNote|Změnou jazyka o pokrok nepřijdeš.
+search|Hledat jazyk…
+dlgNote|Po instalaci se „{name}“ otevře jako aplikace z plochy a tvůj pokrok zůstane uložený.
+dlgOk|OK
+dlgIosTitle|📲 Instalace na iPhone
+dlgIosSafari1|V Safari klepni na tlačítko Sdílet {share}.
+dlgIosSafari2|Sjeď dolů a vyber {a}.
+dlgIosSafari3|Klepni na {a} — ikona aplikace se objeví na ploše.
+dlgIosOther1|Otevři tuto stránku v {a} (na iPhonu lze instalovat jen ze Safari).
+dlgIosOther2|Klepni na tlačítko Sdílet {share}.
+dlgIosOther3|Klepni na {a} a potom na {b}.
+dlgAndroidTitle|📲 Instalace na Android
+dlgAndroid1|Otevři v Chromu nabídku {a}.
+dlgAndroid2|Klepni na {a} nebo {b}.
+dlgAndroid3|Potvrď instalaci aplikace.
+dlgMacTitle|💻 Instalace na Mac
+dlgMac1|V Safari otevři nabídku {a}.
+dlgMac2|Klikni na {a} a potvrď tlačítkem {b}.
+dlgPcTitle|💻 Instalace na počítač
+dlgFirefox1|Firefox instalaci webových aplikací nepodporuje.
+dlgFirefox2|Otevři tuto stránku v {a} nebo {b} a klikni na „Instalovat“.
+dlgPc1|Klikni v adresním řádku na ikonu instalace {a}
+dlgPc2|nebo v nabídce {a} vyber {b}.

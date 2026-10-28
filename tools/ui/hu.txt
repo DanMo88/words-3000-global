@@ -1,0 +1,122 @@
+_meaningLang|magyarra
+appName|3000 szó
+appSub|Amerikai angol · Oxford 3000
+docTitle|3000 angol szó
+install|📲 Telepítés
+installTitle|Telepítsd az appot a telefonodra vagy a gépedre
+streakTitle|Egymást követő napok
+settings|Beállítások
+totalProgress|Teljes haladás
+wordsOfTotal|{a} / {b} szó
+lvA1|Kezdő
+lvA2|Alapfok
+lvB1|Középfok
+lvB2|Felső középfok
+recommended|⭐ Ajánlott
+nLessons|{"one":"{n} lecke","other":"{n} lecke"}
+soon|Hamarosan
+toolReview|Mai ismétlés
+toolHard|Nehéz szavak
+toolQuick|60 mp ismétlés
+placeBtn|🎯 Szintfelmérő
+placeResult| · eredmény: {lv}
+placeDuration| (2 perc)
+back|Vissza
+exit|Kilépés
+lessonN|{n}. lecke
+start|Kezdés
+lessonsProgress|{a}/{b} lecke
+pageOf|{a}. / {b} oldal
+notTranslated|Fordítás hamarosan
+notTranslatedMsg|A lecke szavait még nem fordítottuk le {lang}. Hamarosan érkezik.
+replay|Lejátszás újra
+roundInfo|{n}. lecke · {r}. kör / {t}
+inOrder|· sorrendben
+shuffled|· keverve
+startQuiz|Kvíz indítása ✓
+next|Tovább →
+confirmExit|Kilépsz a leckéből? Az ebben a leckében elért haladás nem mentődik el.
+qMeaning|Mit jelent ez a szó?
+qEnglish|Melyik az angol szó?
+qListen|Hallgasd meg, és válaszd ki a jelentést
+score|⚡ Pont:
+placementHead|🎯 Szint
+correctOf|{a}/{b} helyes
+fbOk|✓ Szuper! 
+fbTimeout|⏱ Lejárt az idő — 
+lessonDone|{title} kész!
+lessonDoneText|Ezek a szavak holnap, majd 3, 7 és 21 nap múlva visszajönnek ismétlésre, hogy örökre megmaradjanak.
+statAccuracy|Pontosság
+statWrong|Hibák
+statMinutes|Perc
+nextLesson|Következő lecke →
+backToLessons|Vissza a leckékhez
+backHome|Vissza a kezdőlapra
+nextDueTomorrow|Következő ismétlés: holnap
+nextDueDays|{"one":"Következő ismétlés: {n} nap múlva","other":"Következő ismétlés: {n} nap múlva"}
+reviewTitle|🔁 Mai ismétlés
+reviewNoneToday|Ma nincs mit ismételni, szuper!
+reviewNoneYet|Először fejezz be egy leckét,<br>utána a szavak ide jönnek vissza ismétlésre.
+nWords|{"one":"{n} szó","other":"{n} szó"}
+reviewList|Ezeket a szavakat ma kell ismételni{more}:
+reviewFirst30| (az első 30)
+reviewStart|Ismétlés indítása
+reviewDone|Kész az ismétlés!
+reviewDoneText|A jól megválaszolt szavak később jönnek vissza, a hibásak már holnap.
+statFirstTry|Elsőre jó
+statNeedPractice|Gyakorolni kell
+hardTitle|💪 Nehéz szavaim
+hardEmpty|Még nincsenek nehéz szavaid.<br>Minden szó, amit legalább 2-szer elrontasz, ide kerül, hogy többet gyakorold.
+hardPractice|Nehéz szavak gyakorlása
+hardDone|Kész a gyakorlás!
+hardDoneText|Minden helyes válasz egy lépéssel távolabb viszi a szót a nehéz szavak listájától.
+statRight|Helyes
+statStillHard|Még nehéz
+practiceAgain|Gyakorolj újra
+quickTitle|⚡ Gyors ismétlés
+quickTitleLong|⚡ 60 másodperces ismétlés
+quickEmpty|Először fejezz be egy leckét,<br>utána itt 60 másodperc alatt annyi szóra válaszolsz, amennyire csak tudsz.
+quickIntro|60 másodperced van.<br>Válaszolj helyesen minél több kérdésre!
+quickRecord|A rekordod: {n}
+quickGo|Rajt!
+newRecord|Új rekord!
+timeUp|Lejárt az idő!
+quickResult|{"one":"{n} helyes válasz 60 másodperc alatt.","other":"{n} helyes válasz 60 másodperc alatt."}
+statRecord|Rekord
+again|Újra
+placeTitle|🎯 Szintfelmérő
+welcome|Üdv! 👋
+placeIntro|Kb. 2 perc.<br>Megjelenik egy angol szó – válaszd ki a magyar jelentését.<br>A1-ről indulunk, és ha jól válaszolsz, feljebb lépünk.
+placeStart|Teszt indítása
+placeSkip|Kihagyom, magam választok
+placeLevel|Ajánlott szint:
+placeLevelText|{name} – ezen a szinten kezdj.<br>A szintek nincsenek zárolva; bármikor választhatsz másikat.
+goLevel|Tovább a(z) {lv} szintre →
+loadError|Betöltési hiba. Ellenőrizd az internetet, és nyisd meg újra az appot.
+chooseLang|Válaszd ki a nyelved
+chooseLangSub|A menük és a szavak jelentése ezen a nyelven jelenik meg.
+continue|Tovább →
+appLanguage|🌐 Az app nyelve
+settingsNote|A nyelvváltás nem törli a haladásodat.
+search|Nyelv keresése…
+dlgNote|Telepítés után a(z) „{name}” appként nyílik meg a kezdőképernyőről, és a haladásod megmarad.
+dlgOk|Rendben
+dlgIosTitle|📲 Telepítés iPhone-ra
+dlgIosSafari1|A Safariban koppints a Megosztás gombra {share}.
+dlgIosSafari2|Görgess le, és válaszd a(z) {a} lehetőséget.
+dlgIosSafari3|Koppints a(z) {a} gombra: az app ikonja megjelenik a kezdőképernyőn.
+dlgIosOther1|Nyisd meg ezt az oldalt a(z) {a} böngészőben (iPhone-on csak Safariból lehet telepíteni).
+dlgIosOther2|Koppints a Megosztás gombra {share}.
+dlgIosOther3|Koppints a(z) {a}, majd a(z) {b} gombra.
+dlgAndroidTitle|📲 Telepítés Androidra
+dlgAndroid1|Nyisd meg a Chrome {a} menüjét.
+dlgAndroid2|Koppints a(z) {a} vagy {b} lehetőségre.
+dlgAndroid3|Erősítsd meg az app telepítését.
+dlgMacTitle|💻 Telepítés Macre
+dlgMac1|A Safariban nyisd meg a(z) {a} menüt.
+dlgMac2|Kattints a(z) {a} lehetőségre, és erősítsd meg: {b}.
+dlgPcTitle|💻 Telepítés számítógépre
+dlgFirefox1|A Firefox nem támogatja a webappok telepítését.
+dlgFirefox2|Nyisd meg ezt az oldalt a(z) {a} vagy {b} böngészőben, és kattints a „Telepítés” gombra.
+dlgPc1|A címsorban kattints a telepítés ikonra {a},
+dlgPc2|vagy a(z) {a} menüben válaszd: {b}.
