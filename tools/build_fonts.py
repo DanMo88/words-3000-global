@@ -15,7 +15,8 @@ def walk(o):
     elif isinstance(o, list): [walk(v) for v in o]
 for f in glob.glob('i18n/*.json') + glob.glob('data/meanings/*/*.json'): walk(json.load(open(f)))
 for f in glob.glob('data/[AB]*.json'): walk(json.load(open(f)))
-text.update(chr(c) for c in range(0x20, 0x7f)); text.update('–—‘’“”„«»…·•′″%‰№°×÷+−±')
+text.update(chr(c) for c in range(0x20, 0x7f)); text.update(chr(c) for c in list(range(0xA0, 0x250)) + list(range(0x400, 0x460)));  # full Latin-1/Ext-A/B + basic Cyrillic so new meanings never miss glyphs
+text.update('–—‘’“”„«»…·•′″%‰№°×÷+−±')
 def ranges(cps):
     cps = sorted(cps); out = []; s = p = cps[0]
     for c in cps[1:]:
