@@ -247,7 +247,12 @@
    "num": "id",
    "flag": "flags/id.svg",
    "pick": "Pilih bahasamu",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "it",
