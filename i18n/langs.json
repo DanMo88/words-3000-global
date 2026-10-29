@@ -472,7 +472,12 @@
    "num": "vi",
    "flag": "flags/vn.svg",
    "pick": "Chọn ngôn ngữ của bạn",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   }
  ]
 }
