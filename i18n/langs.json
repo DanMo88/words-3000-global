@@ -97,7 +97,12 @@
    "num": "cs",
    "flag": "flags/cz.svg",
    "pick": "Vyber si jazyk",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "da",
