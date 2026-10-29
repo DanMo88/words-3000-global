@@ -172,7 +172,12 @@
    "num": "he",
    "flag": "flags/il.svg",
    "pick": "בחר את השפה שלך",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "hi",
