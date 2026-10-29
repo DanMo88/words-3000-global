@@ -57,7 +57,12 @@
    "num": "zh-CN",
    "flag": "flags/cn.svg",
    "pick": "选择你的语言",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "hr",
