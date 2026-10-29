@@ -232,7 +232,12 @@
    "num": "hu",
    "flag": "flags/hu.svg",
    "pick": "Válaszd ki a nyelved",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "id",
