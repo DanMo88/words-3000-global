@@ -182,7 +182,12 @@
    "num": "hi-IN",
    "flag": "flags/in.svg",
    "pick": "अपनी भाषा चुनें",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "hu",
