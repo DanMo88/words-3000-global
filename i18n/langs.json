@@ -52,7 +52,12 @@
    "num": "bg",
    "flag": "flags/bg.svg",
    "pick": "Избери своя език",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "zh",
