@@ -227,7 +227,12 @@
    "num": "ja",
    "flag": "flags/jp.svg",
    "pick": "言語を選んでください",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "ko",
