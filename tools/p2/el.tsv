@@ -1,0 +1,345 @@
+# id	meaning (manual overrides, Greek)
+food	φαγητό, τροφή
+eat	τρώω
+go	πηγαίνω, πάω
+the	ο, η, το
+of	του, της
+for	για
+that	εκείνος, ότι
+you	εσύ, εσείς
+on	πάνω σε
+this	αυτός, αυτό
+be	είμαι
+as	ως, σαν
+by	από, δίπλα σε
+your	σου, σας
+one	ένα, ένας
+about	σχετικά με, περίπου
+up	πάνω
+who	ποιος
+which	ποιος, ο οποίος
+new	καινούριος, νέος
+how	πώς
+some	μερικοί, λίγο
+into	μέσα σε
+after	μετά από
+first	πρώτος
+two	δύο
+over	πάνω από
+most	περισσότερο, οι περισσότεροι
+where	πού
+year	χρόνος, έτος
+before	πριν
+many	πολλοί
+say	λέω
+through	μέσα από
+last	τελευταίος
+always	πάντα
+place	μέρος, τόπος
+during	κατά τη διάρκεια
+next-to	δίπλα σε
+ever	ποτέ (ερωτ.)
+money	χρήματα, λεφτά
+lot	πολλά
+however	όμως, ωστόσο
+everything	τα πάντα
+full	γεμάτος
+point	σημείο; δείχνω
+yes	ναι
+order	σειρά; παραγγέλνω
+party	πάρτι, κόμμα
+area	περιοχή
+course	μάθημα, πορεία
+oh	ω!
+post	ανάρτηση, ταχυδρομείο
+true	αληθινός
+wrong	λάθος, λανθασμένος
+nice	ωραίος
+possible	πιθανός, δυνατός
+late	αργά, αργοπορημένος
+leave	φεύγω, αφήνω
+future	μέλλον
+west	δύση
+bring	φέρνω
+college	κολέγιο
+across	απέναντι, κατά πλάτος
+online	στο διαδίκτυο
+player	παίκτης
+event	εκδήλωση, γεγονός
+sorry	συγγνώμη, λυπάμαι
+interest	ενδιαφέρον
+bank	τράπεζα
+hot	ζεστός, καυτός
+bill	λογαριασμός
+ok	εντάξει
+hey	έι!
+page	σελίδα
+cannot	δεν μπορώ
+born	γεννημένος
+internet	διαδίκτυο
+build	χτίζω
+ten	δέκα
+wall	τοίχος
+join	συμμετέχω, ενώνω
+favorite	αγαπημένος
+letter	γράμμα, επιστολή
+bar	μπαρ, ράβδος
+floor	πάτωμα, όροφος
+evening	βράδυ
+ride	καβαλάω, οδηγώ
+partner	σύντροφος, συνεργάτης
+excited	ενθουσιασμένος
+blog	ιστολόγιο
+hello	γεια σου
+email	ηλεκτρονικό ταχυδρομείο
+girlfriend	κοπέλα, φιλενάδα
+boyfriend	αγόρι, φίλος
+parent	γονιός
+t-shirt	μπλουζάκι
+delicious	νόστιμος
+purple	μωβ
+mouse	ποντίκι
+dish	πιάτο
+bored	βαριεστημένος
+homework	εργασία για το σπίτι
+cafe	καφετέρια
+jeans	τζιν
+teenager	έφηβος
+oclock	η ώρα (ακριβώς)
+sweater	πουλόβερ
+downstairs	κάτω (όροφος)
+may	μπορεί, επιτρέπεται
+used-to	συνήθιζα να
+might	ίσως, μπορεί να
+top	κορυφή; ανώτατος
+based	βασισμένος
+national	εθνικός
+single	μόνος, ελεύθερος
+guy	τύπος, άντρας
+among	ανάμεσα σε
+further	περαιτέρω, πιο μακριά
+although	παρόλο που
+major	σημαντικός, κύριος
+himself	ο ίδιος, τον εαυτό του
+board	πίνακας, συμβούλιο
+position	θέση, στάση
+site	τοποθεσία, ιστότοπος
+provide	παρέχω
+attention	προσοχή
+itself	το ίδιο, τον εαυτό του
+stage	σκηνή, στάδιο
+pick	διαλέγω, μαζεύω
+race	αγώνας δρόμου; φυλή
+figure	αριθμός, μορφή
+goal	στόχος, γκολ
+missing	χαμένος, που λείπει
+percent	τοις εκατό
+straight	ευθεία, ίσιος
+store	κατάστημα; αποθηκεύω
+expect	περιμένω, αναμένω
+improve	βελτιώνω
+yourself	ο εαυτός σου
+themselves	τον εαυτό τους
+smartphone	έξυπνο κινητό
+podcast	ηχητική εκπομπή
+wi-fi	ασύρματο δίκτυο
+female	γυναικείος, θηλυκός
+focus	εστιάζω; εστίαση
+definitely	σίγουρα
+wide	πλατύς, φαρδύς
+wow	ουάου!
+hurt	πονάω, πληγώνω
+image	εικόνα
+worst	χειρότερος (απόλ.)
+fan	θαυμαστής, ανεμιστήρας
+anyway	τέλος πάντων
+direct	άμεσος, ευθύς
+male	αρσενικός, ανδρικός
+drug	φάρμακο, ναρκωτικό
+environment	περιβάλλον
+pop	ποπ (μουσική)
+serve	σερβίρω, υπηρετώ
+silver	ασήμι, ασημένιος
+extremely	εξαιρετικά
+herself	τον εαυτό της
+neither	ούτε ο ένας ούτε ο άλλος
+patient	υπομονετικός; ασθενής
+raise	σηκώνω, αυξάνω
+dry	στεγνός
+injury	τραυματισμός
+lovely	υπέροχος
+web	ιστός, διαδίκτυο
+audience	κοινό
+excellent	εξαιρετικός
+reduce	μειώνω
+alternative	εναλλακτικός; εναλλακτική
+flying	πτήση
+survey	έρευνα, δημοσκόπηση
+user	χρήστης
+smile	χαμογελώ
+task	καθήκον, εργασία
+bowl	μπολ
+scared	φοβισμένος
+empty	άδειος
+achieve	πετυχαίνω
+item	αντικείμενο
+basketball	μπάσκετ
+expert	ειδικός
+pattern	μοτίβο
+tip	φιλοδώρημα, συμβουλή
+loud	δυνατός (ήχος)
+plastic	πλαστικός
+recording	ηχογράφηση
+gallery	πινακοθήκη
+audio	ήχος
+clothing	ρουχισμός
+fishing	ψάρεμα
+argue	διαφωνώ, λογομαχώ
+badly	άσχημα
+fiction	μυθοπλασία
+hockey	χόκεϊ
+desert	έρημος
+marry	παντρεύομαι
+compete	ανταγωνίζομαι
+twin	δίδυμος
+lifestyle	τρόπος ζωής
+essay	δοκίμιο, έκθεση
+laptop	φορητός υπολογιστής
+teenage	εφηβικός
+closet	ντουλάπα
+happily	χαρούμενα
+cookie	μπισκότο
+penny	πένα
+tablet	ταμπλέτα, δισκίο
+subway	μετρό
+airline	αεροπορική εταιρεία
+divorced	διαζευγμένος
+sailing	ιστιοπλοΐα
+employ	απασχολώ, προσλαμβάνω
+headache	πονοκέφαλος
+skiing	σκι (άθλημα)
+stove	κουζίνα, εστία
+i-t	πληροφορική
+living	ζωντανός; τα προς το ζην
+current	τρέχων, σημερινός
+sex	φύλο, σεξ
+official	επίσημος
+stuff	πράγματα
+range	εύρος, σειρά
+related	σχετικός
+currently	επί του παρόντος
+version	έκδοση
+standard	τυπικός, πρότυπο
+throughout	καθ' όλη τη διάρκεια
+unless	εκτός αν
+expected	αναμενόμενος
+particularly	ιδιαίτερα
+claim	ισχυρίζομαι
+fighting	μάχη, πάλη
+impact	αντίκτυπος
+highly	ιδιαίτερα, πολύ
+located	που βρίσκεται
+totally	εντελώς
+click	κάνω κλικ
+generation	γενιά
+agent	πράκτορας
+marketing	μάρκετινγκ
+host	οικοδεσπότης
+journal	περιοδικό, ημερολόγιο
+setting	περιβάλλον, ρύθμιση
+stick	κολλάω; ραβδί
+duty	καθήκον
+spending	δαπάνες
+environmental	περιβαλλοντικός
+update	ενημερώνω; ενημέρωση
+whenever	όποτε
+medium	μέτριος, μέσο
+upset	αναστατωμένος
+afford	έχω την οικονομική δυνατότητα
+tend	τείνω να
+employment	απασχόληση
+importance	σημασία
+promote	προωθώ
+hardly	σχεδόν καθόλου
+injured	τραυματισμένος
+fairly	αρκετά, δίκαια
+graduate	απόφοιτος; αποφοιτώ
+racing	αγώνας ταχύτητας
+occur	συμβαίνει
+confident	σίγουρος, με αυτοπεποίθηση
+label	ετικέτα
+dressed	ντυμένος
+odd	παράξενος
+conclusion	συμπέρασμα
+hire	προσλαμβάνω, νοικιάζω
+mood	διάθεση, κέφι
+commercial	εμπορικός; διαφήμιση
+contact	επικοινωνώ; επαφή
+fitness	φυσική κατάσταση
+fancy	πολυτελής, φανταχτερός
+bite	δαγκώνω; δάγκωμα
+documentary	ντοκιμαντέρ
+alarm	συναγερμός, ξυπνητήρι
+volunteer	εθελοντής
+ai	τεχνητή νοημοσύνη
+folk	λαϊκός
+highlight	κορυφαία στιγμή; τονίζω
+assignment	εργασία, ανάθεση
+gentle	ήπιος, τρυφερός
+unfair	άδικος
+politician	πολιτικός (πρόσωπο)
+embarrassing	ντροπιαστικός
+keen	πρόθυμος, ενθουσιώδης
+retire	συνταξιοδοτούμαι
+donate	δωρίζω
+disappointing	απογοητευτικός
+relaxed	χαλαρός
+needle	βελόνα
+annoyed	ενοχλημένος
+receipt	απόδειξη
+relaxing	χαλαρωτικός
+dislike	αντιπαθώ
+spicy	καυτερός, πικάντικος
+fashionable	μοδάτος
+indoors	μέσα (σε κτίριο)
+quotation	απόσπασμα
+statistic	στατιστικό στοιχείο
+associated	συνδεδεμένος
+overall	συνολικά, συνολικός
+funding	χρηματοδότηση
+largely	σε μεγάλο βαθμό
+facility	εγκατάσταση
+whereas	ενώ
+convinced	πεπεισμένος
+monitor	οθόνη; παρακολουθώ
+satisfied	ικανοποιημένος
+shocked	σοκαρισμένος
+submit	υποβάλλω
+venue	χώρος (εκδήλωσης)
+convert	μετατρέπω
+matching	ταιριαστός
+depressing	καταθλιπτικός
+confusing	μπερδεμένος, συγκεχυμένος
+virtual	εικονικός
+edit	επεξεργάζομαι
+enable	επιτρέπω, καθιστώ δυνατό
+impressed	εντυπωσιασμένος
+broadcast	μεταδίδω
+melt	λιώνω
+neat	τακτοποιημένος
+elect	εκλέγω
+limited	περιορισμένος
+multiple	πολλαπλός
+grab	αρπάζω
+grant	επιχορήγηση; παραχωρώ
+emotional	συναισθηματικός
+debate	συζήτηση, αντιπαράθεση
+illustration	εικονογράφηση
+relate	σχετίζομαι
+to	προς, σε
+this	αυτό εδώ, τούτος
+fighting	πάλη, καβγάς
+from	από
+than	παρά, από ό,τι
+by	δίπλα σε, μέσω
+in	μέσα σε, στο

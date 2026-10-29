@@ -162,7 +162,12 @@
    "num": "el",
    "flag": "flags/gr.svg",
    "pick": "Διάλεξε τη γλώσσα σου",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "he",
