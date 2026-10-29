@@ -142,7 +142,12 @@
    "num": "fi",
    "flag": "flags/fi.svg",
    "pick": "Valitse kielesi",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "fr",
