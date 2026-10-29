@@ -342,7 +342,12 @@
    "num": "sv",
    "flag": "flags/se.svg",
    "pick": "Välj ditt språk",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "th",
