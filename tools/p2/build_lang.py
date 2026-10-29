@@ -12,7 +12,7 @@ PM = {'NOUN': ['noun'], 'PROPN': ['noun'], 'VERB': ['verb'], 'AUX': ['auxiliary 
       'PRON': ['pronoun'], 'ADP': ['preposition'], 'CCONJ': ['conjunction'], 'SCONJ': ['conjunction'], 'DET': ['article', 'pronoun', 'adjective'],
       'INTJ': ['interjection'], 'NUM': ['noun', 'adjective'], 'PART': ['particle', 'adverb']}
 SCRIPT = {'ar': r'[\u0600-\u06FF]', 'ru': r'[\u0400-\u04FF]', 'uk': r'[\u0400-\u04FF]', 'bg': r'[\u0400-\u04FF]', 'el': r'[\u0370-\u03FF]', 'he': r'[\u0590-\u05FF]',
-          'hi': r'[\u0900-\u097F]', 'th': r'[\u0E00-\u0E7F]', 'zh': r'[\u4E00-\u9FFF]', 'ja': r'[\u3040-\u30FF\u4E00-\u9FFF]', 'ko': r'[\uAC00-\uD7AF]'}
+          'hi': r'[\u0900-\u097F]', 'th': r'[\u0E00-\u0E7F]', 'zh': r'[\u4E00-\u9FFF]', 'ja': r'[\u3005\u3040-\u30FF\u4E00-\u9FFF]', 'ko': r'[\uAC00-\uD7AF]'}
 NONLATIN = lang in SCRIPT
 # fix POS tags that came out as PROPN/None/DET for ordinary words (use kaikki's first entry)
 KP = {'noun': 'NOUN', 'name': 'NOUN', 'verb': 'VERB', 'adj': 'ADJ', 'adv': 'ADV', 'intj': 'INTJ'}
