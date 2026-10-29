@@ -38,9 +38,10 @@ Original live app DanMo88/english-words-3000 is NOT touched (separate localStora
 
 ## Phase 2: word meanings (2,973 words per language)
 
-Done (all 4 levels enabled in i18n/langs.json; see tools/p2/DONE.txt): fa, de, fr, es, ar, ru, tr, it, nl, pl, da, nb, pt, uk, sv
-Next: any of the remaining languages below. SW cache is w3g-v7; bump it when you ship the next batch.
-Remaining: af bg zh hr cs fi el he hi hu id ja ko ro th vi
+Done (all 4 levels enabled in i18n/langs.json; see tools/p2/DONE.txt): fa, de, fr, es, ar, ru, tr, it, nl, pl, da, nb, pt, uk, sv, zh, ja, ko, hi, he, el
+Next: any of the remaining languages below. SW cache is w3g-v8; bump it when you ship the next batch.
+Remaining: af bg hr cs fi hu id ro th vi
+Notes (zh/ja/ko/hi/he/el): build_lang SCRIPT for ja now allows 々 (U+3005). Latin acronyms (T-shirt, IT, Wi-Fi, email) are spelled out in the native script, since script: checks flag Latin letters. he keeps Google's niqqud where it gave it; the overrides are unpointed. CJK uses system fonts; deva/hebrew subsets keep all layout features.
 Note (uk-style languages): if a language's Google dict dumps have all scores = 0 (unranked, alphabetical), the auto pick is poor; build the base from Wiktionary first-sense translations in /workspace/w3g-mt/kaikki/<id>.json (code = L), reranked by the Google entries, write it as L.tsv and review (see tools/p2/uk.tsv header).
 
 How to resume for language L:
