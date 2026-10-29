@@ -367,7 +367,12 @@
    "num": "ro",
    "flag": "flags/ro.svg",
    "pick": "Alege-ți limba",
-   "meanings": []
+   "meanings": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ]
   },
   {
    "code": "ru",

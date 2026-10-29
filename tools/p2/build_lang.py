@@ -97,6 +97,7 @@ for lv, li, i in ids:
             sec = [x for x in sec if not (toks(x) & (used | toks(m))) and bare(x) != enw]
             if sec and len(m) + len(sec[0]) <= 34: m = m + SEP2 + sec[0]
     if lang == 'fr': m = re.sub(r' ([!?])', '\u00a0\\1', m)  # French: no-break space before ! ?
+    if lang == 'ro': m = m.translate({0x15f: 0x219, 0x163: 0x21b, 0x15e: 0x218, 0x162: 0x21a})  # Romanian: comma-below ș ț
     out[i] = m; src[i] = s; by_lesson.setdefault((lv, li), []).append(i)
 # validate
 bad = []
