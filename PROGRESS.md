@@ -66,7 +66,7 @@ Legend: [x] done · [~] in progress · [ ] todo · (B) = needs backend (Supabase
 - Tests: words-3000-global-test/courses.js (onboarding, switcher, per-course separation, migration), render31.js (now incl. target screen, switcher, "recommended" badge on every level), test.js (target step added)
 - Also fixed: "⭐ recommended" line on a level card overflowed horizontally in ru/el at 390/412 px (pre-existing on live)
 
-## Phase 2 — accounts and sync (Supabase) — DONE, awaiting Daniel's review
+## Phase 2 — accounts and sync (Supabase) — DONE & LIVE (commit 16de3f9, SW cache w3g-v11), awaiting Daniel's review
 - [x] 4. (B) Email sign up / sign in with password + forgot password (reset link → "new password" screen). Redirects go to APP_URL (GitHub Pages URL)
 - [~] 5. (B) Google sign-in: UI + code done, hidden behind `SB.google = false` in app.js until Daniel creates the Google OAuth client and enables the provider in Supabase (steps below)
 - [x] 6. Guest mode: everything works without an account; 👤 button in the header (orange dot when a guest has progress) + "save my progress" button on the lesson-done screen; on sign-in/sign-up local progress is merged and uploaded
@@ -92,3 +92,4 @@ Legend: [x] done · [~] in progress · [ ] todo · (B) = needs backend (Supabase
 - Test users: cannot sign up @example.com (rejected) and default SMTP only mails team members → tests seed a confirmed disposable user via SQL, then delete it.
 - Security advisors (security + performance): 0 findings after dropping the RPC.
 - Fixed during testing: profile re-render loop when a stored session is invalid; sign-out no longer wipes local progress if the session had expired; header overflow in de/ru/ro/pt/es/af/bg/el/nl with the new 👤 button; RTL course name clipped at 768 px.
+- Live check 2026-10-31 (390x844): accounts.js 30/0, render31 806 checks/0 fails; test users deleted, deletion_requests emptied. Persian screenshots: words-3000-global-test/phase2acct/{1-sign-in,2-profile,3-delete-confirm}.png
