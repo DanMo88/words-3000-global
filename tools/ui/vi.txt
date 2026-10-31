@@ -216,3 +216,9 @@ devFree|Bài học miễn phí và đồng bộ vẫn hoạt động trên đi�
 devCheck|Kiểm tra lại
 devNow|Để sau
 premLoading|Đang tải bài học…
+famTitle|Mã gia đình
+famText|Nhập mã gia đình gồm 4 chữ số để mở khóa tất cả bài học.
+famGo|Mở khóa
+famWrong|Sai mã. Số lần thử còn lại: {n}
+famLocked|Thử quá nhiều lần. Hãy thử lại sau {n} phút.
+famOffline|Không có internet. Chỉ cần internet một lần để mở khóa.

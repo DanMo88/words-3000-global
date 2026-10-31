@@ -235,5 +235,11 @@
  "devFree": "Lecțiile gratuite și sincronizarea funcționează în continuare pe acest telefon.",
  "devCheck": "Verifică din nou",
  "devNow": "Nu acum",
- "premLoading": "Se descarcă lecția…"
+ "premLoading": "Se descarcă lecția…",
+ "famTitle": "Codul familiei",
+ "famText": "Introdu codul familiei din 4 cifre ca să deblochezi toate lecțiile.",
+ "famGo": "Deblochează",
+ "famWrong": "Cod greșit. Încercări rămase: {n}",
+ "famLocked": "Prea multe încercări. Încearcă din nou peste {n} min.",
+ "famOffline": "Nu ai internet. Ai nevoie de internet o singură dată pentru deblocare."
 }

@@ -235,5 +235,11 @@
  "devFree": "Az ingyenes leckék és a szinkronizálás ezen a telefonon is működnek.",
  "devCheck": "Újraellenőrzés",
  "devNow": "Most nem",
- "premLoading": "A lecke letöltése folyamatban…"
+ "premLoading": "A lecke letöltése folyamatban…",
+ "famTitle": "Családi kód",
+ "famText": "Írd be a 4 jegyű családi kódot, hogy minden lecke megnyíljon.",
+ "famGo": "Feloldás",
+ "famWrong": "Hibás kód. Hátralévő próbálkozások: {n}",
+ "famLocked": "Túl sok próbálkozás. Próbáld újra {n} perc múlva.",
+ "famOffline": "Nincs internet. A feloldáshoz csak egyszer kell internet."
 }

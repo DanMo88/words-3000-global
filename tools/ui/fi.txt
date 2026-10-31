@@ -216,3 +216,9 @@ devFree|Ilmaiset oppitunnit ja synkronointi toimivat edelleen tässä puhelimess
 devCheck|Tarkista uudelleen
 devNow|Ei nyt
 premLoading|Oppituntia ladataan…
+famTitle|Perhekoodi
+famText|Anna 4-numeroinen perhekoodi, niin kaikki oppitunnit avautuvat.
+famGo|Avaa
+famWrong|Väärä koodi. Yrityksiä jäljellä: {n}
+famLocked|Liian monta yritystä. Yritä uudelleen {n} min kuluttua.
+famOffline|Ei verkkoyhteyttä. Tarvitset internetin vain kerran avaamiseen.

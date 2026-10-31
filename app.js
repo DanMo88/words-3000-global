@@ -7,6 +7,7 @@ const DAY = 86400000, INTERVALS = [1, 3, 7, 21], NEED = 3, PER_PAGE = 20, ROUNDS
 const LEVEL_IDS = ['A1', 'A2', 'B1', 'B2'];
 const params = new URLSearchParams(location.search);
 const DEBUG = params.has('debug');
+const FAMILY = false;   // true only in the free family build made by tools/build_family.py (it drops the paid-only blocks)
 const $app = document.getElementById('app');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; };
@@ -29,9 +30,16 @@ function t(key, vars) {
   return s;
 }
 const langInfo = code => LANGS.find(l => l.code === code);
+//#paid-begin
+const APP = { name: 'English 3000 Words', short: '3000 Words' };
+//#paid-end
+/*#family-begin
+const APP = { name: 'Words 3000 Family', short: 'Words 3000 Family' };
+#family-end*/
 const has = id => M[id] != null;
 const mean = id => M[id];
 
+//#paid-begin
 /* ---------- access: free lessons, then Premium (one-time $5 "lifetime" via Lemon Squeezy on the web; see LS below) ----------
    FREE.per = 'app': the first FREE.lessons lessons completed anywhere in the app (all levels, all language courses) are free.
    Signed in, lessons sync, so the count is per account; as a guest it is per device. Set per: 'level' for FREE.lessons per level.
@@ -53,6 +61,12 @@ const ACCESS = {
   left(lv) { return Math.max(0, FREE.lessons - this.used(lv)); },
   canOpen(lv, i) { return !this.paywall || this.isPremium() || lessonDone(lv, i) || this.used(lv) < FREE.lessons; }
 };
+//#paid-end
+/*#family-begin
+// family build: everything is open once this phone has a family token (see the family code screen)
+const FREE = { lessons: 0, per: 'app' };
+const ACCESS = { FREE, owned: () => famOk(), devOk: () => true, isPremium: () => famOk(), used: () => 0, left: () => 0, canOpen: () => true };
+#family-end*/
 
 const W = {};            // id -> {id,w,ex,img,level,li}
 const LV = {};           // level -> {id,lessons:[[ids]], count, available}
@@ -85,7 +99,12 @@ Object.keys(R.courses).forEach(k => { if (!COURSES[k]) delete R.courses[k]; else
 if (!R.courses[R.cur]) R.cur = Object.keys(R.courses)[0] || null;
 S = R.cur ? R.courses[R.cur] : initCourse({});   // placeholder until a course is chosen (not saved)
 const saveLocal = () => { try { localStorage.setItem(KEY, JSON.stringify(R)); } catch (e) {} };
+//#paid-begin
 const save = () => { saveLocal(); if (R.acct && R.acct.uid) scheduleSync(); };   // signed in: push changes a few seconds after the last save
+//#paid-end
+/*#family-begin
+const save = saveLocal;
+#family-end*/
 saveLocal();
 function setCourse(code) {
   if (!COURSES[code]) return false;
@@ -169,8 +188,8 @@ function applyLang(code) {
       Object.keys(M).forEach(k => delete M[k]); arr.forEach(o => Object.assign(M, o));
     }).then(() => premMeanings())
   ]).then(() => {
-    document.title = t('docTitle') + ' · English 3000 Words';
-    const mt = document.querySelector('meta[name="apple-mobile-web-app-title"]'); if (mt) mt.content = '3000 Words';
+    document.title = t('docTitle') + ' · ' + APP.name;
+    const mt = document.querySelector('meta[name="apple-mobile-web-app-title"]'); if (mt) mt.content = APP.short;
   });
 }
 const fold = x => String(x).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -334,7 +353,7 @@ function home() {
   const rec = S.placement && S.placement.level;
   screen(`
     <div class="home-head"><div class="logo">${t('appName')}<small>${t('appSub')}</small></div>
-      <div class="hd-r"><button class="inst pwa-install" data-install title="${esc(t('installTitle'))}"><span class="ii">📲</span><span class="it">${t('install').replace(/^📲\s*/u, '')}</span></button><div class="streak" title="${esc(t('streakTitle'))}">🔥 ${N(streakNow())}</div><button class="gear acct ${!signedIn() && learnedIds().length ? 'dot' : ''}" id="tAcct" aria-label="${esc(t('acct'))}">👤</button><button class="gear" id="tSet" aria-label="${esc(t('settings'))}">⚙️</button></div></div>
+      <div class="hd-r"><button class="inst pwa-install" data-install title="${esc(t('installTitle'))}"><span class="ii">📲</span><span class="it">${t('install').replace(/^📲\s*/u, '')}</span></button><div class="streak" title="${esc(t('streakTitle'))}">🔥 ${N(streakNow())}</div>${FAMILY ? '' : `<button class="gear acct ${!signedIn() && learnedIds().length ? 'dot' : ''}" id="tAcct" aria-label="${esc(t('acct'))}">👤</button>`}<button class="gear" id="tSet" aria-label="${esc(t('settings'))}">⚙️</button></div></div>
     <div class="cbar"><button class="ccur" id="tCourse" aria-label="${esc(t('myCourses'))}">${flagImg(R.cur)}<b>${esc(courseName(R.cur))}</b><span class="car">▾</span></button><button class="cadd" id="tAdd">➕ ${t('newLanguage')}</button></div>
     <div class="prog"><div class="row"><span>${t('totalProgress')}</span><b>${t('wordsOfTotal', { a: learned, b: TOTAL })}</b></div>
       <div class="bar"><i style="width:${Math.max(learned / TOTAL * 100, learned ? 1 : 0)}%"></i></div></div>
@@ -358,7 +377,9 @@ function home() {
   document.getElementById('tQuick').onclick = quickIntro;
   document.getElementById('tPlace').onclick = () => placementIntro();
   document.getElementById('tSet').onclick = settingsScreen;
+//#paid-begin
   document.getElementById('tAcct').onclick = acctOpen;
+//#paid-end
   document.getElementById('tCourse').onclick = courseSwitcher;
   document.getElementById('tAdd').onclick = () => targetPicker(false, home);
   if (DEBUG) {
@@ -395,6 +416,7 @@ function levelScreen(lv, page) {
     openLesson(lv, i);
   });
 }
+//#paid-begin
 /* paywall: features, "$5 once" (Lemon Squeezy checkout), "I already bought", one-device note, legal links.
    Not configured (LS.checkoutUrl empty) → "coming soon", nothing can be paid. Owned on another phone → deviceScreen. */
 function paywallScreen(lv) {
@@ -465,14 +487,22 @@ function deviceScreen(lv, fromProfile) {
 const fmtDate = v => { try { return new Intl.DateTimeFormat(LANG, { dateStyle: 'medium' }).format(new Date(v)); } catch (e) { return String(v).slice(0, 10); } };
 const fmtWhen = v => { try { return new Intl.DateTimeFormat(LANG, { dateStyle: 'short', timeStyle: 'short' }).format(new Date(v)); } catch (e) { return String(v).slice(0, 16); } };
 const legalLinks = () => `<a href="privacy.html" target="_blank" rel="noopener">${t('privacy')}</a><span aria-hidden="true"> · </span><a href="terms.html" target="_blank" rel="noopener">${t('terms')}</a>`;
-/* open a lesson: paywall / device check, download a premium lesson (text + audio/images) if needed, then start */
+const noAccess = (lv, i) => ACCESS.owned() ? deviceScreen(lv) : paywallScreen(lv, i);
+const loadFail = () => t(navigator.onLine ? 'pwFail' : 'devOffline');
+//#paid-end
+/*#family-begin
+const legalLinks = () => '';
+const noAccess = lv => famScreen(() => (lv && LV[lv] ? levelScreen(lv) : home()));
+const loadFail = () => t(navigator.onLine ? 'errGeneric' : 'errOffline');
+#family-end*/
+/* open a lesson: access check, download a premium lesson (text + audio/images) if needed, then start */
 async function openLesson(lv, i) {
-  if (!ACCESS.canOpen(lv, i)) return paywallScreen(lv, i);
+  if (!ACCESS.canOpen(lv, i)) return noAccess(lv, i);
   if (!LV[lv].lessons[i]) {
-    if (!ACCESS.isPremium()) return ACCESS.owned() ? deviceScreen(lv) : paywallScreen(lv, i);
+    if (!ACCESS.isPremium()) return noAccess(lv, i);
     toast(esc(t('premLoading')));
     try { await premLoad(true); } catch (e) {}
-    if (!LV[lv].lessons[i]) { document.querySelectorAll('.toast').forEach(x => x.remove()); return toast(esc(t(navigator.onLine ? 'pwFail' : 'devOffline'))); }
+    if (!LV[lv].lessons[i]) { document.querySelectorAll('.toast').forEach(x => x.remove()); return toast(esc(loadFail())); }
   }
   if (!lessonReady(lv, i)) return toast(t('notTranslatedMsg', { lang: L10N._meaningLang || LANG }));
   const ids = LV[lv].lessons[i];
@@ -625,13 +655,15 @@ function doneScreen(icon, title, text, stats, chips, extraBtn, back) {
   stopAudio();
   screen(`<div class="done"><div class="big">${icon}</div><h1>${title}</h1><p>${text}</p>
     ${stats ? `<div class="stats">${stats.map(([b, s]) => `<div class="stat"><b>${b}</b><span>${s}</span></div>`).join('')}</div>` : ''}
-    ${!signedIn() && chips && chips.length ? `<button class="savep" id="saveP">${t('savePrompt')}</button>` : ''}
+    ${!FAMILY && !signedIn() && chips && chips.length ? `<button class="savep" id="saveP">${t('savePrompt')}</button>` : ''}
     ${chips && chips.length ? `<div class="chips">${chips.slice(0, 12).map(id => `<span class="chip"><span class="en">${esc(W[id].w)}</span> · <bdi>${esc(mean(id))}</bdi></span>`).join('')}</div>` : ''}
     </div>
     <div class="btns">${extraBtn ? `<button class="btn" id="extra">${extraBtn[0]}</button>` : ''}<button class="btn ${extraBtn ? 'ghost' : ''}" id="home">${back ? t('backToLessons') : t('backHome')}</button></div>`);
   document.getElementById('home').onclick = back || home;
   if (extraBtn) document.getElementById('extra').onclick = extraBtn[1];
+//#paid-begin
   const sp = document.getElementById('saveP'); if (sp) sp.onclick = () => authScreen('up');
+//#paid-end
   touchStreak();
 }
 
@@ -739,6 +771,16 @@ function runPlacement() {
     } });
 }
 
+/* the device id is a random UUID kept on this device */
+function deviceId() {
+  let id = null; try { id = localStorage.getItem('w3g-device'); } catch (e) {}
+  if (!/^[0-9a-f-]{36}$/i.test(id || '')) {
+    id = (crypto.randomUUID && crypto.randomUUID()) || 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => { const r = crypto.getRandomValues(new Uint8Array(1))[0] & 15; return (c === 'x' ? r : (r & 3) | 8).toString(16); });
+    try { localStorage.setItem('w3g-device', id); } catch (e) {}
+  }
+  return id;
+}
+//#paid-begin
 /* ---------- accounts + sync (Supabase) ----------
    Guests: everything works offline in localStorage (w3g-v2). Signed in: each course is a row in public.progress
    (user_id, course, data jsonb); sync = pull all rows, merge with local per course, push what changed.
@@ -1020,15 +1062,6 @@ async function waitPremium() {
   }
   return false;
 }
-/* one active device per account; the device id is a random UUID kept on this device */
-function deviceId() {
-  let id = null; try { id = localStorage.getItem('w3g-device'); } catch (e) {}
-  if (!/^[0-9a-f-]{36}$/i.test(id || '')) {
-    id = (crypto.randomUUID && crypto.randomUUID()) || 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => { const r = crypto.getRandomValues(new Uint8Array(1))[0] & 15; return (c === 'x' ? r : (r & 3) | 8).toString(16); });
-    try { localStorage.setItem('w3g-device', id); } catch (e) {}
-  }
-  return id;
-}
 function deviceLabel() {
   const ua = navigator.userAgent || '';
   const os = /Android/i.test(ua) ? 'Android' : /iPhone/i.test(ua) ? 'iPhone' : /iPad/i.test(ua) ? 'iPad' : /Windows/i.test(ua) ? 'Windows' : /Mac OS X|Macintosh/i.test(ua) ? 'Mac' : /CrOS/i.test(ua) ? 'ChromeOS' : /Linux/i.test(ua) ? 'Linux' : '';
@@ -1062,6 +1095,12 @@ document.addEventListener('visibilitychange', devTick);
 async function restorePremium() { await loadSB(); await loadProfile(); await deviceCheck(); return ACCESS.isPremium(); }
 const payErr = e => (!navigator.onLine || (e && /offline/.test(e.message || ''))) ? 'errOffline' : 'pwFail';
 
+//#paid-end
+/*#family-begin
+const SB = { url: 'https://acwkuhudvmarssthibzf.supabase.co', key: 'sb_publishable_L-R_EwjjZHj0tBxbjqFkPg_XfXNIHvh' };
+const signedIn = () => false;
+#family-end*/
+
 /* ---------- premium content (lessons after the free ones) ----------
    Not on GitHub Pages: served by the premium-content Edge Function only to a Premium account on its active device.
    Text: { levels, meanings } → Cache Storage "w3g-prem-<uid>" (per user, survives SW updates) so learned premium words
@@ -1069,7 +1108,12 @@ const payErr = e => (!navigator.onLine || (e && /offline/.test(e.message || ''))
    10-minute signed URLs, stored in the same per-user cache under a virtual same-origin URL that sw.js serves
    (…/__prem/<uid>/audio/<id>.mp3); without a controlling service worker blob: URLs are used instead. */
 const PREM = { ids: new Set(), from: {}, pv: 1, langs: new Set(), blob: {}, loading: null };
+//#paid-begin
 const premUid = () => (R && R.acct && R.acct.uid) || null;
+//#paid-end
+/*#family-begin
+const premUid = () => famOk() ? FAM_UID : null;
+#family-end*/
 const premBase = () => location.href.replace(/[?#].*$/, '').replace(/[^/]*$/, '');
 const premKey = (uid, p) => premBase() + '__prem/' + uid + '/' + p;
 const premCache = uid => ('caches' in window && uid) ? caches.open('w3g-prem-' + uid) : Promise.reject(new Error('no cache'));
@@ -1084,12 +1128,21 @@ function premApply(lvs) {
       L.lessons[li] = ls.map(([id, w, ex, img]) => { W[id] = { id, w, ex, img: !!img, level: lv, li }; PREM.ids.add(id); return id; }); }); });
 }
 const premApplyMeanings = ms => Object.keys(ms || {}).forEach(lv => Object.assign(M, ms[lv]));
+//#paid-begin
 async function premCall(body) {
   await loadSB(); const { data } = await sb.auth.getSession(); if (!data.session) throw { code: 'no_session' };
   const r = await fetch(SB.url + '/functions/v1/premium-content', { method: 'POST', headers: { Authorization: 'Bearer ' + data.session.access_token, apikey: SB.key, 'Content-Type': 'application/json' },
     body: JSON.stringify(Object.assign({ device_id: deviceId() }, body)) });
   const j = await r.json().catch(() => ({})); if (!r.ok) throw { code: j.error || 'premium_failed', status: r.status }; return j;
 }
+//#paid-end
+/*#family-begin
+async function premCall(body) {
+  const r = await fetch(SB.url + '/functions/v1/premium-content', { method: 'POST', headers: { apikey: SB.key, 'x-family-token': famTok(), 'Content-Type': 'application/json' },
+    body: JSON.stringify(Object.assign({ device_id: deviceId() }, body)) });
+  const j = await r.json().catch(() => ({})); if (r.status === 401) famRevoke(); if (!r.ok) throw { code: j.error || 'premium_failed', status: r.status }; return j;
+}
+#family-end*/
 /* cached text first (offline OK); net = also download what is missing when this is the active Premium device */
 function premLoad(net) {
   const uid = premUid(); if (!uid) return Promise.resolve(false);
@@ -1144,6 +1197,7 @@ async function premPurge(uid) {
   if (uid && 'caches' in window) await caches.delete('w3g-prem-' + uid);
 }
 
+//#paid-begin
 /* ---------- Google Play Billing: DORMANT (kept for a possible Android/TWA build; PLAY.enabled = false → billing() is null) ----------
    Digital Goods API + Payment Request, verified server-side by the verify-purchase Edge Function (501 until configured). */
 const PLAY = { enabled: false, method: 'https://play.google.com/billing', product: 'premium_monthly', usd: 4 };
@@ -1183,15 +1237,88 @@ function acctBoot() {
 window.addEventListener('online', () => { if (R.acct && R.acct.dirty) syncAll().catch(() => {}); });
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden' && R.acct && R.acct.dirty && user) { clearTimeout(syncTimer); syncAll().catch(() => {}); } });
 
+const gate = fn => fn, postBoot = acctBoot;
+//#paid-end
+/*#family-begin
+// ---------- family build: 4-digit family code (checked only on the server by the family-unlock Edge Function) ----------
+// A correct code gives this phone a long-lived family token (HMAC-signed by the server, bound to deviceId()).
+// premium-content accepts it, so every lesson + audio/images download like Premium and stay cached for offline use.
+// The token is re-checked when online; if the server secret was rotated (= access revoked) the phone asks for the code again.
+const FAM_KEY = 'w3g-fam', FAM_UID = '00000000-0000-4000-8000-00000000fa31';
+const famTok = () => { try { const j = JSON.parse(localStorage.getItem(FAM_KEY) || 'null'); return j && /^f1\./.test(j.token) ? j.token : ''; } catch (e) { return ''; } };
+const famOk = () => !!famTok();
+const famDigits = v => String(v).replace(/[\u06F0-\u06F9]/g, d => d.charCodeAt(0) - 0x06F0).replace(/[\u0660-\u0669]/g, d => d.charCodeAt(0) - 0x0660).replace(/[^0-9]/g, '').slice(0, 4);
+async function famCall(body) {
+  const r = await fetch(SB.url + '/functions/v1/family-unlock', { method: 'POST', headers: { apikey: SB.key, 'Content-Type': 'application/json' }, body: JSON.stringify(Object.assign({ device_id: deviceId() }, body)) });
+  return { status: r.status, j: await r.json().catch(() => ({})) };
+}
+let famRevoking = false;
+function famRevoke() {
+  if (famRevoking || !famOk()) return; famRevoking = true;
+  try { localStorage.removeItem(FAM_KEY); } catch (e) {}
+  premPurge(FAM_UID).catch(() => {}).then(() => { famRevoking = false; famScreen(home); });
+}
+function famCheck() {
+  if (!famOk() || !navigator.onLine) return;
+  famCall({ token: famTok() }).then(r => { if (r.status === 401) famRevoke(); }).catch(() => {});
+}
+function famScreen(next) {
+  stopAudio();
+  const li = langInfo(LANG) || {};
+  screen(`<div class="scroll"><div class="pw fam">
+      <div class="pwhero">👨‍👩‍👧‍👦</div><div class="famapp" dir="ltr" lang="en">${esc(APP.name)}</div>
+      <h1>${t('famTitle')}</h1><p class="tsub">${t('famText')}</p>
+      <div class="pin" dir="ltr"><input id="famCode" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="one-time-code" enterkeyhint="go" placeholder="• • • •" aria-label="${esc(t('famTitle'))}"></div>
+      <div class="amsg" id="famMsg" role="status"></div>
+    </div></div>
+    <div class="btns"><button class="btn" id="famGo" disabled>${t('famGo')}</button>
+      <button class="lnk mut" id="famLang">${li.flag ? `<img class="flag" src="${li.flag}" alt="" width="24" height="18">` : '🌐'} <bdi>${esc(li.name || 'Language')}</bdi></button></div>`);
+  const g = id => document.getElementById(id), inp = g('famCode'), go = g('famGo');
+  const say = (k, v, ok) => { const m = g('famMsg'); if (m) { m.className = 'amsg' + (ok ? ' ok' : k ? '' : ''); m.textContent = k ? t(k, v) : ''; } };
+  inp.oninput = () => { const v = famDigits(inp.value); if (inp.value !== v) inp.value = v; go.disabled = v.length !== 4; say(''); };
+  inp.onkeydown = e => { if (e.key === 'Enter' && !go.disabled) go.click(); };
+  g('famLang').onclick = () => langPicker(() => famScreen(next));
+  go.onclick = async () => {
+    const code = famDigits(inp.value); if (code.length !== 4) return;
+    if (!navigator.onLine) return say('famOffline');
+    busy(go, true);
+    try {
+      const r = await famCall({ code });
+      if (r.status === 200 && r.j.token) {
+        try { localStorage.setItem(FAM_KEY, JSON.stringify({ token: r.j.token, at: Date.now() })); } catch (e) {}
+        say('premLoading', null, true);
+        try { await premLoad(true); } catch (e) {}
+        busy(go, false); return next();
+      }
+      busy(go, false); inp.value = ''; go.disabled = true;
+      if (r.status === 429) return say('famLocked', { n: Math.max(1, Math.ceil((r.j.retry_after || 600) / 60)) });
+      if (r.status === 403) { vibrate(80); return say('famWrong', { n: r.j.left != null ? r.j.left : 0 }); }
+      say('errGeneric');
+    } catch (e) { busy(go, false); say(navigator.onLine ? 'errGeneric' : 'famOffline'); }
+  };
+  setTimeout(() => { try { inp.focus(); } catch (e) {} }, 60);
+}
+const busy = (btn, on) => { if (btn) { btn.disabled = on; btn.classList.toggle('busy', on); } };
+const gate = fn => () => famOk() ? fn() : famScreen(fn), postBoot = famCheck;
+window.addEventListener('online', famCheck);
+#family-end*/
+
 /* ---------- boot ---------- */
 let VERSION = 1;
-window.__app = { get S() { return S; }, get R() { return R; }, W, LV, M, home, DEBUG, levelScreen, lessonObj, settingsScreen, langPicker, ACCESS,
-  targetPicker, courseSwitcher, setCourse, COURSES, FREE, paywallScreen, deviceScreen, openLesson, prem: { PREM, load: premLoad, media: premMedia, purge: premPurge, apply: premApply, url: premUrl }, billing, PLAY, LS, deviceCheck, deviceId, deviceLabel, checkoutLink, checkReminder, setReminder, REM,
-  save, acct: { SB, authScreen, profileScreen, deleteConfirm, syncAll, mergeCourse, loadSB, get user() { return user; }, get sb() { return sb; } },
+window.__app = { get S() { return S; }, get R() { return R; }, W, LV, M, home, DEBUG, FAMILY, levelScreen, lessonObj, settingsScreen, langPicker, ACCESS,
+  targetPicker, courseSwitcher, setCourse, COURSES, FREE, openLesson, prem: { PREM, load: premLoad, media: premMedia, purge: premPurge, apply: premApply, url: premUrl }, deviceId, checkReminder, setReminder, REM,
+  save,
   get lang() { return LANG; }, setLang: c => { R.lang = c; save(); return applyLang(c); }, t,
   cardFor: id => { const w = W[id]; learnCard({ L: lessonObj(w.level, w.li), seq: [w], i: 0, t0: 0 }); stopAudio(); },
   quizFor: (id, type) => { let n = 0; runQuiz({ mode: 'lesson', targets: [id], need: 1, pool: LV[W[id].level].lessons[W[id].li], next: () => n++ ? null : { id, type }, onDone: () => {} }); stopAudio(); clearTimers(); } };
 window.__t = (k, v) => t(k, v);   // used by install.js
+//#paid-begin
+Object.assign(window.__app, { paywallScreen, deviceScreen, billing, PLAY, LS, deviceCheck, deviceLabel, checkoutLink,
+  acct: { SB, authScreen, profileScreen, deleteConfirm, syncAll, mergeCourse, loadSB, get user() { return user; }, get sb() { return sb; } } });
+//#paid-end
+/*#family-begin
+Object.assign(window.__app, { fam: { screen: famScreen, ok: famOk, tok: famTok, revoke: famRevoke, check: famCheck } });
+#family-end*/
 const afterLang = () => R.cur && R.courses[R.cur] ? start() : targetPicker(true);
 const start = () => { window.__app.ready = true; if (!S.onboarded && !learnedIds().length) placementIntro(true); else { S.onboarded = true; save(); home(); } setTimeout(checkReminder, 1200); };
 fetch('data/index.json').then(r => r.json()).then(ix => {
@@ -1206,7 +1333,7 @@ fetch('data/index.json').then(r => r.json()).then(ix => {
 }).then(() => {
   const forced = params.get('lang');
   if (forced && langInfo(forced)) { R.lang = forced; save(); }
-  if (R.lang && langInfo(R.lang)) return applyLang(R.lang).then(() => premLoad(false).catch(() => {})).then(afterLang).then(acctBoot);
-  langPicker(afterLang); acctBoot();
+  if (R.lang && langInfo(R.lang)) return applyLang(R.lang).then(() => premLoad(false).catch(() => {})).then(gate(afterLang)).then(postBoot);
+  langPicker(gate(afterLang)); postBoot();
 }).catch(e => { $app.innerHTML = '<div class="empty">⚠️ ' + (L10N.loadError || 'Loading error · خطا در بارگذاری · خطأ في التحميل · Erreur de chargement') + '</div>'; console.error(e); });
 })();

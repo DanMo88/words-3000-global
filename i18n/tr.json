@@ -235,5 +235,11 @@
  "devFree": "Ücretsiz dersler ve eşitleme bu telefonda da çalışır.",
  "devCheck": "Tekrar kontrol et",
  "devNow": "Şimdi değil",
- "premLoading": "Ders indiriliyor…"
+ "premLoading": "Ders indiriliyor…",
+ "famTitle": "Aile kodu",
+ "famText": "Tüm dersleri açmak için 4 haneli aile kodunu gir.",
+ "famGo": "Kilidi aç",
+ "famWrong": "Yanlış kod. Kalan deneme: {n}",
+ "famLocked": "Çok fazla deneme. {n} dk sonra tekrar dene.",
+ "famOffline": "İnternet yok. Kilidi açmak için yalnızca bir kez internet gerekir."
 }

@@ -216,3 +216,9 @@ devFree|Gratis lesse en sinchronisering werk steeds op hierdie foon.
 devCheck|Kyk weer
 devNow|Nie nou nie
 premLoading|Die les word afgelaai…
+famTitle|Gesinskode
+famText|Voer die 4-syfer-gesinskode in om al die lesse oop te sluit.
+famGo|Sluit oop
+famWrong|Verkeerde kode. Pogings oor: {n}
+famLocked|Te veel pogings. Probeer weer oor {n} min.
+famOffline|Geen internet nie. Jy het net een keer internet nodig om oop te sluit.

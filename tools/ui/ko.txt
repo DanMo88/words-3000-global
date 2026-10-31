@@ -216,3 +216,9 @@ devFree|무료 레슨과 동기화는 이 휴대폰에서도 계속 작동해요
 devCheck|다시 확인
 devNow|나중에
 premLoading|레슨을 내려받는 중…
+famTitle|가족 코드
+famText|4자리 가족 코드를 입력하면 모든 레슨이 열립니다.
+famGo|잠금 해제
+famWrong|코드가 틀렸어요. 남은 횟수: {n}
+famLocked|시도 횟수가 너무 많아요. {n}분 후에 다시 해 보세요.
+famOffline|인터넷에 연결되어 있지 않아요. 잠금 해제에는 인터넷이 한 번만 필요해요.

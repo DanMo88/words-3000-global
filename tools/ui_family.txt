@@ -1,0 +1,217 @@
+## fa
+famTitle|کد خانواده
+famText|کد ۴ رقمی خانواده را وارد کن تا همه‌ی درس‌ها باز شوند.
+famGo|باز کردن
+famWrong|کد اشتباه است. {n} بار دیگر می‌توانی امتحان کنی.
+famLocked|تلاش‌های زیادی انجام شد. {n} دقیقه‌ی دیگر دوباره امتحان کن.
+famOffline|اینترنت وصل نیست. فقط یک بار برای باز کردن به اینترنت نیاز است.
+## ar
+famTitle|رمز العائلة
+famText|أدخل رمز العائلة المكوّن من ٤ أرقام لفتح كل الدروس.
+famGo|فتح
+famWrong|الرمز غير صحيح. المحاولات المتبقية: {n}
+famLocked|محاولات كثيرة. حاول مرة أخرى بعد {n} دقيقة.
+famOffline|لا يوجد اتصال بالإنترنت. تحتاج إلى الإنترنت مرة واحدة فقط للفتح.
+## af
+famTitle|Gesinskode
+famText|Voer die 4-syfer-gesinskode in om al die lesse oop te sluit.
+famGo|Sluit oop
+famWrong|Verkeerde kode. Pogings oor: {n}
+famLocked|Te veel pogings. Probeer weer oor {n} min.
+famOffline|Geen internet nie. Jy het net een keer internet nodig om oop te sluit.
+## bg
+famTitle|Семеен код
+famText|Въведи 4-цифрения семеен код, за да отключиш всички уроци.
+famGo|Отключи
+famWrong|Грешен код. Оставащи опити: {n}
+famLocked|Твърде много опити. Опитай отново след {n} мин.
+famOffline|Няма интернет. Интернет е нужен само веднъж за отключване.
+## zh
+famTitle|家庭密码
+famText|输入 4 位家庭密码，解锁全部课程。
+famGo|解锁
+famWrong|密码错误。剩余次数：{n}
+famLocked|尝试次数过多。请 {n} 分钟后再试。
+famOffline|没有网络。只需联网一次即可解锁。
+## hr
+famTitle|Obiteljski kod
+famText|Upiši 4-znamenkasti obiteljski kod da otključaš sve lekcije.
+famGo|Otključaj
+famWrong|Pogrešan kod. Preostalo pokušaja: {n}
+famLocked|Previše pokušaja. Pokušaj ponovno za {n} min.
+famOffline|Nema interneta. Internet ti treba samo jednom za otključavanje.
+## cs
+famTitle|Rodinný kód
+famText|Zadej 4místný rodinný kód a odemkni všechny lekce.
+famGo|Odemknout
+famWrong|Špatný kód. Zbývající pokusy: {n}
+famLocked|Příliš mnoho pokusů. Zkus to znovu za {n} min.
+famOffline|Nejsi online. Internet potřebuješ jen jednou k odemčení.
+## da
+famTitle|Familiekode
+famText|Indtast den 4-cifrede familiekode for at låse alle lektioner op.
+famGo|Lås op
+famWrong|Forkert kode. Forsøg tilbage: {n}
+famLocked|For mange forsøg. Prøv igen om {n} min.
+famOffline|Intet internet. Du skal kun bruge internet én gang for at låse op.
+## nl
+famTitle|Gezinscode
+famText|Voer de 4-cijferige gezinscode in om alle lessen te ontgrendelen.
+famGo|Ontgrendelen
+famWrong|Verkeerde code. Pogingen over: {n}
+famLocked|Te veel pogingen. Probeer het over {n} min opnieuw.
+famOffline|Geen internet. Je hebt maar één keer internet nodig om te ontgrendelen.
+## fi
+famTitle|Perhekoodi
+famText|Anna 4-numeroinen perhekoodi, niin kaikki oppitunnit avautuvat.
+famGo|Avaa
+famWrong|Väärä koodi. Yrityksiä jäljellä: {n}
+famLocked|Liian monta yritystä. Yritä uudelleen {n} min kuluttua.
+famOffline|Ei verkkoyhteyttä. Tarvitset internetin vain kerran avaamiseen.
+## fr
+famTitle|Code famille
+famText|Saisis le code famille à 4 chiffres pour débloquer toutes les leçons.
+famGo|Débloquer
+famWrong|Code incorrect. Essais restants : {n}
+famLocked|Trop d’essais. Réessaie dans {n} min.
+famOffline|Pas d’internet. Il suffit d’être en ligne une seule fois pour débloquer.
+## de
+famTitle|Familiencode
+famText|Gib den 4-stelligen Familiencode ein, um alle Lektionen freizuschalten.
+famGo|Freischalten
+famWrong|Falscher Code. Verbleibende Versuche: {n}
+famLocked|Zu viele Versuche. Versuche es in {n} Min. erneut.
+famOffline|Kein Internet. Du brauchst nur einmal Internet zum Freischalten.
+## el
+famTitle|Οικογενειακός κωδικός
+famText|Γράψε τον 4ψήφιο οικογενειακό κωδικό για να ξεκλειδώσεις όλα τα μαθήματα.
+famGo|Ξεκλείδωμα
+famWrong|Λάθος κωδικός. Απομένουν προσπάθειες: {n}
+famLocked|Πάρα πολλές προσπάθειες. Δοκίμασε ξανά σε {n} λεπτά.
+famOffline|Δεν υπάρχει ίντερνετ. Χρειάζεσαι ίντερνετ μόνο μία φορά για το ξεκλείδωμα.
+## he
+famTitle|קוד משפחה
+famText|הקלד את קוד המשפחה בן 4 הספרות כדי לפתוח את כל השיעורים.
+famGo|פתיחה
+famWrong|קוד שגוי. ניסיונות שנותרו: {n}
+famLocked|יותר מדי ניסיונות. נסה שוב בעוד {n} דקות.
+famOffline|אין אינטרנט. צריך אינטרנט רק פעם אחת כדי לפתוח.
+## hi
+famTitle|परिवार कोड
+famText|सभी पाठ खोलने के लिए 4 अंकों का परिवार कोड डालें।
+famGo|खोलें
+famWrong|गलत कोड। बचे हुए प्रयास: {n}
+famLocked|बहुत ज़्यादा प्रयास। {n} मिनट बाद फिर कोशिश करें।
+famOffline|इंटरनेट नहीं है। खोलने के लिए सिर्फ़ एक बार इंटरनेट चाहिए।
+## hu
+famTitle|Családi kód
+famText|Írd be a 4 jegyű családi kódot, hogy minden lecke megnyíljon.
+famGo|Feloldás
+famWrong|Hibás kód. Hátralévő próbálkozások: {n}
+famLocked|Túl sok próbálkozás. Próbáld újra {n} perc múlva.
+famOffline|Nincs internet. A feloldáshoz csak egyszer kell internet.
+## id
+famTitle|Kode keluarga
+famText|Masukkan kode keluarga 4 angka untuk membuka semua pelajaran.
+famGo|Buka
+famWrong|Kode salah. Sisa percobaan: {n}
+famLocked|Terlalu banyak percobaan. Coba lagi dalam {n} menit.
+famOffline|Tidak ada internet. Internet hanya perlu sekali untuk membuka.
+## it
+famTitle|Codice famiglia
+famText|Inserisci il codice famiglia di 4 cifre per sbloccare tutte le lezioni.
+famGo|Sblocca
+famWrong|Codice errato. Tentativi rimasti: {n}
+famLocked|Troppi tentativi. Riprova tra {n} min.
+famOffline|Niente internet. Serve internet solo una volta per sbloccare.
+## ja
+famTitle|家族コード
+famText|4けたの家族コードを入力すると、すべてのレッスンが使えます。
+famGo|ロック解除
+famWrong|コードが違います。残り回数：{n}
+famLocked|試行回数が多すぎます。{n}分後にもう一度お試しください。
+famOffline|インターネットに接続していません。解除にはインターネットが一度だけ必要です。
+## ko
+famTitle|가족 코드
+famText|4자리 가족 코드를 입력하면 모든 레슨이 열립니다.
+famGo|잠금 해제
+famWrong|코드가 틀렸어요. 남은 횟수: {n}
+famLocked|시도 횟수가 너무 많아요. {n}분 후에 다시 해 보세요.
+famOffline|인터넷에 연결되어 있지 않아요. 잠금 해제에는 인터넷이 한 번만 필요해요.
+## nb
+famTitle|Familiekode
+famText|Skriv inn den firesifrede familiekoden for å låse opp alle leksjonene.
+famGo|Lås opp
+famWrong|Feil kode. Forsøk igjen: {n}
+famLocked|For mange forsøk. Prøv igjen om {n} min.
+famOffline|Ingen internett. Du trenger internett bare én gang for å låse opp.
+## pl
+famTitle|Kod rodzinny
+famText|Wpisz 4-cyfrowy kod rodzinny, aby odblokować wszystkie lekcje.
+famGo|Odblokuj
+famWrong|Zły kod. Pozostałe próby: {n}
+famLocked|Za dużo prób. Spróbuj ponownie za {n} min.
+famOffline|Brak internetu. Internet jest potrzebny tylko raz, aby odblokować.
+## pt
+famTitle|Código da família
+famText|Digite o código da família de 4 dígitos para desbloquear todas as lições.
+famGo|Desbloquear
+famWrong|Código errado. Tentativas restantes: {n}
+famLocked|Muitas tentativas. Tente de novo em {n} min.
+famOffline|Sem internet. Você só precisa de internet uma vez para desbloquear.
+## ro
+famTitle|Codul familiei
+famText|Introdu codul familiei din 4 cifre ca să deblochezi toate lecțiile.
+famGo|Deblochează
+famWrong|Cod greșit. Încercări rămase: {n}
+famLocked|Prea multe încercări. Încearcă din nou peste {n} min.
+famOffline|Nu ai internet. Ai nevoie de internet o singură dată pentru deblocare.
+## ru
+famTitle|Семейный код
+famText|Введи 4-значный семейный код, чтобы открыть все уроки.
+famGo|Открыть
+famWrong|Неверный код. Осталось попыток: {n}
+famLocked|Слишком много попыток. Попробуй снова через {n} мин.
+famOffline|Нет интернета. Интернет нужен только один раз, чтобы открыть доступ.
+## es
+famTitle|Código familiar
+famText|Escribe el código familiar de 4 cifras para desbloquear todas las lecciones.
+famGo|Desbloquear
+famWrong|Código incorrecto. Intentos restantes: {n}
+famLocked|Demasiados intentos. Vuelve a intentarlo en {n} min.
+famOffline|Sin internet. Solo necesitas internet una vez para desbloquear.
+## sv
+famTitle|Familjekod
+famText|Skriv den fyrsiffriga familjekoden för att låsa upp alla lektioner.
+famGo|Lås upp
+famWrong|Fel kod. Försök kvar: {n}
+famLocked|För många försök. Försök igen om {n} min.
+famOffline|Inget internet. Du behöver internet bara en gång för att låsa upp.
+## th
+famTitle|รหัสครอบครัว
+famText|ใส่รหัสครอบครัว 4 หลักเพื่อปลดล็อกบทเรียนทั้งหมด
+famGo|ปลดล็อก
+famWrong|รหัสไม่ถูกต้อง เหลืออีก {n} ครั้ง
+famLocked|ลองหลายครั้งเกินไป ลองใหม่อีกครั้งใน {n} นาที
+famOffline|ไม่มีอินเทอร์เน็ต ต้องใช้อินเทอร์เน็ตเพียงครั้งเดียวเพื่อปลดล็อก
+## tr
+famTitle|Aile kodu
+famText|Tüm dersleri açmak için 4 haneli aile kodunu gir.
+famGo|Kilidi aç
+famWrong|Yanlış kod. Kalan deneme: {n}
+famLocked|Çok fazla deneme. {n} dk sonra tekrar dene.
+famOffline|İnternet yok. Kilidi açmak için yalnızca bir kez internet gerekir.
+## uk
+famTitle|Сімейний код
+famText|Введи 4-значний сімейний код, щоб відкрити всі уроки.
+famGo|Відкрити
+famWrong|Неправильний код. Залишилося спроб: {n}
+famLocked|Забагато спроб. Спробуй знову через {n} хв.
+famOffline|Немає інтернету. Інтернет потрібен лише один раз, щоб відкрити доступ.
+## vi
+famTitle|Mã gia đình
+famText|Nhập mã gia đình gồm 4 chữ số để mở khóa tất cả bài học.
+famGo|Mở khóa
+famWrong|Sai mã. Số lần thử còn lại: {n}
+famLocked|Thử quá nhiều lần. Hãy thử lại sau {n} phút.
+famOffline|Không có internet. Chỉ cần internet một lần để mở khóa.

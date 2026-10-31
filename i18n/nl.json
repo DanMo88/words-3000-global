@@ -235,5 +235,11 @@
  "devFree": "Gratis lessen en synchronisatie werken nog steeds op deze telefoon.",
  "devCheck": "Opnieuw controleren",
  "devNow": "Niet nu",
- "premLoading": "De les wordt gedownload…"
+ "premLoading": "De les wordt gedownload…",
+ "famTitle": "Gezinscode",
+ "famText": "Voer de 4-cijferige gezinscode in om alle lessen te ontgrendelen.",
+ "famGo": "Ontgrendelen",
+ "famWrong": "Verkeerde code. Pogingen over: {n}",
+ "famLocked": "Te veel pogingen. Probeer het over {n} min opnieuw.",
+ "famOffline": "Geen internet. Je hebt maar één keer internet nodig om te ontgrendelen."
 }

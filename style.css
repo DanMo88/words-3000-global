@@ -281,3 +281,13 @@ html[dir=rtl] .ccur b{line-height:1.5}
 .remnote{font-size:clamp(12px,1.7dvh,14px);color:var(--mut);line-height:1.4;flex:none}
 .remnote:empty{display:none}
 .rembar{position:fixed;left:50%;transform:translateX(-50%);top:calc(env(safe-area-inset-top) + 1.4dvh);width:min(92vw,480px);z-index:50;display:flex;flex-direction:column;gap:2px;text-align:center;background:#fff7ed;color:#9a3412;border:2px solid #fdba74;border-radius:16px;padding:1.2dvh 4vw;box-shadow:0 6px 20px #0002;font:inherit;font-size:clamp(13px,1.9dvh,16px);cursor:pointer;animation:tfade .2s ease}
+/* family build: 4-digit family code screen */
+.fam .famapp{font-weight:800;color:var(--pri);font-size:clamp(14px,2.1dvh,18px);letter-spacing:.02em}
+.fam .tsub{max-width:28em}
+.pin{display:flex;justify-content:center;margin:1dvh 0 .4dvh}
+.pin input{width:min(64vw,7.4em);font-size:clamp(28px,5.4dvh,42px);font-weight:800;font-family:system-ui,"Segoe UI",Roboto,sans-serif;letter-spacing:.4em;text-indent:.4em;text-align:center;
+ padding:1.2dvh 0;border:2px solid #c7d2fe;border-radius:18px;background:#fff;color:var(--ink);direction:ltr;-webkit-user-select:text;user-select:text;box-shadow:0 3px 0 #e0e7ff}
+.pin input:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 4px #6366f133}
+.pin input::placeholder{color:#c7d2fe;letter-spacing:.2em}
+.fam .amsg{max-width:30em}
+.btns .lnk .flag{width:22px;height:auto;vertical-align:-3px;border-radius:3px;margin-inline-end:4px}

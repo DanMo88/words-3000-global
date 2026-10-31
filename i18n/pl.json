@@ -238,5 +238,11 @@
  "devFree": "Darmowe lekcje i synchronizacja nadal działają na tym telefonie.",
  "devCheck": "Sprawdź ponownie",
  "devNow": "Nie teraz",
- "premLoading": "Pobieranie lekcji…"
+ "premLoading": "Pobieranie lekcji…",
+ "famTitle": "Kod rodzinny",
+ "famText": "Wpisz 4-cyfrowy kod rodzinny, aby odblokować wszystkie lekcje.",
+ "famGo": "Odblokuj",
+ "famWrong": "Zły kod. Pozostałe próby: {n}",
+ "famLocked": "Za dużo prób. Spróbuj ponownie za {n} min.",
+ "famOffline": "Brak internetu. Internet jest potrzebny tylko raz, aby odblokować."
 }

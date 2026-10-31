@@ -216,3 +216,9 @@ devFree|Kostenlose Lektionen und Synchronisierung funktionieren auf diesem Handy
 devCheck|Erneut prüfen
 devNow|Nicht jetzt
 premLoading|Lektion wird geladen…
+famTitle|Familiencode
+famText|Gib den 4-stelligen Familiencode ein, um alle Lektionen freizuschalten.
+famGo|Freischalten
+famWrong|Falscher Code. Verbleibende Versuche: {n}
+famLocked|Zu viele Versuche. Versuche es in {n} Min. erneut.
+famOffline|Kein Internet. Du brauchst nur einmal Internet zum Freischalten.

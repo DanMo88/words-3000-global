@@ -235,5 +235,11 @@
  "devFree": "Las lecciones gratis y la sincronización siguen funcionando en este teléfono.",
  "devCheck": "Comprobar de nuevo",
  "devNow": "Ahora no",
- "premLoading": "Descargando la lección…"
+ "premLoading": "Descargando la lección…",
+ "famTitle": "Código familiar",
+ "famText": "Escribe el código familiar de 4 cifras para desbloquear todas las lecciones.",
+ "famGo": "Desbloquear",
+ "famWrong": "Código incorrecto. Intentos restantes: {n}",
+ "famLocked": "Demasiados intentos. Vuelve a intentarlo en {n} min.",
+ "famOffline": "Sin internet. Solo necesitas internet una vez para desbloquear."
 }

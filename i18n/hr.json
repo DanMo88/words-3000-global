@@ -235,5 +235,11 @@
  "devFree": "Besplatne lekcije i sinkronizacija i dalje rade na ovom telefonu.",
  "devCheck": "Provjeri ponovno",
  "devNow": "Ne sada",
- "premLoading": "Lekcija se preuzima…"
+ "premLoading": "Lekcija se preuzima…",
+ "famTitle": "Obiteljski kod",
+ "famText": "Upiši 4-znamenkasti obiteljski kod da otključaš sve lekcije.",
+ "famGo": "Otključaj",
+ "famWrong": "Pogrešan kod. Preostalo pokušaja: {n}",
+ "famLocked": "Previše pokušaja. Pokušaj ponovno za {n} min.",
+ "famOffline": "Nema interneta. Internet ti treba samo jednom za otključavanje."
 }

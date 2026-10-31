@@ -216,3 +216,9 @@ devFree|免费课程和同步在这部手机上照常可用。
 devCheck|再次检查
 devNow|以后再说
 premLoading|正在下载课程…
+famTitle|家庭密码
+famText|输入 4 位家庭密码，解锁全部课程。
+famGo|解锁
+famWrong|密码错误。剩余次数：{n}
+famLocked|尝试次数过多。请 {n} 分钟后再试。
+famOffline|没有网络。只需联网一次即可解锁。

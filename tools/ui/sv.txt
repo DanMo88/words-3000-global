@@ -216,3 +216,9 @@ devFree|Gratislektioner och synkronisering fungerar fortfarande på den här tel
 devCheck|Kontrollera igen
 devNow|Inte nu
 premLoading|Lektionen laddas ner…
+famTitle|Familjekod
+famText|Skriv den fyrsiffriga familjekoden för att låsa upp alla lektioner.
+famGo|Lås upp
+famWrong|Fel kod. Försök kvar: {n}
+famLocked|För många försök. Försök igen om {n} min.
+famOffline|Inget internet. Du behöver internet bara en gång för att låsa upp.
