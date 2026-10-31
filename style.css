@@ -241,3 +241,23 @@ html[lang=ro] .home-head>.logo{font-size:clamp(18px,min(3.3dvh,5vw),30px)}
 /* header too crowded (long install label): icon-only install button */
 .hd-r.compact{gap:1.2vw}.hd-r.compact .inst .it{display:none}.hd-r.compact .inst{padding:.6dvh 2.2vw;border-radius:99px}
 html[dir=rtl] .ccur b{line-height:1.5}
+
+/* paywall */
+[hidden]{display:none!important}
+.pw{display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.2dvh;padding:1dvh 1vw 2dvh}
+.pwhero{font-size:clamp(44px,8dvh,72px);line-height:1;filter:drop-shadow(0 4px 10px #6366f155)}
+.pw h1{font-size:clamp(20px,3.2dvh,28px);margin:0}
+.pw .tsub{margin:0}
+.pwf{list-style:none;margin:.6dvh 0;padding:1.4dvh 4vw;display:flex;flex-direction:column;gap:1.1dvh;background:#fff;border-radius:16px;box-shadow:0 2px 0 #e0e7ff;width:100%;box-sizing:border-box;text-align:start}
+.pwf li{display:flex;gap:2.4vw;align-items:flex-start;font-size:clamp(14px,2.1dvh,17px);font-weight:600;line-height:1.35}
+.pwf i{font-style:normal;color:#16a34a;font-weight:900;flex:none}
+.pwprice{display:flex;flex-direction:column;gap:.4dvh}
+.pwprice b{font-size:clamp(22px,3.6dvh,32px);font-weight:900;color:var(--pri)}
+.pwprice small{color:var(--mut);font-size:clamp(12px,1.7dvh,14px)}
+.pw .amsg{min-height:0}
+.pwb .lnk{margin:0 auto}
+.legal{display:flex;justify-content:center;flex-wrap:wrap;gap:0 1.5vw;font-size:clamp(12px,1.7dvh,14px);color:var(--mut)}
+.legal a{color:var(--mut);text-decoration:underline;padding:.4dvh 1vw}
+.ls.pay{position:relative;opacity:.85}
+.ls .gem{position:absolute;top:2px;inset-inline-end:3px;font-style:normal;font-size:11px;line-height:1}
+.amsg.info{color:var(--mut);font-weight:600;background:#eef2ff;border-radius:12px;padding:1dvh 3vw}

@@ -32,14 +32,22 @@ const langInfo = code => LANGS.find(l => l.code === code);
 const has = id => M[id] != null;
 const mean = id => M[id];
 
-/* ---------- access (paywall-ready; OFF in this build) ---------- */
-// Plan: first FREE_LESSONS lessons free, then a $4/month Google Play subscription.
-// When billing is added, set ACCESS.paywall = true and implement ACCESS.isPremium() + paywallScreen().
+/* ---------- access: free lessons, then Premium ($4/month, Google Play subscription "premium_monthly") ----------
+   FREE.per = 'app': the first FREE.lessons lessons completed anywhere in the app (all levels, all language courses) are free.
+   Signed in, lessons sync, so the count is per account; as a guest it is per device. Set per: 'level' for FREE.lessons per level.
+   Lessons already completed always stay open. Premium comes only from the server (profiles.premium, set by verify-purchase). */
+const FREE = { lessons: 5, per: 'app' };
 const ACCESS = {
-  paywall: false, freeLessons: 5,
-  isPremium: () => !!(R && R.premium),
-  freeIndex: (lv, i) => LEVEL_IDS.slice(0, LEVEL_IDS.indexOf(lv)).reduce((s, l) => s + (LV[l] ? LV[l].lessons.length : 0), 0) + i,
-  canOpen(lv, i) { return !this.paywall || this.isPremium() || this.freeIndex(lv, i) < this.freeLessons; }
+  paywall: true, FREE,
+  isPremium: () => !!(R && R.premium && R.acct && R.acct.uid) && (!R.premiumUntil || Date.parse(R.premiumUntil) + 3 * 864e5 > Date.now()),
+  used(lv) {
+    let n = 0;
+    Object.keys(R.courses || {}).forEach(c => { const ls = R.courses[c].lessons || {};
+      Object.keys(ls).forEach(k => { if (ls[k] && ls[k].done && (FREE.per === 'app' || (c === R.cur && k.split('-')[0] === lv))) n++; }); });
+    return n;
+  },
+  left(lv) { return Math.max(0, FREE.lessons - this.used(lv)); },
+  canOpen(lv, i) { return !this.paywall || this.isPremium() || lessonDone(lv, i) || this.used(lv) < FREE.lessons; }
 };
 
 const W = {};            // id -> {id,w,ex,img,level,li}
@@ -310,7 +318,8 @@ function levelScreen(lv, page) {
   for (let i = from; i < to; i++) {
     const d = lessonDone(lv, i), u = unlocked(lv, i), c = i === cur, r = lessonReady(lv, i);
     if (u && !d && !r) { cells += `<button class="ls tr" data-i="${i}">🌐<small>${t('lessonN', { n: i + 1 })}</small></button>`; continue; }
-    cells += `<button class="ls ${d ? 'done' : c ? 'cur' : u ? '' : 'lock'}" data-i="${i}" ${u ? '' : 'aria-disabled="true"'}>${d ? '✓' : u ? N(i + 1) : '🔒'}<small>${d || !u ? t('lessonN', { n: i + 1 }) : c ? t('start') : ''}</small></button>`;
+    const pay = u && !d && !ACCESS.canOpen(lv, i);
+    cells += `<button class="ls ${d ? 'done' : c ? 'cur' : u ? '' : 'lock'}${pay ? ' pay' : ''}" data-i="${i}" ${u ? '' : 'aria-disabled="true"'}>${pay ? '<i class="gem">💎</i>' : ''}${d ? '✓' : u ? N(i + 1) : '🔒'}<small>${d || !u ? t('lessonN', { n: i + 1 }) : c ? t('start') : ''}</small></button>`;
   }
   for (let i = to; i < from + PER_PAGE; i++) cells += '<span></span>';
   screen(`<div class="top"><button class="x" aria-label="${esc(t('back'))}">✕</button><div class="h2">${tag(lv)} ${lvName(lv)}</div><span class="pill">${t('lessonsProgress', { a: Math.min(cur, n), b: n })}</span></div>
@@ -327,7 +336,52 @@ function levelScreen(lv, page) {
     startLesson(lessonObj(lv, i));
   });
 }
-function paywallScreen(lv) { /* placeholder: Google Play subscription screen goes here */ levelScreen(lv); }
+/* paywall: price, features, subscribe (Android app only), restore, legal links */
+function paywallScreen(lv) {
+  stopAudio();
+  const back = () => (lv && LV[lv] ? levelScreen(lv) : home()), prem = ACCESS.isPremium();
+  screen(`<div class="top"><button class="x" aria-label="${esc(t('back'))}">✕</button><div class="h2">💎 ${t('premium')}</div></div>
+    <div class="scroll"><div class="pw">
+      <div class="pwhero">💎</div><h1>${t(prem ? 'pwActive' : 'pwTitle')}</h1>${prem ? '' : `<p class="tsub">${t('pwText')}</p>`}
+      <ul class="pwf">${['pwF1', 'pwF2', 'pwF3', 'pwF4'].map(k => `<li><i>✓</i><span>${t(k)}</span></li>`).join('')}</ul>
+      <div class="pwprice"><b id="pwPrice">${esc(t('pwPrice', { price: webPrice() }))}</b><small>${t('pwCancel')}</small></div>
+      <div class="amsg" id="pwMsg" role="status"></div>
+    </div></div>
+    <div class="btns pwb"><button class="btn" id="pwBuy" ${prem ? 'hidden' : ''}>${t('pwBuy')}</button><button class="lnk" id="pwRestore">${t('pwRestore')}</button>
+      <div class="legal">${legalLinks()}</div></div>`);
+  bindX(back);
+  const g = id => document.getElementById(id), say = (k, ok) => { const m = g('pwMsg'); if (m) { m.textContent = t(k); m.classList.toggle('ok', !!ok); } };
+  const done = () => { toast(esc(t('pwActive'))); later(back, 900); };
+  billing().then(svc => {
+    if (!g('pwBuy')) return;
+    if (!svc) {   // web / iOS / desktop: no Google Play Billing → no payments here
+      document.body.dataset.billing = 'none';
+      if (!prem) { g('pwBuy').className = 'btn ghost'; g('pwBuy').textContent = t(signedIn() ? 'pwRestore' : 'signIn'); g('pwRestore').hidden = true;
+        const m = g('pwMsg'); m.className = 'amsg info'; m.textContent = t('pwAndroid') + ' ' + t('pwWebHave'); }
+    } else {
+      document.body.dataset.billing = 'play';
+      playPrice().then(p => { if (p && g('pwPrice')) g('pwPrice').textContent = t('pwPrice', { price: p }); });
+    }
+  });
+  const needAcct = () => { authScreen(signedIn() ? 'in' : 'up', { text: t('pwSignInFirst') }); };
+  g('pwBuy').onclick = async () => {
+    if (!signedIn()) return needAcct();
+    const svc = await billing(), btn = g('pwBuy');
+    busy(btn, true);
+    try {
+      if (!svc) { await loadSB(); await loadProfile(); if (ACCESS.isPremium()) return done(); busy(btn, false); return say('pwNone'); }
+      if (await buyPremium()) return done();
+      busy(btn, false); say('pwNone');
+    } catch (e) { busy(btn, false); if (e && (e.name === 'AbortError' || e.code === 'aborted')) return; say(payErr(e)); }
+  };
+  g('pwRestore').onclick = async () => {
+    if (!signedIn()) return authScreen('in', { text: t('pwSignInFirst') });
+    const btn = g('pwRestore'); busy(btn, true);
+    try { if (await restorePremium()) return done(); busy(btn, false); say('pwNone'); }
+    catch (e) { busy(btn, false); say(payErr(e)); }
+  };
+}
+const legalLinks = () => `<a href="privacy.html" target="_blank" rel="noopener">${t('privacy')}</a><span aria-hidden="true"> · </span><a href="terms.html" target="_blank" rel="noopener">${t('terms')}</a>`;
 const lessonObj = (lv, i) => ({ id: lv + '-' + (i + 1), lv, i, title: lv + ' · ' + t('lessonN', { n: i + 1 }), words: LV[lv].lessons[i].map(id => W[id]) });
 
 /* ---------- learning phase ---------- */
@@ -680,10 +734,10 @@ function syncAll() {
   return syncing;
 }
 async function loadProfile() {
-  const { data, error } = await sb.from('profiles').select('display_name,native_lang,premium').eq('id', user.id).maybeSingle();
+  const { data, error } = await sb.from('profiles').select('display_name,native_lang,premium,premium_until').eq('id', user.id).maybeSingle();
   if (error) throw error;
   if (data) {
-    R.acct = Object.assign(R.acct || {}, { name: data.display_name || '' }); R.premium = !!data.premium;
+    R.acct = Object.assign(R.acct || {}, { name: data.display_name || '' }); R.premium = !!data.premium; R.premiumUntil = data.premium_until || null;
     if (R.lang && data.native_lang !== R.lang) await sb.from('profiles').update({ native_lang: R.lang }).eq('id', user.id);
     saveLocal();
   }
@@ -793,7 +847,7 @@ function profileScreen() {
     const btn = g('pOut'); busy(btn, true);
     let r; try { r = await syncAll(); } catch (e) { busy(btn, false); toast(esc(t('errOffline'))); return; }
     try { await sb.auth.signOut({ scope: 'local' }); } catch (e) {}
-    user = null; R.acct = null; R.premium = false;
+    user = null; R.acct = null; R.premium = false; R.premiumUntil = null;
     if (r !== null) { R.courses = {}; R.cur = null; S = initCourse({}); }   // progress is safe in the cloud; if the session had expired, keep it locally
     saveLocal();
     afterLang();
@@ -816,11 +870,50 @@ function deleteConfirm() {
       if (!r.ok) throw { status: r.status };
       try { await sb.auth.signOut({ scope: 'local' }); } catch (e) {}
       try { localStorage.removeItem(SB.store); } catch (e) {}
-      user = null; R.acct = null; R.premium = false; saveLocal();
+      user = null; R.acct = null; R.premium = false; R.premiumUntil = null; saveLocal();
       home(); toast(esc(t('deleted')));
     } catch (e) { busy(btn, false); toast(esc(errText(e))); }
   };
 }
+/* ---------- Google Play Billing (only inside the Android app = TWA): Digital Goods API + Payment Request ----------
+   Feature-detected; on the web billing() resolves null and the paywall says "available in the Android app".
+   Every purchase token is verified server-side by the verify-purchase Edge Function, which alone sets profiles.premium. */
+const PLAY = { method: 'https://play.google.com/billing', product: 'premium_monthly', usd: 4 };
+let dgs = null, dgsTried = null;
+function billing() {
+  if (!dgsTried) dgsTried = (async () => {
+    try { if ('getDigitalGoodsService' in window && 'PaymentRequest' in window) dgs = await window.getDigitalGoodsService(PLAY.method); } catch (e) { dgs = null; }
+    return dgs || null;
+  })();
+  return dgsTried;
+}
+const webPrice = () => { try { return new Intl.NumberFormat(LANG, { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 2 }).format(PLAY.usd); } catch (e) { return '$' + PLAY.usd; } };
+async function playPrice() {
+  const svc = await billing(); if (!svc) return null;
+  try { const [d] = await svc.getDetails([PLAY.product]); if (d && d.price) return new Intl.NumberFormat(LANG, { style: 'currency', currency: d.price.currency }).format(Number(d.price.value)); } catch (e) {}
+  return null;
+}
+async function verifyPurchase(token) {
+  await loadSB(); const { data } = await sb.auth.getSession(); if (!data.session) throw { code: 'no_session' };
+  const r = await fetch(SB.url + '/functions/v1/verify-purchase', { method: 'POST', headers: { Authorization: 'Bearer ' + data.session.access_token, apikey: SB.key, 'Content-Type': 'application/json' }, body: JSON.stringify({ purchaseToken: token, productId: PLAY.product }) });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) throw { code: j.error || 'verify_failed', status: r.status };
+  R.premium = !!j.premium; R.premiumUntil = j.expires_at || null; saveLocal();
+  return ACCESS.isPremium();
+}
+async function buyPremium() {
+  const svc = await billing(); if (!svc) throw { code: 'no_billing' };
+  const req = new PaymentRequest([{ supportedMethods: PLAY.method, data: { sku: PLAY.product } }], { total: { label: 'Total', amount: { currency: 'USD', value: '0' } } });
+  const res = await req.show();
+  try { const ok = await verifyPurchase(res.details.purchaseToken); await res.complete(ok ? 'success' : 'fail'); return ok; }
+  catch (e) { try { await res.complete('fail'); } catch (x) {} throw e; }
+}
+async function restorePremium() {
+  const svc = await billing();
+  if (svc) { let ok = false; for (const p of await svc.listPurchases()) if (p.itemId === PLAY.product) ok = (await verifyPurchase(p.purchaseToken)) || ok; if (ok) return true; }
+  await loadSB(); await loadProfile(); return ACCESS.isPremium();   // bought on another device / account already premium
+}
+const payErr = e => (e && e.code === 'billing_not_configured') ? 'pwNotReady' : (!navigator.onLine ? 'errOffline' : 'pwFail');
 const acctOpen = () => signedIn() ? profileScreen() : authScreen('up');
 /* app open: restore session, handle auth links (email confirm / password recovery / OAuth), then sync */
 function acctBoot() {
@@ -834,7 +927,7 @@ function acctBoot() {
     if (!user) { if (R.acct) { R.acct = null; saveLocal(); } return; }
     const first = !(R.acct && R.acct.uid === user.id);
     R.acct = Object.assign(R.acct || {}, { email: user.email, uid: user.id }); saveLocal();
-    return syncAll().then(ch => { loadProfile().catch(() => {}); if (first && linked) { toast(esc(t('signedInMsg'))); } if (ch && $app.querySelector('.levels')) home(); });
+    return syncAll().then(ch => { loadProfile().then(() => billing()).then(svc => svc && restorePremium()).catch(() => {}); if (first && linked) { toast(esc(t('signedInMsg'))); } if (ch && $app.querySelector('.levels')) home(); });
   }).catch(() => {});
 }
 window.addEventListener('online', () => { if (R.acct && R.acct.dirty) syncAll().catch(() => {}); });
@@ -843,7 +936,7 @@ document.addEventListener('visibilitychange', () => { if (document.visibilitySta
 /* ---------- boot ---------- */
 let VERSION = 1;
 window.__app = { get S() { return S; }, get R() { return R; }, W, LV, M, home, DEBUG, levelScreen, lessonObj, settingsScreen, langPicker, ACCESS,
-  targetPicker, courseSwitcher, setCourse, COURSES,
+  targetPicker, courseSwitcher, setCourse, COURSES, FREE, paywallScreen, billing, PLAY,
   save, acct: { SB, authScreen, profileScreen, deleteConfirm, syncAll, mergeCourse, loadSB, get user() { return user; }, get sb() { return sb; } },
   get lang() { return LANG; }, setLang: c => { R.lang = c; save(); return applyLang(c); }, t,
   cardFor: id => { const w = W[id]; learnCard({ L: lessonObj(w.level, w.li), seq: [w], i: 0, t0: 0 }); stopAudio(); },

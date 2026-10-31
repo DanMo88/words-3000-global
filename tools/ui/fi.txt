@@ -165,3 +165,32 @@ delConfirm|Kyllä, poista pysyvästi
 cancel|Peruuta
 deleted|Tilisi on poistettu.
 savePrompt|💾 Tallenna edistymisesi: luo ilmainen tili
+premium|Premium
+pwTitle|Jatka Premiumilla
+pwText|Ilmaiset oppituntisi on käytetty. Premium avaa kaikki oppitunnit.
+pwF1|Kaikki oppitunnit kaikilla tasoilla (A1–B2)
+pwF2|Jokainen uusi kielikurssi heti kun se ilmestyy
+pwF3|Ei koskaan mainoksia
+pwF4|Tue itsenäistä kehittäjää
+pwPrice|{price} kuukaudessa
+pwCancel|Peru milloin tahansa Google Playssa.
+pwBuy|Tilaa
+pwRestore|Palauta osto
+pwAndroid|Tilaus on saatavilla Android-sovelluksessa Google Playssa.
+pwWebHave|Onko sinulla jo tilaus? Kirjaudu samalla tilillä.
+pwSignInFirst|Kirjaudu ensin tai luo ilmainen tili, jotta tilaus liitetään siihen.
+pwActive|Premium on käytössä ✓
+pwNone|Voimassa olevaa tilausta ei löytynyt.
+pwFail|Ostoa ei voitu vahvistaa. Jos sinulta veloitettiin, napauta ”Palauta osto”.
+pwNotReady|Maksut eivät ole vielä käytössä. Yritä myöhemmin.
+privacy|Tietosuojakäytäntö
+terms|Käyttöehdot
+reminder|Päivittäinen muistutus
+remTime|Aika
+remWeb|Selaimessa muistutamme, kun avaat sovelluksen. Ilmoitukset tiettyyn aikaan vaativat Android-sovelluksen.
+remTrig|Saat ilmoituksen joka päivä tähän aikaan.
+remDenied|Ilmoitukset on estetty. Salli ne selaimen asetuksista.
+remTitle|Sanojen aika! 📚
+remBody|Muutama minuutti päivässä pitää putkesi käynnissä 🔥
+remSet|Muistutus asetettu klo {time}
+remOff|Muistutus pois päältä

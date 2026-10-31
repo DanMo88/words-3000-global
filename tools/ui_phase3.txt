@@ -1,0 +1,930 @@
+## fa
+premium|پریمیوم
+pwTitle|با پریمیوم ادامه بده
+pwText|درس‌های رایگانت تموم شد. با پریمیوم همه‌ی درس‌ها باز می‌شن.
+pwF1|همه‌ی درس‌های همه‌ی سطح‌ها، از A1 تا B2
+pwF2|هر دوره‌ی زبان جدیدی که اضافه بشه
+pwF3|بدون تبلیغ، برای همیشه
+pwF4|حمایت از یه برنامه‌نویس مستقل
+pwPrice|{price} در ماه
+pwCancel|هر وقت خواستی از گوگل‌پلی لغوش کن.
+pwBuy|اشتراک بگیر
+pwRestore|بازیابی خرید
+pwAndroid|اشتراک فقط توی اپ اندروید (از گوگل‌پلی) در دسترسه.
+pwWebHave|قبلاً اشتراک گرفتی؟ با همون حساب وارد شو.
+pwSignInFirst|اول وارد شو یا یه حساب رایگان بساز تا اشتراکت به حسابت وصل بشه.
+pwActive|پریمیوم فعاله ✓
+pwNone|اشتراک فعالی پیدا نشد.
+pwFail|خرید تأیید نشد. اگه پول ازت کم شده، «بازیابی خرید» رو بزن.
+pwNotReady|پرداخت هنوز فعال نشده. لطفاً بعداً دوباره امتحان کن.
+privacy|حریم خصوصی
+terms|شرایط استفاده
+reminder|یادآور روزانه
+remTime|ساعت
+remWeb|توی مرورگر، وقتی اپ رو باز کنی یادآوری می‌کنیم. اعلان سر یه ساعت مشخص فقط توی اپ اندروید ممکنه.
+remTrig|هر روز همین ساعت یه اعلان برات میاد.
+remDenied|اعلان‌ها مسدودن. توی تنظیمات مرورگر اجازه بده.
+remTitle|وقت لغت‌هاست! 📚
+remBody|روزی چند دقیقه کافیه تا زنجیره‌ت نشکنه 🔥
+remSet|یادآور برای ساعت {time} تنظیم شد
+remOff|یادآور خاموش شد
+## ar
+premium|بريميوم
+pwTitle|تابع التعلّم مع بريميوم
+pwText|لقد أنهيت دروسك المجانية. بريميوم يفتح جميع الدروس.
+pwF1|كل الدروس في كل المستويات، من A1 إلى B2
+pwF2|كل دورة لغة جديدة عند إضافتها
+pwF3|بلا إعلانات، دائمًا
+pwF4|ادعم مطوّرًا مستقلًا
+pwPrice|{price} شهريًا
+pwCancel|يمكنك الإلغاء في أي وقت من Google Play.
+pwBuy|اشترك
+pwRestore|استعادة الشراء
+pwAndroid|الاشتراك متاح في تطبيق أندرويد عبر Google Play.
+pwWebHave|مشترك بالفعل؟ سجّل الدخول بالحساب نفسه.
+pwSignInFirst|سجّل الدخول أو أنشئ حسابًا مجانيًا أولًا ليرتبط اشتراكك به.
+pwActive|بريميوم مفعّل ✓
+pwNone|لم يُعثر على اشتراك نشط.
+pwFail|تعذّر تأكيد الشراء. إذا خُصم المبلغ، اضغط «استعادة الشراء».
+pwNotReady|الدفع غير مفعّل بعد. حاول لاحقًا.
+privacy|سياسة الخصوصية
+terms|شروط الاستخدام
+reminder|تذكير يومي
+remTime|الوقت
+remWeb|في المتصفح نذكّرك عند فتح التطبيق. الإشعارات في وقت محدد تتطلب تطبيق أندرويد.
+remTrig|سيصلك إشعار كل يوم في هذا الوقت.
+remDenied|الإشعارات محظورة. اسمح بها من إعدادات المتصفح.
+remTitle|حان وقت الكلمات! 📚
+remBody|بضع دقائق يوميًا تحافظ على سلسلتك 🔥
+remSet|تم ضبط التذكير على {time}
+remOff|تم إيقاف التذكير
+## af
+premium|Premium
+pwTitle|Hou aan leer met Premium
+pwText|Jy het jou gratis lesse klaar gemaak. Premium sluit alle lesse oop.
+pwF1|Elke les in elke vlak (A1–B2)
+pwF2|Elke nuwe taalkursus wanneer dit bykom
+pwF3|Geen advertensies, ooit nie
+pwF4|Ondersteun 'n onafhanklike ontwikkelaar
+pwPrice|{price} per maand
+pwCancel|Kanselleer enige tyd in Google Play.
+pwBuy|Teken in
+pwRestore|Herstel aankoop
+pwAndroid|Intekeninge is beskikbaar in die Android-app op Google Play.
+pwWebHave|Reeds ingeteken? Meld aan met dieselfde rekening.
+pwSignInFirst|Meld eers aan of skep 'n gratis rekening sodat jou intekening daaraan gekoppel word.
+pwActive|Premium is aktief ✓
+pwNone|Geen aktiewe intekening gevind nie.
+pwFail|Die aankoop kon nie bevestig word nie. As jy betaal het, tik "Herstel aankoop".
+pwNotReady|Betalings is nog nie aangeskakel nie. Probeer later weer.
+privacy|Privaatheidsbeleid
+terms|Gebruiksvoorwaardes
+reminder|Daaglikse herinnering
+remTime|Tyd
+remWeb|In die blaaier herinner ons jou wanneer jy die app oopmaak. Kennisgewings op 'n vaste tyd vereis die Android-app.
+remTrig|Jy kry elke dag op hierdie tyd 'n kennisgewing.
+remDenied|Kennisgewings is geblokkeer. Laat dit toe in jou blaaierinstellings.
+remTitle|Tyd vir jou woorde! 📚
+remBody|'n Paar minute per dag hou jou reeks aan die gang 🔥
+remSet|Herinnering gestel vir {time}
+remOff|Herinnering afgeskakel
+## bg
+premium|Премиум
+pwTitle|Продължи с Премиум
+pwText|Безплатните ти уроци свършиха. Премиум отключва всички уроци.
+pwF1|Всеки урок от всяко ниво (A1–B2)
+pwF2|Всеки нов езиков курс, щом излезе
+pwF3|Без реклами, никога
+pwF4|Подкрепи независим разработчик
+pwPrice|{price} на месец
+pwCancel|Откажи по всяко време в Google Play.
+pwBuy|Абонирай се
+pwRestore|Възстанови покупка
+pwAndroid|Абонаментът е наличен в приложението за Android в Google Play.
+pwWebHave|Вече си абониран? Влез със същия профил.
+pwSignInFirst|Първо влез или създай безплатен профил, за да се свърже абонаментът с него.
+pwActive|Премиум е активен ✓
+pwNone|Няма активен абонамент.
+pwFail|Покупката не беше потвърдена. Ако си таксуван, натисни „Възстанови покупка“.
+pwNotReady|Плащанията още не са включени. Опитай по-късно.
+privacy|Поверителност
+terms|Условия за ползване
+reminder|Дневно напомняне
+remTime|Час
+remWeb|В браузъра ти напомняме, когато отвориш приложението. Известия в точен час има само в приложението за Android.
+remTrig|Всеки ден в този час ще получаваш известие.
+remDenied|Известията са блокирани. Разреши ги в настройките на браузъра.
+remTitle|Време за думи! 📚
+remBody|Няколко минути на ден пазят серията ти 🔥
+remSet|Напомнянето е за {time}
+remOff|Напомнянето е изключено
+## zh
+premium|高级版
+pwTitle|升级高级版，继续学习
+pwText|免费课程已用完。高级版解锁全部课程。
+pwF1|所有级别（A1–B2）的全部课程
+pwF2|今后新增的所有语言课程
+pwF3|永无广告
+pwF4|支持独立开发者
+pwPrice|每月 {price}
+pwCancel|可随时在 Google Play 取消。
+pwBuy|订阅
+pwRestore|恢复购买
+pwAndroid|订阅仅在 Google Play 的安卓应用中提供。
+pwWebHave|已经订阅？请用同一账户登录。
+pwSignInFirst|请先登录或创建免费账户，以便将订阅绑定到账户。
+pwActive|高级版已开通 ✓
+pwNone|未找到有效订阅。
+pwFail|无法确认购买。如果已扣款，请点“恢复购买”。
+pwNotReady|支付尚未开通，请稍后再试。
+privacy|隐私政策
+terms|使用条款
+reminder|每日提醒
+remTime|时间
+remWeb|在浏览器中，我们会在你打开应用时提醒你。定时通知需要安卓应用。
+remTrig|每天这个时间你会收到一条通知。
+remDenied|通知已被阻止。请在浏览器设置中允许。
+remTitle|该背单词啦！📚
+remBody|每天几分钟，连续记录不中断 🔥
+remSet|提醒时间已设为 {time}
+remOff|提醒已关闭
+## hr
+premium|Premium
+pwTitle|Nastavi učiti uz Premium
+pwText|Iskoristio si besplatne lekcije. Premium otključava sve lekcije.
+pwF1|Sve lekcije na svim razinama (A1–B2)
+pwF2|Svaki novi jezični tečaj kad stigne
+pwF3|Bez oglasa, nikad
+pwF4|Podrži neovisnog developera
+pwPrice|{price} mjesečno
+pwCancel|Otkaži bilo kada u Google Playu.
+pwBuy|Pretplati se
+pwRestore|Vrati kupnju
+pwAndroid|Pretplata je dostupna u Android aplikaciji na Google Playu.
+pwWebHave|Već si pretplaćen? Prijavi se istim računom.
+pwSignInFirst|Prvo se prijavi ili napravi besplatan račun da se pretplata poveže s njim.
+pwActive|Premium je aktivan ✓
+pwNone|Nema aktivne pretplate.
+pwFail|Kupnja nije potvrđena. Ako ti je naplaćeno, dodirni „Vrati kupnju”.
+pwNotReady|Plaćanja još nisu uključena. Pokušaj kasnije.
+privacy|Pravila privatnosti
+terms|Uvjeti korištenja
+reminder|Dnevni podsjetnik
+remTime|Vrijeme
+remWeb|U pregledniku te podsjetimo kad otvoriš aplikaciju. Obavijesti u točno vrijeme traže Android aplikaciju.
+remTrig|Svaki dan u ovo vrijeme dobit ćeš obavijest.
+remDenied|Obavijesti su blokirane. Dopusti ih u postavkama preglednika.
+remTitle|Vrijeme je za riječi! 📚
+remBody|Nekoliko minuta dnevno čuva tvoj niz 🔥
+remSet|Podsjetnik postavljen za {time}
+remOff|Podsjetnik isključen
+## cs
+premium|Premium
+pwTitle|Pokračuj s Premium
+pwText|Bezplatné lekce ti došly. Premium odemkne všechny lekce.
+pwF1|Všechny lekce ve všech úrovních (A1–B2)
+pwF2|Každý nový jazykový kurz, jakmile vyjde
+pwF3|Bez reklam, nikdy
+pwF4|Podpoříš nezávislého vývojáře
+pwPrice|{price} měsíčně
+pwCancel|Zrušit můžeš kdykoli v Google Play.
+pwBuy|Předplatit
+pwRestore|Obnovit nákup
+pwAndroid|Předplatné je dostupné v aplikaci pro Android na Google Play.
+pwWebHave|Už předplácíš? Přihlas se stejným účtem.
+pwSignInFirst|Nejdřív se přihlas nebo si založ účet zdarma, aby se k němu předplatné připojilo.
+pwActive|Premium je aktivní ✓
+pwNone|Nenalezeno žádné aktivní předplatné.
+pwFail|Nákup se nepodařilo ověřit. Pokud ti byla stržena platba, klepni na „Obnovit nákup“.
+pwNotReady|Platby zatím nejsou zapnuté. Zkus to později.
+privacy|Ochrana soukromí
+terms|Podmínky použití
+reminder|Denní připomínka
+remTime|Čas
+remWeb|V prohlížeči ti připomeneme při otevření aplikace. Oznámení v přesný čas umí jen aplikace pro Android.
+remTrig|Každý den v tento čas dostaneš oznámení.
+remDenied|Oznámení jsou blokovaná. Povol je v nastavení prohlížeče.
+remTitle|Čas na slovíčka! 📚
+remBody|Pár minut denně udrží tvou sérii 🔥
+remSet|Připomínka nastavena na {time}
+remOff|Připomínka vypnuta
+## da
+premium|Premium
+pwTitle|Fortsæt med Premium
+pwText|Du har brugt dine gratis lektioner. Premium låser alle lektioner op.
+pwF1|Alle lektioner på alle niveauer (A1–B2)
+pwF2|Hvert nyt sprogkursus, når det kommer
+pwF3|Aldrig reklamer
+pwF4|Støt en uafhængig udvikler
+pwPrice|{price} om måneden
+pwCancel|Opsig når som helst i Google Play.
+pwBuy|Abonner
+pwRestore|Gendan køb
+pwAndroid|Abonnementet findes i Android-appen på Google Play.
+pwWebHave|Har du allerede abonnement? Log ind med samme konto.
+pwSignInFirst|Log ind eller opret en gratis konto først, så abonnementet knyttes til den.
+pwActive|Premium er aktiv ✓
+pwNone|Intet aktivt abonnement fundet.
+pwFail|Købet kunne ikke bekræftes. Hvis du er blevet trukket, så tryk på "Gendan køb".
+pwNotReady|Betaling er ikke slået til endnu. Prøv igen senere.
+privacy|Privatlivspolitik
+terms|Vilkår for brug
+reminder|Daglig påmindelse
+remTime|Tidspunkt
+remWeb|I browseren minder vi dig, når du åbner appen. Notifikationer på et fast tidspunkt kræver Android-appen.
+remTrig|Du får en notifikation hver dag på dette tidspunkt.
+remDenied|Notifikationer er blokeret. Tillad dem i browserens indstillinger.
+remTitle|Tid til dine ord! 📚
+remBody|Et par minutter om dagen holder din stime i gang 🔥
+remSet|Påmindelse sat til {time}
+remOff|Påmindelse slået fra
+## nl
+premium|Premium
+pwTitle|Ga verder met Premium
+pwText|Je gratis lessen zijn op. Premium ontgrendelt alle lessen.
+pwF1|Alle lessen in alle niveaus (A1–B2)
+pwF2|Elke nieuwe taalcursus zodra die er is
+pwF3|Nooit advertenties
+pwF4|Steun een onafhankelijke ontwikkelaar
+pwPrice|{price} per maand
+pwCancel|Altijd opzegbaar in Google Play.
+pwBuy|Abonneren
+pwRestore|Aankoop herstellen
+pwAndroid|Abonnementen zijn beschikbaar in de Android-app op Google Play.
+pwWebHave|Al een abonnement? Log in met hetzelfde account.
+pwSignInFirst|Log eerst in of maak een gratis account, zodat je abonnement eraan gekoppeld wordt.
+pwActive|Premium is actief ✓
+pwNone|Geen actief abonnement gevonden.
+pwFail|De aankoop kon niet worden bevestigd. Is er betaald? Tik dan op "Aankoop herstellen".
+pwNotReady|Betalen is nog niet ingeschakeld. Probeer het later opnieuw.
+privacy|Privacybeleid
+terms|Gebruiksvoorwaarden
+reminder|Dagelijkse herinnering
+remTime|Tijd
+remWeb|In de browser herinneren we je wanneer je de app opent. Meldingen op een vast tijdstip vereisen de Android-app.
+remTrig|Je krijgt elke dag op dit tijdstip een melding.
+remDenied|Meldingen zijn geblokkeerd. Sta ze toe in je browserinstellingen.
+remTitle|Tijd voor je woorden! 📚
+remBody|Een paar minuten per dag houdt je reeks in stand 🔥
+remSet|Herinnering ingesteld op {time}
+remOff|Herinnering uitgeschakeld
+## fi
+premium|Premium
+pwTitle|Jatka Premiumilla
+pwText|Ilmaiset oppituntisi on käytetty. Premium avaa kaikki oppitunnit.
+pwF1|Kaikki oppitunnit kaikilla tasoilla (A1–B2)
+pwF2|Jokainen uusi kielikurssi heti kun se ilmestyy
+pwF3|Ei koskaan mainoksia
+pwF4|Tue itsenäistä kehittäjää
+pwPrice|{price} kuukaudessa
+pwCancel|Peru milloin tahansa Google Playssa.
+pwBuy|Tilaa
+pwRestore|Palauta osto
+pwAndroid|Tilaus on saatavilla Android-sovelluksessa Google Playssa.
+pwWebHave|Onko sinulla jo tilaus? Kirjaudu samalla tilillä.
+pwSignInFirst|Kirjaudu ensin tai luo ilmainen tili, jotta tilaus liitetään siihen.
+pwActive|Premium on käytössä ✓
+pwNone|Voimassa olevaa tilausta ei löytynyt.
+pwFail|Ostoa ei voitu vahvistaa. Jos sinulta veloitettiin, napauta ”Palauta osto”.
+pwNotReady|Maksut eivät ole vielä käytössä. Yritä myöhemmin.
+privacy|Tietosuojakäytäntö
+terms|Käyttöehdot
+reminder|Päivittäinen muistutus
+remTime|Aika
+remWeb|Selaimessa muistutamme, kun avaat sovelluksen. Ilmoitukset tiettyyn aikaan vaativat Android-sovelluksen.
+remTrig|Saat ilmoituksen joka päivä tähän aikaan.
+remDenied|Ilmoitukset on estetty. Salli ne selaimen asetuksista.
+remTitle|Sanojen aika! 📚
+remBody|Muutama minuutti päivässä pitää putkesi käynnissä 🔥
+remSet|Muistutus asetettu klo {time}
+remOff|Muistutus pois päältä
+## fr
+premium|Premium
+pwTitle|Continuez avec Premium
+pwText|Vous avez terminé vos leçons gratuites. Premium débloque toutes les leçons.
+pwF1|Toutes les leçons de tous les niveaux (A1–B2)
+pwF2|Chaque nouveau cours de langue dès sa sortie
+pwF3|Jamais de publicité
+pwF4|Soutenez un développeur indépendant
+pwPrice|{price} par mois
+pwCancel|Résiliable à tout moment dans Google Play.
+pwBuy|S'abonner
+pwRestore|Restaurer l'achat
+pwAndroid|L'abonnement est disponible dans l'application Android sur Google Play.
+pwWebHave|Déjà abonné ? Connectez-vous avec le même compte.
+pwSignInFirst|Connectez-vous ou créez d'abord un compte gratuit pour y rattacher votre abonnement.
+pwActive|Premium est actif ✓
+pwNone|Aucun abonnement actif trouvé.
+pwFail|L'achat n'a pas pu être confirmé. Si vous avez été débité, touchez « Restaurer l'achat ».
+pwNotReady|Les paiements ne sont pas encore activés. Réessayez plus tard.
+privacy|Confidentialité
+terms|Conditions d'utilisation
+reminder|Rappel quotidien
+remTime|Heure
+remWeb|Dans le navigateur, nous vous le rappelons à l'ouverture de l'appli. Les notifications à heure fixe nécessitent l'application Android.
+remTrig|Vous recevrez une notification chaque jour à cette heure.
+remDenied|Les notifications sont bloquées. Autorisez-les dans les réglages du navigateur.
+remTitle|C'est l'heure de vos mots ! 📚
+remBody|Quelques minutes par jour pour garder votre série 🔥
+remSet|Rappel réglé à {time}
+remOff|Rappel désactivé
+## de
+premium|Premium
+pwTitle|Weiterlernen mit Premium
+pwText|Deine kostenlosen Lektionen sind aufgebraucht. Premium schaltet alle Lektionen frei.
+pwF1|Alle Lektionen in allen Stufen (A1–B2)
+pwF2|Jeder neue Sprachkurs, sobald er erscheint
+pwF3|Niemals Werbung
+pwF4|Unterstütze einen unabhängigen Entwickler
+pwPrice|{price} pro Monat
+pwCancel|Jederzeit in Google Play kündbar.
+pwBuy|Abonnieren
+pwRestore|Kauf wiederherstellen
+pwAndroid|Das Abo gibt es in der Android-App bei Google Play.
+pwWebHave|Schon abonniert? Melde dich mit demselben Konto an.
+pwSignInFirst|Melde dich zuerst an oder erstelle ein kostenloses Konto, damit dein Abo damit verknüpft wird.
+pwActive|Premium ist aktiv ✓
+pwNone|Kein aktives Abo gefunden.
+pwFail|Der Kauf konnte nicht bestätigt werden. Falls du belastet wurdest, tippe auf „Kauf wiederherstellen“.
+pwNotReady|Zahlungen sind noch nicht aktiviert. Bitte später erneut versuchen.
+privacy|Datenschutz
+terms|Nutzungsbedingungen
+reminder|Tägliche Erinnerung
+remTime|Uhrzeit
+remWeb|Im Browser erinnern wir dich beim Öffnen der App. Benachrichtigungen zu einer festen Uhrzeit gibt es nur in der Android-App.
+remTrig|Du bekommst jeden Tag zu dieser Uhrzeit eine Benachrichtigung.
+remDenied|Benachrichtigungen sind blockiert. Erlaube sie in den Browsereinstellungen.
+remTitle|Zeit für deine Wörter! 📚
+remBody|Ein paar Minuten täglich halten deine Serie am Laufen 🔥
+remSet|Erinnerung um {time} eingestellt
+remOff|Erinnerung ausgeschaltet
+## el
+premium|Premium
+pwTitle|Συνέχισε με το Premium
+pwText|Τα δωρεάν μαθήματά σου τελείωσαν. Το Premium ξεκλειδώνει όλα τα μαθήματα.
+pwF1|Όλα τα μαθήματα σε όλα τα επίπεδα (A1–B2)
+pwF2|Κάθε νέο μάθημα γλώσσας μόλις βγει
+pwF3|Χωρίς διαφημίσεις, ποτέ
+pwF4|Στήριξε έναν ανεξάρτητο προγραμματιστή
+pwPrice|{price} τον μήνα
+pwCancel|Ακύρωση οποτεδήποτε στο Google Play.
+pwBuy|Συνδρομή
+pwRestore|Επαναφορά αγοράς
+pwAndroid|Η συνδρομή διατίθεται στην εφαρμογή Android στο Google Play.
+pwWebHave|Έχεις ήδη συνδρομή; Συνδέσου με τον ίδιο λογαριασμό.
+pwSignInFirst|Συνδέσου ή φτιάξε πρώτα δωρεάν λογαριασμό, ώστε η συνδρομή να συνδεθεί με αυτόν.
+pwActive|Το Premium είναι ενεργό ✓
+pwNone|Δεν βρέθηκε ενεργή συνδρομή.
+pwFail|Η αγορά δεν επιβεβαιώθηκε. Αν χρεώθηκες, πάτα «Επαναφορά αγοράς».
+pwNotReady|Οι πληρωμές δεν έχουν ενεργοποιηθεί ακόμα. Δοκίμασε αργότερα.
+privacy|Απόρρητο
+terms|Όροι χρήσης
+reminder|Καθημερινή υπενθύμιση
+remTime|Ώρα
+remWeb|Στον browser σού το θυμίζουμε όταν ανοίγεις την εφαρμογή. Ειδοποιήσεις σε συγκεκριμένη ώρα μόνο στην εφαρμογή Android.
+remTrig|Θα λαμβάνεις ειδοποίηση κάθε μέρα αυτή την ώρα.
+remDenied|Οι ειδοποιήσεις είναι αποκλεισμένες. Επίτρεψέ τες στις ρυθμίσεις του browser.
+remTitle|Ώρα για λέξεις! 📚
+remBody|Λίγα λεπτά τη μέρα κρατούν το σερί σου 🔥
+remSet|Η υπενθύμιση ορίστηκε για {time}
+remOff|Η υπενθύμιση απενεργοποιήθηκε
+## he
+premium|פרימיום
+pwTitle|ממשיכים ללמוד עם פרימיום
+pwText|השיעורים החינמיים שלך נגמרו. פרימיום פותח את כל השיעורים.
+pwF1|כל השיעורים בכל הרמות, מ-A1 עד B2
+pwF2|כל קורס שפה חדש ברגע שיצא
+pwF3|בלי פרסומות, אף פעם
+pwF4|תמיכה במפתח עצמאי
+pwPrice|{price} לחודש
+pwCancel|אפשר לבטל בכל עת ב-Google Play.
+pwBuy|הרשמה למינוי
+pwRestore|שחזור רכישה
+pwAndroid|המינוי זמין באפליקציית האנדרואיד ב-Google Play.
+pwWebHave|כבר יש לך מינוי? התחבר/י עם אותו חשבון.
+pwSignInFirst|קודם צריך להתחבר או ליצור חשבון חינמי, כדי שהמינוי יקושר אליו.
+pwActive|פרימיום פעיל ✓
+pwNone|לא נמצא מינוי פעיל.
+pwFail|לא הצלחנו לאשר את הרכישה. אם חויבת, הקש/י על „שחזור רכישה”.
+pwNotReady|התשלומים עוד לא הופעלו. נסה/י שוב מאוחר יותר.
+privacy|מדיניות פרטיות
+terms|תנאי שימוש
+reminder|תזכורת יומית
+remTime|שעה
+remWeb|בדפדפן נזכיר לך כשתפתח/י את האפליקציה. התראות בשעה קבועה דורשות את אפליקציית האנדרואיד.
+remTrig|כל יום בשעה הזו תקבל/י התראה.
+remDenied|ההתראות חסומות. אפשר/י אותן בהגדרות הדפדפן.
+remTitle|הגיע הזמן למילים! 📚
+remBody|כמה דקות ביום שומרות על הרצף שלך 🔥
+remSet|התזכורת נקבעה ל-{time}
+remOff|התזכורת כובתה
+## hi
+premium|प्रीमियम
+pwTitle|प्रीमियम के साथ सीखते रहें
+pwText|आपके मुफ़्त पाठ पूरे हो गए। प्रीमियम सभी पाठ खोल देता है।
+pwF1|हर स्तर (A1–B2) के सभी पाठ
+pwF2|आने वाला हर नया भाषा कोर्स
+pwF3|कभी कोई विज्ञापन नहीं
+pwF4|एक स्वतंत्र डेवलपर का साथ दें
+pwPrice|{price} प्रति माह
+pwCancel|Google Play में कभी भी रद्द करें।
+pwBuy|सदस्यता लें
+pwRestore|खरीदारी बहाल करें
+pwAndroid|सदस्यता Google Play पर Android ऐप में उपलब्ध है।
+pwWebHave|पहले से सदस्य हैं? उसी खाते से साइन इन करें।
+pwSignInFirst|पहले साइन इन करें या मुफ़्त खाता बनाएँ, ताकि सदस्यता उससे जुड़ जाए।
+pwActive|प्रीमियम चालू है ✓
+pwNone|कोई सक्रिय सदस्यता नहीं मिली।
+pwFail|खरीदारी की पुष्टि नहीं हो सकी। अगर पैसे कटे हैं, तो "खरीदारी बहाल करें" दबाएँ।
+pwNotReady|भुगतान अभी चालू नहीं हुआ है। बाद में फिर कोशिश करें।
+privacy|गोपनीयता नीति
+terms|उपयोग की शर्तें
+reminder|रोज़ का रिमाइंडर
+remTime|समय
+remWeb|ब्राउज़र में हम ऐप खोलने पर याद दिलाते हैं। तय समय पर सूचना के लिए Android ऐप चाहिए।
+remTrig|आपको हर दिन इसी समय एक सूचना मिलेगी।
+remDenied|सूचनाएँ ब्लॉक हैं। ब्राउज़र सेटिंग्स में अनुमति दें।
+remTitle|शब्दों का समय! 📚
+remBody|रोज़ कुछ मिनट से आपका सिलसिला बना रहता है 🔥
+remSet|रिमाइंडर {time} पर सेट हुआ
+remOff|रिमाइंडर बंद किया गया
+## hu
+premium|Prémium
+pwTitle|Tanulj tovább a Prémiummal
+pwText|Elfogytak az ingyenes leckéid. A Prémium minden leckét felold.
+pwF1|Minden lecke minden szinten (A1–B2)
+pwF2|Minden új nyelvi kurzus, amint megjelenik
+pwF3|Soha nincs reklám
+pwF4|Támogass egy független fejlesztőt
+pwPrice|{price} havonta
+pwCancel|Bármikor lemondható a Google Playen.
+pwBuy|Előfizetés
+pwRestore|Vásárlás visszaállítása
+pwAndroid|Az előfizetés a Google Play Android-alkalmazásában érhető el.
+pwWebHave|Már előfizettél? Jelentkezz be ugyanazzal a fiókkal.
+pwSignInFirst|Előbb jelentkezz be, vagy hozz létre ingyenes fiókot, hogy az előfizetés hozzá kapcsolódjon.
+pwActive|A Prémium aktív ✓
+pwNone|Nincs aktív előfizetés.
+pwFail|A vásárlást nem sikerült megerősíteni. Ha terheltek, koppints a „Vásárlás visszaállítása” gombra.
+pwNotReady|A fizetés még nincs bekapcsolva. Próbáld később.
+privacy|Adatvédelem
+terms|Felhasználási feltételek
+reminder|Napi emlékeztető
+remTime|Időpont
+remWeb|A böngészőben az app megnyitásakor emlékeztetünk. Pontos időben érkező értesítéshez az Android-app kell.
+remTrig|Minden nap ebben az időpontban kapsz értesítést.
+remDenied|Az értesítések le vannak tiltva. Engedélyezd őket a böngésző beállításaiban.
+remTitle|Itt az idő a szavakra! 📚
+remBody|Napi néhány perc, és nem szakad meg a sorozatod 🔥
+remSet|Emlékeztető beállítva: {time}
+remOff|Emlékeztető kikapcsolva
+## id
+premium|Premium
+pwTitle|Lanjut belajar dengan Premium
+pwText|Pelajaran gratismu sudah habis. Premium membuka semua pelajaran.
+pwF1|Semua pelajaran di semua level (A1–B2)
+pwF2|Setiap kursus bahasa baru begitu tersedia
+pwF3|Tanpa iklan, selamanya
+pwF4|Dukung pengembang independen
+pwPrice|{price} per bulan
+pwCancel|Batalkan kapan saja di Google Play.
+pwBuy|Berlangganan
+pwRestore|Pulihkan pembelian
+pwAndroid|Langganan tersedia di aplikasi Android di Google Play.
+pwWebHave|Sudah berlangganan? Masuk dengan akun yang sama.
+pwSignInFirst|Masuk atau buat akun gratis dulu agar langgananmu terhubung ke akun itu.
+pwActive|Premium aktif ✓
+pwNone|Tidak ada langganan aktif.
+pwFail|Pembelian tidak dapat dikonfirmasi. Jika saldomu terpotong, ketuk "Pulihkan pembelian".
+pwNotReady|Pembayaran belum diaktifkan. Coba lagi nanti.
+privacy|Kebijakan privasi
+terms|Ketentuan penggunaan
+reminder|Pengingat harian
+remTime|Waktu
+remWeb|Di browser, kami mengingatkanmu saat aplikasi dibuka. Notifikasi pada jam tertentu perlu aplikasi Android.
+remTrig|Kamu akan mendapat notifikasi setiap hari pada jam ini.
+remDenied|Notifikasi diblokir. Izinkan di pengaturan browser.
+remTitle|Waktunya belajar kata! 📚
+remBody|Beberapa menit sehari menjaga runtunanmu 🔥
+remSet|Pengingat diatur ke {time}
+remOff|Pengingat dimatikan
+## it
+premium|Premium
+pwTitle|Continua con Premium
+pwText|Hai finito le lezioni gratuite. Premium sblocca tutte le lezioni.
+pwF1|Tutte le lezioni di tutti i livelli (A1–B2)
+pwF2|Ogni nuovo corso di lingua appena esce
+pwF3|Mai pubblicità
+pwF4|Sostieni uno sviluppatore indipendente
+pwPrice|{price} al mese
+pwCancel|Disdici quando vuoi su Google Play.
+pwBuy|Abbonati
+pwRestore|Ripristina acquisto
+pwAndroid|L'abbonamento è disponibile nell'app Android su Google Play.
+pwWebHave|Hai già l'abbonamento? Accedi con lo stesso account.
+pwSignInFirst|Prima accedi o crea un account gratuito, così l'abbonamento resta collegato.
+pwActive|Premium è attivo ✓
+pwNone|Nessun abbonamento attivo trovato.
+pwFail|Non è stato possibile confermare l'acquisto. Se hai pagato, tocca «Ripristina acquisto».
+pwNotReady|I pagamenti non sono ancora attivi. Riprova più tardi.
+privacy|Privacy
+terms|Termini d'uso
+reminder|Promemoria giornaliero
+remTime|Ora
+remWeb|Nel browser te lo ricordiamo quando apri l'app. Le notifiche a un'ora precisa richiedono l'app Android.
+remTrig|Riceverai una notifica ogni giorno a quest'ora.
+remDenied|Le notifiche sono bloccate. Consentile nelle impostazioni del browser.
+remTitle|È l'ora delle parole! 📚
+remBody|Pochi minuti al giorno mantengono la tua serie 🔥
+remSet|Promemoria impostato alle {time}
+remOff|Promemoria disattivato
+## ja
+premium|プレミアム
+pwTitle|プレミアムで学習を続けよう
+pwText|無料レッスンを使い切りました。プレミアムですべてのレッスンが開きます。
+pwF1|全レベル（A1–B2）の全レッスン
+pwF2|今後追加されるすべての言語コース
+pwF3|広告は一切なし
+pwF4|個人開発者を応援
+pwPrice|月額 {price}
+pwCancel|Google Play でいつでも解約できます。
+pwBuy|登録する
+pwRestore|購入を復元
+pwAndroid|サブスクリプションは Google Play の Android アプリで利用できます。
+pwWebHave|登録済みですか？同じアカウントでログインしてください。
+pwSignInFirst|先にログインするか無料アカウントを作成して、サブスクリプションを紐づけてください。
+pwActive|プレミアム有効 ✓
+pwNone|有効なサブスクリプションが見つかりません。
+pwFail|購入を確認できませんでした。請求された場合は「購入を復元」をタップしてください。
+pwNotReady|支払いはまだ有効になっていません。後でもう一度お試しください。
+privacy|プライバシーポリシー
+terms|利用規約
+reminder|毎日のリマインダー
+remTime|時刻
+remWeb|ブラウザでは、アプリを開いたときにお知らせします。決まった時刻の通知には Android アプリが必要です。
+remTrig|毎日この時刻に通知が届きます。
+remDenied|通知がブロックされています。ブラウザの設定で許可してください。
+remTitle|単語の時間です！📚
+remBody|1日数分で連続記録をキープ 🔥
+remSet|リマインダーを {time} に設定しました
+remOff|リマインダーをオフにしました
+## ko
+premium|프리미엄
+pwTitle|프리미엄으로 계속 배우기
+pwText|무료 레슨을 모두 사용했어요. 프리미엄은 모든 레슨을 열어 줍니다.
+pwF1|모든 레벨(A1–B2)의 모든 레슨
+pwF2|새로 추가되는 모든 언어 코스
+pwF3|광고 없음, 영원히
+pwF4|개인 개발자 응원하기
+pwPrice|월 {price}
+pwCancel|Google Play에서 언제든 해지할 수 있어요.
+pwBuy|구독하기
+pwRestore|구매 복원
+pwAndroid|구독은 Google Play의 Android 앱에서 이용할 수 있어요.
+pwWebHave|이미 구독 중인가요? 같은 계정으로 로그인하세요.
+pwSignInFirst|구독을 계정에 연결하려면 먼저 로그인하거나 무료 계정을 만드세요.
+pwActive|프리미엄 사용 중 ✓
+pwNone|활성 구독을 찾지 못했어요.
+pwFail|구매를 확인하지 못했어요. 결제가 되었다면 "구매 복원"을 누르세요.
+pwNotReady|아직 결제가 켜지지 않았어요. 나중에 다시 시도하세요.
+privacy|개인정보 처리방침
+terms|이용약관
+reminder|매일 알림
+remTime|시간
+remWeb|브라우저에서는 앱을 열 때 알려 드려요. 정해진 시간 알림은 Android 앱이 필요해요.
+remTrig|매일 이 시간에 알림을 받아요.
+remDenied|알림이 차단되어 있어요. 브라우저 설정에서 허용하세요.
+remTitle|단어 공부할 시간! 📚
+remBody|하루 몇 분이면 연속 기록이 이어져요 🔥
+remSet|{time}에 알림이 설정됐어요
+remOff|알림을 껐어요
+## nb
+premium|Premium
+pwTitle|Fortsett med Premium
+pwText|Du har brukt opp gratisleksjonene. Premium låser opp alle leksjoner.
+pwF1|Alle leksjoner på alle nivåer (A1–B2)
+pwF2|Hvert nytt språkkurs når det kommer
+pwF3|Aldri reklame
+pwF4|Støtt en uavhengig utvikler
+pwPrice|{price} per måned
+pwCancel|Si opp når som helst i Google Play.
+pwBuy|Abonner
+pwRestore|Gjenopprett kjøp
+pwAndroid|Abonnementet finnes i Android-appen på Google Play.
+pwWebHave|Har du allerede abonnement? Logg inn med samme konto.
+pwSignInFirst|Logg inn eller lag en gratis konto først, så abonnementet knyttes til den.
+pwActive|Premium er aktiv ✓
+pwNone|Fant ingen aktive abonnement.
+pwFail|Kjøpet kunne ikke bekreftes. Har du blitt trukket, trykk «Gjenopprett kjøp».
+pwNotReady|Betaling er ikke slått på ennå. Prøv igjen senere.
+privacy|Personvern
+terms|Vilkår for bruk
+reminder|Daglig påminnelse
+remTime|Tidspunkt
+remWeb|I nettleseren minner vi deg på det når du åpner appen. Varsler på et fast tidspunkt krever Android-appen.
+remTrig|Du får et varsel hver dag på dette tidspunktet.
+remDenied|Varsler er blokkert. Tillat dem i nettleserinnstillingene.
+remTitle|Tid for ordene dine! 📚
+remBody|Noen minutter om dagen holder rekken din i gang 🔥
+remSet|Påminnelse satt til {time}
+remOff|Påminnelse slått av
+## pl
+premium|Premium
+pwTitle|Ucz się dalej z Premium
+pwText|Darmowe lekcje się skończyły. Premium odblokowuje wszystkie lekcje.
+pwF1|Wszystkie lekcje na wszystkich poziomach (A1–B2)
+pwF2|Każdy nowy kurs językowy, gdy tylko się pojawi
+pwF3|Nigdy żadnych reklam
+pwF4|Wesprzyj niezależnego twórcę
+pwPrice|{price} miesięcznie
+pwCancel|Anuluj w dowolnej chwili w Google Play.
+pwBuy|Subskrybuj
+pwRestore|Przywróć zakup
+pwAndroid|Subskrypcja jest dostępna w aplikacji na Androida w Google Play.
+pwWebHave|Masz już subskrypcję? Zaloguj się na to samo konto.
+pwSignInFirst|Najpierw zaloguj się lub załóż darmowe konto, aby powiązać z nim subskrypcję.
+pwActive|Premium jest aktywne ✓
+pwNone|Nie znaleziono aktywnej subskrypcji.
+pwFail|Nie udało się potwierdzić zakupu. Jeśli pobrano opłatę, stuknij „Przywróć zakup”.
+pwNotReady|Płatności nie są jeszcze włączone. Spróbuj później.
+privacy|Prywatność
+terms|Warunki korzystania
+reminder|Codzienne przypomnienie
+remTime|Godzina
+remWeb|W przeglądarce przypominamy po otwarciu aplikacji. Powiadomienia o stałej porze wymagają aplikacji na Androida.
+remTrig|Codziennie o tej porze dostaniesz powiadomienie.
+remDenied|Powiadomienia są zablokowane. Zezwól na nie w ustawieniach przeglądarki.
+remTitle|Czas na słówka! 📚
+remBody|Kilka minut dziennie podtrzymuje Twoją serię 🔥
+remSet|Przypomnienie ustawione na {time}
+remOff|Przypomnienie wyłączone
+## pt
+premium|Premium
+pwTitle|Continue com o Premium
+pwText|Suas lições grátis acabaram. O Premium libera todas as lições.
+pwF1|Todas as lições de todos os níveis (A1–B2)
+pwF2|Cada novo curso de idioma assim que sair
+pwF3|Nunca anúncios
+pwF4|Apoie um desenvolvedor independente
+pwPrice|{price} por mês
+pwCancel|Cancele quando quiser no Google Play.
+pwBuy|Assinar
+pwRestore|Restaurar compra
+pwAndroid|A assinatura está disponível no app Android no Google Play.
+pwWebHave|Já é assinante? Entre com a mesma conta.
+pwSignInFirst|Entre ou crie uma conta grátis primeiro, para vincular a assinatura a ela.
+pwActive|Premium ativo ✓
+pwNone|Nenhuma assinatura ativa encontrada.
+pwFail|Não foi possível confirmar a compra. Se você foi cobrado, toque em "Restaurar compra".
+pwNotReady|Os pagamentos ainda não foram ativados. Tente mais tarde.
+privacy|Privacidade
+terms|Termos de uso
+reminder|Lembrete diário
+remTime|Horário
+remWeb|No navegador, lembramos você quando abrir o app. Notificações em horário fixo exigem o app Android.
+remTrig|Você receberá uma notificação todo dia neste horário.
+remDenied|As notificações estão bloqueadas. Permita nas configurações do navegador.
+remTitle|Hora das palavras! 📚
+remBody|Alguns minutos por dia mantêm sua sequência 🔥
+remSet|Lembrete definido para {time}
+remOff|Lembrete desativado
+## ro
+premium|Premium
+pwTitle|Continuă cu Premium
+pwText|Ai terminat lecțiile gratuite. Premium deblochează toate lecțiile.
+pwF1|Toate lecțiile de la toate nivelurile (A1–B2)
+pwF2|Fiecare curs nou de limbă, imediat ce apare
+pwF3|Fără reclame, niciodată
+pwF4|Susține un dezvoltator independent
+pwPrice|{price} pe lună
+pwCancel|Anulezi oricând din Google Play.
+pwBuy|Abonează-te
+pwRestore|Restabilește achiziția
+pwAndroid|Abonamentul este disponibil în aplicația Android din Google Play.
+pwWebHave|Ai deja abonament? Conectează-te cu același cont.
+pwSignInFirst|Conectează-te sau creează mai întâi un cont gratuit, ca abonamentul să fie legat de el.
+pwActive|Premium este activ ✓
+pwNone|Nu s-a găsit niciun abonament activ.
+pwFail|Achiziția nu a putut fi confirmată. Dacă ai fost taxat, apasă „Restabilește achiziția”.
+pwNotReady|Plățile nu sunt încă activate. Încearcă mai târziu.
+privacy|Confidențialitate
+terms|Termeni de utilizare
+reminder|Memento zilnic
+remTime|Ora
+remWeb|În browser îți amintim când deschizi aplicația. Notificările la oră fixă necesită aplicația Android.
+remTrig|Vei primi o notificare în fiecare zi la această oră.
+remDenied|Notificările sunt blocate. Permite-le din setările browserului.
+remTitle|E timpul pentru cuvinte! 📚
+remBody|Câteva minute pe zi îți păstrează seria 🔥
+remSet|Memento setat pentru {time}
+remOff|Memento dezactivat
+## ru
+premium|Премиум
+pwTitle|Продолжай с Премиум
+pwText|Бесплатные уроки закончились. Премиум открывает все уроки.
+pwF1|Все уроки всех уровней (A1–B2)
+pwF2|Каждый новый языковой курс, как только выйдет
+pwF3|Никакой рекламы
+pwF4|Поддержи независимого разработчика
+pwPrice|{price} в месяц
+pwCancel|Отменить можно в любой момент в Google Play.
+pwBuy|Оформить подписку
+pwRestore|Восстановить покупку
+pwAndroid|Подписка доступна в приложении для Android в Google Play.
+pwWebHave|Уже есть подписка? Войди в тот же аккаунт.
+pwSignInFirst|Сначала войди или создай бесплатный аккаунт, чтобы подписка была к нему привязана.
+pwActive|Премиум активен ✓
+pwNone|Активная подписка не найдена.
+pwFail|Не удалось подтвердить покупку. Если деньги списаны, нажми «Восстановить покупку».
+pwNotReady|Оплата пока не включена. Попробуй позже.
+privacy|Конфиденциальность
+terms|Условия использования
+reminder|Ежедневное напоминание
+remTime|Время
+remWeb|В браузере мы напомним, когда ты откроешь приложение. Уведомления в точное время — только в приложении для Android.
+remTrig|Каждый день в это время будет приходить уведомление.
+remDenied|Уведомления заблокированы. Разреши их в настройках браузера.
+remTitle|Время для слов! 📚
+remBody|Пара минут в день — и серия не прервётся 🔥
+remSet|Напоминание на {time}
+remOff|Напоминание выключено
+## es
+premium|Premium
+pwTitle|Sigue aprendiendo con Premium
+pwText|Ya usaste tus lecciones gratis. Premium desbloquea todas las lecciones.
+pwF1|Todas las lecciones de todos los niveles (A1–B2)
+pwF2|Cada nuevo curso de idioma en cuanto salga
+pwF3|Nunca anuncios
+pwF4|Apoya a un desarrollador independiente
+pwPrice|{price} al mes
+pwCancel|Cancela cuando quieras en Google Play.
+pwBuy|Suscribirse
+pwRestore|Restaurar compra
+pwAndroid|La suscripción está disponible en la app de Android en Google Play.
+pwWebHave|¿Ya tienes suscripción? Inicia sesión con la misma cuenta.
+pwSignInFirst|Primero inicia sesión o crea una cuenta gratis para vincular tu suscripción.
+pwActive|Premium activo ✓
+pwNone|No se encontró ninguna suscripción activa.
+pwFail|No se pudo confirmar la compra. Si se te cobró, toca «Restaurar compra».
+pwNotReady|Los pagos aún no están activados. Inténtalo más tarde.
+privacy|Privacidad
+terms|Términos de uso
+reminder|Recordatorio diario
+remTime|Hora
+remWeb|En el navegador te lo recordamos al abrir la app. Las notificaciones a una hora fija requieren la app de Android.
+remTrig|Recibirás una notificación cada día a esta hora.
+remDenied|Las notificaciones están bloqueadas. Permítelas en los ajustes del navegador.
+remTitle|¡Hora de tus palabras! 📚
+remBody|Unos minutos al día mantienen tu racha 🔥
+remSet|Recordatorio a las {time}
+remOff|Recordatorio desactivado
+## sv
+premium|Premium
+pwTitle|Fortsätt med Premium
+pwText|Dina gratislektioner är slut. Premium låser upp alla lektioner.
+pwF1|Alla lektioner på alla nivåer (A1–B2)
+pwF2|Varje ny språkkurs när den kommer
+pwF3|Aldrig reklam
+pwF4|Stöd en oberoende utvecklare
+pwPrice|{price} per månad
+pwCancel|Avsluta när du vill i Google Play.
+pwBuy|Prenumerera
+pwRestore|Återställ köp
+pwAndroid|Prenumerationen finns i Android-appen på Google Play.
+pwWebHave|Prenumererar du redan? Logga in med samma konto.
+pwSignInFirst|Logga in eller skapa ett gratiskonto först, så kopplas prenumerationen till det.
+pwActive|Premium är aktivt ✓
+pwNone|Ingen aktiv prenumeration hittades.
+pwFail|Köpet kunde inte bekräftas. Om du har debiterats, tryck på ”Återställ köp”.
+pwNotReady|Betalningar är inte aktiverade än. Försök igen senare.
+privacy|Integritetspolicy
+terms|Användarvillkor
+reminder|Daglig påminnelse
+remTime|Tid
+remWeb|I webbläsaren påminner vi dig när du öppnar appen. Aviseringar vid en fast tid kräver Android-appen.
+remTrig|Du får en avisering varje dag vid den här tiden.
+remDenied|Aviseringar är blockerade. Tillåt dem i webbläsarens inställningar.
+remTitle|Dags för dina ord! 📚
+remBody|Några minuter om dagen håller din svit vid liv 🔥
+remSet|Påminnelse inställd på {time}
+remOff|Påminnelse avstängd
+## th
+premium|พรีเมียม
+pwTitle|เรียนต่อด้วยพรีเมียม
+pwText|คุณใช้บทเรียนฟรีครบแล้ว พรีเมียมจะปลดล็อกทุกบทเรียน
+pwF1|ทุกบทเรียนในทุกระดับ (A1–B2)
+pwF2|คอร์สภาษาใหม่ทุกคอร์สทันทีที่มา
+pwF3|ไม่มีโฆษณาตลอดไป
+pwF4|สนับสนุนนักพัฒนาอิสระ
+pwPrice|{price} ต่อเดือน
+pwCancel|ยกเลิกได้ทุกเมื่อใน Google Play
+pwBuy|สมัครสมาชิก
+pwRestore|กู้คืนการซื้อ
+pwAndroid|การสมัครสมาชิกใช้ได้ในแอป Android บน Google Play
+pwWebHave|สมัครไว้แล้ว? เข้าสู่ระบบด้วยบัญชีเดิม
+pwSignInFirst|เข้าสู่ระบบหรือสร้างบัญชีฟรีก่อน เพื่อผูกการสมัครสมาชิกกับบัญชี
+pwActive|พรีเมียมใช้งานอยู่ ✓
+pwNone|ไม่พบการสมัครสมาชิกที่ใช้งานอยู่
+pwFail|ยืนยันการซื้อไม่ได้ หากถูกเรียกเก็บเงินแล้ว ให้แตะ "กู้คืนการซื้อ"
+pwNotReady|ยังไม่เปิดการชำระเงิน โปรดลองใหม่ภายหลัง
+privacy|นโยบายความเป็นส่วนตัว
+terms|ข้อกำหนดการใช้งาน
+reminder|เตือนรายวัน
+remTime|เวลา
+remWeb|ในเบราว์เซอร์ เราจะเตือนเมื่อคุณเปิดแอป การแจ้งเตือนตามเวลาที่กำหนดต้องใช้แอป Android
+remTrig|คุณจะได้รับการแจ้งเตือนทุกวันในเวลานี้
+remDenied|การแจ้งเตือนถูกบล็อก โปรดอนุญาตในการตั้งค่าเบราว์เซอร์
+remTitle|ได้เวลาท่องศัพท์แล้ว! 📚
+remBody|วันละไม่กี่นาทีช่วยรักษาสถิติต่อเนื่องของคุณ 🔥
+remSet|ตั้งเตือนเวลา {time} แล้ว
+remOff|ปิดการเตือนแล้ว
+## tr
+premium|Premium
+pwTitle|Premium ile öğrenmeye devam et
+pwText|Ücretsiz derslerin bitti. Premium tüm dersleri açar.
+pwF1|Tüm seviyelerdeki tüm dersler (A1–B2)
+pwF2|Çıkan her yeni dil kursu
+pwF3|Asla reklam yok
+pwF4|Bağımsız bir geliştiriciyi destekle
+pwPrice|Aylık {price}
+pwCancel|Google Play'den istediğin zaman iptal et.
+pwBuy|Abone ol
+pwRestore|Satın alımı geri yükle
+pwAndroid|Abonelik, Google Play'deki Android uygulamasında sunulur.
+pwWebHave|Zaten abone misin? Aynı hesapla giriş yap.
+pwSignInFirst|Aboneliğin hesabına bağlanması için önce giriş yap veya ücretsiz hesap oluştur.
+pwActive|Premium etkin ✓
+pwNone|Etkin abonelik bulunamadı.
+pwFail|Satın alma doğrulanamadı. Ücret alındıysa "Satın alımı geri yükle"ye dokun.
+pwNotReady|Ödemeler henüz açık değil. Daha sonra tekrar dene.
+privacy|Gizlilik politikası
+terms|Kullanım koşulları
+reminder|Günlük hatırlatıcı
+remTime|Saat
+remWeb|Tarayıcıda, uygulamayı açtığında hatırlatırız. Belirli saatte bildirim için Android uygulaması gerekir.
+remTrig|Her gün bu saatte bir bildirim alacaksın.
+remDenied|Bildirimler engelli. Tarayıcı ayarlarından izin ver.
+remTitle|Kelime zamanı! 📚
+remBody|Günde birkaç dakika serini korur 🔥
+remSet|Hatırlatıcı {time} için ayarlandı
+remOff|Hatırlatıcı kapatıldı
+## uk
+premium|Преміум
+pwTitle|Продовжуй з Преміум
+pwText|Безкоштовні уроки закінчилися. Преміум відкриває всі уроки.
+pwF1|Усі уроки всіх рівнів (A1–B2)
+pwF2|Кожен новий мовний курс, щойно вийде
+pwF3|Жодної реклами
+pwF4|Підтримай незалежного розробника
+pwPrice|{price} на місяць
+pwCancel|Скасувати можна будь-коли в Google Play.
+pwBuy|Оформити підписку
+pwRestore|Відновити покупку
+pwAndroid|Підписка доступна в застосунку для Android у Google Play.
+pwWebHave|Уже маєш підписку? Увійди в той самий акаунт.
+pwSignInFirst|Спершу увійди або створи безкоштовний акаунт, щоб підписку прив'язати до нього.
+pwActive|Преміум активний ✓
+pwNone|Активну підписку не знайдено.
+pwFail|Не вдалося підтвердити покупку. Якщо кошти списано, натисни «Відновити покупку».
+pwNotReady|Оплату ще не ввімкнено. Спробуй пізніше.
+privacy|Конфіденційність
+terms|Умови використання
+reminder|Щоденне нагадування
+remTime|Час
+remWeb|У браузері ми нагадаємо, коли ти відкриєш застосунок. Сповіщення в точний час — лише в застосунку для Android.
+remTrig|Щодня в цей час надходитиме сповіщення.
+remDenied|Сповіщення заблоковано. Дозволь їх у налаштуваннях браузера.
+remTitle|Час для слів! 📚
+remBody|Кілька хвилин на день — і серія не перерветься 🔥
+remSet|Нагадування на {time}
+remOff|Нагадування вимкнено
+## vi
+premium|Premium
+pwTitle|Học tiếp với Premium
+pwText|Bạn đã dùng hết bài học miễn phí. Premium mở khóa mọi bài học.
+pwF1|Mọi bài học ở mọi cấp độ (A1–B2)
+pwF2|Mọi khóa ngôn ngữ mới ngay khi ra mắt
+pwF3|Không bao giờ có quảng cáo
+pwF4|Ủng hộ một nhà phát triển độc lập
+pwPrice|{price} mỗi tháng
+pwCancel|Hủy bất cứ lúc nào trên Google Play.
+pwBuy|Đăng ký
+pwRestore|Khôi phục giao dịch
+pwAndroid|Gói đăng ký có trong ứng dụng Android trên Google Play.
+pwWebHave|Đã đăng ký rồi? Hãy đăng nhập bằng cùng tài khoản.
+pwSignInFirst|Hãy đăng nhập hoặc tạo tài khoản miễn phí trước để liên kết gói đăng ký.
+pwActive|Premium đang hoạt động ✓
+pwNone|Không tìm thấy gói đăng ký đang hoạt động.
+pwFail|Không xác nhận được giao dịch. Nếu đã bị trừ tiền, hãy chạm "Khôi phục giao dịch".
+pwNotReady|Thanh toán chưa được bật. Vui lòng thử lại sau.
+privacy|Chính sách quyền riêng tư
+terms|Điều khoản sử dụng
+reminder|Nhắc nhở hằng ngày
+remTime|Giờ
+remWeb|Trên trình duyệt, chúng tôi nhắc bạn khi mở ứng dụng. Thông báo đúng giờ cần ứng dụng Android.
+remTrig|Bạn sẽ nhận thông báo mỗi ngày vào giờ này.
+remDenied|Thông báo đang bị chặn. Hãy cho phép trong cài đặt trình duyệt.
+remTitle|Đến giờ học từ rồi! 📚
+remBody|Vài phút mỗi ngày giữ chuỗi ngày học của bạn 🔥
+remSet|Đã đặt nhắc nhở lúc {time}
+remOff|Đã tắt nhắc nhở

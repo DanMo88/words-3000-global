@@ -165,3 +165,32 @@ delConfirm|Có, xóa vĩnh viễn
 cancel|Hủy
 deleted|Tài khoản của bạn đã bị xóa.
 savePrompt|💾 Lưu tiến độ: tạo tài khoản miễn phí
+premium|Premium
+pwTitle|Học tiếp với Premium
+pwText|Bạn đã dùng hết bài học miễn phí. Premium mở khóa mọi bài học.
+pwF1|Mọi bài học ở mọi cấp độ (A1–B2)
+pwF2|Mọi khóa ngôn ngữ mới ngay khi ra mắt
+pwF3|Không bao giờ có quảng cáo
+pwF4|Ủng hộ một nhà phát triển độc lập
+pwPrice|{price} mỗi tháng
+pwCancel|Hủy bất cứ lúc nào trên Google Play.
+pwBuy|Đăng ký
+pwRestore|Khôi phục giao dịch
+pwAndroid|Gói đăng ký có trong ứng dụng Android trên Google Play.
+pwWebHave|Đã đăng ký rồi? Hãy đăng nhập bằng cùng tài khoản.
+pwSignInFirst|Hãy đăng nhập hoặc tạo tài khoản miễn phí trước để liên kết gói đăng ký.
+pwActive|Premium đang hoạt động ✓
+pwNone|Không tìm thấy gói đăng ký đang hoạt động.
+pwFail|Không xác nhận được giao dịch. Nếu đã bị trừ tiền, hãy chạm "Khôi phục giao dịch".
+pwNotReady|Thanh toán chưa được bật. Vui lòng thử lại sau.
+privacy|Chính sách quyền riêng tư
+terms|Điều khoản sử dụng
+reminder|Nhắc nhở hằng ngày
+remTime|Giờ
+remWeb|Trên trình duyệt, chúng tôi nhắc bạn khi mở ứng dụng. Thông báo đúng giờ cần ứng dụng Android.
+remTrig|Bạn sẽ nhận thông báo mỗi ngày vào giờ này.
+remDenied|Thông báo đang bị chặn. Hãy cho phép trong cài đặt trình duyệt.
+remTitle|Đến giờ học từ rồi! 📚
+remBody|Vài phút mỗi ngày giữ chuỗi ngày học của bạn 🔥
+remSet|Đã đặt nhắc nhở lúc {time}
+remOff|Đã tắt nhắc nhở

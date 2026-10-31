@@ -165,3 +165,32 @@ delConfirm|Tak, usuń na zawsze
 cancel|Anuluj
 deleted|Twoje konto zostało usunięte.
 savePrompt|💾 Zapisz postępy: załóż darmowe konto
+premium|Premium
+pwTitle|Ucz się dalej z Premium
+pwText|Darmowe lekcje się skończyły. Premium odblokowuje wszystkie lekcje.
+pwF1|Wszystkie lekcje na wszystkich poziomach (A1–B2)
+pwF2|Każdy nowy kurs językowy, gdy tylko się pojawi
+pwF3|Nigdy żadnych reklam
+pwF4|Wesprzyj niezależnego twórcę
+pwPrice|{price} miesięcznie
+pwCancel|Anuluj w dowolnej chwili w Google Play.
+pwBuy|Subskrybuj
+pwRestore|Przywróć zakup
+pwAndroid|Subskrypcja jest dostępna w aplikacji na Androida w Google Play.
+pwWebHave|Masz już subskrypcję? Zaloguj się na to samo konto.
+pwSignInFirst|Najpierw zaloguj się lub załóż darmowe konto, aby powiązać z nim subskrypcję.
+pwActive|Premium jest aktywne ✓
+pwNone|Nie znaleziono aktywnej subskrypcji.
+pwFail|Nie udało się potwierdzić zakupu. Jeśli pobrano opłatę, stuknij „Przywróć zakup”.
+pwNotReady|Płatności nie są jeszcze włączone. Spróbuj później.
+privacy|Prywatność
+terms|Warunki korzystania
+reminder|Codzienne przypomnienie
+remTime|Godzina
+remWeb|W przeglądarce przypominamy po otwarciu aplikacji. Powiadomienia o stałej porze wymagają aplikacji na Androida.
+remTrig|Codziennie o tej porze dostaniesz powiadomienie.
+remDenied|Powiadomienia są zablokowane. Zezwól na nie w ustawieniach przeglądarki.
+remTitle|Czas na słówka! 📚
+remBody|Kilka minut dziennie podtrzymuje Twoją serię 🔥
+remSet|Przypomnienie ustawione na {time}
+remOff|Przypomnienie wyłączone

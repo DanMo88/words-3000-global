@@ -165,3 +165,32 @@ delConfirm|Da, trajno izbriši
 cancel|Odustani
 deleted|Tvoj račun je izbrisan.
 savePrompt|💾 Spremi napredak: izradi besplatni račun
+premium|Premium
+pwTitle|Nastavi učiti uz Premium
+pwText|Iskoristio si besplatne lekcije. Premium otključava sve lekcije.
+pwF1|Sve lekcije na svim razinama (A1–B2)
+pwF2|Svaki novi jezični tečaj kad stigne
+pwF3|Bez oglasa, nikad
+pwF4|Podrži neovisnog developera
+pwPrice|{price} mjesečno
+pwCancel|Otkaži bilo kada u Google Playu.
+pwBuy|Pretplati se
+pwRestore|Vrati kupnju
+pwAndroid|Pretplata je dostupna u Android aplikaciji na Google Playu.
+pwWebHave|Već si pretplaćen? Prijavi se istim računom.
+pwSignInFirst|Prvo se prijavi ili napravi besplatan račun da se pretplata poveže s njim.
+pwActive|Premium je aktivan ✓
+pwNone|Nema aktivne pretplate.
+pwFail|Kupnja nije potvrđena. Ako ti je naplaćeno, dodirni „Vrati kupnju”.
+pwNotReady|Plaćanja još nisu uključena. Pokušaj kasnije.
+privacy|Pravila privatnosti
+terms|Uvjeti korištenja
+reminder|Dnevni podsjetnik
+remTime|Vrijeme
+remWeb|U pregledniku te podsjetimo kad otvoriš aplikaciju. Obavijesti u točno vrijeme traže Android aplikaciju.
+remTrig|Svaki dan u ovo vrijeme dobit ćeš obavijest.
+remDenied|Obavijesti su blokirane. Dopusti ih u postavkama preglednika.
+remTitle|Vrijeme je za riječi! 📚
+remBody|Nekoliko minuta dnevno čuva tvoj niz 🔥
+remSet|Podsjetnik postavljen za {time}
+remOff|Podsjetnik isključen

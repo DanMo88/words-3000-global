@@ -165,3 +165,32 @@ delConfirm|Igen, végleges törlés
 cancel|Mégse
 deleted|A fiókodat töröltük.
 savePrompt|💾 Mentsd a haladásod: hozz létre ingyenes fiókot
+premium|Prémium
+pwTitle|Tanulj tovább a Prémiummal
+pwText|Elfogytak az ingyenes leckéid. A Prémium minden leckét felold.
+pwF1|Minden lecke minden szinten (A1–B2)
+pwF2|Minden új nyelvi kurzus, amint megjelenik
+pwF3|Soha nincs reklám
+pwF4|Támogass egy független fejlesztőt
+pwPrice|{price} havonta
+pwCancel|Bármikor lemondható a Google Playen.
+pwBuy|Előfizetés
+pwRestore|Vásárlás visszaállítása
+pwAndroid|Az előfizetés a Google Play Android-alkalmazásában érhető el.
+pwWebHave|Már előfizettél? Jelentkezz be ugyanazzal a fiókkal.
+pwSignInFirst|Előbb jelentkezz be, vagy hozz létre ingyenes fiókot, hogy az előfizetés hozzá kapcsolódjon.
+pwActive|A Prémium aktív ✓
+pwNone|Nincs aktív előfizetés.
+pwFail|A vásárlást nem sikerült megerősíteni. Ha terheltek, koppints a „Vásárlás visszaállítása” gombra.
+pwNotReady|A fizetés még nincs bekapcsolva. Próbáld később.
+privacy|Adatvédelem
+terms|Felhasználási feltételek
+reminder|Napi emlékeztető
+remTime|Időpont
+remWeb|A böngészőben az app megnyitásakor emlékeztetünk. Pontos időben érkező értesítéshez az Android-app kell.
+remTrig|Minden nap ebben az időpontban kapsz értesítést.
+remDenied|Az értesítések le vannak tiltva. Engedélyezd őket a böngésző beállításaiban.
+remTitle|Itt az idő a szavakra! 📚
+remBody|Napi néhány perc, és nem szakad meg a sorozatod 🔥
+remSet|Emlékeztető beállítva: {time}
+remOff|Emlékeztető kikapcsolva
