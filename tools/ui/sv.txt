@@ -178,10 +178,7 @@ pwBuy|Prenumerera
 pwRestore|Återställ köp
 pwAndroid|Prenumerationen finns i Android-appen på Google Play.
 pwWebHave|Prenumererar du redan? Logga in med samma konto.
-pwSignInFirst|Logga in eller skapa ett gratiskonto först, så kopplas prenumerationen till det.
 pwActive|Premium är aktivt ✓
-pwNone|Ingen aktiv prenumeration hittades.
-pwFail|Köpet kunde inte bekräftas. Om du har debiterats, tryck på ”Återställ köp”.
 pwNotReady|Betalningar är inte aktiverade än. Försök igen senare.
 privacy|Integritetspolicy
 terms|Användarvillkor
@@ -194,3 +191,27 @@ remTitle|Dags för dina ord! 📚
 remBody|Några minuter om dagen håller din svit vid liv 🔥
 remSet|Påminnelse inställd på {time}
 remOff|Påminnelse avstängd
+pwOnce|{price} · engångsbetalning
+pwLifetime|Ingen prenumeration: livstids tillgång till alla lektioner och framtida kurser.
+pwBuyOnce|Köp en gång · {price}
+pwSoonBtn|Kommer snart
+pwSoon|Betalning kommer snart. Dina gratislektioner fungerar fortfarande.
+pwHave|Jag har redan köpt
+pwWait|Aktiverar ditt köp…
+pwPending|Redan betalat? Aktiveringen kan ta en minut. Tryck på ”Jag har redan köpt” för att kontrollera igen.
+pwDevNote|Premium fungerar på en telefon i taget. Du kan flytta det till en annan telefon en gång var 30:e dag.
+pwSignInFirst|Logga in eller skapa ett gratiskonto först så att köpet kopplas till det.
+pwNone|Inget köp hittades för det här kontot.
+pwFail|Köpet kunde inte bekräftas. Om du har debiterats, tryck på ”Jag har redan köpt”.
+devTitle|Premium finns på en annan telefon
+devOther|Det här köpet är aktivt på en annan telefon ({label}, senast sedd {time}). Flytta det till den här telefonen?
+devMove|Flytta till den här telefonen
+devMoved|Premium är nu aktivt på den här telefonen.
+devWait|Du kan flytta det igen {date}.
+devThis|Premium är aktivt på den här telefonen.
+devManage|Hantera enhet
+devOffline|Anslut till internet för att kontrollera ditt köp.
+devUnknown|okänd enhet
+devFree|Gratislektioner och synkronisering fungerar fortfarande på den här telefonen.
+devCheck|Kontrollera igen
+devNow|Inte nu

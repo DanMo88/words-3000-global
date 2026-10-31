@@ -178,10 +178,7 @@ pwBuy|Abone ol
 pwRestore|Satın alımı geri yükle
 pwAndroid|Abonelik, Google Play'deki Android uygulamasında sunulur.
 pwWebHave|Zaten abone misin? Aynı hesapla giriş yap.
-pwSignInFirst|Aboneliğin hesabına bağlanması için önce giriş yap veya ücretsiz hesap oluştur.
 pwActive|Premium etkin ✓
-pwNone|Etkin abonelik bulunamadı.
-pwFail|Satın alma doğrulanamadı. Ücret alındıysa "Satın alımı geri yükle"ye dokun.
 pwNotReady|Ödemeler henüz açık değil. Daha sonra tekrar dene.
 privacy|Gizlilik politikası
 terms|Kullanım koşulları
@@ -194,3 +191,27 @@ remTitle|Kelime zamanı! 📚
 remBody|Günde birkaç dakika serini korur 🔥
 remSet|Hatırlatıcı {time} için ayarlandı
 remOff|Hatırlatıcı kapatıldı
+pwOnce|{price} · tek seferlik ödeme
+pwLifetime|Abonelik yok: tüm derslere ve gelecek kurslara ömür boyu erişim.
+pwBuyOnce|Bir kez satın al · {price}
+pwSoonBtn|Çok yakında
+pwSoon|Ödeme çok yakında geliyor. Ücretsiz derslerin çalışmaya devam ediyor.
+pwHave|Zaten satın aldım
+pwWait|Satın alman etkinleştiriliyor…
+pwPending|Ödedin mi? Etkinleştirme bir dakika sürebilir. Tekrar kontrol etmek için “Zaten satın aldım”a dokun.
+pwDevNote|Premium aynı anda tek bir telefonda çalışır. 30 günde bir kez başka bir telefona taşıyabilirsin.
+pwSignInFirst|Satın alman hesabına bağlansın diye önce giriş yap ya da ücretsiz bir hesap oluştur.
+pwNone|Bu hesap için satın alma bulunamadı.
+pwFail|Satın alma doğrulanamadı. Ücret alındıysa “Zaten satın aldım”a dokun.
+devTitle|Premium başka bir telefonda
+devOther|Bu satın alma başka bir telefonda etkin ({label}, son görülme {time}). Bu telefona taşınsın mı?
+devMove|Bu telefona taşı
+devMoved|Premium artık bu telefonda etkin.
+devWait|{date} tarihinde tekrar taşıyabilirsin.
+devThis|Premium bu telefonda etkin.
+devManage|Cihazı yönet
+devOffline|Satın almanı kontrol etmek için internete bağlan.
+devUnknown|bilinmeyen cihaz
+devFree|Ücretsiz dersler ve eşitleme bu telefonda da çalışır.
+devCheck|Tekrar kontrol et
+devNow|Şimdi değil

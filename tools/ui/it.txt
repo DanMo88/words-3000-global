@@ -178,10 +178,7 @@ pwBuy|Abbonati
 pwRestore|Ripristina acquisto
 pwAndroid|L'abbonamento è disponibile nell'app Android su Google Play.
 pwWebHave|Hai già l'abbonamento? Accedi con lo stesso account.
-pwSignInFirst|Prima accedi o crea un account gratuito, così l'abbonamento resta collegato.
 pwActive|Premium è attivo ✓
-pwNone|Nessun abbonamento attivo trovato.
-pwFail|Non è stato possibile confermare l'acquisto. Se hai pagato, tocca «Ripristina acquisto».
 pwNotReady|I pagamenti non sono ancora attivi. Riprova più tardi.
 privacy|Privacy
 terms|Termini d'uso
@@ -194,3 +191,27 @@ remTitle|È l'ora delle parole! 📚
 remBody|Pochi minuti al giorno mantengono la tua serie 🔥
 remSet|Promemoria impostato alle {time}
 remOff|Promemoria disattivato
+pwOnce|{price} · pagamento unico
+pwLifetime|Nessun abbonamento: accesso a vita a tutte le lezioni e ai corsi futuri.
+pwBuyOnce|Acquista una volta · {price}
+pwSoonBtn|Prossimamente
+pwSoon|I pagamenti arriveranno presto. Le tue lezioni gratuite continuano a funzionare.
+pwHave|Ho già acquistato
+pwWait|Stiamo attivando il tuo acquisto…
+pwPending|Hai già pagato? L’attivazione può richiedere un minuto. Tocca «Ho già acquistato» per controllare di nuovo.
+pwDevNote|Premium funziona su un telefono alla volta. Puoi spostarlo su un altro telefono una volta ogni 30 giorni.
+pwSignInFirst|Accedi o crea prima un account gratuito, così l’acquisto verrà collegato a esso.
+pwNone|Nessun acquisto trovato per questo account.
+pwFail|Non è stato possibile confermare l’acquisto. Se ti è stato addebitato, tocca «Ho già acquistato».
+devTitle|Premium è su un altro telefono
+devOther|Questo acquisto è attivo su un altro telefono ({label}, visto l’ultima volta {time}). Spostarlo su questo telefono?
+devMove|Sposta su questo telefono
+devMoved|Premium ora è attivo su questo telefono.
+devWait|Potrai spostarlo di nuovo il {date}.
+devThis|Premium è attivo su questo telefono.
+devManage|Gestisci dispositivo
+devOffline|Connettiti a Internet per verificare il tuo acquisto.
+devUnknown|dispositivo sconosciuto
+devFree|Le lezioni gratuite e la sincronizzazione funzionano ancora su questo telefono.
+devCheck|Controlla di nuovo
+devNow|Non ora

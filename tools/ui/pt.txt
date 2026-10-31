@@ -178,10 +178,7 @@ pwBuy|Assinar
 pwRestore|Restaurar compra
 pwAndroid|A assinatura está disponível no app Android no Google Play.
 pwWebHave|Já é assinante? Entre com a mesma conta.
-pwSignInFirst|Entre ou crie uma conta grátis primeiro, para vincular a assinatura a ela.
 pwActive|Premium ativo ✓
-pwNone|Nenhuma assinatura ativa encontrada.
-pwFail|Não foi possível confirmar a compra. Se você foi cobrado, toque em "Restaurar compra".
 pwNotReady|Os pagamentos ainda não foram ativados. Tente mais tarde.
 privacy|Privacidade
 terms|Termos de uso
@@ -194,3 +191,27 @@ remTitle|Hora das palavras! 📚
 remBody|Alguns minutos por dia mantêm sua sequência 🔥
 remSet|Lembrete definido para {time}
 remOff|Lembrete desativado
+pwOnce|{price} · pagamento único
+pwLifetime|Sem assinatura: acesso vitalício a todas as lições e aos cursos futuros.
+pwBuyOnce|Comprar uma vez · {price}
+pwSoonBtn|Em breve
+pwSoon|Os pagamentos chegam em breve. As suas lições gratuitas continuam funcionando.
+pwHave|Já comprei
+pwWait|Ativando sua compra…
+pwPending|Já pagou? A ativação pode levar um minuto. Toque em “Já comprei” para verificar de novo.
+pwDevNote|O Premium funciona em um celular por vez. Você pode transferi-lo para outro celular uma vez a cada 30 dias.
+pwSignInFirst|Entre ou crie primeiro uma conta gratuita para que a compra fique vinculada a ela.
+pwNone|Nenhuma compra encontrada para esta conta.
+pwFail|Não foi possível confirmar a compra. Se você foi cobrado, toque em “Já comprei”.
+devTitle|O Premium está em outro celular
+devOther|Esta compra está ativa em outro celular ({label}, visto pela última vez {time}). Transferir para este celular?
+devMove|Transferir para este celular
+devMoved|O Premium agora está ativo neste celular.
+devWait|Você poderá transferi-lo de novo em {date}.
+devThis|O Premium está ativo neste celular.
+devManage|Gerenciar dispositivo
+devOffline|Conecte-se à internet para verificarmos sua compra.
+devUnknown|dispositivo desconhecido
+devFree|As lições gratuitas e a sincronização continuam funcionando neste celular.
+devCheck|Verificar de novo
+devNow|Agora não

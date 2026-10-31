@@ -255,6 +255,10 @@ html[dir=rtl] .ccur b{line-height:1.5}
 .pwprice b{font-size:clamp(22px,3.6dvh,32px);font-weight:900;color:var(--pri)}
 .pwprice small{color:var(--mut);font-size:clamp(12px,1.7dvh,14px)}
 .pw .amsg{min-height:0}
+.pwprice .pwdev,.pw .pwdev{font-size:clamp(12px,1.7dvh,14px);color:var(--mut);margin:0;max-width:34em}
+.pw.dev .tsub{max-width:30em}
+.pw .dlab{font-weight:700}
+.pw bdi{unicode-bidi:isolate}
 .pwb .lnk{margin:0 auto}
 .legal{display:flex;justify-content:center;flex-wrap:wrap;gap:0 1.5vw;font-size:clamp(12px,1.7dvh,14px);color:var(--mut)}
 .legal a{color:var(--mut);text-decoration:underline;padding:.4dvh 1vw}
