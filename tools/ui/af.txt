@@ -165,3 +165,32 @@ delConfirm|Ja, skrap permanent
 cancel|Kanselleer
 deleted|Jou rekening is geskrap.
 savePrompt|💾 Stoor jou vordering: skep ’n gratis rekening
+premium|Premium
+pwTitle|Hou aan leer met Premium
+pwText|Jy het jou gratis lesse klaar gemaak. Premium sluit alle lesse oop.
+pwF1|Elke les in elke vlak (A1–B2)
+pwF2|Elke nuwe taalkursus wanneer dit bykom
+pwF3|Geen advertensies, ooit nie
+pwF4|Ondersteun 'n onafhanklike ontwikkelaar
+pwPrice|{price} per maand
+pwCancel|Kanselleer enige tyd in Google Play.
+pwBuy|Teken in
+pwRestore|Herstel aankoop
+pwAndroid|Intekeninge is beskikbaar in die Android-app op Google Play.
+pwWebHave|Reeds ingeteken? Meld aan met dieselfde rekening.
+pwSignInFirst|Meld eers aan of skep 'n gratis rekening sodat jou intekening daaraan gekoppel word.
+pwActive|Premium is aktief ✓
+pwNone|Geen aktiewe intekening gevind nie.
+pwFail|Die aankoop kon nie bevestig word nie. As jy betaal het, tik "Herstel aankoop".
+pwNotReady|Betalings is nog nie aangeskakel nie. Probeer later weer.
+privacy|Privaatheidsbeleid
+terms|Gebruiksvoorwaardes
+reminder|Daaglikse herinnering
+remTime|Tyd
+remWeb|In die blaaier herinner ons jou wanneer jy die app oopmaak. Kennisgewings op 'n vaste tyd vereis die Android-app.
+remTrig|Jy kry elke dag op hierdie tyd 'n kennisgewing.
+remDenied|Kennisgewings is geblokkeer. Laat dit toe in jou blaaierinstellings.
+remTitle|Tyd vir jou woorde! 📚
+remBody|'n Paar minute per dag hou jou reeks aan die gang 🔥
+remSet|Herinnering gestel vir {time}
+remOff|Herinnering afgeskakel

@@ -165,3 +165,32 @@ delConfirm|是的，永久删除
 cancel|取消
 deleted|你的账户已删除。
 savePrompt|💾 保存你的进度：创建免费账户
+premium|高级版
+pwTitle|升级高级版，继续学习
+pwText|免费课程已用完。高级版解锁全部课程。
+pwF1|所有级别（A1–B2）的全部课程
+pwF2|今后新增的所有语言课程
+pwF3|永无广告
+pwF4|支持独立开发者
+pwPrice|每月 {price}
+pwCancel|可随时在 Google Play 取消。
+pwBuy|订阅
+pwRestore|恢复购买
+pwAndroid|订阅仅在 Google Play 的安卓应用中提供。
+pwWebHave|已经订阅？请用同一账户登录。
+pwSignInFirst|请先登录或创建免费账户，以便将订阅绑定到账户。
+pwActive|高级版已开通 ✓
+pwNone|未找到有效订阅。
+pwFail|无法确认购买。如果已扣款，请点“恢复购买”。
+pwNotReady|支付尚未开通，请稍后再试。
+privacy|隐私政策
+terms|使用条款
+reminder|每日提醒
+remTime|时间
+remWeb|在浏览器中，我们会在你打开应用时提醒你。定时通知需要安卓应用。
+remTrig|每天这个时间你会收到一条通知。
+remDenied|通知已被阻止。请在浏览器设置中允许。
+remTitle|该背单词啦！📚
+remBody|每天几分钟，连续记录不中断 🔥
+remSet|提醒时间已设为 {time}
+remOff|提醒已关闭

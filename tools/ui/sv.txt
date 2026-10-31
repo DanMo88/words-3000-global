@@ -165,3 +165,32 @@ delConfirm|Ja, radera permanent
 cancel|Avbryt
 deleted|Ditt konto har raderats.
 savePrompt|💾 Spara dina framsteg: skapa ett gratis konto
+premium|Premium
+pwTitle|Fortsätt med Premium
+pwText|Dina gratislektioner är slut. Premium låser upp alla lektioner.
+pwF1|Alla lektioner på alla nivåer (A1–B2)
+pwF2|Varje ny språkkurs när den kommer
+pwF3|Aldrig reklam
+pwF4|Stöd en oberoende utvecklare
+pwPrice|{price} per månad
+pwCancel|Avsluta när du vill i Google Play.
+pwBuy|Prenumerera
+pwRestore|Återställ köp
+pwAndroid|Prenumerationen finns i Android-appen på Google Play.
+pwWebHave|Prenumererar du redan? Logga in med samma konto.
+pwSignInFirst|Logga in eller skapa ett gratiskonto först, så kopplas prenumerationen till det.
+pwActive|Premium är aktivt ✓
+pwNone|Ingen aktiv prenumeration hittades.
+pwFail|Köpet kunde inte bekräftas. Om du har debiterats, tryck på ”Återställ köp”.
+pwNotReady|Betalningar är inte aktiverade än. Försök igen senare.
+privacy|Integritetspolicy
+terms|Användarvillkor
+reminder|Daglig påminnelse
+remTime|Tid
+remWeb|I webbläsaren påminner vi dig när du öppnar appen. Aviseringar vid en fast tid kräver Android-appen.
+remTrig|Du får en avisering varje dag vid den här tiden.
+remDenied|Aviseringar är blockerade. Tillåt dem i webbläsarens inställningar.
+remTitle|Dags för dina ord! 📚
+remBody|Några minuter om dagen håller din svit vid liv 🔥
+remSet|Påminnelse inställd på {time}
+remOff|Påminnelse avstängd

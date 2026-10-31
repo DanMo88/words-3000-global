@@ -165,3 +165,32 @@ delConfirm|Ja, slet permanent
 cancel|Annuller
 deleted|Din konto er slettet.
 savePrompt|💾 Gem dine fremskridt: opret en gratis konto
+premium|Premium
+pwTitle|Fortsæt med Premium
+pwText|Du har brugt dine gratis lektioner. Premium låser alle lektioner op.
+pwF1|Alle lektioner på alle niveauer (A1–B2)
+pwF2|Hvert nyt sprogkursus, når det kommer
+pwF3|Aldrig reklamer
+pwF4|Støt en uafhængig udvikler
+pwPrice|{price} om måneden
+pwCancel|Opsig når som helst i Google Play.
+pwBuy|Abonner
+pwRestore|Gendan køb
+pwAndroid|Abonnementet findes i Android-appen på Google Play.
+pwWebHave|Har du allerede abonnement? Log ind med samme konto.
+pwSignInFirst|Log ind eller opret en gratis konto først, så abonnementet knyttes til den.
+pwActive|Premium er aktiv ✓
+pwNone|Intet aktivt abonnement fundet.
+pwFail|Købet kunne ikke bekræftes. Hvis du er blevet trukket, så tryk på "Gendan køb".
+pwNotReady|Betaling er ikke slået til endnu. Prøv igen senere.
+privacy|Privatlivspolitik
+terms|Vilkår for brug
+reminder|Daglig påmindelse
+remTime|Tidspunkt
+remWeb|I browseren minder vi dig, når du åbner appen. Notifikationer på et fast tidspunkt kræver Android-appen.
+remTrig|Du får en notifikation hver dag på dette tidspunkt.
+remDenied|Notifikationer er blokeret. Tillad dem i browserens indstillinger.
+remTitle|Tid til dine ord! 📚
+remBody|Et par minutter om dagen holder din stime i gang 🔥
+remSet|Påmindelse sat til {time}
+remOff|Påmindelse slået fra

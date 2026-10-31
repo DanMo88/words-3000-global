@@ -165,3 +165,32 @@ delConfirm|Ano, trvale smazat
 cancel|Zrušit
 deleted|Tvůj účet byl smazán.
 savePrompt|💾 Ulož si pokrok: vytvoř si účet zdarma
+premium|Premium
+pwTitle|Pokračuj s Premium
+pwText|Bezplatné lekce ti došly. Premium odemkne všechny lekce.
+pwF1|Všechny lekce ve všech úrovních (A1–B2)
+pwF2|Každý nový jazykový kurz, jakmile vyjde
+pwF3|Bez reklam, nikdy
+pwF4|Podpoříš nezávislého vývojáře
+pwPrice|{price} měsíčně
+pwCancel|Zrušit můžeš kdykoli v Google Play.
+pwBuy|Předplatit
+pwRestore|Obnovit nákup
+pwAndroid|Předplatné je dostupné v aplikaci pro Android na Google Play.
+pwWebHave|Už předplácíš? Přihlas se stejným účtem.
+pwSignInFirst|Nejdřív se přihlas nebo si založ účet zdarma, aby se k němu předplatné připojilo.
+pwActive|Premium je aktivní ✓
+pwNone|Nenalezeno žádné aktivní předplatné.
+pwFail|Nákup se nepodařilo ověřit. Pokud ti byla stržena platba, klepni na „Obnovit nákup“.
+pwNotReady|Platby zatím nejsou zapnuté. Zkus to později.
+privacy|Ochrana soukromí
+terms|Podmínky použití
+reminder|Denní připomínka
+remTime|Čas
+remWeb|V prohlížeči ti připomeneme při otevření aplikace. Oznámení v přesný čas umí jen aplikace pro Android.
+remTrig|Každý den v tento čas dostaneš oznámení.
+remDenied|Oznámení jsou blokovaná. Povol je v nastavení prohlížeče.
+remTitle|Čas na slovíčka! 📚
+remBody|Pár minut denně udrží tvou sérii 🔥
+remSet|Připomínka nastavena na {time}
+remOff|Připomínka vypnuta

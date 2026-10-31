@@ -165,3 +165,32 @@ delConfirm|Sim, excluir para sempre
 cancel|Cancelar
 deleted|Sua conta foi excluída.
 savePrompt|💾 Salve seu progresso: crie uma conta grátis
+premium|Premium
+pwTitle|Continue com o Premium
+pwText|Suas lições grátis acabaram. O Premium libera todas as lições.
+pwF1|Todas as lições de todos os níveis (A1–B2)
+pwF2|Cada novo curso de idioma assim que sair
+pwF3|Nunca anúncios
+pwF4|Apoie um desenvolvedor independente
+pwPrice|{price} por mês
+pwCancel|Cancele quando quiser no Google Play.
+pwBuy|Assinar
+pwRestore|Restaurar compra
+pwAndroid|A assinatura está disponível no app Android no Google Play.
+pwWebHave|Já é assinante? Entre com a mesma conta.
+pwSignInFirst|Entre ou crie uma conta grátis primeiro, para vincular a assinatura a ela.
+pwActive|Premium ativo ✓
+pwNone|Nenhuma assinatura ativa encontrada.
+pwFail|Não foi possível confirmar a compra. Se você foi cobrado, toque em "Restaurar compra".
+pwNotReady|Os pagamentos ainda não foram ativados. Tente mais tarde.
+privacy|Privacidade
+terms|Termos de uso
+reminder|Lembrete diário
+remTime|Horário
+remWeb|No navegador, lembramos você quando abrir o app. Notificações em horário fixo exigem o app Android.
+remTrig|Você receberá uma notificação todo dia neste horário.
+remDenied|As notificações estão bloqueadas. Permita nas configurações do navegador.
+remTitle|Hora das palavras! 📚
+remBody|Alguns minutos por dia mantêm sua sequência 🔥
+remSet|Lembrete definido para {time}
+remOff|Lembrete desativado

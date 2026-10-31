@@ -165,3 +165,32 @@ delConfirm|Ya, hapus permanen
 cancel|Batal
 deleted|Akunmu sudah dihapus.
 savePrompt|💾 Simpan kemajuanmu: buat akun gratis
+premium|Premium
+pwTitle|Lanjut belajar dengan Premium
+pwText|Pelajaran gratismu sudah habis. Premium membuka semua pelajaran.
+pwF1|Semua pelajaran di semua level (A1–B2)
+pwF2|Setiap kursus bahasa baru begitu tersedia
+pwF3|Tanpa iklan, selamanya
+pwF4|Dukung pengembang independen
+pwPrice|{price} per bulan
+pwCancel|Batalkan kapan saja di Google Play.
+pwBuy|Berlangganan
+pwRestore|Pulihkan pembelian
+pwAndroid|Langganan tersedia di aplikasi Android di Google Play.
+pwWebHave|Sudah berlangganan? Masuk dengan akun yang sama.
+pwSignInFirst|Masuk atau buat akun gratis dulu agar langgananmu terhubung ke akun itu.
+pwActive|Premium aktif ✓
+pwNone|Tidak ada langganan aktif.
+pwFail|Pembelian tidak dapat dikonfirmasi. Jika saldomu terpotong, ketuk "Pulihkan pembelian".
+pwNotReady|Pembayaran belum diaktifkan. Coba lagi nanti.
+privacy|Kebijakan privasi
+terms|Ketentuan penggunaan
+reminder|Pengingat harian
+remTime|Waktu
+remWeb|Di browser, kami mengingatkanmu saat aplikasi dibuka. Notifikasi pada jam tertentu perlu aplikasi Android.
+remTrig|Kamu akan mendapat notifikasi setiap hari pada jam ini.
+remDenied|Notifikasi diblokir. Izinkan di pengaturan browser.
+remTitle|Waktunya belajar kata! 📚
+remBody|Beberapa menit sehari menjaga runtunanmu 🔥
+remSet|Pengingat diatur ke {time}
+remOff|Pengingat dimatikan
