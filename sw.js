@@ -1,7 +1,7 @@
 // HTML: network-first · JSON data: network-first · css/js/manifest: stale-while-revalidate
 // media (audio/img/fonts/icons): cache-on-demand · cross-origin: never touched
-const V = 'w3g-v13', MEDIA = 'w3g-media';
-const SHELL = ['./', 'index.html', 'style.css?v=8', 'app.js?v=9', 'fonts/w3g-fonts.css?v=5', 'fonts/w3g-latin.woff2', 'install.js?v=1', 'manifest.webmanifest', 'data/index.json', 'i18n/langs.json', 'flags/us.svg', 'vendor/supabase-2.118.0.js',
+const V = 'w3g-v14', MEDIA = 'w3g-media';
+const SHELL = ['./', 'index.html', 'style.css?v=9', 'app.js?v=10', 'fonts/w3g-fonts.css?v=5', 'fonts/w3g-latin.woff2', 'install.js?v=1', 'manifest.webmanifest', 'data/index.json', 'i18n/langs.json', 'flags/us.svg', 'vendor/supabase-2.118.0.js',
   'fonts/Vazirmatn-Regular.woff2', 'fonts/Vazirmatn-Bold.woff2', 'fonts/Vazirmatn-Black.woff2',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-192.png', 'icons/maskable-512.png', 'icons/apple-touch-icon.png', 'audio/sfx-correct.mp3', 'audio/sfx-wrong.mp3'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
@@ -36,4 +36,13 @@ self.addEventListener('fetch', e => {
       return hit || net;
     }));
   }
+});
+
+// daily reminder notifications (scheduled by the app with Notification Triggers where supported): open/focus the app
+self.addEventListener('notificationclick', e => {
+  e.notification.close();
+  e.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(ws => {
+    for (const w of ws) if (w.url.startsWith(self.registration.scope) && 'focus' in w) return w.focus();
+    return self.clients.openWindow(self.registration.scope);
+  }));
 });
