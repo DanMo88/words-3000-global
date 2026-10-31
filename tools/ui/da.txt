@@ -120,3 +120,10 @@ dlgFirefox1|Firefox understøtter ikke installation af webapps.
 dlgFirefox2|Åbn denne side i {a} eller {b}, og klik på »Installer«.
 dlgPc1|Klik på installationsikonet {a} i adresselinjen,
 dlgPc2|eller vælg {b} i menuen {a}.
+learnTitle|Hvilket sprog vil du lære?
+learnSub|Du kan tilføje flere sprog senere.
+comingSoonMsg|{lang}: dette kursus kommer snart. Indtil videre kan du lære amerikansk engelsk.
+newLanguage|Nyt sprog
+myCourses|Mine sprog
+addLanguage|Tilføj et nyt sprog
+langEnglishUS|Amerikansk engelsk

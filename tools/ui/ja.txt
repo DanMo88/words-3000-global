@@ -120,3 +120,10 @@ dlgFirefox1|Firefox はウェブアプリのインストールに対応してい
 dlgFirefox2|このページを {a} または {b} で開き、「インストール」をクリックしてください。
 dlgPc1|アドレスバーのインストールアイコン {a} をクリックするか、
 dlgPc2|{a} メニューから {b} を選びます。
+learnTitle|どの言語を学びたいですか？
+learnSub|ほかの言語はあとから追加できます。
+comingSoonMsg|{lang}：このコースは近日公開予定です。今はアメリカ英語を学べます。
+newLanguage|新しい言語
+myCourses|マイ言語
+addLanguage|新しい言語を追加
+langEnglishUS|アメリカ英語

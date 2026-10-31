@@ -20,6 +20,7 @@ for l in langs:
         texts += list(v.values()) if isinstance(v, dict) else [v]
     for f in glob.glob(f'data/meanings/{c}/*.json'):
         texts += list(json.load(open(f)).values())
+    texts += list(json.load(open('i18n/names.json')).get(c, {}).values())
     fonts = viz | w3g if c in ('fa', 'ar') else w3g
     miss = sorted({ch for t in texts for ch in str(t) if ord(ch) > 32 and ord(ch) not in fonts and not system_ok(ord(ch))})
     if miss: bad[c] = ''.join(miss)

@@ -120,3 +120,10 @@ dlgFirefox1|Firefox ei tue verkkosovellusten asentamista.
 dlgFirefox2|Avaa tämä sivu {a}- tai {b}-selaimessa ja valitse ”Asenna”.
 dlgPc1|Napsauta osoiterivin asennuskuvaketta {a}
 dlgPc2|tai valitse valikosta {a} kohta {b}.
+learnTitle|Mitä kieltä haluat oppia?
+learnSub|Voit lisätä muita kieliä myöhemmin.
+comingSoonMsg|{lang}: tämä kurssi tulee pian. Toistaiseksi voit opiskella amerikanenglantia.
+newLanguage|Uusi kieli
+myCourses|Omat kieleni
+addLanguage|Lisää uusi kieli
+langEnglishUS|Amerikanenglanti

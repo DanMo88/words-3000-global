@@ -120,3 +120,10 @@ dlgFirefox1|Firefox non supporta l'installazione delle app web.
 dlgFirefox2|Apri questa pagina in {a} o {b} e premi «Installa».
 dlgPc1|Nella barra degli indirizzi fai clic sull'icona di installazione {a},
 dlgPc2|oppure dal menu {a} scegli {b}.
+learnTitle|Quale lingua vuoi imparare?
+learnSub|Potrai aggiungere altre lingue più avanti.
+comingSoonMsg|{lang}: questo corso arriverà presto. Per ora puoi imparare l’inglese americano.
+newLanguage|Nuova lingua
+myCourses|Le mie lingue
+addLanguage|Aggiungi una nuova lingua
+langEnglishUS|Inglese americano

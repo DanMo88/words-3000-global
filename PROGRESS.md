@@ -53,3 +53,30 @@ How to resume for language L:
 5. `python3 tools/p2/finish_lang.py L` (enables levels, bumps data/index.json version, logs DONE.txt), then commit and push.
 Never commit a language's data/meanings/L before it has been reviewed (restore with `git checkout -- data/meanings/L`).
 Caveat: meanings are machine-dictionary based with manual review, not native-speaker checked. Arabic verbs are mostly past-tense citation form (the 130 original samples use present tense).
+
+# Pre-publish plan (approved by Daniel 2026-10-31: build phases 1–3 on GitHub; Google Play packaging later; sample-first, stop for review after each phase)
+Legend: [x] done · [~] in progress · [ ] todo · (B) = needs backend (Supabase)
+
+## Phase 1 — target language + several languages at once — DONE locally, awaiting Daniel's review
+- [x] 1. After the native language: "Which language do you want to learn?" — 31 tiles (American English + 30 others, native excluded), flags (fa = lion-and-sun, en = flags/us.svg), nothing preselected, Continue disabled until a choice
+- [x] 2. Languages without content show the localized "Coming soon" badge (`soon` key); tapping shows a short note (`comingSoonMsg`) and can't start
+- [x] 3. Home: course bar under the header (current flag + name ▾ → "My languages" switcher; "➕ New language" → add-language screen). Progress, streak, review queue, hard words, 60-s record, placement stored per target language
+- Storage: localStorage `w3g-v2` = {v, lang, cur, courses:{<target>:{words,lessons,streak,best60,placement,onboarded,added}}}; old `w3g-v1` migrated into courses.en once and kept untouched as a backup. Premium flag lives at R.premium (account level). Add a target course = add it to `COURSES` in app.js + its content.
+- Strings: tools/ui_courses.tsv → `python3 tools/add_course_ui.py` (merges into tools/ui/*.txt + fa/ar/fr JSON, writes i18n/names.json from CLDR) → `python3 tools/build_ui.py`; then build_fonts + check_glyphs (now also checks names.json)
+- Tests: words-3000-global-test/courses.js (onboarding, switcher, per-course separation, migration), render31.js (now incl. target screen, switcher, "recommended" badge on every level), test.js (target step added)
+- Also fixed: "⭐ recommended" line on a level card overflowed horizontally in ru/el at 390/412 px (pre-existing on live)
+
+## Phase 2 — accounts and sync (Supabase) — TODO
+- [ ] 4. (B) Sign up / sign in with email
+- [ ] 5. (B) Sign in with Google
+- [ ] 6. Guest mode: start without an account, later attach progress to a new account
+- [ ] 7. (B) Cross-device progress sync (per course)
+- [ ] 8. (B) Delete account in the app + public web page for deletion requests (Google Play requirement)
+- [ ] 9. Profile screen: name, languages, stats, sign out
+
+## Phase 3 — before Google Play — TODO
+- [ ] 10. (B) $4/month subscription via Google Play Billing (server-side purchase verification)
+- [ ] 11. Paywall screen after the free lessons (open: 5 free lessons for the whole app or per level?)
+- [ ] 12. Privacy policy + terms pages
+- [ ] 13. Android package (TWA) assets: icon, screenshots, store texts in several languages (packaging/upload later)
+- [ ] 14. Daily reminder notification at a chosen time

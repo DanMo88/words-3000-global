@@ -139,5 +139,12 @@
  "dlgFirefox2": "Open deze pagina in {a} of {b} en klik op „Installeren”.",
  "dlgPc1": "Klik in de adresbalk op het installatie-icoon {a},",
  "dlgPc2": "of kies in het menu {a} de optie {b}.",
- "search": "Taal zoeken…"
+ "search": "Taal zoeken…",
+ "learnTitle": "Welke taal wil je leren?",
+ "learnSub": "Je kunt later meer talen toevoegen.",
+ "comingSoonMsg": "{lang}: deze cursus komt binnenkort. Voorlopig kun je Amerikaans Engels leren.",
+ "newLanguage": "Nieuwe taal",
+ "myCourses": "Mijn talen",
+ "addLanguage": "Nieuwe taal toevoegen",
+ "langEnglishUS": "Amerikaans Engels"
 }

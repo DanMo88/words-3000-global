@@ -120,3 +120,10 @@ dlgFirefox1|Firefox instalaci webových aplikací nepodporuje.
 dlgFirefox2|Otevři tuto stránku v {a} nebo {b} a klikni na „Instalovat“.
 dlgPc1|Klikni v adresním řádku na ikonu instalace {a}
 dlgPc2|nebo v nabídce {a} vyber {b}.
+learnTitle|Jaký jazyk se chceš učit?
+learnSub|Další jazyky můžeš přidat později.
+comingSoonMsg|{lang}: tento kurz bude brzy. Zatím se můžeš učit americkou angličtinu.
+newLanguage|Nový jazyk
+myCourses|Moje jazyky
+addLanguage|Přidat nový jazyk
+langEnglishUS|Americká angličtina

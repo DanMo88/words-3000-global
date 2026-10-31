@@ -139,5 +139,12 @@
  "dlgFirefox2": "Åpne denne siden i {a} eller {b} og klikk på «Installer».",
  "dlgPc1": "Klikk på installeringsikonet {a} i adresselinjen,",
  "dlgPc2": "eller velg {b} i menyen {a}.",
- "search": "Søk etter språk…"
+ "search": "Søk etter språk…",
+ "learnTitle": "Hvilket språk vil du lære?",
+ "learnSub": "Du kan legge til flere språk senere.",
+ "comingSoonMsg": "{lang}: dette kurset kommer snart. Foreløpig kan du lære amerikansk engelsk.",
+ "newLanguage": "Nytt språk",
+ "myCourses": "Mine språk",
+ "addLanguage": "Legg til et nytt språk",
+ "langEnglishUS": "Amerikansk engelsk"
 }

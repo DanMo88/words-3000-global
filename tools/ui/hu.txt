@@ -120,3 +120,10 @@ dlgFirefox1|A Firefox nem támogatja a webappok telepítését.
 dlgFirefox2|Nyisd meg ezt az oldalt a(z) {a} vagy {b} böngészőben, és kattints a „Telepítés” gombra.
 dlgPc1|A címsorban kattints a telepítés ikonra {a},
 dlgPc2|vagy a(z) {a} menüben válaszd: {b}.
+learnTitle|Milyen nyelvet szeretnél tanulni?
+learnSub|Később további nyelveket is hozzáadhatsz.
+comingSoonMsg|{lang}: ez a kurzus hamarosan érkezik. Addig is tanulhatsz amerikai angolt.
+newLanguage|Új nyelv
+myCourses|Nyelveim
+addLanguage|Új nyelv hozzáadása
+langEnglishUS|Amerikai angol
