@@ -114,7 +114,7 @@ Legend: [x] done · [~] in progress · [ ] todo · (B) = needs backend (Supabase
 - [x] Verified before deleting from the repo: the 6233 deleted audio/img files match the bucket file list exactly (same md5 of the sorted name list); 2973 words total = 200 public + 2773 in content_lessons. Full sources kept on the box in /workspace/words-3000-private (not in git).
 - [x] client + public data split (32ad815, SW w3g-v19, app v12): public repo keeps only lessons 1-5 of each level (200 words, 402 audio, 17 images; data 648K) — everything a free user can ever open, offline. Premium text + media come from premium-content, cached in Cache Storage w3g-prem-<user> (served by the SW at …/__prem/<user>/…), so learned premium words can be reviewed offline; cache deleted on sign-out, account delete, or when the server says not premium (refund). Fonts are built from the private sources (W3G_PRIVATE). tools/translations.tsv, build_meanings.py, tools/p2 removed from the repo (kept on the box).
 - [x] local tests: prem.js 54/0 (anon/free/inactive device get nothing, table + bucket direct access denied, active device gets content, offline review, purge), render31 1240/0 ×4 sizes, paywall 241/0, courses 1156/0, accounts 30/0, test.js fa/ar/he 17592+/0, zh/ja/hi 26388/0, th/ru/de 26388/0 (UI tests load the full course from the box via a test-only route).
-- [ ] Git history still contains the old premium data (all commits before 32ad815). Rewriting needs Daniel's approval (filter-repo + force-push) — NOT done.
+- [x] Git history cleaned 2026-10-31 (Daniel approved) — see "History rewrite" below.
 
 # Lemon Squeezy store wired (test mode) — 2026-10-31
 - [x] cc7117e lemonsqueezy-webhook v2 deployed: accepts only store 511779 + product 1489846 (no variant id needed; env LEMONSQUEEZY_STORE_ID / LEMONSQUEEZY_PRODUCT_ID can override). Signing secret (40 random letters/digits — Lemon Squeezy allows max 40) stored in app_secrets (service role only) → webhook is ON. Box-only copy: /workspace/.secrets/ls_webhook_secret (chmod 600, never in git). Daniel must paste the same value in Lemon Squeezy → Settings → Webhooks (test mode now, live mode later).
@@ -128,7 +128,7 @@ Legend: [x] done · [~] in progress · [ ] todo · (B) = needs backend (Supabase
 - Advisors: security = INFO "RLS enabled, no policy" on app_secrets/content_* (intended: service role only) + WARN leaked-password protection (paid-plan feature, left off); performance clean.
 - Sizes: DB 19 MB of 500 MB (content tables 1.7 MB); storage 51 MB of 1 GB (premium-media). Egress ≈ 51 MB for one user who downloads every premium lesson.
 - All test users, test orders, devices and deletion requests deleted. app_secrets keeps the real webhook secret.
-- **Needs Daniel's decision (not done): git history.** Commits before 32ad815 still contain all premium text/audio/images and are public. Removing them needs `git filter-repo` + force-push. Clones/forks and GitHub's cached commits can still hold copies, so assume the old data is already public. Waiting for approval.
+- **Git history: cleaned later the same day (see "History rewrite").** Old note: Commits before 32ad815 still contain all premium text/audio/images and are public. Removing them needs `git filter-repo` + force-push. Clones/forks and GitHub's cached commits can still hold copies, so assume the old data is already public. Waiting for approval.
 
 # Family build (free, code-locked) — started 2026-10-31 14:20 (Daniel approved)
 - [x] Server: migration family_unlock = table family_attempts (rate limit, RLS, no client grants) + function public.family_try(keys, code) (service role only): bcrypt check against app_secrets.family_code_hash, 5 wrong tries per IP and per device → 10 min lock, a correct code clears both. app_secrets.family_token_secret = 32 random bytes made inside the DB.
@@ -144,3 +144,12 @@ Legend: [x] done · [~] in progress · [ ] todo · (B) = needs backend (Supabase
 - Test lockout rows deleted (`family_attempts` empty).
 - Local test.js re-run for he/hi/de (earlier flaky timeouts): 6597 checks / 0 fails.
 - Persian screenshots: words-3000-global-test/family/fa-code-screen-live-390x844.png, fa-home-unlocked-live-390x844.png.
+
+# History rewrite — 2026-10-31 (Daniel approved)
+- Backup first: full mirror `/workspace/backups/words-3000-global-pre-rewrite.git` (on the box, outside every repo; old main 671c712, 80 commits).
+- `git filter-repo` on a fresh clone: removed from every commit the 6233 paid audio/img files + tools/translations.tsv, tools/build_meanings.py, tools/p2/ (6300 paths); 135 old versions of data/*.json and data/meanings/** were rewritten to keep only the 200 free words (paid lessons / example sentences / translations dropped). The latest files are unchanged (same tree as before).
+- Verified on the new history: 0 paid media files (by path and by content), 0 paid example sentences, 0 paid lesson words, 0 paid meanings, 0 paid word:translation pairs in any blob; media paths in history = only the free media at HEAD.
+- Pack size 59.4 MB → 16.1 MB. 80 commits kept. New main = 1fea52b (force-pushed with --force-with-lease; only branch, no tags, no forks).
+- Family repo DanMo88/words-3000-family: 1 commit, never contained paid content (same scan: 0) — nothing to clean.
+- Live after the rewrite: family.js 87/0 (no lockout run), paywall 257/0, prem 54/0, render31 390x844 1240/0; Pages serves w3g-v21 / w3f-v21. Test accounts and lockout rows deleted.
+- Old copies can still exist outside our control: anyone's earlier clone, GitHub's cache of old commit SHAs (until GitHub support purges them), and any download made before today.
