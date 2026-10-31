@@ -1,5 +1,8 @@
 # Google Play preparation (Phase 3) — nothing has been uploaded
 
+> **2026-10-31 — direction changed:** Premium is now sold **on the web** as a one-time US$5 purchase through Lemon Squeezy (see [LEMONSQUEEZY.md](LEMONSQUEEZY.md)). The Google Play / TWA path below is **dormant** (`PLAY.enabled = false` in app.js; verify-purchase stays disabled). The listings in `listings/` still describe the old US$4/month Play subscription and must be rewritten before any Play upload. Note that Google Play requires Play Billing for digital goods sold inside a Play app.
+
+
 ## What is here
 - `listings/<locale>.md` — title (≤30), short (≤80) and full (≤4000) descriptions: en-US, fa-IR, ar, es-ES, de-DE, ru-RU, tr-TR, pt-BR (lengths checked).
 - `screenshots/<lang>/` — phone screenshots 1080×1920 (9:16) for fa, ar, es, de, ru, tr: home, learning card, quiz, lessons. Regenerate: `node words-3000-global-test/storeshots.js <BASE> store/screenshots fa,ar,es,de,ru,tr`.
