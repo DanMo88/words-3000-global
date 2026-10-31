@@ -982,11 +982,11 @@ function deleteConfirm() {
   };
 }
 /* ---------- web purchase: Lemon Squeezy (merchant of record) one-time "$5 lifetime" ----------
-   LS.checkoutUrl = the product's checkout link from Lemon Squeezy (Products → Share → checkout URL, e.g.
-   https://STORE.lemonsqueezy.com/buy/VARIANT-UUID). Empty = payments not live: the paywall says "coming soon".
+   LS.checkoutUrl = the product's checkout link from Lemon Squeezy (store 511779 "words3000global", product 1489846 "$5 lifetime").
+   Empty = payments not live: the paywall says "coming soon".
    The checkout gets checkout[custom][user_id] + checkout[email]; the lemonsqueezy-webhook Edge Function verifies the signed
    order_created / order_refunded webhooks and alone sets profiles.premium. The client never decides premium. */
-const LS = { checkoutUrl: '', usd: 5 };
+const LS = { checkoutUrl: 'https://words3000global.lemonsqueezy.com/checkout/buy/1171dc65-1320-4eab-a7db-20f394c33677', usd: 5, storeId: 511779, productId: 1489846 };   // store words3000global (TEST MODE until Daniel switches the store live)
 const lsPrice = () => { try { return new Intl.NumberFormat(LANG, { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 2 }).format(LS.usd); } catch (e) { return '$' + LS.usd; } };
 let lemonP = null;
 function loadLemon() {

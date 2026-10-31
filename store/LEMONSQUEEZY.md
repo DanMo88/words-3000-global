@@ -35,25 +35,19 @@ The app is ready. Payments stay **off** until you do the steps below. Until then
 7. Open the product → **Share** and copy the **checkout link**. It looks like `https://3000words.lemonsqueezy.com/buy/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`.
    → **Send me this link.** I put it into `LS.checkoutUrl` in app.js; that is the switch that turns on the Buy button.
 
-## 3. Store id and variant id (optional extra safety)
-- **Store id:** Settings → Stores. It is the number shown next to the store (e.g. `#123456`).
-- **Variant id:** after the first test purchase I can read it from the order. You can also find it in Products → the product → the variant (the number in the URL).
-- If you give me both, I set them as Edge Function secrets `LEMONSQUEEZY_STORE_ID` and `LEMONSQUEEZY_VARIANT_ID`. Orders for any other product or store are then ignored.
+> **Status 2026-10-31: steps 1–2 are done (test mode).** Store **words3000global** (id 511779), product id 1489846 ($5 single payment), checkout link `https://words3000global.lemonsqueezy.com/checkout/buy/1171dc65-1320-4eab-a7db-20f394c33677` is in `LS.checkoutUrl` → the Buy button is live (test mode).
+
+## 3. Store id and product id — DONE
+- The webhook only accepts orders with store id **511779** and product id **1489846**. Orders for any other store or product are ignored. No variant id is needed.
+- These are built into the function. They can be overridden with Edge Function secrets `LEMONSQUEEZY_STORE_ID` / `LEMONSQUEEZY_PRODUCT_ID`, for example if the live product gets a different id after "Copy to Live Mode". Check the id after copying.
 
 ## 4. Webhook (this is what unlocks Premium)
 1. Go to **Settings → Webhooks → + (Add webhook)**.
 2. Callback URL: `https://acwkuhudvmarssthibzf.supabase.co/functions/v1/lemonsqueezy-webhook`
-3. Signing secret: a random string of 6–40 characters.
-   - For example, open https://www.random.org/strings/?num=1&len=32&digits=on&upperalpha=on&loweralpha=on&unique=on&format=html&rnd=new and copy the result.
-   - Keep it private.
+3. Signing secret: **already made for you** — a random 40-character string (Lemon Squeezy allows at most 40). It is already stored on the server (table `app_secrets`, readable only by the server), so the webhook is switched on. Ask me for it privately (it is kept on my box in `/workspace/.secrets/ls_webhook_secret`, never on GitHub) and paste exactly that value here.
 4. Events: tick **order_created** and **order_refunded**. Nothing else is needed.
 5. Save.
-6. Put the same secret into Supabase. Pick one of these:
-   - **a) Yourself (preferred):**
-     - https://supabase.com/dashboard/project/acwkuhudvmarssthibzf/functions/secrets → **Add new secret**
-     - Name `LEMONSQUEEZY_SIGNING_SECRET`, value = the secret.
-     - Nothing else is needed.
-   - **b) Give it to me privately.** I store it in the server-only table `app_secrets`, which only the server can read. I never put it in the code or on GitHub.
+6. Nothing to do in Supabase: the server already has the secret. (Optional: if you later want to change it, set Supabase → Edge Functions → Secrets → `LEMONSQUEEZY_SIGNING_SECRET`; that value then wins over the table.)
 7. Webhooks are separate for test mode and live mode. When you go live (step 6), add the same webhook again in **live mode** with the same URL, secret and events.
 
 ## 5. Test purchase (test mode, no real money)
@@ -79,15 +73,15 @@ The app is ready. Payments stay **off** until you do the steps below. Until then
 ## What I need from you
 | What | Where you find it | Needed for |
 |---|---|---|
-| Checkout link (test first, live later) | Product → Share | Turning on the Buy button |
-| Webhook signing secret | You choose it in step 4 | Set it yourself in Supabase secrets (4.6a), or give it to me |
-| Store id, variant id (optional) | Settings → Stores; product variant | Ignoring other products |
+| Checkout link — test: DONE; live: later | Product → Share | Turning on the Buy button |
+| Webhook in Lemon Squeezy (test mode now, live later) | Settings → Webhooks, step 4 (URL + the secret I give you) | Unlocking Premium after payment |
+| Store id 511779 / product id 1489846 — DONE | | Ignoring other products |
 | "Store approved" message | Email from Lemon Squeezy | Switching to the live link |
 
 ## Notes
 - **Refund policy:** the terms promise a **full refund within 14 days, no questions asked**. This is more than EU law requires for digital content once access has started. If you want a different policy, tell me and I will change terms.html.
 - **Lost phone:** the app allows one device move per 30 days. In a support case I can reset `profiles.device_moved_at` for that user.
-- **Honest limit:** lesson files are public static files on GitHub Pages. The device check stops normal users, but a technical person could read the files directly. Real server-side gating would need the lessons to be served through Supabase. That is possible later.
+- **Content protection:** only the free lessons (1–5 of each level) are public files. Premium lessons, meanings, audio and images are served by Supabase only to a signed-in Premium account on its active phone. Old versions of the files are still in the public git history (see PROGRESS.md).
 
 ---
 
@@ -99,12 +93,12 @@ The app is ready. Payments stay **off** until you do the steps below. Until then
 ۲. **محصول:**
    - Products → New product، با نام «3000 Words Premium (lifetime)»، «Single payment» و قیمت **۵ دلار**.
    - منتشرش کن و از Share **لینک checkout** را کپی کن و برای من بفرست.
-۳. **(اختیاری) شناسه‌ها:** Store id را از Settings → Stores و Variant id را از صفحه‌ی محصول بفرست. اگر نفرستی، خودم از اولین سفارش تستی برمی‌دارم.
+۳. **شناسه‌ها — انجام شد:** فروشگاه 511779 و محصول 1489846 در وبهوک ثبت شده‌اند و لینک checkout در برنامه است (حالت تست).
 ۴. **وبهوک:**
    - در Settings → Webhooks، آدرس `https://acwkuhudvmarssthibzf.supabase.co/functions/v1/lemonsqueezy-webhook` را بگذار.
-   - یک رمز تصادفی ۶ تا ۴۰ حرفی به‌عنوان Signing secret بساز.
+   - Signing secret را خودم ساخته‌ام (۴۰ حرف) و روی سرور گذاشته‌ام. خصوصی از من بگیر و همان را اینجا بچسبان.
    - رویدادهای **order_created** و **order_refunded** را تیک بزن.
-   - همان رمز را خودت در Supabase → Edge Functions → Secrets با نام `LEMONSQUEEZY_SIGNING_SECRET` بگذار، یا خصوصی به من بده. هیچ‌وقت در کد یا گیت‌هاب نمی‌رود.
+   - در Supabase کاری لازم نیست. این رمز هیچ‌وقت در کد یا گیت‌هاب نمی‌رود.
 ۵. **خرید تستی:** با کارت 4242 4242 4242 4242 بخر؛ چند ثانیه بعد پریمیوم فعال می‌شود. با Refund پریمیوم برداشته می‌شود.
 ۶. **فعال‌سازی واقعی:**
    - دکمه‌ی Activate your store را بزن و پرسشنامه را پر کن.
