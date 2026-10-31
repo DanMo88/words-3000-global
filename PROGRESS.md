@@ -95,3 +95,10 @@ Legend: [x] done · [~] in progress · [ ] todo · (B) = needs backend (Supabase
 - Security advisors (security + performance): 0 findings after dropping the RPC.
 - Fixed during testing: profile re-render loop when a stored session is invalid; sign-out no longer wipes local progress if the session had expired; header overflow in de/ru/ro/pt/es/af/bg/el/nl with the new 👤 button; RTL course name clipped at 768 px.
 - Live check 2026-10-31 (390x844): accounts.js 30/0, render31 806 checks/0 fails; test users deleted, deletion_requests emptied. Persian screenshots: words-3000-global-test/phase2acct/{1-sign-in,2-profile,3-delete-confirm}.png
+
+# Web purchase (Lemon Squeezy, one-time $5) + one-device lock — started 2026-10-31 11:45 (Daniel's new direction; Play Billing kept dormant)
+- [x] DB migration web_purchase_and_device_lock: purchases (order_id pk, user_id, email, status, amount, currency, variant_id, test_mode), devices (one active per user via partial unique index), profiles.device_moved_at, app_secrets (service-role only). Clients: select own rows only, no writes.
+- [x] Edge Function lemonsqueezy-webhook (verify_jwt=false, HMAC X-Signature; secret from env LEMONSQUEEZY_SIGNING_SECRET or app_secrets row; 501 until set). order_created paid → premium lifetime; order_refunded → revoked; idempotent.
+- [x] Edge Function premium-device (verify_jwt=true): registers device, first device auto-active, claim = move (max once / 30 days, 429 move_limit), links unlinked paid orders by email.
+- [ ] client: paywall "$5 once" + Lemon Squeezy checkout config (empty → coming soon), device screen, manage device, restore
+- [ ] strings 31 langs, legal pages, store/LEMONSQUEEZY.md, tests, live, screenshots
