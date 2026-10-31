@@ -120,3 +120,10 @@ dlgFirefox1|Firefox 不支持安装网页应用。
 dlgFirefox2|请用 {a} 或 {b} 打开此页面，然后点击“安装”。
 dlgPc1|点击地址栏中的安装图标 {a}，
 dlgPc2|或在 {a} 菜单中选择 {b}。
+learnTitle|你想学习哪种语言？
+learnSub|以后还可以添加其他语言。
+comingSoonMsg|{lang}：该课程即将推出。目前你可以学习美式英语。
+newLanguage|新语言
+myCourses|我的语言
+addLanguage|添加新语言
+langEnglishUS|美式英语

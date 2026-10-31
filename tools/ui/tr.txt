@@ -120,3 +120,10 @@ dlgFirefox1|Firefox web uygulaması yüklemeyi desteklemiyor.
 dlgFirefox2|Bu sayfayı {a} veya {b} ile açıp “Yükle” düğmesine bas.
 dlgPc1|Adres çubuğundaki yükleme simgesine {a} tıkla
 dlgPc2|ya da {a} menüsünden {b} seçeneğini seç.
+learnTitle|Hangi dili öğrenmek istiyorsun?
+learnSub|Daha sonra başka diller de ekleyebilirsin.
+comingSoonMsg|{lang}: bu kurs yakında geliyor. Şimdilik Amerikan İngilizcesi öğrenebilirsin.
+newLanguage|Yeni dil
+myCourses|Dillerim
+addLanguage|Yeni dil ekle
+langEnglishUS|Amerikan İngilizcesi

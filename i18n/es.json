@@ -139,5 +139,12 @@
  "dlgFirefox2": "Abre esta página en {a} o {b} y pulsa «Instalar».",
  "dlgPc1": "En la barra de direcciones, haz clic en el icono de instalar {a},",
  "dlgPc2": "o en el menú {a} elige {b}.",
- "search": "Buscar idioma…"
+ "search": "Buscar idioma…",
+ "learnTitle": "¿Qué idioma quieres aprender?",
+ "learnSub": "Puedes añadir más idiomas más adelante.",
+ "comingSoonMsg": "{lang}: este curso llegará pronto. Por ahora puedes aprender inglés americano.",
+ "newLanguage": "Nuevo idioma",
+ "myCourses": "Mis idiomas",
+ "addLanguage": "Añadir un idioma nuevo",
+ "langEnglishUS": "Inglés americano"
 }

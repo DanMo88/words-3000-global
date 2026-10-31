@@ -15,7 +15,7 @@
  "lvA2": "Osnovni",
  "lvB1": "Srednji",
  "lvB2": "Viši srednji",
- "recommended": "⭐ Preporuka",
+ "recommended": "⭐ Preporučeno",
  "nLessons": {
   "one": "{n} lekcija",
   "few": "{n} lekcije",
@@ -139,5 +139,12 @@
  "dlgFirefox2": "Otvori ovu stranicu u {a} ili {b} i klikni „Instaliraj”.",
  "dlgPc1": "U adresnoj traci klikni ikonu za instalaciju {a}",
  "dlgPc2": "ili u izborniku {a} odaberi {b}.",
- "search": "Traži jezik…"
+ "search": "Traži jezik…",
+ "learnTitle": "Koji jezik želiš učiti?",
+ "learnSub": "Kasnije možeš dodati još jezika.",
+ "comingSoonMsg": "{lang}: ovaj tečaj stiže uskoro. Za sada možeš učiti američki engleski.",
+ "newLanguage": "Novi jezik",
+ "myCourses": "Moji jezici",
+ "addLanguage": "Dodaj novi jezik",
+ "langEnglishUS": "Američki engleski"
 }

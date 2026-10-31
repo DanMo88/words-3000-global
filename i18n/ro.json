@@ -139,5 +139,12 @@
  "dlgFirefox2": "Deschide această pagină în {a} sau {b} și apasă „Instalează”.",
  "dlgPc1": "În bara de adrese, dă clic pe pictograma de instalare {a}",
  "dlgPc2": "sau alege {b} din meniul {a}.",
- "search": "Caută o limbă…"
+ "search": "Caută o limbă…",
+ "learnTitle": "Ce limbă vrei să înveți?",
+ "learnSub": "Poți adăuga mai multe limbi mai târziu.",
+ "comingSoonMsg": "{lang}: acest curs vine în curând. Deocamdată poți învăța engleza americană.",
+ "newLanguage": "Limbă nouă",
+ "myCourses": "Limbile mele",
+ "addLanguage": "Adaugă o limbă nouă",
+ "langEnglishUS": "Engleză americană"
 }

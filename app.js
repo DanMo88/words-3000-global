@@ -18,7 +18,7 @@ const fitO = t => t.length > 9 ? ` style="font-size:min(var(--fs),${(66 / t.leng
 const fitW = t => t.length > 8 ? ` style="font-size:min(var(--fs),${(128 / t.length).toFixed(1)}vw)"` : '';
 
 /* ---------- i18n ---------- */
-let LANGS = [], ALIASES = {}, LANG = null, L10N = {}, NF = new Intl.NumberFormat('en'), PR = new Intl.PluralRules('en');
+let LANGS = [], ALIASES = {}, LANG = null, L10N = {}, NAMES = null, COLL = new Intl.Collator('en'), NF = new Intl.NumberFormat('en'), PR = new Intl.PluralRules('en');
 const M = {};            // id -> meaning in the current native language
 const N = n => NF.format(n);
 function t(key, vars) {
@@ -37,7 +37,7 @@ const mean = id => M[id];
 // When billing is added, set ACCESS.paywall = true and implement ACCESS.isPremium() + paywallScreen().
 const ACCESS = {
   paywall: false, freeLessons: 5,
-  isPremium: () => !!(S && S.premium),
+  isPremium: () => !!(R && R.premium),
   freeIndex: (lv, i) => LEVEL_IDS.slice(0, LEVEL_IDS.indexOf(lv)).reduce((s, l) => s + (LV[l] ? LV[l].lessons.length : 0), 0) + i,
   canOpen(lv, i) { return !this.paywall || this.isPremium() || this.freeIndex(lv, i) < this.freeLessons; }
 };
@@ -49,13 +49,36 @@ const timers = new Set();
 const later = (fn, ms) => { const tm = setTimeout(() => { timers.delete(tm); fn(); }, ms); timers.add(tm); return tm; };
 const clearTimers = () => { timers.forEach(clearTimeout); timers.clear(); };
 
-/* ---------- storage ---------- */
-const KEY = 'w3g-v1';
-let S;
-try { S = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { S = {}; }
-S.words = S.words || {}; S.lessons = S.lessons || {}; S.streak = S.streak || { count: 0, last: null }; S.best60 = S.best60 || 0;
-const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} };
+/* ---------- storage ----------
+   w3g-v2 = { v:2, lang (native/UI), cur (target course), courses: { <target>: {words, lessons, streak, best60, placement, onboarded, added} } }
+   S = the current course, so all learning code below stays per target language.
+   Old w3g-v1 (single English course) is migrated into courses.en once and left in place untouched as a backup. */
+const KEY = 'w3g-v2', OLD_KEY = 'w3g-v1';
+// target languages with content; every other language in langs.json is listed as "coming soon"
+const COURSES = { en: { flag: 'flags/us.svg' } };
+const initCourse = c => { c.words = c.words || {}; c.lessons = c.lessons || {}; c.streak = c.streak || { count: 0, last: null }; c.best60 = c.best60 || 0; return c; };
+let R = null, S;
+try { R = JSON.parse(localStorage.getItem(KEY)); } catch (e) { R = null; }
+if (!R || typeof R !== 'object' || !R.courses || typeof R.courses !== 'object') {
+  R = { v: 2, lang: null, cur: null, courses: {} };
+  let o = null; try { o = JSON.parse(localStorage.getItem(OLD_KEY)); } catch (e) { o = null; }
+  if (o && typeof o === 'object') {
+    if (o.lang) R.lang = o.lang;
+    if (o.premium) R.premium = o.premium;
+    const used = o.lang || o.onboarded || o.placement || Object.keys(o.words || {}).length || Object.keys(o.lessons || {}).length;
+    if (used) { const c = Object.assign({}, o); delete c.lang; delete c.premium; c.added = c.added || Date.now(); R.courses.en = c; R.cur = 'en'; R.migrated = OLD_KEY; }
+  }
+}
+Object.keys(R.courses).forEach(k => { if (!COURSES[k]) delete R.courses[k]; else initCourse(R.courses[k]); });
+if (!R.courses[R.cur]) R.cur = Object.keys(R.courses)[0] || null;
+S = R.cur ? R.courses[R.cur] : initCourse({});   // placeholder until a course is chosen (not saved)
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(R)); } catch (e) {} };
 save();
+function setCourse(code) {
+  if (!COURSES[code]) return false;
+  if (!R.courses[code]) R.courses[code] = initCourse({ added: Date.now() });
+  R.cur = code; S = R.courses[code]; save(); return true;
+}
 const ws = id => (S.words[id] = S.words[id] || { miss: 0 });
 const dkey = d => d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
 function touchStreak() {
@@ -63,7 +86,8 @@ function touchStreak() {
   const y = dkey(new Date(Date.now() - DAY));
   S.streak.count = S.streak.last === y ? S.streak.count + 1 : 1; S.streak.last = td; save();
 }
-function streakNow() { const td = dkey(new Date()), y = dkey(new Date(Date.now() - DAY)); return (S.streak.last === td || S.streak.last === y) ? S.streak.count : 0; }
+function streakOf(c) { const td = dkey(new Date()), y = dkey(new Date(Date.now() - DAY)); return (c.streak.last === td || c.streak.last === y) ? c.streak.count : 0; }
+const streakNow = () => streakOf(S);
 const learnedIds = () => Object.keys(S.words).filter(id => S.words[id].learnedAt && W[id] && has(id));
 const dueIds = () => learnedIds().filter(id => S.words[id].due && S.words[id].due <= Date.now()).sort((a, b) => S.words[a].due - S.words[b].due);
 const hardIds = () => Object.keys(S.words).filter(id => W[id] && has(id) && S.words[id].miss >= 2).sort((a, b) => S.words[b].miss - S.words[a].miss);
@@ -118,7 +142,7 @@ function toast(msg) {
 function applyLang(code) {
   const li = langInfo(code) || LANGS[0]; LANG = li.code;
   const de = document.documentElement; de.lang = LANG; de.dir = li.dir;
-  NF = new Intl.NumberFormat(li.num || LANG); PR = new Intl.PluralRules(LANG);
+  NF = new Intl.NumberFormat(li.num || LANG); PR = new Intl.PluralRules(LANG); try { COLL = new Intl.Collator(LANG); } catch (e) { COLL = new Intl.Collator('en'); }
   return Promise.all([
     fetch('i18n/' + LANG + '.json?v=' + VERSION).then(r => r.json()).then(j => { L10N = j; }),
     Promise.all(LEVEL_IDS.filter(lv => LV[lv] && LV[lv].available && (!li.meanings || li.meanings.includes(lv))).map(lv => fetch('data/meanings/' + LANG + '/' + lv + '.json?v=' + VERSION).then(r => r.ok ? r.json() : {}).catch(() => ({})))).then(arr => {
@@ -152,7 +176,7 @@ function guessLang() {
 }
 function langPicker(onDone) {
   stopAudio();
-  let sel = S.lang || guessLang();
+  let sel = R.lang || guessLang();
   const draw = () => {
     const li = langInfo(sel);
     document.documentElement.dir = li ? li.dir : 'ltr'; document.documentElement.lang = sel || 'en';
@@ -161,7 +185,7 @@ function langPicker(onDone) {
       ${langGrid(sel)}
       <button class="btn" id="go" ${sel ? '' : 'disabled'}>${sel ? esc(L10N._lang === sel ? t('continue') : '…') : '→'}</button>`);
     bindLangGrid(code => { sel = code; applyLang(sel).then(draw); });
-    document.getElementById('go').onclick = () => { if (!sel) return; S.lang = sel; save(); applyLang(sel).then(onDone); };
+    document.getElementById('go').onclick = () => { if (!sel) return; R.lang = sel; save(); applyLang(sel).then(onDone); };
   };
   if (sel) applyLang(sel).then(draw); else draw();
 }
@@ -173,23 +197,71 @@ function settingsScreen() {
     <div class="foot">${t('settingsNote')}</div>
     <button class="btn" id="home">${t('backHome')}</button>`);
   bindX(home); document.getElementById('home').onclick = home;
-  bindLangGrid(code => { S.lang = code; save(); applyLang(S.lang).then(settingsScreen); });
+  bindLangGrid(code => { R.lang = code; save(); applyLang(R.lang).then(settingsScreen); });
+}
+
+/* ---------- target language (course) picker + switcher ---------- */
+const loadNames = () => NAMES ? Promise.resolve(NAMES) : fetch('i18n/names.json?v=' + VERSION).then(r => r.json()).then(j => (NAMES = j)).catch(() => (NAMES = {}));
+const courseName = code => code === 'en' ? t('langEnglishUS') : ((NAMES && NAMES[LANG] && NAMES[LANG][code]) || (langInfo(code) || {}).en || code);
+const courseFlag = code => COURSES[code] ? COURSES[code].flag : (langInfo(code) || {}).flag;
+const flagImg = (code, cls) => `<img class="${cls || 'flag'}" src="${courseFlag(code)}" alt="" width="40" height="30" decoding="async">`;
+function targetList() {
+  const rest = LANGS.filter(l => l.code !== LANG && !COURSES[l.code]).map(l => l.code).sort((a, b) => COLL.compare(courseName(a), courseName(b)));
+  return Object.keys(COURSES).filter(c => c !== LANG).concat(rest);
+}
+/* first: onboarding step after the native language (back = native picker); otherwise "add a language" from the switcher */
+function targetPicker(first, back) {
+  stopAudio();
+  loadNames().then(() => {
+    let sel = null;
+    const list = targetList();
+    const tile = code => { const ok = !!COURSES[code], mine = !!R.courses[code], li = langInfo(code), nm = courseName(code);
+      return `<button class="lang tgt ${ok ? '' : 'soonl'}" data-code="${code}" data-q="${esc(fold(nm + ' ' + (li ? li.name + ' ' + li.en : 'English American') + ' ' + code))}">
+        ${flagImg(code)}<span class="lt2"><b${!/\s/.test(nm) && vlen(nm) > 9 ? ' class="lg"' : ''}>${esc(nm)}</b>${ok ? `<small>${t('nWords', { n: TOTAL })}</small>` : `<small class="soonb">${t('soon')}</small>`}</span>${mine ? '<i>✓</i>' : ''}</button>`; };
+    screen(`<div class="top"><button class="x" aria-label="${esc(t('back'))}">✕</button><div class="h2">${first ? '🎯' : '➕'} ${t(first ? 'learnTitle' : 'addLanguage')}</div></div>
+      ${first ? `<p class="tsub">${t('learnSub')}</p>` : ''}
+      <div class="lsearch"><span>🔍</span><input id="lq" type="search" autocomplete="off" spellcheck="false" placeholder="${esc(t('search'))}" aria-label="${esc(t('search'))}"></div>
+      <div class="langs" id="langs">${list.map(tile).join('')}</div>
+      <button class="btn" id="go" disabled>${t('continue')}</button>`);
+    bindX(first ? () => langPicker(afterLang) : (back || courseSwitcher));
+    const box = document.getElementById('langs'), go = document.getElementById('go'), q = document.getElementById('lq');
+    q.oninput = () => { const v = fold(q.value.trim()); box.querySelectorAll('.lang').forEach(b => { b.hidden = !!v && !b.dataset.q.includes(v); }); };
+    box.querySelectorAll('.lang').forEach(b => b.onclick = () => {
+      const code = b.dataset.code;
+      if (!COURSES[code]) { toast(esc(t('comingSoonMsg', { lang: courseName(code) }))); return; }
+      sel = code; box.querySelectorAll('.lang').forEach(x => x.classList.toggle('sel', x === b)); go.disabled = false;
+    });
+    go.onclick = () => { if (!sel || !setCourse(sel)) return; first ? start() : home(); };
+  });
+}
+function courseSwitcher() {
+  stopAudio();
+  const codes = Object.keys(R.courses).sort((a, b) => (R.courses[a].added || 0) - (R.courses[b].added || 0));
+  screen(`<div class="top"><button class="x" aria-label="${esc(t('back'))}">✕</button><div class="h2">${t('myCourses')}</div></div>
+    <div class="courses">${codes.map(code => { const c = R.courses[code], n = Object.keys(c.words).filter(id => c.words[id].learnedAt).length;
+      return `<button class="lang course ${code === R.cur ? 'sel' : ''}" data-code="${code}">${flagImg(code)}<span class="lt2"><b>${esc(courseName(code))}</b><small>${t('wordsOfTotal', { a: n, b: TOTAL })} · 🔥 ${N(streakOf(c))}</small></span>${code === R.cur ? '<i>✓</i>' : ''}</button>`; }).join('')}</div>
+    <button class="btn" id="add">➕ ${t('addLanguage')}</button>`);
+  bindX(home);
+  $app.querySelectorAll('.course').forEach(b => b.onclick = () => { setCourse(b.dataset.code); home(); });
+  document.getElementById('add').onclick = () => targetPicker(false);
 }
 
 /* ---------- home ---------- */
 function home() {
+  if (!R.cur) return targetPicker(true);
   stopAudio();
   const learned = learnedIds().length, due = dueIds().length, hard = hardIds().length;
   const rec = S.placement && S.placement.level;
   screen(`
     <div class="home-head"><div class="logo">${t('appName')}<small>${t('appSub')}</small></div>
       <div class="hd-r"><button class="inst pwa-install" data-install title="${esc(t('installTitle'))}"><span class="ii">📲</span><span class="it">${t('install').replace(/^📲\s*/u, '')}</span></button><div class="streak" title="${esc(t('streakTitle'))}">🔥 ${N(streakNow())}</div><button class="gear" id="tSet" aria-label="${esc(t('settings'))}">⚙️</button></div></div>
+    <div class="cbar"><button class="ccur" id="tCourse" aria-label="${esc(t('myCourses'))}">${flagImg(R.cur)}<b>${esc(courseName(R.cur))}</b><span class="car">▾</span></button><button class="cadd" id="tAdd">➕ ${t('newLanguage')}</button></div>
     <div class="prog"><div class="row"><span>${t('totalProgress')}</span><b>${t('wordsOfTotal', { a: learned, b: TOTAL })}</b></div>
       <div class="bar"><i style="width:${Math.max(learned / TOTAL * 100, learned ? 1 : 0)}%"></i></div></div>
     <div class="levels">${LEVEL_IDS.map(lv => { const L = LV[lv]; const n = L ? L.count : 0, done = L ? learnedIn(lv) : 0, ok = L && L.available;
-      const lw = Math.max(...lvName(lv).split(/[\s-]+/).map(vlen)), long = lw > 7;
+      const lw = Math.max(...lvName(lv).split(/[\s-]+/).map(vlen), rec === lv ? vlen(t('recommended')) - 1 : 0), long = lw > 7;   // the 'recommended' line must fit too
       return `<button class="lvl ${lv} ${rec === lv ? 'rec' : ''} ${ok ? '' : 'soon'} ${long ? 'long' : ''}" data-lv="${lv}">
-        <div class="lt"><span class="code">${lv}</span><span class="nm"${lw > 12 ? ` style="font-size:min(clamp(13px,2dvh,18px),${(58 / lw).toFixed(2)}vw)"` : ''}>${lvName(lv)}${rec === lv ? '<br>' + t('recommended') : ''}</span></div>
+        <div class="lt"><span class="code">${lv}</span><span class="nm"${lw > 12 ? ` style="font-size:min(clamp(13px,2dvh,18px),${(58 / lw).toFixed(2)}vw)"` : ''}>${lvName(lv)}${rec === lv ? '<br><small class="rect">' + t('recommended') + '</small>' : ''}</span></div>
         <div><div class="meta"><span>${ok ? t('nLessons', { n: L.lessons.length }) : t('soon')}</span><span>${N(done)}/${N(n)}</span></div>
         <div class="bar"><i style="width:${n ? Math.max(done / n * 100, done ? 2 : 0) : 0}%"></i></div></div></button>`; }).join('')}</div>
     <div class="tools">
@@ -205,10 +277,12 @@ function home() {
   document.getElementById('tQuick').onclick = quickIntro;
   document.getElementById('tPlace').onclick = () => placementIntro();
   document.getElementById('tSet').onclick = settingsScreen;
+  document.getElementById('tCourse').onclick = courseSwitcher;
+  document.getElementById('tAdd').onclick = () => targetPicker(false, home);
   if (DEBUG) {
     document.getElementById('dDue').onclick = () => { learnedIds().forEach(id => { if (!S.words[id].mastered) S.words[id].due = Date.now() - 1000; }); save(); home(); };
     document.getElementById('dLearn').onclick = () => { [0, 1, 2].forEach(i => finishLessonState(lessonObj('A1', i))); home(); };
-    document.getElementById('dReset').onclick = () => { localStorage.removeItem(KEY); location.reload(); };
+    document.getElementById('dReset').onclick = () => { localStorage.removeItem(KEY); localStorage.removeItem(OLD_KEY); location.reload(); };
   }
 }
 
@@ -500,11 +574,13 @@ function runPlacement() {
 
 /* ---------- boot ---------- */
 let VERSION = 1;
-window.__app = { get S() { return S; }, W, LV, M, home, DEBUG, levelScreen, lessonObj, settingsScreen, langPicker, ACCESS,
-  get lang() { return LANG; }, setLang: c => { S.lang = c; save(); return applyLang(c); }, t,
+window.__app = { get S() { return S; }, get R() { return R; }, W, LV, M, home, DEBUG, levelScreen, lessonObj, settingsScreen, langPicker, ACCESS,
+  targetPicker, courseSwitcher, setCourse, COURSES,
+  get lang() { return LANG; }, setLang: c => { R.lang = c; save(); return applyLang(c); }, t,
   cardFor: id => { const w = W[id]; learnCard({ L: lessonObj(w.level, w.li), seq: [w], i: 0, t0: 0 }); stopAudio(); },
   quizFor: (id, type) => { let n = 0; runQuiz({ mode: 'lesson', targets: [id], need: 1, pool: LV[W[id].level].lessons[W[id].li], next: () => n++ ? null : { id, type }, onDone: () => {} }); stopAudio(); clearTimers(); } };
 window.__t = (k, v) => t(k, v);   // used by install.js
+const afterLang = () => R.cur && R.courses[R.cur] ? start() : targetPicker(true);
 const start = () => { window.__app.ready = true; if (!S.onboarded && !learnedIds().length) placementIntro(true); else { S.onboarded = true; save(); home(); } };
 fetch('data/index.json').then(r => r.json()).then(ix => {
   TOTAL = ix.total; VERSION = ix.version;
@@ -516,8 +592,8 @@ fetch('data/index.json').then(r => r.json()).then(ix => {
     }))]);
 }).then(() => {
   const forced = params.get('lang');
-  if (forced && langInfo(forced)) { S.lang = forced; save(); }
-  if (S.lang && langInfo(S.lang)) return applyLang(S.lang).then(start);
-  langPicker(start);
+  if (forced && langInfo(forced)) { R.lang = forced; save(); }
+  if (R.lang && langInfo(R.lang)) return applyLang(R.lang).then(afterLang);
+  langPicker(afterLang);
 }).catch(e => { $app.innerHTML = '<div class="empty">⚠️ ' + (L10N.loadError || 'Loading error · خطا در بارگذاری · خطأ في التحميل · Erreur de chargement') + '</div>'; console.error(e); });
 })();

@@ -127,5 +127,12 @@
  "dlgFirefox2": "Buka halaman ini di {a} atau {b} lalu klik “Pasang”.",
  "dlgPc1": "Di bilah alamat, klik ikon pasang {a},",
  "dlgPc2": "atau dari menu {a} pilih {b}.",
- "search": "Cari bahasa…"
+ "search": "Cari bahasa…",
+ "learnTitle": "Bahasa apa yang ingin kamu pelajari?",
+ "learnSub": "Kamu bisa menambah bahasa lain nanti.",
+ "comingSoonMsg": "{lang}: kursus ini segera hadir. Untuk sekarang kamu bisa belajar bahasa Inggris Amerika.",
+ "newLanguage": "Bahasa baru",
+ "myCourses": "Bahasaku",
+ "addLanguage": "Tambah bahasa baru",
+ "langEnglishUS": "Bahasa Inggris Amerika"
 }

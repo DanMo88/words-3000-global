@@ -127,5 +127,12 @@
  "dlgFirefox2": "Mở trang này bằng {a} hoặc {b} rồi nhấp “Cài đặt”.",
  "dlgPc1": "Nhấp biểu tượng cài đặt {a} trên thanh địa chỉ,",
  "dlgPc2": "hoặc chọn {b} trong menu {a}.",
- "search": "Tìm ngôn ngữ…"
+ "search": "Tìm ngôn ngữ…",
+ "learnTitle": "Bạn muốn học ngôn ngữ nào?",
+ "learnSub": "Bạn có thể thêm ngôn ngữ khác sau.",
+ "comingSoonMsg": "{lang}: khóa học này sắp ra mắt. Hiện tại bạn có thể học tiếng Anh Mỹ.",
+ "newLanguage": "Ngôn ngữ mới",
+ "myCourses": "Ngôn ngữ của tôi",
+ "addLanguage": "Thêm ngôn ngữ mới",
+ "langEnglishUS": "Tiếng Anh Mỹ"
 }

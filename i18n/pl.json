@@ -142,5 +142,12 @@
  "dlgFirefox2": "Otwórz tę stronę w {a} lub {b} i kliknij „Zainstaluj”.",
  "dlgPc1": "Kliknij ikonę instalacji {a} na pasku adresu",
  "dlgPc2": "albo wybierz {b} z menu {a}.",
- "search": "Szukaj języka…"
+ "search": "Szukaj języka…",
+ "learnTitle": "Jakiego języka chcesz się uczyć?",
+ "learnSub": "Później możesz dodać kolejne języki.",
+ "comingSoonMsg": "{lang}: ten kurs będzie dostępny wkrótce. Na razie możesz uczyć się amerykańskiego angielskiego.",
+ "newLanguage": "Nowy język",
+ "myCourses": "Moje języki",
+ "addLanguage": "Dodaj nowy język",
+ "langEnglishUS": "Amerykański angielski"
 }

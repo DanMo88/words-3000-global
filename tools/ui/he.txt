@@ -120,3 +120,10 @@ dlgFirefox1|Firefox לא תומך בהתקנת אפליקציות ווב.
 dlgFirefox2|פתח את הדף ב־{a} או ב־{b} ולחץ על „התקנה“.
 dlgPc1|בשורת הכתובת לחץ על סמל ההתקנה {a},
 dlgPc2|או בתפריט {a} בחר {b}.
+learnTitle|איזו שפה תרצה ללמוד?
+learnSub|אפשר להוסיף שפות נוספות בהמשך.
+comingSoonMsg|{lang}: הקורס הזה יגיע בקרוב. בינתיים אפשר ללמוד אנגלית אמריקאית.
+newLanguage|שפה חדשה
+myCourses|השפות שלי
+addLanguage|הוספת שפה חדשה
+langEnglishUS|אנגלית אמריקאית

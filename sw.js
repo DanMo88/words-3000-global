@@ -1,7 +1,7 @@
 // HTML: network-first · JSON data: network-first · css/js/manifest: stale-while-revalidate
 // media (audio/img/fonts/icons): cache-on-demand · cross-origin: never touched
-const V = 'w3g-v9', MEDIA = 'w3g-media';
-const SHELL = ['./', 'index.html', 'style.css?v=3', 'app.js?v=4', 'fonts/w3g-fonts.css?v=2', 'fonts/w3g-latin.woff2', 'install.js?v=1', 'manifest.webmanifest', 'data/index.json', 'i18n/langs.json',
+const V = 'w3g-v10', MEDIA = 'w3g-media';
+const SHELL = ['./', 'index.html', 'style.css?v=4', 'app.js?v=5', 'fonts/w3g-fonts.css?v=3', 'fonts/w3g-latin.woff2', 'install.js?v=1', 'manifest.webmanifest', 'data/index.json', 'i18n/langs.json', 'flags/us.svg',
   'fonts/Vazirmatn-Regular.woff2', 'fonts/Vazirmatn-Bold.woff2', 'fonts/Vazirmatn-Black.woff2',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-192.png', 'icons/maskable-512.png', 'icons/apple-touch-icon.png', 'audio/sfx-correct.mp3', 'audio/sfx-wrong.mp3'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });

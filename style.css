@@ -183,3 +183,21 @@ button:active{transform:scale(.97)}
 .top .h2{min-width:0;overflow-wrap:anywhere;hyphens:auto;font-size:clamp(17px,min(2.8dvh,5.4vw),25px)}
 .lvl .nm{font-size:clamp(13px,min(2dvh,4.1vw),18px)}
 html[lang=ro] .home-head>.logo{font-size:clamp(18px,min(3.3dvh,5vw),30px)}
+/* courses: target-language picker, home course bar, switcher */
+.tsub{flex:none;text-align:center;color:var(--mut);font-size:clamp(13px,2dvh,17px);line-height:1.5;margin-top:-.4dvh}
+.lang.soonl{background:#fafafa;border-color:#e5e7eb;box-shadow:0 2px 0 #e5e7eb}
+.lang.soonl .flag{opacity:.6;filter:saturate(.55)}
+.lang.soonl b{color:#4b5563}
+.lang .soonb{align-self:flex-start;background:#fef3c7;color:#92400e;font-weight:700;border-radius:99px;padding:0 1.8vw;margin-top:2px;line-height:1.6}
+.lang.tgt:not(.soonl) small{color:var(--ok);font-weight:700}
+.cbar{display:flex;gap:2vw;flex:none;align-items:stretch}
+.ccur{flex:1;min-width:0;display:flex;align-items:center;gap:2.2vw;background:#fff;border:2px solid #e0e7ff;border-radius:14px;box-shadow:0 2px 0 #c7d2fe;padding:.5dvh 3vw;min-height:max(40px,5.4dvh);text-align:start}
+.ccur .flag{width:clamp(26px,7.4vw,34px);height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:4px;box-shadow:0 0 0 1px #0001,0 1px 2px #0002;flex:none}
+.ccur b{font-weight:800;font-size:clamp(13px,min(2dvh,4vw),17px);line-height:1.2;min-width:0;overflow-wrap:anywhere}
+.ccur .car{margin-inline-start:auto;color:var(--mut);font-size:clamp(12px,1.8dvh,15px);flex:none}
+.cadd{flex:none;max-width:44vw;display:flex;align-items:center;justify-content:center;gap:1vw;font-weight:800;font-size:clamp(12px,min(1.9dvh,3.8vw),16px);line-height:1.2;color:var(--pri);background:#eef2ff;border:2px solid #c7d2fe;border-radius:14px;padding:.5dvh 2.6vw;text-align:center}
+.courses{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:1.2dvh;padding:2px 2px 6px}
+.course{flex:none;width:100%}
+.course small{font-size:clamp(12px,1.7dvh,14px)}
+.lvl .rect{font-size:.84em;line-height:1.25}
+.toast{animation:tfade .2s ease}@keyframes tfade{from{opacity:0;transform:translate(-50%,4px)}to{opacity:1;transform:translateX(-50%)}}

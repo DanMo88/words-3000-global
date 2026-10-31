@@ -139,5 +139,12 @@
  "dlgFirefox2": "Maak hierdie bladsy in {a} of {b} oop en klik op “Installeer”.",
  "dlgPc1": "Klik in die adresbalk op die installeer-ikoon {a},",
  "dlgPc2": "of kies {b} in die kieslys {a}.",
- "search": "Soek 'n taal…"
+ "search": "Soek 'n taal…",
+ "learnTitle": "Watter taal wil jy leer?",
+ "learnSub": "Jy kan later meer tale byvoeg.",
+ "comingSoonMsg": "{lang}: hierdie kursus kom binnekort. Vir nou kan jy Amerikaanse Engels leer.",
+ "newLanguage": "Nuwe taal",
+ "myCourses": "My tale",
+ "addLanguage": "Voeg ’n nuwe taal by",
+ "langEnglishUS": "Amerikaanse Engels"
 }
