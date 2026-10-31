@@ -206,7 +206,8 @@ function settingsScreen() {
     <div class="sect">${t('appLanguage')}</div>
     ${langGrid(LANG)}
     <div class="foot">${t('settingsNote')}</div>
-    <button class="btn" id="home">${t('backHome')}</button>`);
+    <button class="btn" id="home">${t('backHome')}</button>
+    <div class="legal">${legalLinks()}</div>`);
   bindX(home); document.getElementById('home').onclick = home;
   bindLangGrid(code => { R.lang = code; save(); applyLang(R.lang).then(settingsScreen); });
 }
@@ -830,12 +831,13 @@ function profileScreen() {
       <div class="pcard"><div class="av">${esc(((a.name || a.email || '?').trim()[0] || '?').toUpperCase())}</div>
         <div class="pinfo"><label class="fld nm"><span>${t('nameLabel')}</span><span class="nrow"><input id="pName" type="text" dir="auto" maxlength="80" autocomplete="name" value="${esc(a.name || '')}"><button class="sbtn" id="pSave">${t('save')}</button></span></label>
         <div class="pmail" dir="ltr">${esc(a.email || '')}</div>
+        ${ACCESS.isPremium() ? `<div class="pprem">💎 ${t('premium')}</div>` : ''}
         <div class="psync ${a.dirty ? 'pend' : ''}" id="psync">${a.dirty ? '⏳ ' + t('syncPending') : (when ? '☁️ ' + t('syncedAt', { time: when }) : '')}</div></div></div>
       <div class="sect">${t('myCourses')}</div>
       <div class="plist">${codes.map(code => { const c = R.courses[code], n = Object.keys(c.words).filter(id => c.words[id].learnedAt).length;
         return `<div class="lang course pc">${flagImg(code)}<span class="lt2"><b>${esc(courseName(code))}</b><small>${t('wordsOfTotal', { a: n, b: TOTAL })} · 🔥 ${N(streakOf(c))} · ⚡ ${N(c.best60 || 0)}</small></span></div>`; }).join('')}</div>
     </div>
-    <div class="btns"><button class="btn ghost" id="pOut">${t('signOut')}</button><button class="lnk danger" id="pDel">${t('deleteAcct')}</button></div>`);
+    <div class="btns"><button class="btn ghost" id="pOut">${t('signOut')}</button><button class="lnk danger" id="pDel">${t('deleteAcct')}</button><div class="legal">${legalLinks()}</div></div>`);
   bindX(home);
   const g = id => document.getElementById(id);
   g('pSave').onclick = async () => {

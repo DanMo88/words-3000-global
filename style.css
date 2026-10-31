@@ -261,3 +261,4 @@ html[dir=rtl] .ccur b{line-height:1.5}
 .ls.pay{position:relative;opacity:.85}
 .ls .gem{position:absolute;top:2px;inset-inline-end:3px;font-style:normal;font-size:11px;line-height:1}
 .amsg.info{color:var(--mut);font-weight:600;background:#eef2ff;border-radius:12px;padding:1dvh 3vw}
+.pprem{font-weight:800;color:#7c3aed;font-size:clamp(13px,1.9dvh,15px)}
