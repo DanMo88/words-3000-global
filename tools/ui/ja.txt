@@ -127,3 +127,41 @@ newLanguage|新しい言語
 myCourses|マイ言語
 addLanguage|新しい言語を追加
 langEnglishUS|アメリカ英語
+acct|アカウント
+acctGuestText|無料アカウントを作ると、学習の進み具合が保存され、すべての端末で使えます。
+signIn|ログイン
+signUp|アカウント作成
+email|メールアドレス
+password|パスワード
+nameLabel|名前
+pwHint|8文字以上
+forgotPw|パスワードをお忘れですか？
+googleBtn|Google で続ける
+guestContinue|アカウントなしで続ける
+resetTitle|パスワードの再設定
+resetText|メールアドレスを入力すると、新しいパスワードを設定するリンクをお送りします。
+resetSend|リンクを送信
+resetSent|このメールアドレスのアカウントがあれば、再設定リンクを送信しました。
+newPwSave|新しいパスワードを保存
+pwSaved|新しいパスワードを保存しました。
+checkEmail|あと少しです！{email} に送ったメールを開いて確認し、ログインしてください。
+signedInMsg|ログインしました。進み具合を同期しました ✓
+errGeneric|問題が発生しました。もう一度お試しください。
+errOffline|インターネットに接続されていません。オンラインになってから再度お試しください。
+errCreds|メールアドレスまたはパスワードが違います。
+errEmailTaken|このメールアドレスはすでに登録されています。ログインしてください。
+errWeakPw|パスワードは8文字以上にしてください。
+errEmailInvalid|正しいメールアドレスを入力してください。
+errNotConfirmed|先にメールアドレスを確認してください。受信トレイをご確認ください。
+errRate|試行回数が多すぎます。数分お待ちください。
+syncedAt|同期：{time}
+syncPending|オンラインになると同期されます
+save|保存
+signOut|ログアウト
+deleteAcct|アカウントを削除
+delTitle|アカウントを削除しますか？
+delText|アカウントとオンラインに保存されたすべての進み具合が完全に削除されます。元に戻せません。この端末の進み具合は残ります。
+delConfirm|はい、完全に削除します
+cancel|キャンセル
+deleted|アカウントを削除しました。
+savePrompt|💾 進み具合を保存：無料アカウントを作成

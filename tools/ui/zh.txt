@@ -127,3 +127,41 @@ newLanguage|新语言
 myCourses|我的语言
 addLanguage|添加新语言
 langEnglishUS|美式英语
+acct|账户
+acctGuestText|创建免费账户，保存你的学习进度，并在所有设备上使用。
+signIn|登录
+signUp|创建账户
+email|邮箱
+password|密码
+nameLabel|名字
+pwHint|至少 8 个字符
+forgotPw|忘记密码？
+googleBtn|使用 Google 继续
+guestContinue|不登录，继续使用
+resetTitle|重置密码
+resetText|输入你的邮箱，我们会发送一个设置新密码的链接。
+resetSend|发送链接
+resetSent|如果该邮箱已注册，我们已发送重置链接。
+newPwSave|保存新密码
+pwSaved|新密码已保存。
+checkEmail|快完成了！打开我们发送到 {email} 的邮件并确认，然后登录。
+signedInMsg|已登录，进度已同步 ✓
+errGeneric|出了点问题，请重试。
+errOffline|没有网络连接。联网后请重试。
+errCreds|邮箱或密码错误。
+errEmailTaken|该邮箱已注册，请直接登录。
+errWeakPw|密码至少需要 8 个字符。
+errEmailInvalid|请输入有效的邮箱地址。
+errNotConfirmed|请先确认你的邮箱，查看收件箱。
+errRate|尝试次数过多，请等几分钟。
+syncedAt|已同步：{time}
+syncPending|联网后将自动同步
+save|保存
+signOut|退出登录
+deleteAcct|删除账户
+delTitle|要删除你的账户吗？
+delText|你的账户和所有在线保存的进度将被永久删除，且无法恢复。此设备上的进度会保留。
+delConfirm|是的，永久删除
+cancel|取消
+deleted|你的账户已删除。
+savePrompt|💾 保存你的进度：创建免费账户

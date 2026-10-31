@@ -127,3 +127,41 @@ newLanguage|Bahasa baru
 myCourses|Bahasaku
 addLanguage|Tambah bahasa baru
 langEnglishUS|Bahasa Inggris Amerika
+acct|Akun
+acctGuestText|Buat akun gratis agar kemajuanmu tersimpan dan bisa dipakai di semua perangkatmu.
+signIn|Masuk
+signUp|Buat akun
+email|Email
+password|Kata sandi
+nameLabel|Nama
+pwHint|Minimal 8 karakter
+forgotPw|Lupa kata sandi?
+googleBtn|Lanjutkan dengan Google
+guestContinue|Lanjut tanpa akun
+resetTitle|Atur ulang kata sandi
+resetText|Masukkan emailmu, kami akan mengirim tautan untuk membuat kata sandi baru.
+resetSend|Kirim tautan
+resetSent|Jika ada akun dengan email ini, tautan atur ulang sudah dikirim.
+newPwSave|Simpan kata sandi baru
+pwSaved|Kata sandi barumu sudah disimpan.
+checkEmail|Hampir selesai! Buka email yang kami kirim ke {email}, konfirmasikan, lalu masuk.
+signedInMsg|Berhasil masuk. Kemajuanmu sudah disinkronkan ✓
+errGeneric|Terjadi kesalahan. Coba lagi.
+errOffline|Tidak ada koneksi internet. Coba lagi saat kamu online.
+errCreds|Email atau kata sandi salah.
+errEmailTaken|Email ini sudah punya akun. Silakan masuk.
+errWeakPw|Kata sandi minimal 8 karakter.
+errEmailInvalid|Masukkan alamat email yang valid.
+errNotConfirmed|Konfirmasikan emailmu dulu. Cek kotak masuk.
+errRate|Terlalu banyak percobaan. Tunggu beberapa menit.
+syncedAt|Disinkronkan: {time}
+syncPending|Akan disinkronkan saat kamu online
+save|Simpan
+signOut|Keluar
+deleteAcct|Hapus akun
+delTitle|Hapus akunmu?
+delText|Akunmu dan semua kemajuan yang tersimpan online akan dihapus permanen. Ini tidak bisa dibatalkan. Kemajuan di perangkat ini tetap ada.
+delConfirm|Ya, hapus permanen
+cancel|Batal
+deleted|Akunmu sudah dihapus.
+savePrompt|💾 Simpan kemajuanmu: buat akun gratis

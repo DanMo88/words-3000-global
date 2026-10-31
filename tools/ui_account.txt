@@ -1,0 +1,1209 @@
+## fa
+acct|حساب کاربری
+acctGuestText|یه حساب رایگان بساز تا پیشرفتت ذخیره بشه و روی همه‌ی دستگاه‌هات داشته باشیش.
+signIn|ورود
+signUp|ساخت حساب
+email|ایمیل
+password|رمز عبور
+nameLabel|اسم
+pwHint|حداقل ۸ حرف
+forgotPw|رمزت رو فراموش کردی؟
+googleBtn|ادامه با گوگل
+guestContinue|ادامه بدون حساب
+resetTitle|بازیابی رمز عبور
+resetText|ایمیلت رو بنویس تا یه لینک برای گذاشتن رمز جدید برات بفرستیم.
+resetSend|ارسال لینک
+resetSent|اگه با این ایمیل حسابی وجود داشته باشه، لینک بازیابی برات فرستاده شد.
+newPwSave|ذخیره‌ی رمز جدید
+pwSaved|رمز جدیدت ذخیره شد.
+checkEmail|تقریباً تمومه! ایمیلی رو که به {email} فرستادیم باز کن و تأیید کن، بعد وارد شو.
+signedInMsg|وارد شدی. پیشرفتت همگام شد ✓
+errGeneric|یه مشکلی پیش اومد. دوباره امتحان کن.
+errOffline|اینترنت وصل نیست. وقتی آنلاین شدی دوباره امتحان کن.
+errCreds|ایمیل یا رمز عبور اشتباهه.
+errEmailTaken|با این ایمیل قبلاً حساب ساخته شده. لطفاً وارد شو.
+errWeakPw|رمز عبور باید حداقل ۸ حرف باشه.
+errEmailInvalid|لطفاً یه ایمیل درست بنویس.
+errNotConfirmed|اول ایمیلت رو تأیید کن. صندوق ایمیلت رو نگاه کن.
+errRate|تلاش‌ها زیاد شد. چند دقیقه صبر کن.
+syncedAt|همگام‌سازی: {time}
+syncPending|وقتی آنلاین بشی همگام می‌شه
+save|ذخیره
+signOut|خروج از حساب
+deleteAcct|حذف حساب
+delTitle|حسابت حذف بشه؟
+delText|حسابت و همه‌ی پیشرفتی که آنلاین ذخیره شده برای همیشه پاک می‌شه و برنمی‌گرده. پیشرفت روی همین دستگاه می‌مونه.
+delConfirm|بله، برای همیشه حذف کن
+cancel|انصراف
+deleted|حسابت حذف شد.
+savePrompt|💾 پیشرفتت رو ذخیره کن: حساب رایگان بساز
+## ar
+acct|الحساب
+acctGuestText|أنشئ حسابًا مجانيًا لحفظ تقدّمك واستخدامه على كل أجهزتك.
+signIn|تسجيل الدخول
+signUp|إنشاء حساب
+email|البريد الإلكتروني
+password|كلمة المرور
+nameLabel|الاسم
+pwHint|8 أحرف على الأقل
+forgotPw|نسيت كلمة المرور؟
+googleBtn|المتابعة باستخدام Google
+guestContinue|المتابعة بدون حساب
+resetTitle|إعادة تعيين كلمة المرور
+resetText|أدخل بريدك الإلكتروني وسنرسل لك رابطًا لتعيين كلمة مرور جديدة.
+resetSend|إرسال الرابط
+resetSent|إذا كان هناك حساب بهذا البريد، فقد أرسلنا رابط إعادة التعيين.
+newPwSave|حفظ كلمة المرور الجديدة
+pwSaved|تم حفظ كلمة المرور الجديدة.
+checkEmail|اقتربت! افتح الرسالة التي أرسلناها إلى {email} وأكّدها، ثم سجّل الدخول.
+signedInMsg|تم تسجيل الدخول. تمت مزامنة تقدّمك ✓
+errGeneric|حدث خطأ ما. حاول مرة أخرى.
+errOffline|لا يوجد اتصال بالإنترنت. حاول مجددًا عندما تكون متصلًا.
+errCreds|البريد الإلكتروني أو كلمة المرور غير صحيحة.
+errEmailTaken|يوجد حساب بهذا البريد بالفعل. يرجى تسجيل الدخول.
+errWeakPw|يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.
+errEmailInvalid|يرجى إدخال بريد إلكتروني صحيح.
+errNotConfirmed|يرجى تأكيد بريدك الإلكتروني أولًا. تحقّق من صندوق الوارد.
+errRate|محاولات كثيرة. يرجى الانتظار بضع دقائق.
+syncedAt|آخر مزامنة: {time}
+syncPending|ستتم المزامنة عند الاتصال بالإنترنت
+save|حفظ
+signOut|تسجيل الخروج
+deleteAcct|حذف الحساب
+delTitle|هل تريد حذف حسابك؟
+delText|سيُحذف حسابك وكل التقدّم المحفوظ على الإنترنت نهائيًا ولا يمكن التراجع. يبقى التقدّم على هذا الجهاز.
+delConfirm|نعم، احذفه نهائيًا
+cancel|إلغاء
+deleted|تم حذف حسابك.
+savePrompt|💾 احفظ تقدّمك: أنشئ حسابًا مجانيًا
+## fr
+acct|Compte
+acctGuestText|Crée un compte gratuit pour sauvegarder ta progression et la retrouver sur tous tes appareils.
+signIn|Se connecter
+signUp|Créer un compte
+email|E-mail
+password|Mot de passe
+nameLabel|Nom
+pwHint|Au moins 8 caractères
+forgotPw|Mot de passe oublié ?
+googleBtn|Continuer avec Google
+guestContinue|Continuer sans compte
+resetTitle|Réinitialiser le mot de passe
+resetText|Saisis ton e-mail et nous t’enverrons un lien pour choisir un nouveau mot de passe.
+resetSend|Envoyer le lien
+resetSent|Si un compte existe pour cet e-mail, un lien de réinitialisation a été envoyé.
+newPwSave|Enregistrer le nouveau mot de passe
+pwSaved|Ton nouveau mot de passe est enregistré.
+checkEmail|Presque fini ! Ouvre l’e-mail envoyé à {email}, confirme-le, puis connecte-toi.
+signedInMsg|Connecté. Ta progression est synchronisée ✓
+errGeneric|Un problème est survenu. Réessaie.
+errOffline|Pas de connexion Internet. Réessaie quand tu seras en ligne.
+errCreds|E-mail ou mot de passe incorrect.
+errEmailTaken|Cet e-mail a déjà un compte. Connecte-toi.
+errWeakPw|Le mot de passe doit contenir au moins 8 caractères.
+errEmailInvalid|Saisis une adresse e-mail valide.
+errNotConfirmed|Confirme d’abord ton e-mail. Regarde ta boîte de réception.
+errRate|Trop de tentatives. Patiente quelques minutes.
+syncedAt|Synchronisé : {time}
+syncPending|Synchronisation dès que tu seras en ligne
+save|Enregistrer
+signOut|Se déconnecter
+deleteAcct|Supprimer le compte
+delTitle|Supprimer ton compte ?
+delText|Ton compte et toute la progression enregistrée en ligne seront supprimés définitivement. C’est irréversible. La progression sur cet appareil reste.
+delConfirm|Oui, supprimer définitivement
+cancel|Annuler
+deleted|Ton compte a été supprimé.
+savePrompt|💾 Sauvegarde ta progression : crée un compte gratuit
+## af
+acct|Rekening
+acctGuestText|Skep ’n gratis rekening om jou vordering te stoor en dit op al jou toestelle te gebruik.
+signIn|Meld aan
+signUp|Skep rekening
+email|E-pos
+password|Wagwoord
+nameLabel|Naam
+pwHint|Minstens 8 karakters
+forgotPw|Wagwoord vergeet?
+googleBtn|Gaan voort met Google
+guestContinue|Gaan voort sonder rekening
+resetTitle|Stel wagwoord terug
+resetText|Tik jou e-pos in en ons stuur vir jou ’n skakel om ’n nuwe wagwoord te kies.
+resetSend|Stuur skakel
+resetSent|As daar ’n rekening vir hierdie e-pos is, het ons ’n terugstelskakel gestuur.
+newPwSave|Stoor nuwe wagwoord
+pwSaved|Jou nuwe wagwoord is gestoor.
+checkEmail|Amper klaar! Maak die e-pos oop wat ons na {email} gestuur het, bevestig dit en meld dan aan.
+signedInMsg|Aangemeld. Jou vordering is gesinchroniseer ✓
+errGeneric|Iets het skeefgeloop. Probeer weer.
+errOffline|Geen internetverbinding nie. Probeer weer wanneer jy aanlyn is.
+errCreds|Verkeerde e-pos of wagwoord.
+errEmailTaken|Hierdie e-pos het reeds ’n rekening. Meld asseblief aan.
+errWeakPw|Die wagwoord moet minstens 8 karakters hê.
+errEmailInvalid|Tik asseblief ’n geldige e-posadres in.
+errNotConfirmed|Bevestig eers jou e-pos. Kyk in jou inkassie.
+errRate|Te veel pogings. Wag asseblief ’n paar minute.
+syncedAt|Gesinchroniseer: {time}
+syncPending|Sinchroniseer sodra jy aanlyn is
+save|Stoor
+signOut|Meld af
+deleteAcct|Skrap rekening
+delTitle|Skrap jou rekening?
+delText|Jou rekening en alle vordering wat aanlyn gestoor is, word permanent geskrap. Dit kan nie ontdoen word nie. Vordering op hierdie toestel bly.
+delConfirm|Ja, skrap permanent
+cancel|Kanselleer
+deleted|Jou rekening is geskrap.
+savePrompt|💾 Stoor jou vordering: skep ’n gratis rekening
+## bg
+acct|Профил
+acctGuestText|Създай безплатен профил, за да запазиш напредъка си и да го ползваш на всичките си устройства.
+signIn|Вход
+signUp|Създай профил
+email|Имейл
+password|Парола
+nameLabel|Име
+pwHint|Поне 8 знака
+forgotPw|Забрави паролата си?
+googleBtn|Продължи с Google
+guestContinue|Продължи без профил
+resetTitle|Нулиране на паролата
+resetText|Въведи имейла си и ще ти изпратим линк за нова парола.
+resetSend|Изпрати линк
+resetSent|Ако има профил с този имейл, изпратихме линк за нулиране.
+newPwSave|Запази новата парола
+pwSaved|Новата ти парола е запазена.
+checkEmail|Почти готово! Отвори имейла, който изпратихме на {email}, потвърди го и влез.
+signedInMsg|Влезе успешно. Напредъкът ти е синхронизиран ✓
+errGeneric|Нещо се обърка. Опитай отново.
+errOffline|Няма интернет връзка. Опитай отново, когато си онлайн.
+errCreds|Грешен имейл или парола.
+errEmailTaken|Вече има профил с този имейл. Моля, влез.
+errWeakPw|Паролата трябва да е поне 8 знака.
+errEmailInvalid|Моля, въведи валиден имейл адрес.
+errNotConfirmed|Първо потвърди имейла си. Провери пощата си.
+errRate|Твърде много опити. Изчакай няколко минути.
+syncedAt|Синхронизирано: {time}
+syncPending|Ще се синхронизира, когато си онлайн
+save|Запази
+signOut|Изход
+deleteAcct|Изтрий профила
+delTitle|Да изтрием ли профила ти?
+delText|Профилът ти и целият напредък, запазен онлайн, ще бъдат изтрити завинаги. Това не може да се отмени. Напредъкът на това устройство остава.
+delConfirm|Да, изтрий завинаги
+cancel|Отказ
+deleted|Профилът ти е изтрит.
+savePrompt|💾 Запази напредъка си: създай безплатен профил
+## zh
+acct|账户
+acctGuestText|创建免费账户，保存你的学习进度，并在所有设备上使用。
+signIn|登录
+signUp|创建账户
+email|邮箱
+password|密码
+nameLabel|名字
+pwHint|至少 8 个字符
+forgotPw|忘记密码？
+googleBtn|使用 Google 继续
+guestContinue|不登录，继续使用
+resetTitle|重置密码
+resetText|输入你的邮箱，我们会发送一个设置新密码的链接。
+resetSend|发送链接
+resetSent|如果该邮箱已注册，我们已发送重置链接。
+newPwSave|保存新密码
+pwSaved|新密码已保存。
+checkEmail|快完成了！打开我们发送到 {email} 的邮件并确认，然后登录。
+signedInMsg|已登录，进度已同步 ✓
+errGeneric|出了点问题，请重试。
+errOffline|没有网络连接。联网后请重试。
+errCreds|邮箱或密码错误。
+errEmailTaken|该邮箱已注册，请直接登录。
+errWeakPw|密码至少需要 8 个字符。
+errEmailInvalid|请输入有效的邮箱地址。
+errNotConfirmed|请先确认你的邮箱，查看收件箱。
+errRate|尝试次数过多，请等几分钟。
+syncedAt|已同步：{time}
+syncPending|联网后将自动同步
+save|保存
+signOut|退出登录
+deleteAcct|删除账户
+delTitle|要删除你的账户吗？
+delText|你的账户和所有在线保存的进度将被永久删除，且无法恢复。此设备上的进度会保留。
+delConfirm|是的，永久删除
+cancel|取消
+deleted|你的账户已删除。
+savePrompt|💾 保存你的进度：创建免费账户
+## hr
+acct|Račun
+acctGuestText|Izradi besplatni račun da spremiš napredak i koristiš ga na svim svojim uređajima.
+signIn|Prijava
+signUp|Izradi račun
+email|E-pošta
+password|Lozinka
+nameLabel|Ime
+pwHint|Najmanje 8 znakova
+forgotPw|Zaboravio si lozinku?
+googleBtn|Nastavi s Googleom
+guestContinue|Nastavi bez računa
+resetTitle|Ponovno postavljanje lozinke
+resetText|Upiši svoju e-poštu i poslat ćemo ti poveznicu za novu lozinku.
+resetSend|Pošalji poveznicu
+resetSent|Ako postoji račun s ovom e-poštom, poslali smo poveznicu za ponovno postavljanje.
+newPwSave|Spremi novu lozinku
+pwSaved|Nova lozinka je spremljena.
+checkEmail|Skoro gotovo! Otvori e-poruku koju smo poslali na {email}, potvrdi je i prijavi se.
+signedInMsg|Prijavljen si. Napredak je sinkroniziran ✓
+errGeneric|Nešto je pošlo po zlu. Pokušaj ponovno.
+errOffline|Nema internetske veze. Pokušaj ponovno kad budeš na mreži.
+errCreds|Pogrešna e-pošta ili lozinka.
+errEmailTaken|Za ovu e-poštu već postoji račun. Prijavi se.
+errWeakPw|Lozinka mora imati najmanje 8 znakova.
+errEmailInvalid|Upiši valjanu adresu e-pošte.
+errNotConfirmed|Najprije potvrdi e-poštu. Provjeri pristiglu poštu.
+errRate|Previše pokušaja. Pričekaj nekoliko minuta.
+syncedAt|Sinkronizirano: {time}
+syncPending|Sinkronizirat će se kad budeš na mreži
+save|Spremi
+signOut|Odjava
+deleteAcct|Izbriši račun
+delTitle|Izbrisati račun?
+delText|Tvoj račun i sav napredak spremljen na mreži bit će trajno izbrisani. To se ne može poništiti. Napredak na ovom uređaju ostaje.
+delConfirm|Da, trajno izbriši
+cancel|Odustani
+deleted|Tvoj račun je izbrisan.
+savePrompt|💾 Spremi napredak: izradi besplatni račun
+## cs
+acct|Účet
+acctGuestText|Vytvoř si zdarma účet, ať máš pokrok uložený a můžeš ho používat na všech zařízeních.
+signIn|Přihlásit se
+signUp|Vytvořit účet
+email|E-mail
+password|Heslo
+nameLabel|Jméno
+pwHint|Alespoň 8 znaků
+forgotPw|Zapomněl jsi heslo?
+googleBtn|Pokračovat přes Google
+guestContinue|Pokračovat bez účtu
+resetTitle|Obnovení hesla
+resetText|Zadej svůj e-mail a pošleme ti odkaz pro nastavení nového hesla.
+resetSend|Poslat odkaz
+resetSent|Pokud k tomuto e-mailu existuje účet, poslali jsme odkaz pro obnovení.
+newPwSave|Uložit nové heslo
+pwSaved|Nové heslo je uložené.
+checkEmail|Skoro hotovo! Otevři e-mail, který jsme poslali na {email}, potvrď ho a přihlas se.
+signedInMsg|Přihlášeno. Pokrok je synchronizovaný ✓
+errGeneric|Něco se pokazilo. Zkus to znovu.
+errOffline|Nejsi připojený k internetu. Zkus to znovu, až budeš online.
+errCreds|Špatný e-mail nebo heslo.
+errEmailTaken|K tomuto e-mailu už účet existuje. Přihlas se.
+errWeakPw|Heslo musí mít alespoň 8 znaků.
+errEmailInvalid|Zadej platnou e-mailovou adresu.
+errNotConfirmed|Nejdřív potvrď svůj e-mail. Podívej se do schránky.
+errRate|Příliš mnoho pokusů. Počkej pár minut.
+syncedAt|Synchronizováno: {time}
+syncPending|Synchronizuje se, až budeš online
+save|Uložit
+signOut|Odhlásit se
+deleteAcct|Smazat účet
+delTitle|Smazat účet?
+delText|Tvůj účet a veškerý pokrok uložený online budou trvale smazány. Nelze to vrátit. Pokrok v tomto zařízení zůstane.
+delConfirm|Ano, trvale smazat
+cancel|Zrušit
+deleted|Tvůj účet byl smazán.
+savePrompt|💾 Ulož si pokrok: vytvoř si účet zdarma
+## da
+acct|Konto
+acctGuestText|Opret en gratis konto for at gemme dine fremskridt og bruge dem på alle dine enheder.
+signIn|Log ind
+signUp|Opret konto
+email|E-mail
+password|Adgangskode
+nameLabel|Navn
+pwHint|Mindst 8 tegn
+forgotPw|Glemt adgangskoden?
+googleBtn|Fortsæt med Google
+guestContinue|Fortsæt uden konto
+resetTitle|Nulstil adgangskode
+resetText|Skriv din e-mail, så sender vi et link til at vælge en ny adgangskode.
+resetSend|Send link
+resetSent|Hvis der findes en konto med denne e-mail, har vi sendt et nulstillingslink.
+newPwSave|Gem ny adgangskode
+pwSaved|Din nye adgangskode er gemt.
+checkEmail|Næsten færdig! Åbn den e-mail, vi sendte til {email}, bekræft den, og log så ind.
+signedInMsg|Logget ind. Dine fremskridt er synkroniseret ✓
+errGeneric|Noget gik galt. Prøv igen.
+errOffline|Ingen internetforbindelse. Prøv igen, når du er online.
+errCreds|Forkert e-mail eller adgangskode.
+errEmailTaken|Der findes allerede en konto med denne e-mail. Log ind.
+errWeakPw|Adgangskoden skal være på mindst 8 tegn.
+errEmailInvalid|Skriv en gyldig e-mailadresse.
+errNotConfirmed|Bekræft din e-mail først. Tjek din indbakke.
+errRate|For mange forsøg. Vent et par minutter.
+syncedAt|Synkroniseret: {time}
+syncPending|Synkroniseres, når du er online
+save|Gem
+signOut|Log ud
+deleteAcct|Slet konto
+delTitle|Slet din konto?
+delText|Din konto og alle fremskridt gemt online slettes permanent. Det kan ikke fortrydes. Fremskridt på denne enhed bliver.
+delConfirm|Ja, slet permanent
+cancel|Annuller
+deleted|Din konto er slettet.
+savePrompt|💾 Gem dine fremskridt: opret en gratis konto
+## nl
+acct|Account
+acctGuestText|Maak een gratis account om je voortgang te bewaren en op al je apparaten te gebruiken.
+signIn|Inloggen
+signUp|Account maken
+email|E-mail
+password|Wachtwoord
+nameLabel|Naam
+pwHint|Minstens 8 tekens
+forgotPw|Wachtwoord vergeten?
+googleBtn|Doorgaan met Google
+guestContinue|Doorgaan zonder account
+resetTitle|Wachtwoord herstellen
+resetText|Vul je e-mail in, dan sturen we je een link om een nieuw wachtwoord te kiezen.
+resetSend|Link versturen
+resetSent|Als er een account met dit e-mailadres bestaat, hebben we een herstellink gestuurd.
+newPwSave|Nieuw wachtwoord opslaan
+pwSaved|Je nieuwe wachtwoord is opgeslagen.
+checkEmail|Bijna klaar! Open de e-mail die we naar {email} stuurden, bevestig hem en log daarna in.
+signedInMsg|Ingelogd. Je voortgang is gesynchroniseerd ✓
+errGeneric|Er ging iets mis. Probeer het opnieuw.
+errOffline|Geen internetverbinding. Probeer het opnieuw als je online bent.
+errCreds|Verkeerd e-mailadres of wachtwoord.
+errEmailTaken|Dit e-mailadres heeft al een account. Log in.
+errWeakPw|Het wachtwoord moet minstens 8 tekens hebben.
+errEmailInvalid|Vul een geldig e-mailadres in.
+errNotConfirmed|Bevestig eerst je e-mailadres. Kijk in je inbox.
+errRate|Te veel pogingen. Wacht een paar minuten.
+syncedAt|Gesynchroniseerd: {time}
+syncPending|Wordt gesynchroniseerd zodra je online bent
+save|Opslaan
+signOut|Uitloggen
+deleteAcct|Account verwijderen
+delTitle|Je account verwijderen?
+delText|Je account en alle online opgeslagen voortgang worden definitief verwijderd. Dit kan niet ongedaan worden gemaakt. Voortgang op dit apparaat blijft bewaard.
+delConfirm|Ja, definitief verwijderen
+cancel|Annuleren
+deleted|Je account is verwijderd.
+savePrompt|💾 Bewaar je voortgang: maak een gratis account
+## fi
+acct|Tili
+acctGuestText|Luo ilmainen tili, niin edistymisesi tallentuu ja voit käyttää sitä kaikilla laitteillasi.
+signIn|Kirjaudu
+signUp|Luo tili
+email|Sähköposti
+password|Salasana
+nameLabel|Nimi
+pwHint|Vähintään 8 merkkiä
+forgotPw|Unohtuiko salasana?
+googleBtn|Jatka Googlella
+guestContinue|Jatka ilman tiliä
+resetTitle|Salasanan palautus
+resetText|Kirjoita sähköpostisi, niin lähetämme linkin uuden salasanan asettamiseen.
+resetSend|Lähetä linkki
+resetSent|Jos tällä sähköpostilla on tili, lähetimme palautuslinkin.
+newPwSave|Tallenna uusi salasana
+pwSaved|Uusi salasanasi on tallennettu.
+checkEmail|Melkein valmista! Avaa osoitteeseen {email} lähettämämme viesti, vahvista se ja kirjaudu sitten sisään.
+signedInMsg|Kirjauduttu. Edistymisesi on synkronoitu ✓
+errGeneric|Jokin meni pieleen. Yritä uudelleen.
+errOffline|Ei internetyhteyttä. Yritä uudelleen, kun olet verkossa.
+errCreds|Väärä sähköposti tai salasana.
+errEmailTaken|Tällä sähköpostilla on jo tili. Kirjaudu sisään.
+errWeakPw|Salasanassa on oltava vähintään 8 merkkiä.
+errEmailInvalid|Kirjoita kelvollinen sähköpostiosoite.
+errNotConfirmed|Vahvista ensin sähköpostisi. Katso saapuneet viestit.
+errRate|Liikaa yrityksiä. Odota muutama minuutti.
+syncedAt|Synkronoitu: {time}
+syncPending|Synkronoidaan, kun olet verkossa
+save|Tallenna
+signOut|Kirjaudu ulos
+deleteAcct|Poista tili
+delTitle|Poistetaanko tilisi?
+delText|Tilisi ja kaikki verkkoon tallennettu edistyminen poistetaan pysyvästi. Tätä ei voi perua. Tämän laitteen edistyminen säilyy.
+delConfirm|Kyllä, poista pysyvästi
+cancel|Peruuta
+deleted|Tilisi on poistettu.
+savePrompt|💾 Tallenna edistymisesi: luo ilmainen tili
+## de
+acct|Konto
+acctGuestText|Erstelle ein kostenloses Konto, um deinen Fortschritt zu sichern und auf all deinen Geräten zu nutzen.
+signIn|Anmelden
+signUp|Konto erstellen
+email|E-Mail
+password|Passwort
+nameLabel|Name
+pwHint|Mindestens 8 Zeichen
+forgotPw|Passwort vergessen?
+googleBtn|Weiter mit Google
+guestContinue|Ohne Konto weiter
+resetTitle|Passwort zurücksetzen
+resetText|Gib deine E-Mail ein und wir schicken dir einen Link für ein neues Passwort.
+resetSend|Link senden
+resetSent|Falls es ein Konto mit dieser E-Mail gibt, haben wir einen Link zum Zurücksetzen geschickt.
+newPwSave|Neues Passwort speichern
+pwSaved|Dein neues Passwort ist gespeichert.
+checkEmail|Fast geschafft! Öffne die E-Mail an {email}, bestätige sie und melde dich dann an.
+signedInMsg|Angemeldet. Dein Fortschritt ist synchronisiert ✓
+errGeneric|Etwas ist schiefgelaufen. Bitte versuche es erneut.
+errOffline|Keine Internetverbindung. Versuche es erneut, wenn du online bist.
+errCreds|E-Mail oder Passwort ist falsch.
+errEmailTaken|Für diese E-Mail gibt es schon ein Konto. Bitte melde dich an.
+errWeakPw|Das Passwort muss mindestens 8 Zeichen haben.
+errEmailInvalid|Bitte gib eine gültige E-Mail-Adresse ein.
+errNotConfirmed|Bitte bestätige zuerst deine E-Mail. Schau in dein Postfach.
+errRate|Zu viele Versuche. Bitte warte ein paar Minuten.
+syncedAt|Synchronisiert: {time}
+syncPending|Wird synchronisiert, sobald du online bist
+save|Speichern
+signOut|Abmelden
+deleteAcct|Konto löschen
+delTitle|Konto löschen?
+delText|Dein Konto und der gesamte online gespeicherte Fortschritt werden endgültig gelöscht. Das kann nicht rückgängig gemacht werden. Der Fortschritt auf diesem Gerät bleibt.
+delConfirm|Ja, endgültig löschen
+cancel|Abbrechen
+deleted|Dein Konto wurde gelöscht.
+savePrompt|💾 Sichere deinen Fortschritt: kostenloses Konto erstellen
+## el
+acct|Λογαριασμός
+acctGuestText|Φτιάξε δωρεάν λογαριασμό για να αποθηκεύεται η πρόοδός σου και να τη χρησιμοποιείς σε όλες τις συσκευές σου.
+signIn|Σύνδεση
+signUp|Δημιουργία λογαριασμού
+email|Email
+password|Κωδικός
+nameLabel|Όνομα
+pwHint|Τουλάχιστον 8 χαρακτήρες
+forgotPw|Ξέχασες τον κωδικό;
+googleBtn|Συνέχεια με Google
+guestContinue|Συνέχεια χωρίς λογαριασμό
+resetTitle|Επαναφορά κωδικού
+resetText|Γράψε το email σου και θα σου στείλουμε σύνδεσμο για νέο κωδικό.
+resetSend|Αποστολή συνδέσμου
+resetSent|Αν υπάρχει λογαριασμός με αυτό το email, στείλαμε σύνδεσμο επαναφοράς.
+newPwSave|Αποθήκευση νέου κωδικού
+pwSaved|Ο νέος σου κωδικός αποθηκεύτηκε.
+checkEmail|Σχεδόν έτοιμο! Άνοιξε το email που στείλαμε στο {email}, επιβεβαίωσέ το και μετά συνδέσου.
+signedInMsg|Συνδέθηκες. Η πρόοδός σου συγχρονίστηκε ✓
+errGeneric|Κάτι πήγε στραβά. Δοκίμασε ξανά.
+errOffline|Δεν υπάρχει σύνδεση στο ίντερνετ. Δοκίμασε ξανά όταν είσαι online.
+errCreds|Λάθος email ή κωδικός.
+errEmailTaken|Υπάρχει ήδη λογαριασμός με αυτό το email. Συνδέσου.
+errWeakPw|Ο κωδικός πρέπει να έχει τουλάχιστον 8 χαρακτήρες.
+errEmailInvalid|Γράψε ένα έγκυρο email.
+errNotConfirmed|Επιβεβαίωσε πρώτα το email σου. Δες τα εισερχόμενά σου.
+errRate|Πάρα πολλές προσπάθειες. Περίμενε λίγα λεπτά.
+syncedAt|Συγχρονίστηκε: {time}
+syncPending|Θα συγχρονιστεί όταν είσαι online
+save|Αποθήκευση
+signOut|Αποσύνδεση
+deleteAcct|Διαγραφή λογαριασμού
+delTitle|Διαγραφή του λογαριασμού σου;
+delText|Ο λογαριασμός σου και όλη η πρόοδος που είναι αποθηκευμένη online θα διαγραφούν οριστικά. Δεν αναιρείται. Η πρόοδος σε αυτή τη συσκευή μένει.
+delConfirm|Ναι, οριστική διαγραφή
+cancel|Ακύρωση
+deleted|Ο λογαριασμός σου διαγράφηκε.
+savePrompt|💾 Κράτα την πρόοδό σου: φτιάξε δωρεάν λογαριασμό
+## he
+acct|חשבון
+acctGuestText|צרו חשבון חינמי כדי לשמור את ההתקדמות ולהשתמש בה בכל המכשירים.
+signIn|התחברות
+signUp|יצירת חשבון
+email|אימייל
+password|סיסמה
+nameLabel|שם
+pwHint|לפחות 8 תווים
+forgotPw|שכחת את הסיסמה?
+googleBtn|המשך עם Google
+guestContinue|המשך בלי חשבון
+resetTitle|איפוס סיסמה
+resetText|הזינו את האימייל ונשלח קישור להגדרת סיסמה חדשה.
+resetSend|שליחת קישור
+resetSent|אם קיים חשבון עם האימייל הזה, שלחנו קישור לאיפוס.
+newPwSave|שמירת סיסמה חדשה
+pwSaved|הסיסמה החדשה נשמרה.
+checkEmail|כמעט סיימנו! פתחו את האימייל שנשלח אל {email}, אשרו אותו ואז התחברו.
+signedInMsg|התחברת. ההתקדמות סונכרנה ✓
+errGeneric|משהו השתבש. נסו שוב.
+errOffline|אין חיבור לאינטרנט. נסו שוב כשתהיו מחוברים.
+errCreds|אימייל או סיסמה שגויים.
+errEmailTaken|לאימייל הזה כבר יש חשבון. נא להתחבר.
+errWeakPw|הסיסמה צריכה להכיל לפחות 8 תווים.
+errEmailInvalid|נא להזין כתובת אימייל תקינה.
+errNotConfirmed|קודם צריך לאשר את האימייל. בדקו את תיבת הדואר.
+errRate|יותר מדי ניסיונות. נא להמתין כמה דקות.
+syncedAt|סונכרן: {time}
+syncPending|יסונכרן כשתהיו מחוברים
+save|שמירה
+signOut|התנתקות
+deleteAcct|מחיקת החשבון
+delTitle|למחוק את החשבון?
+delText|החשבון וכל ההתקדמות שנשמרה ברשת יימחקו לצמיתות. אי אפשר לבטל את זה. ההתקדמות במכשיר הזה נשארת.
+delConfirm|כן, למחוק לצמיתות
+cancel|ביטול
+deleted|החשבון נמחק.
+savePrompt|💾 שמרו את ההתקדמות: צרו חשבון חינמי
+## hi
+acct|खाता
+acctGuestText|अपनी प्रगति सुरक्षित रखने और सभी डिवाइस पर इस्तेमाल करने के लिए मुफ़्त खाता बनाएँ।
+signIn|साइन इन
+signUp|खाता बनाएँ
+email|ईमेल
+password|पासवर्ड
+nameLabel|नाम
+pwHint|कम से कम 8 अक्षर
+forgotPw|पासवर्ड भूल गए?
+googleBtn|Google से जारी रखें
+guestContinue|बिना खाते के जारी रखें
+resetTitle|पासवर्ड रीसेट करें
+resetText|अपना ईमेल लिखें, हम नया पासवर्ड बनाने का लिंक भेजेंगे।
+resetSend|लिंक भेजें
+resetSent|अगर इस ईमेल से कोई खाता है, तो हमने रीसेट लिंक भेज दिया है।
+newPwSave|नया पासवर्ड सेव करें
+pwSaved|आपका नया पासवर्ड सेव हो गया।
+checkEmail|बस थोड़ा सा बाकी! {email} पर भेजा गया ईमेल खोलें, पुष्टि करें, फिर साइन इन करें।
+signedInMsg|साइन इन हो गया। आपकी प्रगति सिंक हो गई ✓
+errGeneric|कुछ गड़बड़ हो गई। फिर से कोशिश करें।
+errOffline|इंटरनेट कनेक्शन नहीं है। ऑनलाइन होने पर फिर से कोशिश करें।
+errCreds|ईमेल या पासवर्ड गलत है।
+errEmailTaken|इस ईमेल से पहले से खाता है। कृपया साइन इन करें।
+errWeakPw|पासवर्ड कम से कम 8 अक्षर का होना चाहिए।
+errEmailInvalid|कृपया सही ईमेल पता लिखें।
+errNotConfirmed|पहले अपने ईमेल की पुष्टि करें। अपना इनबॉक्स देखें।
+errRate|बहुत ज़्यादा कोशिशें। कुछ मिनट रुकें।
+syncedAt|सिंक हुआ: {time}
+syncPending|ऑनलाइन होने पर सिंक होगा
+save|सेव करें
+signOut|साइन आउट
+deleteAcct|खाता हटाएँ
+delTitle|अपना खाता हटाएँ?
+delText|आपका खाता और ऑनलाइन सेव की गई पूरी प्रगति हमेशा के लिए हट जाएगी। इसे वापस नहीं लाया जा सकता। इस डिवाइस पर प्रगति बनी रहेगी।
+delConfirm|हाँ, हमेशा के लिए हटाएँ
+cancel|रद्द करें
+deleted|आपका खाता हटा दिया गया है।
+savePrompt|💾 अपनी प्रगति सेव करें: मुफ़्त खाता बनाएँ
+## hu
+acct|Fiók
+acctGuestText|Hozz létre ingyenes fiókot, hogy a haladásod megmaradjon, és minden eszközödön használhasd.
+signIn|Belépés
+signUp|Fiók létrehozása
+email|E-mail
+password|Jelszó
+nameLabel|Név
+pwHint|Legalább 8 karakter
+forgotPw|Elfelejtetted a jelszót?
+googleBtn|Folytatás Google-lel
+guestContinue|Folytatás fiók nélkül
+resetTitle|Jelszó visszaállítása
+resetText|Add meg az e-mail-címed, és küldünk egy linket az új jelszóhoz.
+resetSend|Link küldése
+resetSent|Ha van fiók ezzel az e-mail-címmel, elküldtük a visszaállító linket.
+newPwSave|Új jelszó mentése
+pwSaved|Az új jelszavad elmentve.
+checkEmail|Mindjárt kész! Nyisd meg a(z) {email} címre küldött e-mailt, erősítsd meg, majd lépj be.
+signedInMsg|Beléptél. A haladásod szinkronizálva ✓
+errGeneric|Hiba történt. Próbáld újra.
+errOffline|Nincs internetkapcsolat. Próbáld újra, ha online vagy.
+errCreds|Hibás e-mail-cím vagy jelszó.
+errEmailTaken|Ehhez az e-mail-címhez már tartozik fiók. Lépj be.
+errWeakPw|A jelszónak legalább 8 karakterből kell állnia.
+errEmailInvalid|Adj meg érvényes e-mail-címet.
+errNotConfirmed|Előbb erősítsd meg az e-mail-címed. Nézd meg a postafiókod.
+errRate|Túl sok próbálkozás. Várj pár percet.
+syncedAt|Szinkronizálva: {time}
+syncPending|Szinkronizál, amint online leszel
+save|Mentés
+signOut|Kijelentkezés
+deleteAcct|Fiók törlése
+delTitle|Törlöd a fiókodat?
+delText|A fiókod és az online mentett haladásod véglegesen törlődik. Ez nem vonható vissza. Az ezen az eszközön lévő haladás megmarad.
+delConfirm|Igen, végleges törlés
+cancel|Mégse
+deleted|A fiókodat töröltük.
+savePrompt|💾 Mentsd a haladásod: hozz létre ingyenes fiókot
+## id
+acct|Akun
+acctGuestText|Buat akun gratis agar kemajuanmu tersimpan dan bisa dipakai di semua perangkatmu.
+signIn|Masuk
+signUp|Buat akun
+email|Email
+password|Kata sandi
+nameLabel|Nama
+pwHint|Minimal 8 karakter
+forgotPw|Lupa kata sandi?
+googleBtn|Lanjutkan dengan Google
+guestContinue|Lanjut tanpa akun
+resetTitle|Atur ulang kata sandi
+resetText|Masukkan emailmu, kami akan mengirim tautan untuk membuat kata sandi baru.
+resetSend|Kirim tautan
+resetSent|Jika ada akun dengan email ini, tautan atur ulang sudah dikirim.
+newPwSave|Simpan kata sandi baru
+pwSaved|Kata sandi barumu sudah disimpan.
+checkEmail|Hampir selesai! Buka email yang kami kirim ke {email}, konfirmasikan, lalu masuk.
+signedInMsg|Berhasil masuk. Kemajuanmu sudah disinkronkan ✓
+errGeneric|Terjadi kesalahan. Coba lagi.
+errOffline|Tidak ada koneksi internet. Coba lagi saat kamu online.
+errCreds|Email atau kata sandi salah.
+errEmailTaken|Email ini sudah punya akun. Silakan masuk.
+errWeakPw|Kata sandi minimal 8 karakter.
+errEmailInvalid|Masukkan alamat email yang valid.
+errNotConfirmed|Konfirmasikan emailmu dulu. Cek kotak masuk.
+errRate|Terlalu banyak percobaan. Tunggu beberapa menit.
+syncedAt|Disinkronkan: {time}
+syncPending|Akan disinkronkan saat kamu online
+save|Simpan
+signOut|Keluar
+deleteAcct|Hapus akun
+delTitle|Hapus akunmu?
+delText|Akunmu dan semua kemajuan yang tersimpan online akan dihapus permanen. Ini tidak bisa dibatalkan. Kemajuan di perangkat ini tetap ada.
+delConfirm|Ya, hapus permanen
+cancel|Batal
+deleted|Akunmu sudah dihapus.
+savePrompt|💾 Simpan kemajuanmu: buat akun gratis
+## it
+acct|Account
+acctGuestText|Crea un account gratuito per salvare i tuoi progressi e usarli su tutti i tuoi dispositivi.
+signIn|Accedi
+signUp|Crea account
+email|Email
+password|Password
+nameLabel|Nome
+pwHint|Almeno 8 caratteri
+forgotPw|Password dimenticata?
+googleBtn|Continua con Google
+guestContinue|Continua senza account
+resetTitle|Reimposta la password
+resetText|Inserisci la tua email e ti invieremo un link per scegliere una nuova password.
+resetSend|Invia link
+resetSent|Se esiste un account con questa email, ti abbiamo inviato un link di reimpostazione.
+newPwSave|Salva nuova password
+pwSaved|La nuova password è stata salvata.
+checkEmail|Quasi fatto! Apri l’email inviata a {email}, confermala e poi accedi.
+signedInMsg|Accesso eseguito. I tuoi progressi sono sincronizzati ✓
+errGeneric|Qualcosa è andato storto. Riprova.
+errOffline|Nessuna connessione a Internet. Riprova quando sei online.
+errCreds|Email o password errate.
+errEmailTaken|Esiste già un account con questa email. Accedi.
+errWeakPw|La password deve avere almeno 8 caratteri.
+errEmailInvalid|Inserisci un indirizzo email valido.
+errNotConfirmed|Conferma prima la tua email. Controlla la posta.
+errRate|Troppi tentativi. Attendi qualche minuto.
+syncedAt|Sincronizzato: {time}
+syncPending|Si sincronizzerà quando sarai online
+save|Salva
+signOut|Esci
+deleteAcct|Elimina account
+delTitle|Eliminare il tuo account?
+delText|Il tuo account e tutti i progressi salvati online verranno eliminati per sempre. Non si può annullare. I progressi su questo dispositivo restano.
+delConfirm|Sì, elimina per sempre
+cancel|Annulla
+deleted|Il tuo account è stato eliminato.
+savePrompt|💾 Salva i tuoi progressi: crea un account gratuito
+## ja
+acct|アカウント
+acctGuestText|無料アカウントを作ると、学習の進み具合が保存され、すべての端末で使えます。
+signIn|ログイン
+signUp|アカウント作成
+email|メールアドレス
+password|パスワード
+nameLabel|名前
+pwHint|8文字以上
+forgotPw|パスワードをお忘れですか？
+googleBtn|Google で続ける
+guestContinue|アカウントなしで続ける
+resetTitle|パスワードの再設定
+resetText|メールアドレスを入力すると、新しいパスワードを設定するリンクをお送りします。
+resetSend|リンクを送信
+resetSent|このメールアドレスのアカウントがあれば、再設定リンクを送信しました。
+newPwSave|新しいパスワードを保存
+pwSaved|新しいパスワードを保存しました。
+checkEmail|あと少しです！{email} に送ったメールを開いて確認し、ログインしてください。
+signedInMsg|ログインしました。進み具合を同期しました ✓
+errGeneric|問題が発生しました。もう一度お試しください。
+errOffline|インターネットに接続されていません。オンラインになってから再度お試しください。
+errCreds|メールアドレスまたはパスワードが違います。
+errEmailTaken|このメールアドレスはすでに登録されています。ログインしてください。
+errWeakPw|パスワードは8文字以上にしてください。
+errEmailInvalid|正しいメールアドレスを入力してください。
+errNotConfirmed|先にメールアドレスを確認してください。受信トレイをご確認ください。
+errRate|試行回数が多すぎます。数分お待ちください。
+syncedAt|同期：{time}
+syncPending|オンラインになると同期されます
+save|保存
+signOut|ログアウト
+deleteAcct|アカウントを削除
+delTitle|アカウントを削除しますか？
+delText|アカウントとオンラインに保存されたすべての進み具合が完全に削除されます。元に戻せません。この端末の進み具合は残ります。
+delConfirm|はい、完全に削除します
+cancel|キャンセル
+deleted|アカウントを削除しました。
+savePrompt|💾 進み具合を保存：無料アカウントを作成
+## ko
+acct|계정
+acctGuestText|무료 계정을 만들면 학습 진도가 저장되고 모든 기기에서 이어서 할 수 있어요.
+signIn|로그인
+signUp|계정 만들기
+email|이메일
+password|비밀번호
+nameLabel|이름
+pwHint|8자 이상
+forgotPw|비밀번호를 잊으셨나요?
+googleBtn|Google로 계속하기
+guestContinue|계정 없이 계속하기
+resetTitle|비밀번호 재설정
+resetText|이메일을 입력하면 새 비밀번호를 설정할 수 있는 링크를 보내드려요.
+resetSend|링크 보내기
+resetSent|이 이메일로 된 계정이 있다면 재설정 링크를 보냈어요.
+newPwSave|새 비밀번호 저장
+pwSaved|새 비밀번호가 저장됐어요.
+checkEmail|거의 다 됐어요! {email}(으)로 보낸 메일을 열어 확인한 다음 로그인하세요.
+signedInMsg|로그인했어요. 진도가 동기화됐어요 ✓
+errGeneric|문제가 생겼어요. 다시 시도해 주세요.
+errOffline|인터넷에 연결되어 있지 않아요. 온라인일 때 다시 시도하세요.
+errCreds|이메일 또는 비밀번호가 틀렸어요.
+errEmailTaken|이미 이 이메일로 된 계정이 있어요. 로그인해 주세요.
+errWeakPw|비밀번호는 8자 이상이어야 해요.
+errEmailInvalid|올바른 이메일 주소를 입력하세요.
+errNotConfirmed|먼저 이메일을 인증해 주세요. 받은편지함을 확인하세요.
+errRate|시도가 너무 많아요. 몇 분 기다려 주세요.
+syncedAt|동기화: {time}
+syncPending|온라인이 되면 동기화돼요
+save|저장
+signOut|로그아웃
+deleteAcct|계정 삭제
+delTitle|계정을 삭제할까요?
+delText|계정과 온라인에 저장된 모든 진도가 영구적으로 삭제되며 되돌릴 수 없어요. 이 기기의 진도는 그대로 남아요.
+delConfirm|네, 영구 삭제할게요
+cancel|취소
+deleted|계정이 삭제됐어요.
+savePrompt|💾 진도 저장하기: 무료 계정 만들기
+## nb
+acct|Konto
+acctGuestText|Lag en gratis konto for å lagre fremgangen din og bruke den på alle enhetene dine.
+signIn|Logg inn
+signUp|Lag konto
+email|E-post
+password|Passord
+nameLabel|Navn
+pwHint|Minst 8 tegn
+forgotPw|Glemt passordet?
+googleBtn|Fortsett med Google
+guestContinue|Fortsett uten konto
+resetTitle|Tilbakestill passord
+resetText|Skriv inn e-posten din, så sender vi en lenke for å velge nytt passord.
+resetSend|Send lenke
+resetSent|Hvis det finnes en konto med denne e-posten, har vi sendt en tilbakestillingslenke.
+newPwSave|Lagre nytt passord
+pwSaved|Det nye passordet ditt er lagret.
+checkEmail|Nesten ferdig! Åpne e-posten vi sendte til {email}, bekreft den, og logg så inn.
+signedInMsg|Logget inn. Fremgangen din er synkronisert ✓
+errGeneric|Noe gikk galt. Prøv igjen.
+errOffline|Ingen internettforbindelse. Prøv igjen når du er på nett.
+errCreds|Feil e-post eller passord.
+errEmailTaken|Det finnes allerede en konto med denne e-posten. Logg inn.
+errWeakPw|Passordet må ha minst 8 tegn.
+errEmailInvalid|Skriv inn en gyldig e-postadresse.
+errNotConfirmed|Bekreft e-posten din først. Sjekk innboksen.
+errRate|For mange forsøk. Vent noen minutter.
+syncedAt|Synkronisert: {time}
+syncPending|Synkroniseres når du er på nett
+save|Lagre
+signOut|Logg ut
+deleteAcct|Slett konto
+delTitle|Slette kontoen din?
+delText|Kontoen din og all fremgang lagret på nett slettes permanent. Dette kan ikke angres. Fremgangen på denne enheten blir værende.
+delConfirm|Ja, slett permanent
+cancel|Avbryt
+deleted|Kontoen din er slettet.
+savePrompt|💾 Lagre fremgangen: lag en gratis konto
+## pl
+acct|Konto
+acctGuestText|Załóż darmowe konto, aby zapisać postępy i korzystać z nich na wszystkich urządzeniach.
+signIn|Zaloguj się
+signUp|Załóż konto
+email|E-mail
+password|Hasło
+nameLabel|Imię
+pwHint|Co najmniej 8 znaków
+forgotPw|Nie pamiętasz hasła?
+googleBtn|Kontynuuj z Google
+guestContinue|Kontynuuj bez konta
+resetTitle|Resetowanie hasła
+resetText|Podaj swój e-mail, a wyślemy link do ustawienia nowego hasła.
+resetSend|Wyślij link
+resetSent|Jeśli istnieje konto z tym adresem, wysłaliśmy link do resetu.
+newPwSave|Zapisz nowe hasło
+pwSaved|Nowe hasło zostało zapisane.
+checkEmail|Prawie gotowe! Otwórz wiadomość wysłaną na {email}, potwierdź ją i zaloguj się.
+signedInMsg|Zalogowano. Postępy są zsynchronizowane ✓
+errGeneric|Coś poszło nie tak. Spróbuj ponownie.
+errOffline|Brak połączenia z internetem. Spróbuj ponownie, gdy będziesz online.
+errCreds|Nieprawidłowy e-mail lub hasło.
+errEmailTaken|Na ten adres jest już konto. Zaloguj się.
+errWeakPw|Hasło musi mieć co najmniej 8 znaków.
+errEmailInvalid|Podaj prawidłowy adres e-mail.
+errNotConfirmed|Najpierw potwierdź swój e-mail. Sprawdź skrzynkę.
+errRate|Zbyt wiele prób. Odczekaj kilka minut.
+syncedAt|Zsynchronizowano: {time}
+syncPending|Synchronizacja, gdy będziesz online
+save|Zapisz
+signOut|Wyloguj się
+deleteAcct|Usuń konto
+delTitle|Usunąć konto?
+delText|Twoje konto i wszystkie postępy zapisane online zostaną trwale usunięte. Tego nie da się cofnąć. Postępy na tym urządzeniu zostaną.
+delConfirm|Tak, usuń na zawsze
+cancel|Anuluj
+deleted|Twoje konto zostało usunięte.
+savePrompt|💾 Zapisz postępy: załóż darmowe konto
+## pt
+acct|Conta
+acctGuestText|Crie uma conta grátis para salvar seu progresso e usá-lo em todos os seus aparelhos.
+signIn|Entrar
+signUp|Criar conta
+email|E-mail
+password|Senha
+nameLabel|Nome
+pwHint|Pelo menos 8 caracteres
+forgotPw|Esqueceu a senha?
+googleBtn|Continuar com o Google
+guestContinue|Continuar sem conta
+resetTitle|Redefinir senha
+resetText|Digite seu e-mail e enviaremos um link para criar uma nova senha.
+resetSend|Enviar link
+resetSent|Se existir uma conta com este e-mail, enviamos um link de redefinição.
+newPwSave|Salvar nova senha
+pwSaved|Sua nova senha foi salva.
+checkEmail|Quase lá! Abra o e-mail que enviamos para {email}, confirme e depois entre.
+signedInMsg|Você entrou. Seu progresso foi sincronizado ✓
+errGeneric|Algo deu errado. Tente novamente.
+errOffline|Sem conexão com a internet. Tente de novo quando estiver online.
+errCreds|E-mail ou senha incorretos.
+errEmailTaken|Este e-mail já tem uma conta. Entre, por favor.
+errWeakPw|A senha precisa ter pelo menos 8 caracteres.
+errEmailInvalid|Digite um endereço de e-mail válido.
+errNotConfirmed|Confirme seu e-mail primeiro. Veja sua caixa de entrada.
+errRate|Tentativas demais. Aguarde alguns minutos.
+syncedAt|Sincronizado: {time}
+syncPending|Vai sincronizar quando você estiver online
+save|Salvar
+signOut|Sair
+deleteAcct|Excluir conta
+delTitle|Excluir sua conta?
+delText|Sua conta e todo o progresso salvo online serão excluídos para sempre. Não dá para desfazer. O progresso neste aparelho continua.
+delConfirm|Sim, excluir para sempre
+cancel|Cancelar
+deleted|Sua conta foi excluída.
+savePrompt|💾 Salve seu progresso: crie uma conta grátis
+## ro
+acct|Cont
+acctGuestText|Creează un cont gratuit ca să-ți salvezi progresul și să-l folosești pe toate dispozitivele.
+signIn|Conectare
+signUp|Creează cont
+email|E-mail
+password|Parolă
+nameLabel|Nume
+pwHint|Cel puțin 8 caractere
+forgotPw|Ai uitat parola?
+googleBtn|Continuă cu Google
+guestContinue|Continuă fără cont
+resetTitle|Resetează parola
+resetText|Scrie-ți e-mailul și îți trimitem un link pentru o parolă nouă.
+resetSend|Trimite linkul
+resetSent|Dacă există un cont cu acest e-mail, am trimis un link de resetare.
+newPwSave|Salvează parola nouă
+pwSaved|Parola nouă a fost salvată.
+checkEmail|Aproape gata! Deschide e-mailul trimis la {email}, confirmă-l, apoi conectează-te.
+signedInMsg|Te-ai conectat. Progresul tău e sincronizat ✓
+errGeneric|Ceva n-a mers. Încearcă din nou.
+errOffline|Nu ai conexiune la internet. Încearcă din nou când ești online.
+errCreds|E-mail sau parolă greșită.
+errEmailTaken|Există deja un cont cu acest e-mail. Conectează-te.
+errWeakPw|Parola trebuie să aibă cel puțin 8 caractere.
+errEmailInvalid|Scrie o adresă de e-mail validă.
+errNotConfirmed|Confirmă mai întâi e-mailul. Verifică-ți căsuța.
+errRate|Prea multe încercări. Așteaptă câteva minute.
+syncedAt|Sincronizat: {time}
+syncPending|Se va sincroniza când ești online
+save|Salvează
+signOut|Deconectare
+deleteAcct|Șterge contul
+delTitle|Ștergi contul?
+delText|Contul tău și tot progresul salvat online vor fi șterse definitiv. Nu se poate anula. Progresul de pe acest dispozitiv rămâne.
+delConfirm|Da, șterge definitiv
+cancel|Anulează
+deleted|Contul tău a fost șters.
+savePrompt|💾 Salvează-ți progresul: creează un cont gratuit
+## ru
+acct|Аккаунт
+acctGuestText|Создай бесплатный аккаунт, чтобы сохранить прогресс и пользоваться им на всех устройствах.
+signIn|Войти
+signUp|Создать аккаунт
+email|Эл. почта
+password|Пароль
+nameLabel|Имя
+pwHint|Минимум 8 символов
+forgotPw|Забыли пароль?
+googleBtn|Продолжить с Google
+guestContinue|Продолжить без аккаунта
+resetTitle|Сброс пароля
+resetText|Введи свою почту, и мы пришлём ссылку для нового пароля.
+resetSend|Отправить ссылку
+resetSent|Если аккаунт с этой почтой существует, мы отправили ссылку для сброса.
+newPwSave|Сохранить новый пароль
+pwSaved|Новый пароль сохранён.
+checkEmail|Почти готово! Открой письмо, которое мы отправили на {email}, подтверди его и войди.
+signedInMsg|Вход выполнен. Прогресс синхронизирован ✓
+errGeneric|Что-то пошло не так. Попробуй ещё раз.
+errOffline|Нет подключения к интернету. Попробуй снова, когда будешь онлайн.
+errCreds|Неверная почта или пароль.
+errEmailTaken|С этой почтой уже есть аккаунт. Войди, пожалуйста.
+errWeakPw|Пароль должен быть не короче 8 символов.
+errEmailInvalid|Введи правильный адрес почты.
+errNotConfirmed|Сначала подтверди почту. Проверь входящие.
+errRate|Слишком много попыток. Подожди несколько минут.
+syncedAt|Синхронизировано: {time}
+syncPending|Синхронизируется, когда будешь онлайн
+save|Сохранить
+signOut|Выйти
+deleteAcct|Удалить аккаунт
+delTitle|Удалить аккаунт?
+delText|Твой аккаунт и весь прогресс, сохранённый онлайн, будут удалены навсегда. Это нельзя отменить. Прогресс на этом устройстве останется.
+delConfirm|Да, удалить навсегда
+cancel|Отмена
+deleted|Аккаунт удалён.
+savePrompt|💾 Сохрани прогресс: создай бесплатный аккаунт
+## es
+acct|Cuenta
+acctGuestText|Crea una cuenta gratis para guardar tu progreso y usarlo en todos tus dispositivos.
+signIn|Iniciar sesión
+signUp|Crear cuenta
+email|Correo
+password|Contraseña
+nameLabel|Nombre
+pwHint|Al menos 8 caracteres
+forgotPw|¿Olvidaste tu contraseña?
+googleBtn|Continuar con Google
+guestContinue|Continuar sin cuenta
+resetTitle|Restablecer contraseña
+resetText|Escribe tu correo y te enviaremos un enlace para crear una contraseña nueva.
+resetSend|Enviar enlace
+resetSent|Si existe una cuenta con este correo, te enviamos un enlace para restablecerla.
+newPwSave|Guardar contraseña nueva
+pwSaved|Tu contraseña nueva se ha guardado.
+checkEmail|¡Casi listo! Abre el correo que enviamos a {email}, confírmalo y luego inicia sesión.
+signedInMsg|Sesión iniciada. Tu progreso está sincronizado ✓
+errGeneric|Algo salió mal. Inténtalo de nuevo.
+errOffline|No hay conexión a internet. Inténtalo cuando estés en línea.
+errCreds|Correo o contraseña incorrectos.
+errEmailTaken|Este correo ya tiene una cuenta. Inicia sesión.
+errWeakPw|La contraseña debe tener al menos 8 caracteres.
+errEmailInvalid|Escribe una dirección de correo válida.
+errNotConfirmed|Primero confirma tu correo. Revisa tu bandeja de entrada.
+errRate|Demasiados intentos. Espera unos minutos.
+syncedAt|Sincronizado: {time}
+syncPending|Se sincronizará cuando estés en línea
+save|Guardar
+signOut|Cerrar sesión
+deleteAcct|Eliminar cuenta
+delTitle|¿Eliminar tu cuenta?
+delText|Tu cuenta y todo el progreso guardado en línea se eliminarán para siempre. No se puede deshacer. El progreso en este dispositivo se conserva.
+delConfirm|Sí, eliminar para siempre
+cancel|Cancelar
+deleted|Tu cuenta se ha eliminado.
+savePrompt|💾 Guarda tu progreso: crea una cuenta gratis
+## sv
+acct|Konto
+acctGuestText|Skapa ett gratis konto för att spara dina framsteg och använda dem på alla dina enheter.
+signIn|Logga in
+signUp|Skapa konto
+email|E-post
+password|Lösenord
+nameLabel|Namn
+pwHint|Minst 8 tecken
+forgotPw|Glömt lösenordet?
+googleBtn|Fortsätt med Google
+guestContinue|Fortsätt utan konto
+resetTitle|Återställ lösenord
+resetText|Skriv din e-post så skickar vi en länk för att välja ett nytt lösenord.
+resetSend|Skicka länk
+resetSent|Om det finns ett konto med den här e-posten har vi skickat en återställningslänk.
+newPwSave|Spara nytt lösenord
+pwSaved|Ditt nya lösenord är sparat.
+checkEmail|Nästan klart! Öppna mejlet vi skickade till {email}, bekräfta det och logga sedan in.
+signedInMsg|Inloggad. Dina framsteg är synkade ✓
+errGeneric|Något gick fel. Försök igen.
+errOffline|Ingen internetanslutning. Försök igen när du är online.
+errCreds|Fel e-post eller lösenord.
+errEmailTaken|Det finns redan ett konto med den här e-posten. Logga in.
+errWeakPw|Lösenordet måste ha minst 8 tecken.
+errEmailInvalid|Skriv en giltig e-postadress.
+errNotConfirmed|Bekräfta din e-post först. Kolla inkorgen.
+errRate|För många försök. Vänta några minuter.
+syncedAt|Synkat: {time}
+syncPending|Synkas när du är online
+save|Spara
+signOut|Logga ut
+deleteAcct|Radera konto
+delTitle|Radera ditt konto?
+delText|Ditt konto och alla framsteg som sparats online raderas permanent. Det går inte att ångra. Framstegen på den här enheten finns kvar.
+delConfirm|Ja, radera permanent
+cancel|Avbryt
+deleted|Ditt konto har raderats.
+savePrompt|💾 Spara dina framsteg: skapa ett gratis konto
+## th
+acct|บัญชี
+acctGuestText|สร้างบัญชีฟรีเพื่อบันทึกความคืบหน้าและใช้ได้ทุกอุปกรณ์
+signIn|เข้าสู่ระบบ
+signUp|สร้างบัญชี
+email|อีเมล
+password|รหัสผ่าน
+nameLabel|ชื่อ
+pwHint|อย่างน้อย 8 ตัวอักษร
+forgotPw|ลืมรหัสผ่าน?
+googleBtn|ดำเนินการต่อด้วย Google
+guestContinue|ใช้ต่อโดยไม่มีบัญชี
+resetTitle|รีเซ็ตรหัสผ่าน
+resetText|กรอกอีเมลของคุณ แล้วเราจะส่งลิงก์สำหรับตั้งรหัสผ่านใหม่ให้
+resetSend|ส่งลิงก์
+resetSent|หากมีบัญชีที่ใช้อีเมลนี้ เราได้ส่งลิงก์รีเซ็ตให้แล้ว
+newPwSave|บันทึกรหัสผ่านใหม่
+pwSaved|บันทึกรหัสผ่านใหม่แล้ว
+checkEmail|ใกล้เสร็จแล้ว! เปิดอีเมลที่เราส่งไปที่ {email} กดยืนยัน แล้วเข้าสู่ระบบ
+signedInMsg|เข้าสู่ระบบแล้ว ซิงค์ความคืบหน้าเรียบร้อย ✓
+errGeneric|เกิดข้อผิดพลาด ลองอีกครั้ง
+errOffline|ไม่มีการเชื่อมต่ออินเทอร์เน็ต ลองใหม่เมื่อออนไลน์
+errCreds|อีเมลหรือรหัสผ่านไม่ถูกต้อง
+errEmailTaken|อีเมลนี้มีบัญชีอยู่แล้ว โปรดเข้าสู่ระบบ
+errWeakPw|รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร
+errEmailInvalid|โปรดกรอกอีเมลที่ถูกต้อง
+errNotConfirmed|โปรดยืนยันอีเมลก่อน ตรวจดูกล่องจดหมาย
+errRate|ลองหลายครั้งเกินไป โปรดรอสักครู่
+syncedAt|ซิงค์แล้ว: {time}
+syncPending|จะซิงค์เมื่อออนไลน์
+save|บันทึก
+signOut|ออกจากระบบ
+deleteAcct|ลบบัญชี
+delTitle|ลบบัญชีของคุณใช่ไหม
+delText|บัญชีและความคืบหน้าทั้งหมดที่บันทึกออนไลน์จะถูกลบถาวรและกู้คืนไม่ได้ ความคืบหน้าในอุปกรณ์นี้ยังอยู่
+delConfirm|ใช่ ลบถาวร
+cancel|ยกเลิก
+deleted|ลบบัญชีของคุณแล้ว
+savePrompt|💾 บันทึกความคืบหน้า: สร้างบัญชีฟรี
+## tr
+acct|Hesap
+acctGuestText|İlerlemeni kaydetmek ve tüm cihazlarında kullanmak için ücretsiz bir hesap oluştur.
+signIn|Giriş yap
+signUp|Hesap oluştur
+email|E-posta
+password|Şifre
+nameLabel|Ad
+pwHint|En az 8 karakter
+forgotPw|Şifreni mi unuttun?
+googleBtn|Google ile devam et
+guestContinue|Hesapsız devam et
+resetTitle|Şifreyi sıfırla
+resetText|E-postanı yaz, sana yeni şifre belirlemen için bir bağlantı gönderelim.
+resetSend|Bağlantı gönder
+resetSent|Bu e-postayla bir hesap varsa sıfırlama bağlantısı gönderildi.
+newPwSave|Yeni şifreyi kaydet
+pwSaved|Yeni şifren kaydedildi.
+checkEmail|Az kaldı! {email} adresine gönderdiğimiz e-postayı açıp onayla, sonra giriş yap.
+signedInMsg|Giriş yapıldı. İlerlemen senkronize edildi ✓
+errGeneric|Bir şeyler ters gitti. Tekrar dene.
+errOffline|İnternet bağlantısı yok. Çevrimiçi olunca tekrar dene.
+errCreds|E-posta veya şifre yanlış.
+errEmailTaken|Bu e-postayla zaten bir hesap var. Lütfen giriş yap.
+errWeakPw|Şifre en az 8 karakter olmalı.
+errEmailInvalid|Lütfen geçerli bir e-posta adresi yaz.
+errNotConfirmed|Önce e-postanı onayla. Gelen kutuna bak.
+errRate|Çok fazla deneme. Birkaç dakika bekle.
+syncedAt|Senkronize edildi: {time}
+syncPending|Çevrimiçi olunca senkronize edilecek
+save|Kaydet
+signOut|Çıkış yap
+deleteAcct|Hesabı sil
+delTitle|Hesabın silinsin mi?
+delText|Hesabın ve çevrimiçi kaydedilen tüm ilerlemen kalıcı olarak silinecek. Bu geri alınamaz. Bu cihazdaki ilerleme kalır.
+delConfirm|Evet, kalıcı olarak sil
+cancel|Vazgeç
+deleted|Hesabın silindi.
+savePrompt|💾 İlerlemeni kaydet: ücretsiz hesap oluştur
+## uk
+acct|Обліковий запис
+acctGuestText|Створи безкоштовний обліковий запис, щоб зберегти прогрес і користуватися ним на всіх пристроях.
+signIn|Увійти
+signUp|Створити обліковий запис
+email|Ел. пошта
+password|Пароль
+nameLabel|Ім’я
+pwHint|Щонайменше 8 символів
+forgotPw|Забули пароль?
+googleBtn|Продовжити з Google
+guestContinue|Продовжити без облікового запису
+resetTitle|Скидання пароля
+resetText|Введи свою пошту, і ми надішлемо посилання для нового пароля.
+resetSend|Надіслати посилання
+resetSent|Якщо обліковий запис із цією поштою існує, ми надіслали посилання для скидання.
+newPwSave|Зберегти новий пароль
+pwSaved|Новий пароль збережено.
+checkEmail|Майже готово! Відкрий лист, надісланий на {email}, підтверди його й увійди.
+signedInMsg|Вхід виконано. Прогрес синхронізовано ✓
+errGeneric|Щось пішло не так. Спробуй ще раз.
+errOffline|Немає підключення до інтернету. Спробуй знову, коли будеш онлайн.
+errCreds|Неправильна пошта або пароль.
+errEmailTaken|Із цією поштою вже є обліковий запис. Увійди, будь ласка.
+errWeakPw|Пароль має містити щонайменше 8 символів.
+errEmailInvalid|Введи правильну адресу пошти.
+errNotConfirmed|Спочатку підтверди пошту. Перевір вхідні.
+errRate|Забагато спроб. Зачекай кілька хвилин.
+syncedAt|Синхронізовано: {time}
+syncPending|Синхронізується, коли будеш онлайн
+save|Зберегти
+signOut|Вийти
+deleteAcct|Видалити обліковий запис
+delTitle|Видалити обліковий запис?
+delText|Твій обліковий запис і весь прогрес, збережений онлайн, буде видалено назавжди. Це не можна скасувати. Прогрес на цьому пристрої залишиться.
+delConfirm|Так, видалити назавжди
+cancel|Скасувати
+deleted|Обліковий запис видалено.
+savePrompt|💾 Збережи прогрес: створи безкоштовний обліковий запис
+## vi
+acct|Tài khoản
+acctGuestText|Tạo tài khoản miễn phí để lưu tiến độ và dùng trên mọi thiết bị của bạn.
+signIn|Đăng nhập
+signUp|Tạo tài khoản
+email|Email
+password|Mật khẩu
+nameLabel|Tên
+pwHint|Ít nhất 8 ký tự
+forgotPw|Quên mật khẩu?
+googleBtn|Tiếp tục với Google
+guestContinue|Tiếp tục không cần tài khoản
+resetTitle|Đặt lại mật khẩu
+resetText|Nhập email, chúng tôi sẽ gửi liên kết để đặt mật khẩu mới.
+resetSend|Gửi liên kết
+resetSent|Nếu có tài khoản dùng email này, chúng tôi đã gửi liên kết đặt lại.
+newPwSave|Lưu mật khẩu mới
+pwSaved|Đã lưu mật khẩu mới.
+checkEmail|Sắp xong rồi! Mở email chúng tôi gửi tới {email}, xác nhận rồi đăng nhập.
+signedInMsg|Đã đăng nhập. Tiến độ đã được đồng bộ ✓
+errGeneric|Đã xảy ra lỗi. Vui lòng thử lại.
+errOffline|Không có kết nối Internet. Hãy thử lại khi bạn trực tuyến.
+errCreds|Sai email hoặc mật khẩu.
+errEmailTaken|Email này đã có tài khoản. Vui lòng đăng nhập.
+errWeakPw|Mật khẩu phải có ít nhất 8 ký tự.
+errEmailInvalid|Vui lòng nhập địa chỉ email hợp lệ.
+errNotConfirmed|Hãy xác nhận email trước. Kiểm tra hộp thư của bạn.
+errRate|Thử quá nhiều lần. Vui lòng đợi vài phút.
+syncedAt|Đã đồng bộ: {time}
+syncPending|Sẽ đồng bộ khi bạn trực tuyến
+save|Lưu
+signOut|Đăng xuất
+deleteAcct|Xóa tài khoản
+delTitle|Xóa tài khoản của bạn?
+delText|Tài khoản và toàn bộ tiến độ lưu trực tuyến sẽ bị xóa vĩnh viễn, không thể khôi phục. Tiến độ trên thiết bị này vẫn còn.
+delConfirm|Có, xóa vĩnh viễn
+cancel|Hủy
+deleted|Tài khoản của bạn đã bị xóa.
+savePrompt|💾 Lưu tiến độ: tạo tài khoản miễn phí

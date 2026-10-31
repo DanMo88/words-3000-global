@@ -127,3 +127,41 @@ newLanguage|Nyt sprog
 myCourses|Mine sprog
 addLanguage|Tilføj et nyt sprog
 langEnglishUS|Amerikansk engelsk
+acct|Konto
+acctGuestText|Opret en gratis konto for at gemme dine fremskridt og bruge dem på alle dine enheder.
+signIn|Log ind
+signUp|Opret konto
+email|E-mail
+password|Adgangskode
+nameLabel|Navn
+pwHint|Mindst 8 tegn
+forgotPw|Glemt adgangskoden?
+googleBtn|Fortsæt med Google
+guestContinue|Fortsæt uden konto
+resetTitle|Nulstil adgangskode
+resetText|Skriv din e-mail, så sender vi et link til at vælge en ny adgangskode.
+resetSend|Send link
+resetSent|Hvis der findes en konto med denne e-mail, har vi sendt et nulstillingslink.
+newPwSave|Gem ny adgangskode
+pwSaved|Din nye adgangskode er gemt.
+checkEmail|Næsten færdig! Åbn den e-mail, vi sendte til {email}, bekræft den, og log så ind.
+signedInMsg|Logget ind. Dine fremskridt er synkroniseret ✓
+errGeneric|Noget gik galt. Prøv igen.
+errOffline|Ingen internetforbindelse. Prøv igen, når du er online.
+errCreds|Forkert e-mail eller adgangskode.
+errEmailTaken|Der findes allerede en konto med denne e-mail. Log ind.
+errWeakPw|Adgangskoden skal være på mindst 8 tegn.
+errEmailInvalid|Skriv en gyldig e-mailadresse.
+errNotConfirmed|Bekræft din e-mail først. Tjek din indbakke.
+errRate|For mange forsøg. Vent et par minutter.
+syncedAt|Synkroniseret: {time}
+syncPending|Synkroniseres, når du er online
+save|Gem
+signOut|Log ud
+deleteAcct|Slet konto
+delTitle|Slet din konto?
+delText|Din konto og alle fremskridt gemt online slettes permanent. Det kan ikke fortrydes. Fremskridt på denne enhed bliver.
+delConfirm|Ja, slet permanent
+cancel|Annuller
+deleted|Din konto er slettet.
+savePrompt|💾 Gem dine fremskridt: opret en gratis konto

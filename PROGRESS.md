@@ -66,13 +66,16 @@ Legend: [x] done · [~] in progress · [ ] todo · (B) = needs backend (Supabase
 - Tests: words-3000-global-test/courses.js (onboarding, switcher, per-course separation, migration), render31.js (now incl. target screen, switcher, "recommended" badge on every level), test.js (target step added)
 - Also fixed: "⭐ recommended" line on a level card overflowed horizontally in ru/el at 390/412 px (pre-existing on live)
 
-## Phase 2 — accounts and sync (Supabase) — TODO
-- [ ] 4. (B) Sign up / sign in with email
-- [ ] 5. (B) Sign in with Google
-- [ ] 6. Guest mode: start without an account, later attach progress to a new account
-- [ ] 7. (B) Cross-device progress sync (per course)
-- [ ] 8. (B) Delete account in the app + public web page for deletion requests (Google Play requirement)
-- [ ] 9. Profile screen: name, languages, stats, sign out
+## Phase 2 — accounts and sync (Supabase) — DONE, awaiting Daniel's review
+- [x] 4. (B) Email sign up / sign in with password + forgot password (reset link → "new password" screen). Redirects go to APP_URL (GitHub Pages URL)
+- [~] 5. (B) Google sign-in: UI + code done, hidden behind `SB.google = false` in app.js until Daniel creates the Google OAuth client and enables the provider in Supabase (steps below)
+- [x] 6. Guest mode: everything works without an account; 👤 button in the header (orange dot when a guest has progress) + "save my progress" button on the lesson-done screen; on sign-in/sign-up local progress is merged and uploaded
+- [x] 7. (B) Per-course sync: on sign-in, on app open, 4 s after every save, when going back online, when the app is hidden. Merge = union of words (newer copy per word wins, earliest learnedAt kept), union of lessons, streak from the latest day (consecutive days chain), best60 max, newest placement. Offline-safe (pending flag + retry)
+- [x] 8. (B) Delete account in the app (confirm screen → Edge Function delete-account; local progress stays on the device) + public delete-account.html (in-app steps, sign-in-and-delete, request form → table deletion_requests, handled within 30 days)
+- [x] 9. Profile: avatar letter, editable name, email, sync status, each language with words/streak/60-s record, sign out (syncs first; clears local courses — but keeps them if the session had expired), delete account
+- Header: if the install label doesn't fit next to the title + 🔥 + 👤 + ⚙️, the install button becomes icon-only (fitHead)
+- Daniel must do (Supabase dashboard): Auth → URL Configuration: Site URL = https://danmo88.github.io/words-3000-global/ and add it to Redirect URLs; custom SMTP (default mailer only sends to project team members, only a few emails per hour); Google provider (client ID/secret from Google Cloud, redirect URI https://acwkuhudvmarssthibzf.supabase.co/auth/v1/callback), then set SB.google = true
+- Tests: words-3000-global-test/accounts.js (30 checks against the real project with 2 SQL-seeded disposable users; both are deleted by the test itself — in-app delete and delete page), render31.js now also covers sign-up/sign-in/reset/new-password/profile/pending/delete-confirm in all 31 languages
 
 ## Phase 3 — before Google Play — TODO
 - [ ] 10. (B) $4/month subscription via Google Play Billing (server-side purchase verification)
@@ -80,3 +83,12 @@ Legend: [x] done · [~] in progress · [ ] todo · (B) = needs backend (Supabase
 - [ ] 12. Privacy policy + terms pages
 - [ ] 13. Android package (TWA) assets: icon, screenshots, store texts in several languages (packaging/upload later)
 - [ ] 14. Daily reminder notification at a chosen time
+
+## Phase 2 — work log (started 2026-10-31 09:20)
+- Supabase project: words-3000-global, ref acwkuhudvmarssthibzf, eu-central-1, org DanMo88 (free plan, $0). URL https://acwkuhudvmarssthibzf.supabase.co ; frontend key = publishable key (sb_publishable_…, safe to commit). NEVER commit the service role key.
+- Migrations: accounts_and_progress (profiles, progress, RLS, column grants so premium is read-only, handle_new_user trigger), drop_delete_rpc (deletion moved to Edge Function to satisfy advisor 0029)
+- Edge Function delete-account (verify_jwt) deletes the caller via admin API (cascade removes rows)
+- supabase-js 2.118.0 UMD vendored as vendor/supabase-2.118.0.js (npm copy in /workspace/w3g-acct)
+- Test users: cannot sign up @example.com (rejected) and default SMTP only mails team members → tests seed a confirmed disposable user via SQL, then delete it.
+- Security advisors (security + performance): 0 findings after dropping the RPC.
+- Fixed during testing: profile re-render loop when a stored session is invalid; sign-out no longer wipes local progress if the session had expired; header overflow in de/ru/ro/pt/es/af/bg/el/nl with the new 👤 button; RTL course name clipped at 768 px.

@@ -127,3 +127,41 @@ newLanguage|Ngôn ngữ mới
 myCourses|Ngôn ngữ của tôi
 addLanguage|Thêm ngôn ngữ mới
 langEnglishUS|Tiếng Anh Mỹ
+acct|Tài khoản
+acctGuestText|Tạo tài khoản miễn phí để lưu tiến độ và dùng trên mọi thiết bị của bạn.
+signIn|Đăng nhập
+signUp|Tạo tài khoản
+email|Email
+password|Mật khẩu
+nameLabel|Tên
+pwHint|Ít nhất 8 ký tự
+forgotPw|Quên mật khẩu?
+googleBtn|Tiếp tục với Google
+guestContinue|Tiếp tục không cần tài khoản
+resetTitle|Đặt lại mật khẩu
+resetText|Nhập email, chúng tôi sẽ gửi liên kết để đặt mật khẩu mới.
+resetSend|Gửi liên kết
+resetSent|Nếu có tài khoản dùng email này, chúng tôi đã gửi liên kết đặt lại.
+newPwSave|Lưu mật khẩu mới
+pwSaved|Đã lưu mật khẩu mới.
+checkEmail|Sắp xong rồi! Mở email chúng tôi gửi tới {email}, xác nhận rồi đăng nhập.
+signedInMsg|Đã đăng nhập. Tiến độ đã được đồng bộ ✓
+errGeneric|Đã xảy ra lỗi. Vui lòng thử lại.
+errOffline|Không có kết nối Internet. Hãy thử lại khi bạn trực tuyến.
+errCreds|Sai email hoặc mật khẩu.
+errEmailTaken|Email này đã có tài khoản. Vui lòng đăng nhập.
+errWeakPw|Mật khẩu phải có ít nhất 8 ký tự.
+errEmailInvalid|Vui lòng nhập địa chỉ email hợp lệ.
+errNotConfirmed|Hãy xác nhận email trước. Kiểm tra hộp thư của bạn.
+errRate|Thử quá nhiều lần. Vui lòng đợi vài phút.
+syncedAt|Đã đồng bộ: {time}
+syncPending|Sẽ đồng bộ khi bạn trực tuyến
+save|Lưu
+signOut|Đăng xuất
+deleteAcct|Xóa tài khoản
+delTitle|Xóa tài khoản của bạn?
+delText|Tài khoản và toàn bộ tiến độ lưu trực tuyến sẽ bị xóa vĩnh viễn, không thể khôi phục. Tiến độ trên thiết bị này vẫn còn.
+delConfirm|Có, xóa vĩnh viễn
+cancel|Hủy
+deleted|Tài khoản của bạn đã bị xóa.
+savePrompt|💾 Lưu tiến độ: tạo tài khoản miễn phí

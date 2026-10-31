@@ -127,3 +127,41 @@ newLanguage|Nový jazyk
 myCourses|Moje jazyky
 addLanguage|Přidat nový jazyk
 langEnglishUS|Americká angličtina
+acct|Účet
+acctGuestText|Vytvoř si zdarma účet, ať máš pokrok uložený a můžeš ho používat na všech zařízeních.
+signIn|Přihlásit se
+signUp|Vytvořit účet
+email|E-mail
+password|Heslo
+nameLabel|Jméno
+pwHint|Alespoň 8 znaků
+forgotPw|Zapomněl jsi heslo?
+googleBtn|Pokračovat přes Google
+guestContinue|Pokračovat bez účtu
+resetTitle|Obnovení hesla
+resetText|Zadej svůj e-mail a pošleme ti odkaz pro nastavení nového hesla.
+resetSend|Poslat odkaz
+resetSent|Pokud k tomuto e-mailu existuje účet, poslali jsme odkaz pro obnovení.
+newPwSave|Uložit nové heslo
+pwSaved|Nové heslo je uložené.
+checkEmail|Skoro hotovo! Otevři e-mail, který jsme poslali na {email}, potvrď ho a přihlas se.
+signedInMsg|Přihlášeno. Pokrok je synchronizovaný ✓
+errGeneric|Něco se pokazilo. Zkus to znovu.
+errOffline|Nejsi připojený k internetu. Zkus to znovu, až budeš online.
+errCreds|Špatný e-mail nebo heslo.
+errEmailTaken|K tomuto e-mailu už účet existuje. Přihlas se.
+errWeakPw|Heslo musí mít alespoň 8 znaků.
+errEmailInvalid|Zadej platnou e-mailovou adresu.
+errNotConfirmed|Nejdřív potvrď svůj e-mail. Podívej se do schránky.
+errRate|Příliš mnoho pokusů. Počkej pár minut.
+syncedAt|Synchronizováno: {time}
+syncPending|Synchronizuje se, až budeš online
+save|Uložit
+signOut|Odhlásit se
+deleteAcct|Smazat účet
+delTitle|Smazat účet?
+delText|Tvůj účet a veškerý pokrok uložený online budou trvale smazány. Nelze to vrátit. Pokrok v tomto zařízení zůstane.
+delConfirm|Ano, trvale smazat
+cancel|Zrušit
+deleted|Tvůj účet byl smazán.
+savePrompt|💾 Ulož si pokrok: vytvoř si účet zdarma

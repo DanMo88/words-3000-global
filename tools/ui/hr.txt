@@ -127,3 +127,41 @@ newLanguage|Novi jezik
 myCourses|Moji jezici
 addLanguage|Dodaj novi jezik
 langEnglishUS|Američki engleski
+acct|Račun
+acctGuestText|Izradi besplatni račun da spremiš napredak i koristiš ga na svim svojim uređajima.
+signIn|Prijava
+signUp|Izradi račun
+email|E-pošta
+password|Lozinka
+nameLabel|Ime
+pwHint|Najmanje 8 znakova
+forgotPw|Zaboravio si lozinku?
+googleBtn|Nastavi s Googleom
+guestContinue|Nastavi bez računa
+resetTitle|Ponovno postavljanje lozinke
+resetText|Upiši svoju e-poštu i poslat ćemo ti poveznicu za novu lozinku.
+resetSend|Pošalji poveznicu
+resetSent|Ako postoji račun s ovom e-poštom, poslali smo poveznicu za ponovno postavljanje.
+newPwSave|Spremi novu lozinku
+pwSaved|Nova lozinka je spremljena.
+checkEmail|Skoro gotovo! Otvori e-poruku koju smo poslali na {email}, potvrdi je i prijavi se.
+signedInMsg|Prijavljen si. Napredak je sinkroniziran ✓
+errGeneric|Nešto je pošlo po zlu. Pokušaj ponovno.
+errOffline|Nema internetske veze. Pokušaj ponovno kad budeš na mreži.
+errCreds|Pogrešna e-pošta ili lozinka.
+errEmailTaken|Za ovu e-poštu već postoji račun. Prijavi se.
+errWeakPw|Lozinka mora imati najmanje 8 znakova.
+errEmailInvalid|Upiši valjanu adresu e-pošte.
+errNotConfirmed|Najprije potvrdi e-poštu. Provjeri pristiglu poštu.
+errRate|Previše pokušaja. Pričekaj nekoliko minuta.
+syncedAt|Sinkronizirano: {time}
+syncPending|Sinkronizirat će se kad budeš na mreži
+save|Spremi
+signOut|Odjava
+deleteAcct|Izbriši račun
+delTitle|Izbrisati račun?
+delText|Tvoj račun i sav napredak spremljen na mreži bit će trajno izbrisani. To se ne može poništiti. Napredak na ovom uređaju ostaje.
+delConfirm|Da, trajno izbriši
+cancel|Odustani
+deleted|Tvoj račun je izbrisan.
+savePrompt|💾 Spremi napredak: izradi besplatni račun

@@ -127,3 +127,41 @@ newLanguage|새 언어
 myCourses|내 언어
 addLanguage|새 언어 추가
 langEnglishUS|미국 영어
+acct|계정
+acctGuestText|무료 계정을 만들면 학습 진도가 저장되고 모든 기기에서 이어서 할 수 있어요.
+signIn|로그인
+signUp|계정 만들기
+email|이메일
+password|비밀번호
+nameLabel|이름
+pwHint|8자 이상
+forgotPw|비밀번호를 잊으셨나요?
+googleBtn|Google로 계속하기
+guestContinue|계정 없이 계속하기
+resetTitle|비밀번호 재설정
+resetText|이메일을 입력하면 새 비밀번호를 설정할 수 있는 링크를 보내드려요.
+resetSend|링크 보내기
+resetSent|이 이메일로 된 계정이 있다면 재설정 링크를 보냈어요.
+newPwSave|새 비밀번호 저장
+pwSaved|새 비밀번호가 저장됐어요.
+checkEmail|거의 다 됐어요! {email}(으)로 보낸 메일을 열어 확인한 다음 로그인하세요.
+signedInMsg|로그인했어요. 진도가 동기화됐어요 ✓
+errGeneric|문제가 생겼어요. 다시 시도해 주세요.
+errOffline|인터넷에 연결되어 있지 않아요. 온라인일 때 다시 시도하세요.
+errCreds|이메일 또는 비밀번호가 틀렸어요.
+errEmailTaken|이미 이 이메일로 된 계정이 있어요. 로그인해 주세요.
+errWeakPw|비밀번호는 8자 이상이어야 해요.
+errEmailInvalid|올바른 이메일 주소를 입력하세요.
+errNotConfirmed|먼저 이메일을 인증해 주세요. 받은편지함을 확인하세요.
+errRate|시도가 너무 많아요. 몇 분 기다려 주세요.
+syncedAt|동기화: {time}
+syncPending|온라인이 되면 동기화돼요
+save|저장
+signOut|로그아웃
+deleteAcct|계정 삭제
+delTitle|계정을 삭제할까요?
+delText|계정과 온라인에 저장된 모든 진도가 영구적으로 삭제되며 되돌릴 수 없어요. 이 기기의 진도는 그대로 남아요.
+delConfirm|네, 영구 삭제할게요
+cancel|취소
+deleted|계정이 삭제됐어요.
+savePrompt|💾 진도 저장하기: 무료 계정 만들기
