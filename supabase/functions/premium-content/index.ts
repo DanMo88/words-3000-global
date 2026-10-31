@@ -1,5 +1,7 @@
 // premium-content: serves the premium lessons (lesson index >= FREE per level) only to a signed-in Premium user
-// on the account's ACTIVE device (same rule as premium-device). verify_jwt = true.
+// on the account's ACTIVE device (same rule as premium-device), or to a phone of the free family build with a valid
+// family token (header x-family-token, issued by family-unlock, HMAC with app_secrets.family_token_secret, bound to device_id).
+// verify_jwt = false: the function checks the user JWT itself (auth.getUser) or the family token.
 // POST { device_id, lang, levels: ["A1",...] }  → { version, free, levels: { A1: { from, lessons: [[[id,w,ex,img],...],...] } }, meanings: { A1: { id: meaning } } }
 //   (meanings: all levels for lang; levels: [] = meanings only, e.g. after a language switch)
 // POST { device_id, media: ["audio/x.mp3", "audio/x-ex.mp3", "img/x.webp", ...] } → { urls: { path: signedUrl } } (10 min, private bucket premium-media)
@@ -11,27 +13,40 @@ const LEVELS = ["A1", "A2", "B1", "B2"];
 const MEDIA = /^(audio\/[a-z0-9-]+\.mp3|img\/[a-z0-9-]+\.webp)$/;
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const cors = (req: Request) => { const o = req.headers.get("origin") || ""; return {
-  "Access-Control-Allow-Origin": ORIGINS.includes(o) ? o : ORIGINS[0], "Access-Control-Allow-Headers": "authorization, apikey, content-type, x-client-info",
+  "Access-Control-Allow-Origin": ORIGINS.includes(o) ? o : ORIGINS[0], "Access-Control-Allow-Headers": "authorization, apikey, content-type, x-client-info, x-family-token",
   "Access-Control-Allow-Methods": "POST, OPTIONS", "Vary": "Origin" }; };
+
+const b64u = (u: Uint8Array) => btoa(String.fromCharCode(...u)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+async function familyOk(admin: any, token: string, dev: string) {
+  const m = /^f1\.([A-Za-z0-9_-]+)\.([A-Za-z0-9_-]+)$/.exec(token); if (!m) return false;
+  const { data: s } = await admin.from("app_secrets").select("value").eq("key", "family_token_secret").maybeSingle(); if (!s?.value) return false;
+  const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(s.value), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const sig = b64u(new Uint8Array(await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(m[1]))));
+  if (sig.length !== m[2].length) return false; let r = 0; for (let i = 0; i < sig.length; i++) r |= sig.charCodeAt(i) ^ m[2].charCodeAt(i); if (r) return false;
+  try { return JSON.parse(atob(m[1].replace(/-/g, "+").replace(/_/g, "/"))).d === dev; } catch { return false; }
+}
 
 Deno.serve(async (req) => {
   const h = { ...cors(req), "Content-Type": "application/json", "Cache-Control": "no-store" }, out = (b: unknown, s = 200) => new Response(JSON.stringify(b), { status: s, headers: h });
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors(req) });
   if (req.method !== "POST") return out({ error: "method_not_allowed" }, 405);
   const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!, { auth: { persistSession: false, autoRefreshToken: false } });
-  const jwt = (req.headers.get("authorization") || "").replace(/^Bearer\s+/i, "");
-  const { data: u } = jwt ? await admin.auth.getUser(jwt) : { data: null };
-  if (!u?.user) return out({ error: "not_signed_in" }, 401);
   let b: { device_id?: string; lang?: string; levels?: string[]; media?: string[] };
   try { b = await req.json(); } catch { return out({ error: "bad_json" }, 400); }
   const dev = String(b.device_id || ""); if (!UUID.test(dev)) return out({ error: "bad_device" }, 400);
-
+  const fam = req.headers.get("x-family-token");
+  if (fam) { if (!(await familyOk(admin, fam, dev.toLowerCase()))) return out({ error: "bad_family_token" }, 401); }
+  else {
+  const jwt = (req.headers.get("authorization") || "").replace(/^Bearer\s+/i, "");
+  const { data: u } = jwt ? await admin.auth.getUser(jwt) : { data: null };
+  if (!u?.user) return out({ error: "not_signed_in" }, 401);
   const { data: p } = await admin.from("profiles").select("premium,premium_until").eq("id", u.user.id).maybeSingle();
   const premium = !!p?.premium && (!p.premium_until || new Date(p.premium_until).getTime() + 3 * 864e5 > Date.now());
   if (!premium) return out({ error: "not_premium" }, 403);
   const { data: d } = await admin.from("devices").select("device_id").eq("user_id", u.user.id).eq("device_id", dev).eq("active", true).maybeSingle();
   if (!d) return out({ error: "not_active_device" }, 403);
   await admin.from("devices").update({ last_seen: new Date().toISOString() }).eq("user_id", u.user.id).eq("device_id", dev);
+  }
 
   if (Array.isArray(b.media)) {
     const paths = [...new Set(b.media.map(String))].filter((x) => MEDIA.test(x)).slice(0, 150);

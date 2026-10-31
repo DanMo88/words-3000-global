@@ -129,3 +129,8 @@ Legend: [x] done · [~] in progress · [ ] todo · (B) = needs backend (Supabase
 - Sizes: DB 19 MB of 500 MB (content tables 1.7 MB); storage 51 MB of 1 GB (premium-media). Egress ≈ 51 MB for one user who downloads every premium lesson.
 - All test users, test orders, devices and deletion requests deleted. app_secrets keeps the real webhook secret.
 - **Needs Daniel's decision (not done): git history.** Commits before 32ad815 still contain all premium text/audio/images and are public. Removing them needs `git filter-repo` + force-push. Clones/forks and GitHub's cached commits can still hold copies, so assume the old data is already public. Waiting for approval.
+
+# Family build (free, code-locked) — started 2026-10-31 14:20 (Daniel approved)
+- [x] Server: migration family_unlock = table family_attempts (rate limit, RLS, no client grants) + function public.family_try(keys, code) (service role only): bcrypt check against app_secrets.family_code_hash, 5 wrong tries per IP and per device → 10 min lock, a correct code clears both. app_secrets.family_token_secret = 32 random bytes made inside the DB.
+- [x] Edge Function family-unlock (verify_jwt=false): code → token "f1.<payload>.<HMAC>" bound to the device id; {token} → still valid? premium-content v3 (now verify_jwt=false, checks the user JWT itself) also accepts x-family-token. Code never in client/repo.
+- [x] API test (/workspace/famtest/api.js, deployed functions): wrong code 403, right code → token, token serves lessons + signed audio, token bound to device, 4 kinds of forged token → 401, 5th wrong try → 429 locked (also for the right code and for another device on the same IP). 19/0.
