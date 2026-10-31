@@ -178,10 +178,7 @@ pwBuy|Abonează-te
 pwRestore|Restabilește achiziția
 pwAndroid|Abonamentul este disponibil în aplicația Android din Google Play.
 pwWebHave|Ai deja abonament? Conectează-te cu același cont.
-pwSignInFirst|Conectează-te sau creează mai întâi un cont gratuit, ca abonamentul să fie legat de el.
 pwActive|Premium este activ ✓
-pwNone|Nu s-a găsit niciun abonament activ.
-pwFail|Achiziția nu a putut fi confirmată. Dacă ai fost taxat, apasă „Restabilește achiziția”.
 pwNotReady|Plățile nu sunt încă activate. Încearcă mai târziu.
 privacy|Confidențialitate
 terms|Termeni de utilizare
@@ -194,3 +191,27 @@ remTitle|E timpul pentru cuvinte! 📚
 remBody|Câteva minute pe zi îți păstrează seria 🔥
 remSet|Memento setat pentru {time}
 remOff|Memento dezactivat
+pwOnce|{price} · plată unică
+pwLifetime|Fără abonament: acces pe viață la toate lecțiile și la cursurile viitoare.
+pwBuyOnce|Cumpără o dată · {price}
+pwSoonBtn|În curând
+pwSoon|Plățile vin în curând. Lecțiile tale gratuite funcționează în continuare.
+pwHave|Am cumpărat deja
+pwWait|Îți activăm achiziția…
+pwPending|Ai plătit deja? Activarea poate dura un minut. Atinge „Am cumpărat deja” ca să verificăm din nou.
+pwDevNote|Premium funcționează pe un singur telefon odată. Îl poți muta pe alt telefon o dată la 30 de zile.
+pwSignInFirst|Conectează-te sau creează mai întâi un cont gratuit, ca achiziția să fie legată de el.
+pwNone|Nu s-a găsit nicio achiziție pentru acest cont.
+pwFail|Achiziția nu a putut fi confirmată. Dacă ai fost taxat, atinge „Am cumpărat deja”.
+devTitle|Premium este pe alt telefon
+devOther|Această achiziție este activă pe alt telefon ({label}, văzut ultima dată {time}). O muți pe acest telefon?
+devMove|Mută pe acest telefon
+devMoved|Premium este acum activ pe acest telefon.
+devWait|Îl poți muta din nou pe {date}.
+devThis|Premium este activ pe acest telefon.
+devManage|Gestionează dispozitivul
+devOffline|Conectează-te la internet ca să-ți verificăm achiziția.
+devUnknown|dispozitiv necunoscut
+devFree|Lecțiile gratuite și sincronizarea funcționează în continuare pe acest telefon.
+devCheck|Verifică din nou
+devNow|Nu acum

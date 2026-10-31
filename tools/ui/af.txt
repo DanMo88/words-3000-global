@@ -178,10 +178,7 @@ pwBuy|Teken in
 pwRestore|Herstel aankoop
 pwAndroid|Intekeninge is beskikbaar in die Android-app op Google Play.
 pwWebHave|Reeds ingeteken? Meld aan met dieselfde rekening.
-pwSignInFirst|Meld eers aan of skep 'n gratis rekening sodat jou intekening daaraan gekoppel word.
 pwActive|Premium is aktief ✓
-pwNone|Geen aktiewe intekening gevind nie.
-pwFail|Die aankoop kon nie bevestig word nie. As jy betaal het, tik "Herstel aankoop".
 pwNotReady|Betalings is nog nie aangeskakel nie. Probeer later weer.
 privacy|Privaatheidsbeleid
 terms|Gebruiksvoorwaardes
@@ -194,3 +191,27 @@ remTitle|Tyd vir jou woorde! 📚
 remBody|'n Paar minute per dag hou jou reeks aan die gang 🔥
 remSet|Herinnering gestel vir {time}
 remOff|Herinnering afgeskakel
+pwOnce|{price} · eenmalige betaling
+pwLifetime|Geen intekening: lewenslange toegang tot alle lesse en toekomstige kursusse.
+pwBuyOnce|Koop een keer · {price}
+pwSoonBtn|Binnekort
+pwSoon|Betalings kom binnekort. Jou gratis lesse werk steeds.
+pwHave|Ek het reeds gekoop
+pwWait|Jou aankoop word geaktiveer…
+pwPending|Reeds betaal? Aktivering kan ’n minuut neem. Tik op “Ek het reeds gekoop” om weer te kyk.
+pwDevNote|Premium werk op een foon op ’n slag. Jy kan dit een keer elke 30 dae na ’n ander foon skuif.
+pwSignInFirst|Meld eers aan of skep ’n gratis rekening sodat jou aankoop daaraan gekoppel word.
+pwNone|Geen aankoop vir hierdie rekening gevind nie.
+pwFail|Die aankoop kon nie bevestig word nie. As jy gedebiteer is, tik op “Ek het reeds gekoop”.
+devTitle|Premium is op ’n ander foon
+devOther|Hierdie aankoop is aktief op ’n ander foon ({label}, laas gesien {time}). Skuif dit na hierdie foon?
+devMove|Skuif na hierdie foon
+devMoved|Premium is nou aktief op hierdie foon.
+devWait|Jy kan dit weer op {date} skuif.
+devThis|Premium is aktief op hierdie foon.
+devManage|Bestuur toestel
+devOffline|Koppel aan die internet om jou aankoop na te gaan.
+devUnknown|onbekende toestel
+devFree|Gratis lesse en sinchronisering werk steeds op hierdie foon.
+devCheck|Kyk weer
+devNow|Nie nou nie

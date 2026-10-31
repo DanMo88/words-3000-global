@@ -1,0 +1,775 @@
+## fa
+pwOnce|{price} · یک‌بار پرداخت
+pwLifetime|بدون اشتراک: دسترسی همیشگی به همه‌ی درس‌ها و دوره‌های آینده.
+pwBuyOnce|یک‌بار بخر · {price}
+pwSoonBtn|به‌زودی
+pwSoon|پرداخت به‌زودی فعال می‌شه. درس‌های رایگانت همچنان کار می‌کنن.
+pwHave|قبلاً خریدم
+pwWait|داریم خریدت رو فعال می‌کنیم…
+pwPending|پرداخت کردی؟ فعال شدنش ممکنه یه دقیقه طول بکشه. «قبلاً خریدم» رو بزن تا دوباره بررسی کنیم.
+pwDevNote|پریمیوم هم‌زمان فقط روی یه گوشی کار می‌کنه. هر ۳۰ روز یه بار می‌تونی ببریش روی یه گوشی دیگه.
+pwSignInFirst|اول وارد شو یا یه حساب رایگان بساز تا خریدت به حسابت وصل بشه.
+pwNone|برای این حساب خریدی پیدا نشد.
+pwFail|خرید تأیید نشد. اگه پول ازت کم شده، «قبلاً خریدم» رو بزن.
+devTitle|پریمیوم روی یه گوشی دیگه‌ست
+devOther|این خرید روی یه گوشی دیگه فعاله: {label}، آخرین بار {time}. می‌خوای بیاریش روی این گوشی؟
+devMove|انتقال به این گوشی
+devMoved|پریمیوم حالا روی این گوشی فعاله.
+devWait|دوباره از {date} می‌تونی منتقلش کنی.
+devThis|پریمیوم روی این گوشی فعاله.
+devManage|مدیریت دستگاه
+devOffline|برای بررسی خریدت به اینترنت وصل شو.
+devUnknown|دستگاه ناشناخته
+devFree|درس‌های رایگان و همگام‌سازی روی این گوشی هم کار می‌کنن.
+devCheck|دوباره بررسی کن
+devNow|الان نه
+## ar
+pwOnce|{price} · دفعة واحدة
+pwLifetime|بلا اشتراك: وصول دائم إلى كل الدروس والدورات القادمة.
+pwBuyOnce|اشترِ مرة واحدة · {price}
+pwSoonBtn|قريبًا
+pwSoon|الدفع سيتوفر قريبًا. دروسك المجانية تبقى متاحة.
+pwHave|اشتريت من قبل
+pwWait|جارٍ تفعيل الشراء…
+pwPending|هل دفعت؟ قد يستغرق التفعيل دقيقة. اضغط «اشتريت من قبل» للتحقق مجددًا.
+pwDevNote|يعمل بريميوم على هاتف واحد في كل مرة. يمكنك نقله إلى هاتف آخر مرة كل 30 يومًا.
+pwSignInFirst|سجّل الدخول أو أنشئ حسابًا مجانيًا أولًا ليرتبط الشراء بحسابك.
+pwNone|لم يُعثر على أي شراء لهذا الحساب.
+pwFail|تعذّر تأكيد الشراء. إذا خُصم المبلغ، اضغط «اشتريت من قبل».
+devTitle|بريميوم مفعّل على هاتف آخر
+devOther|هذا الشراء مفعّل على هاتف آخر: {label}، آخر ظهور {time}. هل تريد نقله إلى هذا الهاتف؟
+devMove|انقله إلى هذا الهاتف
+devMoved|بريميوم مفعّل الآن على هذا الهاتف.
+devWait|يمكنك نقله مرة أخرى في {date}.
+devThis|بريميوم مفعّل على هذا الهاتف.
+devManage|إدارة الجهاز
+devOffline|اتصل بالإنترنت للتحقق من الشراء.
+devUnknown|جهاز غير معروف
+devFree|الدروس المجانية والمزامنة تعمل على هذا الهاتف أيضًا.
+devCheck|تحقّق مجددًا
+devNow|ليس الآن
+## af
+pwOnce|{price} · eenmalige betaling
+pwLifetime|Geen intekening: lewenslange toegang tot alle lesse en toekomstige kursusse.
+pwBuyOnce|Koop een keer · {price}
+pwSoonBtn|Binnekort
+pwSoon|Betalings kom binnekort. Jou gratis lesse werk steeds.
+pwHave|Ek het reeds gekoop
+pwWait|Jou aankoop word geaktiveer…
+pwPending|Reeds betaal? Aktivering kan ’n minuut neem. Tik op “Ek het reeds gekoop” om weer te kyk.
+pwDevNote|Premium werk op een foon op ’n slag. Jy kan dit een keer elke 30 dae na ’n ander foon skuif.
+pwSignInFirst|Meld eers aan of skep ’n gratis rekening sodat jou aankoop daaraan gekoppel word.
+pwNone|Geen aankoop vir hierdie rekening gevind nie.
+pwFail|Die aankoop kon nie bevestig word nie. As jy gedebiteer is, tik op “Ek het reeds gekoop”.
+devTitle|Premium is op ’n ander foon
+devOther|Hierdie aankoop is aktief op ’n ander foon ({label}, laas gesien {time}). Skuif dit na hierdie foon?
+devMove|Skuif na hierdie foon
+devMoved|Premium is nou aktief op hierdie foon.
+devWait|Jy kan dit weer op {date} skuif.
+devThis|Premium is aktief op hierdie foon.
+devManage|Bestuur toestel
+devOffline|Koppel aan die internet om jou aankoop na te gaan.
+devUnknown|onbekende toestel
+devFree|Gratis lesse en sinchronisering werk steeds op hierdie foon.
+devCheck|Kyk weer
+devNow|Nie nou nie
+## bg
+pwOnce|{price} · еднократно плащане
+pwLifetime|Без абонамент: доживотен достъп до всички уроци и бъдещи курсове.
+pwBuyOnce|Купи веднъж · {price}
+pwSoonBtn|Очаквайте скоро
+pwSoon|Плащанията идват скоро. Безплатните ти уроци продължават да работят.
+pwHave|Вече купих
+pwWait|Активираме покупката ти…
+pwPending|Вече плати? Активирането може да отнеме минута. Натисни „Вече купих“, за да проверим отново.
+pwDevNote|Премиум работи на един телефон наведнъж. Можеш да го преместиш на друг телефон веднъж на 30 дни.
+pwSignInFirst|Първо влез или създай безплатен акаунт, за да бъде покупката свързана с него.
+pwNone|Няма намерена покупка за този акаунт.
+pwFail|Покупката не можа да бъде потвърдена. Ако си таксуван, натисни „Вече купих“.
+devTitle|Премиум е на друг телефон
+devOther|Тази покупка е активна на друг телефон ({label}, последно видян {time}). Да я преместим ли на този телефон?
+devMove|Премести на този телефон
+devMoved|Премиум вече е активен на този телефон.
+devWait|Можеш да го преместиш отново на {date}.
+devThis|Премиум е активен на този телефон.
+devManage|Управление на устройството
+devOffline|Свържи се с интернет, за да проверим покупката ти.
+devUnknown|неизвестно устройство
+devFree|Безплатните уроци и синхронизацията работят и на този телефон.
+devCheck|Провери отново
+devNow|Не сега
+## zh
+pwOnce|{price} · 一次性付款
+pwLifetime|无需订阅：永久使用所有课程和今后的新课程。
+pwBuyOnce|一次买断 · {price}
+pwSoonBtn|即将推出
+pwSoon|付款功能即将推出。你的免费课程照常可用。
+pwHave|我已购买
+pwWait|正在激活你的购买…
+pwPending|已经付款了？激活可能需要一分钟。点“我已购买”再次检查。
+pwDevNote|高级版同一时间只能在一部手机上使用。每 30 天可以转移到另一部手机一次。
+pwSignInFirst|请先登录或创建免费账号，这样购买才会关联到你的账号。
+pwNone|此账号没有找到购买记录。
+pwFail|无法确认购买。如果已扣款，请点“我已购买”。
+devTitle|高级版在另一部手机上
+devOther|此购买正在另一部手机上使用（{label}，最后在线 {time}）。要转移到这部手机吗？
+devMove|转移到这部手机
+devMoved|高级版现已在这部手机上激活。
+devWait|你可以在 {date} 再次转移。
+devThis|高级版已在这部手机上激活。
+devManage|管理设备
+devOffline|请连接网络以检查你的购买。
+devUnknown|未知设备
+devFree|免费课程和同步在这部手机上照常可用。
+devCheck|再次检查
+devNow|以后再说
+## hr
+pwOnce|{price} · jednokratno plaćanje
+pwLifetime|Bez pretplate: doživotan pristup svim lekcijama i budućim tečajevima.
+pwBuyOnce|Kupi jednom · {price}
+pwSoonBtn|Uskoro
+pwSoon|Plaćanje stiže uskoro. Tvoje besplatne lekcije i dalje rade.
+pwHave|Već sam kupio
+pwWait|Aktiviramo tvoju kupnju…
+pwPending|Već si platio? Aktivacija može potrajati minutu. Dodirni „Već sam kupio” za ponovnu provjeru.
+pwDevNote|Premium radi na jednom telefonu istodobno. Možeš ga premjestiti na drugi telefon jednom u 30 dana.
+pwSignInFirst|Najprije se prijavi ili izradi besplatan račun kako bi kupnja bila povezana s njim.
+pwNone|Za ovaj račun nije pronađena nijedna kupnja.
+pwFail|Kupnju nije moguće potvrditi. Ako ti je naplaćeno, dodirni „Već sam kupio”.
+devTitle|Premium je na drugom telefonu
+devOther|Ova kupnja aktivna je na drugom telefonu ({label}, zadnji put viđen {time}). Premjestiti je na ovaj telefon?
+devMove|Premjesti na ovaj telefon
+devMoved|Premium je sada aktivan na ovom telefonu.
+devWait|Ponovno ga možeš premjestiti {date}.
+devThis|Premium je aktivan na ovom telefonu.
+devManage|Upravljanje uređajem
+devOffline|Spoji se na internet da provjerimo kupnju.
+devUnknown|nepoznati uređaj
+devFree|Besplatne lekcije i sinkronizacija i dalje rade na ovom telefonu.
+devCheck|Provjeri ponovno
+devNow|Ne sada
+## cs
+pwOnce|{price} · jednorázová platba
+pwLifetime|Žádné předplatné: doživotní přístup ke všem lekcím i budoucím kurzům.
+pwBuyOnce|Koupit jednou · {price}
+pwSoonBtn|Již brzy
+pwSoon|Platby budou brzy k dispozici. Tvoje bezplatné lekce dál fungují.
+pwHave|Už jsem koupil
+pwWait|Aktivujeme tvůj nákup…
+pwPending|Už jsi zaplatil? Aktivace může trvat minutu. Klepni na „Už jsem koupil“ a zkontrolujeme to znovu.
+pwDevNote|Premium funguje vždy jen na jednom telefonu. Na jiný telefon ho můžeš přesunout jednou za 30 dní.
+pwSignInFirst|Nejdřív se přihlas nebo si vytvoř bezplatný účet, aby se k němu nákup připojil.
+pwNone|Pro tento účet nebyl nalezen žádný nákup.
+pwFail|Nákup se nepodařilo ověřit. Pokud ti byla stržena platba, klepni na „Už jsem koupil“.
+devTitle|Premium je na jiném telefonu
+devOther|Tento nákup je aktivní na jiném telefonu ({label}, naposledy {time}). Přesunout ho na tento telefon?
+devMove|Přesunout na tento telefon
+devMoved|Premium je teď aktivní na tomto telefonu.
+devWait|Znovu ho můžeš přesunout {date}.
+devThis|Premium je aktivní na tomto telefonu.
+devManage|Správa zařízení
+devOffline|Připoj se k internetu, abychom mohli nákup ověřit.
+devUnknown|neznámé zařízení
+devFree|Bezplatné lekce a synchronizace na tomto telefonu fungují dál.
+devCheck|Zkontrolovat znovu
+devNow|Teď ne
+## da
+pwOnce|{price} · engangsbetaling
+pwLifetime|Intet abonnement: livslang adgang til alle lektioner og fremtidige kurser.
+pwBuyOnce|Køb én gang · {price}
+pwSoonBtn|Kommer snart
+pwSoon|Betaling kommer snart. Dine gratis lektioner virker stadig.
+pwHave|Jeg har allerede købt
+pwWait|Aktiverer dit køb…
+pwPending|Har du betalt? Aktiveringen kan tage et minut. Tryk på “Jeg har allerede købt” for at tjekke igen.
+pwDevNote|Premium virker på én telefon ad gangen. Du kan flytte det til en anden telefon én gang hver 30. dag.
+pwSignInFirst|Log ind eller opret en gratis konto først, så dit køb bliver knyttet til den.
+pwNone|Der blev ikke fundet noget køb for denne konto.
+pwFail|Købet kunne ikke bekræftes. Hvis du er blevet trukket, så tryk på “Jeg har allerede købt”.
+devTitle|Premium er på en anden telefon
+devOther|Dette køb er aktivt på en anden telefon ({label}, sidst set {time}). Flyt det til denne telefon?
+devMove|Flyt til denne telefon
+devMoved|Premium er nu aktivt på denne telefon.
+devWait|Du kan flytte det igen den {date}.
+devThis|Premium er aktivt på denne telefon.
+devManage|Administrer enhed
+devOffline|Gå online for at tjekke dit køb.
+devUnknown|ukendt enhed
+devFree|Gratis lektioner og synkronisering virker stadig på denne telefon.
+devCheck|Tjek igen
+devNow|Ikke nu
+## nl
+pwOnce|{price} · eenmalige betaling
+pwLifetime|Geen abonnement: levenslang toegang tot alle lessen en toekomstige cursussen.
+pwBuyOnce|Eenmalig kopen · {price}
+pwSoonBtn|Binnenkort
+pwSoon|Betalen kan binnenkort. Je gratis lessen blijven werken.
+pwHave|Ik heb al gekocht
+pwWait|Je aankoop wordt geactiveerd…
+pwPending|Al betaald? Activeren kan een minuut duren. Tik op ‘Ik heb al gekocht’ om opnieuw te controleren.
+pwDevNote|Premium werkt op één telefoon tegelijk. Je kunt het eens per 30 dagen naar een andere telefoon verplaatsen.
+pwSignInFirst|Log eerst in of maak een gratis account aan, zodat je aankoop eraan gekoppeld wordt.
+pwNone|Geen aankoop gevonden voor dit account.
+pwFail|De aankoop kon niet worden bevestigd. Is er geld afgeschreven? Tik dan op ‘Ik heb al gekocht’.
+devTitle|Premium staat op een andere telefoon
+devOther|Deze aankoop is actief op een andere telefoon ({label}, laatst gezien {time}). Naar deze telefoon verplaatsen?
+devMove|Naar deze telefoon verplaatsen
+devMoved|Premium is nu actief op deze telefoon.
+devWait|Je kunt het weer verplaatsen op {date}.
+devThis|Premium is actief op deze telefoon.
+devManage|Apparaat beheren
+devOffline|Maak verbinding met internet om je aankoop te controleren.
+devUnknown|onbekend apparaat
+devFree|Gratis lessen en synchronisatie werken nog steeds op deze telefoon.
+devCheck|Opnieuw controleren
+devNow|Niet nu
+## fi
+pwOnce|{price} · kertamaksu
+pwLifetime|Ei tilausta: elinikäinen pääsy kaikkiin oppitunteihin ja tuleviin kursseihin.
+pwBuyOnce|Osta kerran · {price}
+pwSoonBtn|Tulossa pian
+pwSoon|Maksaminen tulee pian mahdolliseksi. Ilmaiset oppituntisi toimivat edelleen.
+pwHave|Olen jo ostanut
+pwWait|Aktivoidaan ostostasi…
+pwPending|Maksoitko jo? Aktivointi voi kestää minuutin. Napauta ”Olen jo ostanut” tarkistaaksesi uudelleen.
+pwDevNote|Premium toimii yhdellä puhelimella kerrallaan. Voit siirtää sen toiseen puhelimeen kerran 30 päivässä.
+pwSignInFirst|Kirjaudu ensin sisään tai luo ilmainen tili, jotta ostos liitetään siihen.
+pwNone|Tälle tilille ei löytynyt ostoksia.
+pwFail|Ostosta ei voitu vahvistaa. Jos sinua veloitettiin, napauta ”Olen jo ostanut”.
+devTitle|Premium on toisessa puhelimessa
+devOther|Tämä ostos on käytössä toisessa puhelimessa ({label}, viimeksi nähty {time}). Siirretäänkö se tähän puhelimeen?
+devMove|Siirrä tähän puhelimeen
+devMoved|Premium on nyt käytössä tässä puhelimessa.
+devWait|Voit siirtää sen uudelleen {date}.
+devThis|Premium on käytössä tässä puhelimessa.
+devManage|Hallitse laitetta
+devOffline|Yhdistä internetiin, jotta voimme tarkistaa ostoksesi.
+devUnknown|tuntematon laite
+devFree|Ilmaiset oppitunnit ja synkronointi toimivat edelleen tässä puhelimessa.
+devCheck|Tarkista uudelleen
+devNow|Ei nyt
+## fr
+pwOnce|{price} · paiement unique
+pwLifetime|Sans abonnement : accès à vie à toutes les leçons et aux futurs cours.
+pwBuyOnce|Acheter une fois · {price}
+pwSoonBtn|Bientôt disponible
+pwSoon|Le paiement arrive bientôt. Tes leçons gratuites restent disponibles.
+pwHave|J’ai déjà acheté
+pwWait|Activation de ton achat…
+pwPending|Déjà payé ? L’activation peut prendre une minute. Touche « J’ai déjà acheté » pour vérifier à nouveau.
+pwDevNote|Premium fonctionne sur un seul téléphone à la fois. Tu peux le transférer sur un autre téléphone une fois tous les 30 jours.
+pwSignInFirst|Connecte-toi ou crée d’abord un compte gratuit pour que ton achat y soit lié.
+pwNone|Aucun achat trouvé pour ce compte.
+pwFail|L’achat n’a pas pu être confirmé. Si tu as été débité, touche « J’ai déjà acheté ».
+devTitle|Premium est sur un autre téléphone
+devOther|Cet achat est actif sur un autre téléphone ({label}, vu pour la dernière fois {time}). Le transférer sur ce téléphone ?
+devMove|Transférer sur ce téléphone
+devMoved|Premium est maintenant actif sur ce téléphone.
+devWait|Tu pourras le transférer à nouveau le {date}.
+devThis|Premium est actif sur ce téléphone.
+devManage|Gérer l’appareil
+devOffline|Connecte-toi à Internet pour vérifier ton achat.
+devUnknown|appareil inconnu
+devFree|Les leçons gratuites et la synchronisation fonctionnent toujours sur ce téléphone.
+devCheck|Vérifier à nouveau
+devNow|Pas maintenant
+## de
+pwOnce|{price} · Einmalzahlung
+pwLifetime|Kein Abo: lebenslanger Zugang zu allen Lektionen und künftigen Kursen.
+pwBuyOnce|Einmal kaufen · {price}
+pwSoonBtn|Bald verfügbar
+pwSoon|Bezahlen ist bald möglich. Deine kostenlosen Lektionen funktionieren weiter.
+pwHave|Ich habe schon gekauft
+pwWait|Dein Kauf wird aktiviert…
+pwPending|Schon bezahlt? Die Aktivierung kann eine Minute dauern. Tippe auf „Ich habe schon gekauft“, um erneut zu prüfen.
+pwDevNote|Premium funktioniert immer auf einem Handy. Du kannst es einmal alle 30 Tage auf ein anderes Handy übertragen.
+pwSignInFirst|Melde dich zuerst an oder erstelle ein kostenloses Konto, damit dein Kauf damit verknüpft wird.
+pwNone|Für dieses Konto wurde kein Kauf gefunden.
+pwFail|Der Kauf konnte nicht bestätigt werden. Falls du belastet wurdest, tippe auf „Ich habe schon gekauft“.
+devTitle|Premium ist auf einem anderen Handy
+devOther|Dieser Kauf ist auf einem anderen Handy aktiv ({label}, zuletzt gesehen {time}). Auf dieses Handy übertragen?
+devMove|Auf dieses Handy übertragen
+devMoved|Premium ist jetzt auf diesem Handy aktiv.
+devWait|Du kannst es am {date} wieder übertragen.
+devThis|Premium ist auf diesem Handy aktiv.
+devManage|Gerät verwalten
+devOffline|Geh online, damit wir deinen Kauf prüfen können.
+devUnknown|unbekanntes Gerät
+devFree|Kostenlose Lektionen und Synchronisierung funktionieren auf diesem Handy weiterhin.
+devCheck|Erneut prüfen
+devNow|Nicht jetzt
+## el
+pwOnce|{price} · εφάπαξ πληρωμή
+pwLifetime|Χωρίς συνδρομή: πρόσβαση για πάντα σε όλα τα μαθήματα και στα μελλοντικά προγράμματα.
+pwBuyOnce|Αγορά μία φορά · {price}
+pwSoonBtn|Έρχεται σύντομα
+pwSoon|Οι πληρωμές έρχονται σύντομα. Τα δωρεάν μαθήματά σου συνεχίζουν να λειτουργούν.
+pwHave|Έχω ήδη αγοράσει
+pwWait|Ενεργοποιούμε την αγορά σου…
+pwPending|Πλήρωσες ήδη; Η ενεργοποίηση μπορεί να πάρει ένα λεπτό. Πάτησε «Έχω ήδη αγοράσει» για νέο έλεγχο.
+pwDevNote|Το Premium λειτουργεί σε ένα κινητό τη φορά. Μπορείς να το μεταφέρεις σε άλλο κινητό μία φορά κάθε 30 ημέρες.
+pwSignInFirst|Συνδέσου ή φτιάξε πρώτα δωρεάν λογαριασμό, ώστε η αγορά να συνδεθεί με αυτόν.
+pwNone|Δεν βρέθηκε αγορά για αυτόν τον λογαριασμό.
+pwFail|Η αγορά δεν επιβεβαιώθηκε. Αν χρεώθηκες, πάτησε «Έχω ήδη αγοράσει».
+devTitle|Το Premium είναι σε άλλο κινητό
+devOther|Αυτή η αγορά είναι ενεργή σε άλλο κινητό ({label}, τελευταία φορά {time}). Να μεταφερθεί σε αυτό το κινητό;
+devMove|Μεταφορά σε αυτό το κινητό
+devMoved|Το Premium είναι τώρα ενεργό σε αυτό το κινητό.
+devWait|Μπορείς να το μεταφέρεις ξανά στις {date}.
+devThis|Το Premium είναι ενεργό σε αυτό το κινητό.
+devManage|Διαχείριση συσκευής
+devOffline|Συνδέσου στο διαδίκτυο για να ελέγξουμε την αγορά σου.
+devUnknown|άγνωστη συσκευή
+devFree|Τα δωρεάν μαθήματα και ο συγχρονισμός λειτουργούν και σε αυτό το κινητό.
+devCheck|Έλεγχος ξανά
+devNow|Όχι τώρα
+## he
+pwOnce|{price} · תשלום חד־פעמי
+pwLifetime|בלי מנוי: גישה לכל החיים לכל השיעורים ולקורסים עתידיים.
+pwBuyOnce|קנייה חד־פעמית · {price}
+pwSoonBtn|בקרוב
+pwSoon|התשלום יהיה זמין בקרוב. השיעורים החינמיים שלך ממשיכים לעבוד.
+pwHave|כבר קניתי
+pwWait|מפעילים את הרכישה שלך…
+pwPending|כבר שילמת? ההפעלה עשויה לקחת דקה. הקש על „כבר קניתי” כדי לבדוק שוב.
+pwDevNote|פרימיום עובד בטלפון אחד בכל פעם. אפשר להעביר אותו לטלפון אחר פעם אחת בכל 30 יום.
+pwSignInFirst|קודם התחבר או צור חשבון חינמי, כדי שהרכישה תקושר אליו.
+pwNone|לא נמצאה רכישה לחשבון הזה.
+pwFail|לא ניתן לאשר את הרכישה. אם חויבת, הקש על „כבר קניתי”.
+devTitle|פרימיום נמצא בטלפון אחר
+devOther|הרכישה הזו פעילה בטלפון אחר: {label}, נראה לאחרונה {time}. להעביר אותה לטלפון הזה?
+devMove|העבר לטלפון הזה
+devMoved|פרימיום פעיל עכשיו בטלפון הזה.
+devWait|אפשר להעביר אותו שוב ב־{date}.
+devThis|פרימיום פעיל בטלפון הזה.
+devManage|ניהול מכשיר
+devOffline|התחבר לאינטרנט כדי שנבדוק את הרכישה.
+devUnknown|מכשיר לא ידוע
+devFree|שיעורים חינמיים וסנכרון ממשיכים לעבוד בטלפון הזה.
+devCheck|בדוק שוב
+devNow|לא עכשיו
+## hi
+pwOnce|{price} · एक बार का भुगतान
+pwLifetime|कोई सदस्यता नहीं: सभी पाठों और आगे आने वाले कोर्स तक हमेशा के लिए पहुँच।
+pwBuyOnce|एक बार खरीदें · {price}
+pwSoonBtn|जल्द आ रहा है
+pwSoon|भुगतान जल्द शुरू होगा। आपके मुफ़्त पाठ चलते रहेंगे।
+pwHave|मैंने पहले ही खरीदा है
+pwWait|आपकी खरीद सक्रिय की जा रही है…
+pwPending|भुगतान कर दिया? सक्रिय होने में एक मिनट लग सकता है। दोबारा जाँचने के लिए “मैंने पहले ही खरीदा है” दबाएँ।
+pwDevNote|प्रीमियम एक समय में एक ही फ़ोन पर चलता है। आप इसे हर 30 दिन में एक बार दूसरे फ़ोन पर ले जा सकते हैं।
+pwSignInFirst|पहले साइन इन करें या मुफ़्त खाता बनाएँ, ताकि आपकी खरीद उससे जुड़ जाए।
+pwNone|इस खाते के लिए कोई खरीद नहीं मिली।
+pwFail|खरीद की पुष्टि नहीं हो सकी। अगर पैसे कट गए हैं, तो “मैंने पहले ही खरीदा है” दबाएँ।
+devTitle|प्रीमियम दूसरे फ़ोन पर है
+devOther|यह खरीद दूसरे फ़ोन पर सक्रिय है ({label}, आख़िरी बार {time})। क्या इसे इस फ़ोन पर ले आएँ?
+devMove|इस फ़ोन पर ले आएँ
+devMoved|प्रीमियम अब इस फ़ोन पर सक्रिय है।
+devWait|आप इसे {date} को फिर से ले जा सकते हैं।
+devThis|प्रीमियम इस फ़ोन पर सक्रिय है।
+devManage|डिवाइस प्रबंधित करें
+devOffline|अपनी खरीद जाँचने के लिए इंटरनेट से जुड़ें।
+devUnknown|अज्ञात डिवाइस
+devFree|मुफ़्त पाठ और सिंक इस फ़ोन पर भी चलते हैं।
+devCheck|फिर से जाँचें
+devNow|अभी नहीं
+## hu
+pwOnce|{price} · egyszeri fizetés
+pwLifetime|Nincs előfizetés: élethosszig tartó hozzáférés minden leckéhez és a jövőbeli kurzusokhoz.
+pwBuyOnce|Vásárlás egyszer · {price}
+pwSoonBtn|Hamarosan
+pwSoon|A fizetés hamarosan elérhető. Az ingyenes leckéid továbbra is működnek.
+pwHave|Már megvettem
+pwWait|Aktiváljuk a vásárlásodat…
+pwPending|Már fizettél? Az aktiválás egy percig is eltarthat. Koppints a „Már megvettem” gombra az újbóli ellenőrzéshez.
+pwDevNote|A Premium egyszerre egy telefonon működik. 30 naponta egyszer áthelyezheted egy másik telefonra.
+pwSignInFirst|Előbb jelentkezz be vagy hozz létre ingyenes fiókot, hogy a vásárlás ahhoz kapcsolódjon.
+pwNone|Ehhez a fiókhoz nem található vásárlás.
+pwFail|A vásárlást nem sikerült megerősíteni. Ha terheltek, koppints a „Már megvettem” gombra.
+devTitle|A Premium egy másik telefonon van
+devOther|Ez a vásárlás egy másik telefonon aktív ({label}, utoljára {time}). Áthelyezed erre a telefonra?
+devMove|Áthelyezés erre a telefonra
+devMoved|A Premium most ezen a telefonon aktív.
+devWait|Újra áthelyezheted ekkor: {date}.
+devThis|A Premium ezen a telefonon aktív.
+devManage|Eszköz kezelése
+devOffline|Csatlakozz az internethez, hogy ellenőrizhessük a vásárlást.
+devUnknown|ismeretlen eszköz
+devFree|Az ingyenes leckék és a szinkronizálás ezen a telefonon is működnek.
+devCheck|Újraellenőrzés
+devNow|Most nem
+## id
+pwOnce|{price} · bayar sekali
+pwLifetime|Tanpa langganan: akses seumur hidup ke semua pelajaran dan kursus mendatang.
+pwBuyOnce|Beli sekali · {price}
+pwSoonBtn|Segera hadir
+pwSoon|Pembayaran segera hadir. Pelajaran gratismu tetap bisa dipakai.
+pwHave|Saya sudah membeli
+pwWait|Mengaktifkan pembelianmu…
+pwPending|Sudah bayar? Aktivasi bisa memakan waktu semenit. Ketuk “Saya sudah membeli” untuk memeriksa lagi.
+pwDevNote|Premium berlaku di satu ponsel dalam satu waktu. Kamu bisa memindahkannya ke ponsel lain sekali setiap 30 hari.
+pwSignInFirst|Masuk atau buat akun gratis dulu agar pembelianmu terhubung ke akun itu.
+pwNone|Tidak ada pembelian untuk akun ini.
+pwFail|Pembelian tidak dapat dikonfirmasi. Jika saldomu terpotong, ketuk “Saya sudah membeli”.
+devTitle|Premium ada di ponsel lain
+devOther|Pembelian ini aktif di ponsel lain ({label}, terakhir terlihat {time}). Pindahkan ke ponsel ini?
+devMove|Pindahkan ke ponsel ini
+devMoved|Premium sekarang aktif di ponsel ini.
+devWait|Kamu bisa memindahkannya lagi pada {date}.
+devThis|Premium aktif di ponsel ini.
+devManage|Kelola perangkat
+devOffline|Sambungkan ke internet untuk memeriksa pembelianmu.
+devUnknown|perangkat tak dikenal
+devFree|Pelajaran gratis dan sinkronisasi tetap berjalan di ponsel ini.
+devCheck|Periksa lagi
+devNow|Nanti saja
+## it
+pwOnce|{price} · pagamento unico
+pwLifetime|Nessun abbonamento: accesso a vita a tutte le lezioni e ai corsi futuri.
+pwBuyOnce|Acquista una volta · {price}
+pwSoonBtn|Prossimamente
+pwSoon|I pagamenti arriveranno presto. Le tue lezioni gratuite continuano a funzionare.
+pwHave|Ho già acquistato
+pwWait|Stiamo attivando il tuo acquisto…
+pwPending|Hai già pagato? L’attivazione può richiedere un minuto. Tocca «Ho già acquistato» per controllare di nuovo.
+pwDevNote|Premium funziona su un telefono alla volta. Puoi spostarlo su un altro telefono una volta ogni 30 giorni.
+pwSignInFirst|Accedi o crea prima un account gratuito, così l’acquisto verrà collegato a esso.
+pwNone|Nessun acquisto trovato per questo account.
+pwFail|Non è stato possibile confermare l’acquisto. Se ti è stato addebitato, tocca «Ho già acquistato».
+devTitle|Premium è su un altro telefono
+devOther|Questo acquisto è attivo su un altro telefono ({label}, visto l’ultima volta {time}). Spostarlo su questo telefono?
+devMove|Sposta su questo telefono
+devMoved|Premium ora è attivo su questo telefono.
+devWait|Potrai spostarlo di nuovo il {date}.
+devThis|Premium è attivo su questo telefono.
+devManage|Gestisci dispositivo
+devOffline|Connettiti a Internet per verificare il tuo acquisto.
+devUnknown|dispositivo sconosciuto
+devFree|Le lezioni gratuite e la sincronizzazione funzionano ancora su questo telefono.
+devCheck|Controlla di nuovo
+devNow|Non ora
+## ja
+pwOnce|{price} · 買い切り
+pwLifetime|サブスクなし：すべてのレッスンと今後のコースにずっとアクセスできます。
+pwBuyOnce|買い切りで購入 · {price}
+pwSoonBtn|近日公開
+pwSoon|お支払いはまもなく利用できます。無料レッスンはそのまま使えます。
+pwHave|購入済みです
+pwWait|購入を有効にしています…
+pwPending|お支払い済みですか？有効になるまで1分ほどかかることがあります。「購入済みです」をタップしてもう一度確認してください。
+pwDevNote|プレミアムは一度に1台のスマホで使えます。30日に1回、別のスマホに移せます。
+pwSignInFirst|購入をアカウントにひも付けるため、先にログインするか無料アカウントを作成してください。
+pwNone|このアカウントの購入は見つかりませんでした。
+pwFail|購入を確認できませんでした。請求された場合は「購入済みです」をタップしてください。
+devTitle|プレミアムは別のスマホで有効です
+devOther|この購入は別のスマホで有効です（{label}、最終利用 {time}）。このスマホに移しますか？
+devMove|このスマホに移す
+devMoved|プレミアムがこのスマホで有効になりました。
+devWait|次に移せるのは {date} です。
+devThis|プレミアムはこのスマホで有効です。
+devManage|端末の管理
+devOffline|購入を確認するにはインターネットに接続してください。
+devUnknown|不明な端末
+devFree|無料レッスンと同期はこのスマホでも使えます。
+devCheck|もう一度確認
+devNow|今はしない
+## ko
+pwOnce|{price} · 한 번 결제
+pwLifetime|구독 없음: 모든 레슨과 앞으로 나올 코스를 평생 이용할 수 있어요.
+pwBuyOnce|한 번 구매 · {price}
+pwSoonBtn|곧 제공
+pwSoon|결제는 곧 제공될 예정이에요. 무료 레슨은 계속 이용할 수 있어요.
+pwHave|이미 구매했어요
+pwWait|구매를 활성화하는 중…
+pwPending|이미 결제하셨나요? 활성화에 1분 정도 걸릴 수 있어요. ‘이미 구매했어요’를 눌러 다시 확인하세요.
+pwDevNote|프리미엄은 한 번에 휴대폰 한 대에서만 작동해요. 30일에 한 번 다른 휴대폰으로 옮길 수 있어요.
+pwSignInFirst|구매가 계정에 연결되도록 먼저 로그인하거나 무료 계정을 만드세요.
+pwNone|이 계정의 구매 내역을 찾지 못했어요.
+pwFail|구매를 확인하지 못했어요. 결제되었다면 ‘이미 구매했어요’를 누르세요.
+devTitle|프리미엄이 다른 휴대폰에 있어요
+devOther|이 구매는 다른 휴대폰에서 사용 중이에요({label}, 마지막 사용 {time}). 이 휴대폰으로 옮길까요?
+devMove|이 휴대폰으로 옮기기
+devMoved|이제 이 휴대폰에서 프리미엄이 활성화되었어요.
+devWait|{date}에 다시 옮길 수 있어요.
+devThis|이 휴대폰에서 프리미엄이 활성화되어 있어요.
+devManage|기기 관리
+devOffline|구매를 확인하려면 인터넷에 연결하세요.
+devUnknown|알 수 없는 기기
+devFree|무료 레슨과 동기화는 이 휴대폰에서도 계속 작동해요.
+devCheck|다시 확인
+devNow|나중에
+## nb
+pwOnce|{price} · engangsbetaling
+pwLifetime|Ingen abonnement: livsvarig tilgang til alle leksjoner og fremtidige kurs.
+pwBuyOnce|Kjøp én gang · {price}
+pwSoonBtn|Kommer snart
+pwSoon|Betaling kommer snart. De gratis leksjonene dine fungerer fortsatt.
+pwHave|Jeg har allerede kjøpt
+pwWait|Aktiverer kjøpet ditt…
+pwPending|Har du betalt? Aktiveringen kan ta et minutt. Trykk på «Jeg har allerede kjøpt» for å sjekke igjen.
+pwDevNote|Premium fungerer på én telefon om gangen. Du kan flytte det til en annen telefon én gang hver 30. dag.
+pwSignInFirst|Logg inn eller opprett en gratis konto først, så blir kjøpet knyttet til den.
+pwNone|Fant ikke noe kjøp for denne kontoen.
+pwFail|Kjøpet kunne ikke bekreftes. Hvis du ble belastet, trykk på «Jeg har allerede kjøpt».
+devTitle|Premium er på en annen telefon
+devOther|Dette kjøpet er aktivt på en annen telefon ({label}, sist sett {time}). Flytte det til denne telefonen?
+devMove|Flytt til denne telefonen
+devMoved|Premium er nå aktivt på denne telefonen.
+devWait|Du kan flytte det igjen {date}.
+devThis|Premium er aktivt på denne telefonen.
+devManage|Administrer enhet
+devOffline|Koble til internett for å sjekke kjøpet ditt.
+devUnknown|ukjent enhet
+devFree|Gratis leksjoner og synkronisering fungerer fortsatt på denne telefonen.
+devCheck|Sjekk igjen
+devNow|Ikke nå
+## pl
+pwOnce|{price} · jednorazowa płatność
+pwLifetime|Bez subskrypcji: dożywotni dostęp do wszystkich lekcji i przyszłych kursów.
+pwBuyOnce|Kup raz · {price}
+pwSoonBtn|Wkrótce
+pwSoon|Płatności pojawią się wkrótce. Twoje darmowe lekcje nadal działają.
+pwHave|Już kupiłem
+pwWait|Aktywujemy Twój zakup…
+pwPending|Już zapłacono? Aktywacja może potrwać minutę. Stuknij „Już kupiłem”, aby sprawdzić ponownie.
+pwDevNote|Premium działa na jednym telefonie naraz. Możesz przenieść go na inny telefon raz na 30 dni.
+pwSignInFirst|Najpierw zaloguj się lub załóż darmowe konto, aby zakup został z nim powiązany.
+pwNone|Nie znaleziono zakupu dla tego konta.
+pwFail|Nie udało się potwierdzić zakupu. Jeśli pobrano opłatę, stuknij „Już kupiłem”.
+devTitle|Premium jest na innym telefonie
+devOther|Ten zakup jest aktywny na innym telefonie ({label}, ostatnio widziany {time}). Przenieść go na ten telefon?
+devMove|Przenieś na ten telefon
+devMoved|Premium jest teraz aktywne na tym telefonie.
+devWait|Możesz przenieść go ponownie {date}.
+devThis|Premium jest aktywne na tym telefonie.
+devManage|Zarządzaj urządzeniem
+devOffline|Połącz się z internetem, aby sprawdzić zakup.
+devUnknown|nieznane urządzenie
+devFree|Darmowe lekcje i synchronizacja nadal działają na tym telefonie.
+devCheck|Sprawdź ponownie
+devNow|Nie teraz
+## pt
+pwOnce|{price} · pagamento único
+pwLifetime|Sem assinatura: acesso vitalício a todas as lições e aos cursos futuros.
+pwBuyOnce|Comprar uma vez · {price}
+pwSoonBtn|Em breve
+pwSoon|Os pagamentos chegam em breve. As suas lições gratuitas continuam funcionando.
+pwHave|Já comprei
+pwWait|Ativando sua compra…
+pwPending|Já pagou? A ativação pode levar um minuto. Toque em “Já comprei” para verificar de novo.
+pwDevNote|O Premium funciona em um celular por vez. Você pode transferi-lo para outro celular uma vez a cada 30 dias.
+pwSignInFirst|Entre ou crie primeiro uma conta gratuita para que a compra fique vinculada a ela.
+pwNone|Nenhuma compra encontrada para esta conta.
+pwFail|Não foi possível confirmar a compra. Se você foi cobrado, toque em “Já comprei”.
+devTitle|O Premium está em outro celular
+devOther|Esta compra está ativa em outro celular ({label}, visto pela última vez {time}). Transferir para este celular?
+devMove|Transferir para este celular
+devMoved|O Premium agora está ativo neste celular.
+devWait|Você poderá transferi-lo de novo em {date}.
+devThis|O Premium está ativo neste celular.
+devManage|Gerenciar dispositivo
+devOffline|Conecte-se à internet para verificarmos sua compra.
+devUnknown|dispositivo desconhecido
+devFree|As lições gratuitas e a sincronização continuam funcionando neste celular.
+devCheck|Verificar de novo
+devNow|Agora não
+## ro
+pwOnce|{price} · plată unică
+pwLifetime|Fără abonament: acces pe viață la toate lecțiile și la cursurile viitoare.
+pwBuyOnce|Cumpără o dată · {price}
+pwSoonBtn|În curând
+pwSoon|Plățile vin în curând. Lecțiile tale gratuite funcționează în continuare.
+pwHave|Am cumpărat deja
+pwWait|Îți activăm achiziția…
+pwPending|Ai plătit deja? Activarea poate dura un minut. Atinge „Am cumpărat deja” ca să verificăm din nou.
+pwDevNote|Premium funcționează pe un singur telefon odată. Îl poți muta pe alt telefon o dată la 30 de zile.
+pwSignInFirst|Conectează-te sau creează mai întâi un cont gratuit, ca achiziția să fie legată de el.
+pwNone|Nu s-a găsit nicio achiziție pentru acest cont.
+pwFail|Achiziția nu a putut fi confirmată. Dacă ai fost taxat, atinge „Am cumpărat deja”.
+devTitle|Premium este pe alt telefon
+devOther|Această achiziție este activă pe alt telefon ({label}, văzut ultima dată {time}). O muți pe acest telefon?
+devMove|Mută pe acest telefon
+devMoved|Premium este acum activ pe acest telefon.
+devWait|Îl poți muta din nou pe {date}.
+devThis|Premium este activ pe acest telefon.
+devManage|Gestionează dispozitivul
+devOffline|Conectează-te la internet ca să-ți verificăm achiziția.
+devUnknown|dispozitiv necunoscut
+devFree|Lecțiile gratuite și sincronizarea funcționează în continuare pe acest telefon.
+devCheck|Verifică din nou
+devNow|Nu acum
+## ru
+pwOnce|{price} · разовый платёж
+pwLifetime|Без подписки: пожизненный доступ ко всем урокам и будущим курсам.
+pwBuyOnce|Купить один раз · {price}
+pwSoonBtn|Скоро
+pwSoon|Оплата скоро появится. Бесплатные уроки продолжают работать.
+pwHave|Я уже купил
+pwWait|Активируем покупку…
+pwPending|Уже оплатил? Активация может занять минуту. Нажми «Я уже купил», чтобы проверить снова.
+pwDevNote|Премиум работает на одном телефоне одновременно. Перенести его на другой телефон можно раз в 30 дней.
+pwSignInFirst|Сначала войди или создай бесплатный аккаунт, чтобы покупка была к нему привязана.
+pwNone|Для этого аккаунта покупка не найдена.
+pwFail|Не удалось подтвердить покупку. Если деньги списаны, нажми «Я уже купил».
+devTitle|Премиум на другом телефоне
+devOther|Эта покупка активна на другом телефоне ({label}, был в сети {time}). Перенести её на этот телефон?
+devMove|Перенести на этот телефон
+devMoved|Теперь премиум активен на этом телефоне.
+devWait|Снова перенести можно {date}.
+devThis|Премиум активен на этом телефоне.
+devManage|Управление устройством
+devOffline|Подключись к интернету, чтобы проверить покупку.
+devUnknown|неизвестное устройство
+devFree|Бесплатные уроки и синхронизация на этом телефоне работают.
+devCheck|Проверить снова
+devNow|Не сейчас
+## es
+pwOnce|{price} · pago único
+pwLifetime|Sin suscripción: acceso de por vida a todas las lecciones y a los cursos futuros.
+pwBuyOnce|Comprar una vez · {price}
+pwSoonBtn|Próximamente
+pwSoon|Los pagos llegarán pronto. Tus lecciones gratis siguen funcionando.
+pwHave|Ya lo compré
+pwWait|Activando tu compra…
+pwPending|¿Ya pagaste? La activación puede tardar un minuto. Toca «Ya lo compré» para comprobarlo de nuevo.
+pwDevNote|Premium funciona en un solo teléfono a la vez. Puedes pasarlo a otro teléfono una vez cada 30 días.
+pwSignInFirst|Inicia sesión o crea primero una cuenta gratis para que la compra quede vinculada a ella.
+pwNone|No se encontró ninguna compra para esta cuenta.
+pwFail|No se pudo confirmar la compra. Si se te cobró, toca «Ya lo compré».
+devTitle|Premium está en otro teléfono
+devOther|Esta compra está activa en otro teléfono ({label}, visto por última vez {time}). ¿Pasarla a este teléfono?
+devMove|Pasar a este teléfono
+devMoved|Premium ya está activo en este teléfono.
+devWait|Podrás pasarlo de nuevo el {date}.
+devThis|Premium está activo en este teléfono.
+devManage|Gestionar dispositivo
+devOffline|Conéctate a internet para comprobar tu compra.
+devUnknown|dispositivo desconocido
+devFree|Las lecciones gratis y la sincronización siguen funcionando en este teléfono.
+devCheck|Comprobar de nuevo
+devNow|Ahora no
+## sv
+pwOnce|{price} · engångsbetalning
+pwLifetime|Ingen prenumeration: livstids tillgång till alla lektioner och framtida kurser.
+pwBuyOnce|Köp en gång · {price}
+pwSoonBtn|Kommer snart
+pwSoon|Betalning kommer snart. Dina gratislektioner fungerar fortfarande.
+pwHave|Jag har redan köpt
+pwWait|Aktiverar ditt köp…
+pwPending|Redan betalat? Aktiveringen kan ta en minut. Tryck på ”Jag har redan köpt” för att kontrollera igen.
+pwDevNote|Premium fungerar på en telefon i taget. Du kan flytta det till en annan telefon en gång var 30:e dag.
+pwSignInFirst|Logga in eller skapa ett gratiskonto först så att köpet kopplas till det.
+pwNone|Inget köp hittades för det här kontot.
+pwFail|Köpet kunde inte bekräftas. Om du har debiterats, tryck på ”Jag har redan köpt”.
+devTitle|Premium finns på en annan telefon
+devOther|Det här köpet är aktivt på en annan telefon ({label}, senast sedd {time}). Flytta det till den här telefonen?
+devMove|Flytta till den här telefonen
+devMoved|Premium är nu aktivt på den här telefonen.
+devWait|Du kan flytta det igen {date}.
+devThis|Premium är aktivt på den här telefonen.
+devManage|Hantera enhet
+devOffline|Anslut till internet för att kontrollera ditt köp.
+devUnknown|okänd enhet
+devFree|Gratislektioner och synkronisering fungerar fortfarande på den här telefonen.
+devCheck|Kontrollera igen
+devNow|Inte nu
+## th
+pwOnce|{price} · จ่ายครั้งเดียว
+pwLifetime|ไม่ต้องสมัครสมาชิก: เข้าถึงทุกบทเรียนและคอร์สในอนาคตได้ตลอดไป
+pwBuyOnce|ซื้อครั้งเดียว · {price}
+pwSoonBtn|เร็ว ๆ นี้
+pwSoon|การชำระเงินจะเปิดให้ใช้เร็ว ๆ นี้ บทเรียนฟรีของคุณยังใช้ได้ตามปกติ
+pwHave|ฉันซื้อแล้ว
+pwWait|กำลังเปิดใช้งานการซื้อของคุณ…
+pwPending|จ่ายแล้วใช่ไหม การเปิดใช้งานอาจใช้เวลาหนึ่งนาที แตะ “ฉันซื้อแล้ว” เพื่อตรวจสอบอีกครั้ง
+pwDevNote|พรีเมียมใช้ได้ทีละหนึ่งเครื่อง คุณย้ายไปยังโทรศัพท์เครื่องอื่นได้ 30 วันครั้ง
+pwSignInFirst|เข้าสู่ระบบหรือสร้างบัญชีฟรีก่อน เพื่อให้การซื้อผูกกับบัญชีของคุณ
+pwNone|ไม่พบการซื้อสำหรับบัญชีนี้
+pwFail|ยืนยันการซื้อไม่ได้ หากถูกตัดเงินแล้ว ให้แตะ “ฉันซื้อแล้ว”
+devTitle|พรีเมียมอยู่ในโทรศัพท์เครื่องอื่น
+devOther|การซื้อนี้ใช้งานอยู่ในโทรศัพท์เครื่องอื่น ({label} ใช้ล่าสุด {time}) ย้ายมาที่เครื่องนี้ไหม
+devMove|ย้ายมาที่เครื่องนี้
+devMoved|ตอนนี้พรีเมียมใช้งานได้ในเครื่องนี้แล้ว
+devWait|คุณย้ายได้อีกครั้งในวันที่ {date}
+devThis|พรีเมียมใช้งานอยู่ในเครื่องนี้
+devManage|จัดการอุปกรณ์
+devOffline|เชื่อมต่ออินเทอร์เน็ตเพื่อตรวจสอบการซื้อของคุณ
+devUnknown|อุปกรณ์ที่ไม่รู้จัก
+devFree|บทเรียนฟรีและการซิงค์ยังใช้ได้ในเครื่องนี้
+devCheck|ตรวจสอบอีกครั้ง
+devNow|ไว้ทีหลัง
+## tr
+pwOnce|{price} · tek seferlik ödeme
+pwLifetime|Abonelik yok: tüm derslere ve gelecek kurslara ömür boyu erişim.
+pwBuyOnce|Bir kez satın al · {price}
+pwSoonBtn|Çok yakında
+pwSoon|Ödeme çok yakında geliyor. Ücretsiz derslerin çalışmaya devam ediyor.
+pwHave|Zaten satın aldım
+pwWait|Satın alman etkinleştiriliyor…
+pwPending|Ödedin mi? Etkinleştirme bir dakika sürebilir. Tekrar kontrol etmek için “Zaten satın aldım”a dokun.
+pwDevNote|Premium aynı anda tek bir telefonda çalışır. 30 günde bir kez başka bir telefona taşıyabilirsin.
+pwSignInFirst|Satın alman hesabına bağlansın diye önce giriş yap ya da ücretsiz bir hesap oluştur.
+pwNone|Bu hesap için satın alma bulunamadı.
+pwFail|Satın alma doğrulanamadı. Ücret alındıysa “Zaten satın aldım”a dokun.
+devTitle|Premium başka bir telefonda
+devOther|Bu satın alma başka bir telefonda etkin ({label}, son görülme {time}). Bu telefona taşınsın mı?
+devMove|Bu telefona taşı
+devMoved|Premium artık bu telefonda etkin.
+devWait|{date} tarihinde tekrar taşıyabilirsin.
+devThis|Premium bu telefonda etkin.
+devManage|Cihazı yönet
+devOffline|Satın almanı kontrol etmek için internete bağlan.
+devUnknown|bilinmeyen cihaz
+devFree|Ücretsiz dersler ve eşitleme bu telefonda da çalışır.
+devCheck|Tekrar kontrol et
+devNow|Şimdi değil
+## uk
+pwOnce|{price} · разовий платіж
+pwLifetime|Без підписки: довічний доступ до всіх уроків і майбутніх курсів.
+pwBuyOnce|Купити один раз · {price}
+pwSoonBtn|Незабаром
+pwSoon|Оплата з’явиться незабаром. Безкоштовні уроки й далі працюють.
+pwHave|Я вже купив
+pwWait|Активуємо покупку…
+pwPending|Уже оплатив? Активація може тривати хвилину. Натисни «Я вже купив», щоб перевірити знову.
+pwDevNote|Преміум працює на одному телефоні водночас. Перенести його на інший телефон можна раз на 30 днів.
+pwSignInFirst|Спершу увійди або створи безкоштовний акаунт, щоб покупку було прив’язано до нього.
+pwNone|Для цього акаунта покупку не знайдено.
+pwFail|Не вдалося підтвердити покупку. Якщо кошти списано, натисни «Я вже купив».
+devTitle|Преміум на іншому телефоні
+devOther|Ця покупка активна на іншому телефоні ({label}, востаннє {time}). Перенести її на цей телефон?
+devMove|Перенести на цей телефон
+devMoved|Тепер преміум активний на цьому телефоні.
+devWait|Знову перенести можна {date}.
+devThis|Преміум активний на цьому телефоні.
+devManage|Керування пристроєм
+devOffline|Підключись до інтернету, щоб перевірити покупку.
+devUnknown|невідомий пристрій
+devFree|Безкоштовні уроки й синхронізація на цьому телефоні працюють.
+devCheck|Перевірити знову
+devNow|Не зараз
+## vi
+pwOnce|{price} · trả một lần
+pwLifetime|Không cần đăng ký: truy cập trọn đời mọi bài học và các khóa học sau này.
+pwBuyOnce|Mua một lần · {price}
+pwSoonBtn|Sắp ra mắt
+pwSoon|Thanh toán sẽ sớm có. Các bài học miễn phí của bạn vẫn dùng được.
+pwHave|Tôi đã mua rồi
+pwWait|Đang kích hoạt giao dịch mua của bạn…
+pwPending|Đã thanh toán? Việc kích hoạt có thể mất một phút. Nhấn “Tôi đã mua rồi” để kiểm tra lại.
+pwDevNote|Premium chỉ dùng trên một điện thoại tại một thời điểm. Bạn có thể chuyển sang điện thoại khác mỗi 30 ngày một lần.
+pwSignInFirst|Hãy đăng nhập hoặc tạo tài khoản miễn phí trước để giao dịch mua được gắn với tài khoản đó.
+pwNone|Không tìm thấy giao dịch mua nào cho tài khoản này.
+pwFail|Không thể xác nhận giao dịch mua. Nếu bạn đã bị trừ tiền, hãy nhấn “Tôi đã mua rồi”.
+devTitle|Premium đang ở điện thoại khác
+devOther|Giao dịch mua này đang hoạt động trên điện thoại khác ({label}, lần cuối {time}). Chuyển sang điện thoại này?
+devMove|Chuyển sang điện thoại này
+devMoved|Premium đã hoạt động trên điện thoại này.
+devWait|Bạn có thể chuyển lại vào {date}.
+devThis|Premium đang hoạt động trên điện thoại này.
+devManage|Quản lý thiết bị
+devOffline|Hãy kết nối internet để kiểm tra giao dịch mua.
+devUnknown|thiết bị không xác định
+devFree|Bài học miễn phí và đồng bộ vẫn hoạt động trên điện thoại này.
+devCheck|Kiểm tra lại
+devNow|Để sau

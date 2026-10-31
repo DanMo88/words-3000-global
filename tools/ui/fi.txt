@@ -178,10 +178,7 @@ pwBuy|Tilaa
 pwRestore|Palauta osto
 pwAndroid|Tilaus on saatavilla Android-sovelluksessa Google Playssa.
 pwWebHave|Onko sinulla jo tilaus? Kirjaudu samalla tilillä.
-pwSignInFirst|Kirjaudu ensin tai luo ilmainen tili, jotta tilaus liitetään siihen.
 pwActive|Premium on käytössä ✓
-pwNone|Voimassa olevaa tilausta ei löytynyt.
-pwFail|Ostoa ei voitu vahvistaa. Jos sinulta veloitettiin, napauta ”Palauta osto”.
 pwNotReady|Maksut eivät ole vielä käytössä. Yritä myöhemmin.
 privacy|Tietosuojakäytäntö
 terms|Käyttöehdot
@@ -194,3 +191,27 @@ remTitle|Sanojen aika! 📚
 remBody|Muutama minuutti päivässä pitää putkesi käynnissä 🔥
 remSet|Muistutus asetettu klo {time}
 remOff|Muistutus pois päältä
+pwOnce|{price} · kertamaksu
+pwLifetime|Ei tilausta: elinikäinen pääsy kaikkiin oppitunteihin ja tuleviin kursseihin.
+pwBuyOnce|Osta kerran · {price}
+pwSoonBtn|Tulossa pian
+pwSoon|Maksaminen tulee pian mahdolliseksi. Ilmaiset oppituntisi toimivat edelleen.
+pwHave|Olen jo ostanut
+pwWait|Aktivoidaan ostostasi…
+pwPending|Maksoitko jo? Aktivointi voi kestää minuutin. Napauta ”Olen jo ostanut” tarkistaaksesi uudelleen.
+pwDevNote|Premium toimii yhdellä puhelimella kerrallaan. Voit siirtää sen toiseen puhelimeen kerran 30 päivässä.
+pwSignInFirst|Kirjaudu ensin sisään tai luo ilmainen tili, jotta ostos liitetään siihen.
+pwNone|Tälle tilille ei löytynyt ostoksia.
+pwFail|Ostosta ei voitu vahvistaa. Jos sinua veloitettiin, napauta ”Olen jo ostanut”.
+devTitle|Premium on toisessa puhelimessa
+devOther|Tämä ostos on käytössä toisessa puhelimessa ({label}, viimeksi nähty {time}). Siirretäänkö se tähän puhelimeen?
+devMove|Siirrä tähän puhelimeen
+devMoved|Premium on nyt käytössä tässä puhelimessa.
+devWait|Voit siirtää sen uudelleen {date}.
+devThis|Premium on käytössä tässä puhelimessa.
+devManage|Hallitse laitetta
+devOffline|Yhdistä internetiin, jotta voimme tarkistaa ostoksesi.
+devUnknown|tuntematon laite
+devFree|Ilmaiset oppitunnit ja synkronointi toimivat edelleen tässä puhelimessa.
+devCheck|Tarkista uudelleen
+devNow|Ei nyt

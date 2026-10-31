@@ -178,10 +178,7 @@ pwBuy|Abonner
 pwRestore|Gendan køb
 pwAndroid|Abonnementet findes i Android-appen på Google Play.
 pwWebHave|Har du allerede abonnement? Log ind med samme konto.
-pwSignInFirst|Log ind eller opret en gratis konto først, så abonnementet knyttes til den.
 pwActive|Premium er aktiv ✓
-pwNone|Intet aktivt abonnement fundet.
-pwFail|Købet kunne ikke bekræftes. Hvis du er blevet trukket, så tryk på "Gendan køb".
 pwNotReady|Betaling er ikke slået til endnu. Prøv igen senere.
 privacy|Privatlivspolitik
 terms|Vilkår for brug
@@ -194,3 +191,27 @@ remTitle|Tid til dine ord! 📚
 remBody|Et par minutter om dagen holder din stime i gang 🔥
 remSet|Påmindelse sat til {time}
 remOff|Påmindelse slået fra
+pwOnce|{price} · engangsbetaling
+pwLifetime|Intet abonnement: livslang adgang til alle lektioner og fremtidige kurser.
+pwBuyOnce|Køb én gang · {price}
+pwSoonBtn|Kommer snart
+pwSoon|Betaling kommer snart. Dine gratis lektioner virker stadig.
+pwHave|Jeg har allerede købt
+pwWait|Aktiverer dit køb…
+pwPending|Har du betalt? Aktiveringen kan tage et minut. Tryk på “Jeg har allerede købt” for at tjekke igen.
+pwDevNote|Premium virker på én telefon ad gangen. Du kan flytte det til en anden telefon én gang hver 30. dag.
+pwSignInFirst|Log ind eller opret en gratis konto først, så dit køb bliver knyttet til den.
+pwNone|Der blev ikke fundet noget køb for denne konto.
+pwFail|Købet kunne ikke bekræftes. Hvis du er blevet trukket, så tryk på “Jeg har allerede købt”.
+devTitle|Premium er på en anden telefon
+devOther|Dette køb er aktivt på en anden telefon ({label}, sidst set {time}). Flyt det til denne telefon?
+devMove|Flyt til denne telefon
+devMoved|Premium er nu aktivt på denne telefon.
+devWait|Du kan flytte det igen den {date}.
+devThis|Premium er aktivt på denne telefon.
+devManage|Administrer enhed
+devOffline|Gå online for at tjekke dit køb.
+devUnknown|ukendt enhed
+devFree|Gratis lektioner og synkronisering virker stadig på denne telefon.
+devCheck|Tjek igen
+devNow|Ikke nu

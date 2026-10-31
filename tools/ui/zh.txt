@@ -178,10 +178,7 @@ pwBuy|订阅
 pwRestore|恢复购买
 pwAndroid|订阅仅在 Google Play 的安卓应用中提供。
 pwWebHave|已经订阅？请用同一账户登录。
-pwSignInFirst|请先登录或创建免费账户，以便将订阅绑定到账户。
 pwActive|高级版已开通 ✓
-pwNone|未找到有效订阅。
-pwFail|无法确认购买。如果已扣款，请点“恢复购买”。
 pwNotReady|支付尚未开通，请稍后再试。
 privacy|隐私政策
 terms|使用条款
@@ -194,3 +191,27 @@ remTitle|该背单词啦！📚
 remBody|每天几分钟，连续记录不中断 🔥
 remSet|提醒时间已设为 {time}
 remOff|提醒已关闭
+pwOnce|{price} · 一次性付款
+pwLifetime|无需订阅：永久使用所有课程和今后的新课程。
+pwBuyOnce|一次买断 · {price}
+pwSoonBtn|即将推出
+pwSoon|付款功能即将推出。你的免费课程照常可用。
+pwHave|我已购买
+pwWait|正在激活你的购买…
+pwPending|已经付款了？激活可能需要一分钟。点“我已购买”再次检查。
+pwDevNote|高级版同一时间只能在一部手机上使用。每 30 天可以转移到另一部手机一次。
+pwSignInFirst|请先登录或创建免费账号，这样购买才会关联到你的账号。
+pwNone|此账号没有找到购买记录。
+pwFail|无法确认购买。如果已扣款，请点“我已购买”。
+devTitle|高级版在另一部手机上
+devOther|此购买正在另一部手机上使用（{label}，最后在线 {time}）。要转移到这部手机吗？
+devMove|转移到这部手机
+devMoved|高级版现已在这部手机上激活。
+devWait|你可以在 {date} 再次转移。
+devThis|高级版已在这部手机上激活。
+devManage|管理设备
+devOffline|请连接网络以检查你的购买。
+devUnknown|未知设备
+devFree|免费课程和同步在这部手机上照常可用。
+devCheck|再次检查
+devNow|以后再说

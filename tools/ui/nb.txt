@@ -178,10 +178,7 @@ pwBuy|Abonner
 pwRestore|Gjenopprett kjøp
 pwAndroid|Abonnementet finnes i Android-appen på Google Play.
 pwWebHave|Har du allerede abonnement? Logg inn med samme konto.
-pwSignInFirst|Logg inn eller lag en gratis konto først, så abonnementet knyttes til den.
 pwActive|Premium er aktiv ✓
-pwNone|Fant ingen aktive abonnement.
-pwFail|Kjøpet kunne ikke bekreftes. Har du blitt trukket, trykk «Gjenopprett kjøp».
 pwNotReady|Betaling er ikke slått på ennå. Prøv igjen senere.
 privacy|Personvern
 terms|Vilkår for bruk
@@ -194,3 +191,27 @@ remTitle|Tid for ordene dine! 📚
 remBody|Noen minutter om dagen holder rekken din i gang 🔥
 remSet|Påminnelse satt til {time}
 remOff|Påminnelse slått av
+pwOnce|{price} · engangsbetaling
+pwLifetime|Ingen abonnement: livsvarig tilgang til alle leksjoner og fremtidige kurs.
+pwBuyOnce|Kjøp én gang · {price}
+pwSoonBtn|Kommer snart
+pwSoon|Betaling kommer snart. De gratis leksjonene dine fungerer fortsatt.
+pwHave|Jeg har allerede kjøpt
+pwWait|Aktiverer kjøpet ditt…
+pwPending|Har du betalt? Aktiveringen kan ta et minutt. Trykk på «Jeg har allerede kjøpt» for å sjekke igjen.
+pwDevNote|Premium fungerer på én telefon om gangen. Du kan flytte det til en annen telefon én gang hver 30. dag.
+pwSignInFirst|Logg inn eller opprett en gratis konto først, så blir kjøpet knyttet til den.
+pwNone|Fant ikke noe kjøp for denne kontoen.
+pwFail|Kjøpet kunne ikke bekreftes. Hvis du ble belastet, trykk på «Jeg har allerede kjøpt».
+devTitle|Premium er på en annen telefon
+devOther|Dette kjøpet er aktivt på en annen telefon ({label}, sist sett {time}). Flytte det til denne telefonen?
+devMove|Flytt til denne telefonen
+devMoved|Premium er nå aktivt på denne telefonen.
+devWait|Du kan flytte det igjen {date}.
+devThis|Premium er aktivt på denne telefonen.
+devManage|Administrer enhet
+devOffline|Koble til internett for å sjekke kjøpet ditt.
+devUnknown|ukjent enhet
+devFree|Gratis leksjoner og synkronisering fungerer fortsatt på denne telefonen.
+devCheck|Sjekk igjen
+devNow|Ikke nå

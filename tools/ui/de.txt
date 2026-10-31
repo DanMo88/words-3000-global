@@ -178,10 +178,7 @@ pwBuy|Abonnieren
 pwRestore|Kauf wiederherstellen
 pwAndroid|Das Abo gibt es in der Android-App bei Google Play.
 pwWebHave|Schon abonniert? Melde dich mit demselben Konto an.
-pwSignInFirst|Melde dich zuerst an oder erstelle ein kostenloses Konto, damit dein Abo damit verknüpft wird.
 pwActive|Premium ist aktiv ✓
-pwNone|Kein aktives Abo gefunden.
-pwFail|Der Kauf konnte nicht bestätigt werden. Falls du belastet wurdest, tippe auf „Kauf wiederherstellen“.
 pwNotReady|Zahlungen sind noch nicht aktiviert. Bitte später erneut versuchen.
 privacy|Datenschutz
 terms|Nutzungsbedingungen
@@ -194,3 +191,27 @@ remTitle|Zeit für deine Wörter! 📚
 remBody|Ein paar Minuten täglich halten deine Serie am Laufen 🔥
 remSet|Erinnerung um {time} eingestellt
 remOff|Erinnerung ausgeschaltet
+pwOnce|{price} · Einmalzahlung
+pwLifetime|Kein Abo: lebenslanger Zugang zu allen Lektionen und künftigen Kursen.
+pwBuyOnce|Einmal kaufen · {price}
+pwSoonBtn|Bald verfügbar
+pwSoon|Bezahlen ist bald möglich. Deine kostenlosen Lektionen funktionieren weiter.
+pwHave|Ich habe schon gekauft
+pwWait|Dein Kauf wird aktiviert…
+pwPending|Schon bezahlt? Die Aktivierung kann eine Minute dauern. Tippe auf „Ich habe schon gekauft“, um erneut zu prüfen.
+pwDevNote|Premium funktioniert immer auf einem Handy. Du kannst es einmal alle 30 Tage auf ein anderes Handy übertragen.
+pwSignInFirst|Melde dich zuerst an oder erstelle ein kostenloses Konto, damit dein Kauf damit verknüpft wird.
+pwNone|Für dieses Konto wurde kein Kauf gefunden.
+pwFail|Der Kauf konnte nicht bestätigt werden. Falls du belastet wurdest, tippe auf „Ich habe schon gekauft“.
+devTitle|Premium ist auf einem anderen Handy
+devOther|Dieser Kauf ist auf einem anderen Handy aktiv ({label}, zuletzt gesehen {time}). Auf dieses Handy übertragen?
+devMove|Auf dieses Handy übertragen
+devMoved|Premium ist jetzt auf diesem Handy aktiv.
+devWait|Du kannst es am {date} wieder übertragen.
+devThis|Premium ist auf diesem Handy aktiv.
+devManage|Gerät verwalten
+devOffline|Geh online, damit wir deinen Kauf prüfen können.
+devUnknown|unbekanntes Gerät
+devFree|Kostenlose Lektionen und Synchronisierung funktionieren auf diesem Handy weiterhin.
+devCheck|Erneut prüfen
+devNow|Nicht jetzt

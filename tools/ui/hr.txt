@@ -178,10 +178,7 @@ pwBuy|Pretplati se
 pwRestore|Vrati kupnju
 pwAndroid|Pretplata je dostupna u Android aplikaciji na Google Playu.
 pwWebHave|Već si pretplaćen? Prijavi se istim računom.
-pwSignInFirst|Prvo se prijavi ili napravi besplatan račun da se pretplata poveže s njim.
 pwActive|Premium je aktivan ✓
-pwNone|Nema aktivne pretplate.
-pwFail|Kupnja nije potvrđena. Ako ti je naplaćeno, dodirni „Vrati kupnju”.
 pwNotReady|Plaćanja još nisu uključena. Pokušaj kasnije.
 privacy|Pravila privatnosti
 terms|Uvjeti korištenja
@@ -194,3 +191,27 @@ remTitle|Vrijeme je za riječi! 📚
 remBody|Nekoliko minuta dnevno čuva tvoj niz 🔥
 remSet|Podsjetnik postavljen za {time}
 remOff|Podsjetnik isključen
+pwOnce|{price} · jednokratno plaćanje
+pwLifetime|Bez pretplate: doživotan pristup svim lekcijama i budućim tečajevima.
+pwBuyOnce|Kupi jednom · {price}
+pwSoonBtn|Uskoro
+pwSoon|Plaćanje stiže uskoro. Tvoje besplatne lekcije i dalje rade.
+pwHave|Već sam kupio
+pwWait|Aktiviramo tvoju kupnju…
+pwPending|Već si platio? Aktivacija može potrajati minutu. Dodirni „Već sam kupio” za ponovnu provjeru.
+pwDevNote|Premium radi na jednom telefonu istodobno. Možeš ga premjestiti na drugi telefon jednom u 30 dana.
+pwSignInFirst|Najprije se prijavi ili izradi besplatan račun kako bi kupnja bila povezana s njim.
+pwNone|Za ovaj račun nije pronađena nijedna kupnja.
+pwFail|Kupnju nije moguće potvrditi. Ako ti je naplaćeno, dodirni „Već sam kupio”.
+devTitle|Premium je na drugom telefonu
+devOther|Ova kupnja aktivna je na drugom telefonu ({label}, zadnji put viđen {time}). Premjestiti je na ovaj telefon?
+devMove|Premjesti na ovaj telefon
+devMoved|Premium je sada aktivan na ovom telefonu.
+devWait|Ponovno ga možeš premjestiti {date}.
+devThis|Premium je aktivan na ovom telefonu.
+devManage|Upravljanje uređajem
+devOffline|Spoji se na internet da provjerimo kupnju.
+devUnknown|nepoznati uređaj
+devFree|Besplatne lekcije i sinkronizacija i dalje rade na ovom telefonu.
+devCheck|Provjeri ponovno
+devNow|Ne sada

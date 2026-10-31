@@ -32,14 +32,18 @@ const langInfo = code => LANGS.find(l => l.code === code);
 const has = id => M[id] != null;
 const mean = id => M[id];
 
-/* ---------- access: free lessons, then Premium ($4/month, Google Play subscription "premium_monthly") ----------
+/* ---------- access: free lessons, then Premium (one-time $5 "lifetime" via Lemon Squeezy on the web; see LS below) ----------
    FREE.per = 'app': the first FREE.lessons lessons completed anywhere in the app (all levels, all language courses) are free.
    Signed in, lessons sync, so the count is per account; as a guest it is per device. Set per: 'level' for FREE.lessons per level.
-   Lessons already completed always stay open. Premium comes only from the server (profiles.premium, set by verify-purchase). */
+   Lessons already completed always stay open. Premium comes only from the server (profiles.premium, set by the lemonsqueezy-webhook
+   Edge Function) and opens only on the account's one active device (premium-device Edge Function; R.dev caches the answer 5 days offline). */
 const FREE = { lessons: 5, per: 'app' };
+const DEV_CACHE = 5 * 864e5, DEV_EVERY = 10 * 6e4;   // device answer valid offline 5 days; re-checked every 10 min while open
 const ACCESS = {
   paywall: true, FREE,
-  isPremium: () => !!(R && R.premium && R.acct && R.acct.uid) && (!R.premiumUntil || Date.parse(R.premiumUntil) + 3 * 864e5 > Date.now()),
+  owned: () => !!(R && R.premium && R.acct && R.acct.uid) && (!R.premiumUntil || Date.parse(R.premiumUntil) + 3 * 864e5 > Date.now()),
+  devOk: () => !!(R && R.dev && R.dev.active && R.dev.uid === (R.acct && R.acct.uid) && Date.now() - (R.dev.at || 0) < DEV_CACHE),
+  isPremium() { return this.owned() && this.devOk(); },
   used(lv) {
     let n = 0;
     Object.keys(R.courses || {}).forEach(c => { const ls = R.courses[c].lessons || {};
@@ -387,51 +391,75 @@ function levelScreen(lv, page) {
     startLesson(lessonObj(lv, i));
   });
 }
-/* paywall: price, features, subscribe (Android app only), restore, legal links */
+/* paywall: features, "$5 once" (Lemon Squeezy checkout), "I already bought", one-device note, legal links.
+   Not configured (LS.checkoutUrl empty) → "coming soon", nothing can be paid. Owned on another phone → deviceScreen. */
 function paywallScreen(lv) {
   stopAudio();
-  const back = () => (lv && LV[lv] ? levelScreen(lv) : home()), prem = ACCESS.isPremium();
+  if (ACCESS.owned() && !ACCESS.devOk()) return deviceScreen(lv);
+  const back = () => (lv && LV[lv] ? levelScreen(lv) : home()), prem = ACCESS.isPremium(), ready = !!LS.checkoutUrl;
+  document.body.dataset.billing = ready ? 'lemonsqueezy' : 'none';
   screen(`<div class="top"><button class="x" aria-label="${esc(t('back'))}">✕</button><div class="h2">💎 ${t('premium')}</div></div>
     <div class="scroll"><div class="pw">
       <div class="pwhero">💎</div><h1>${t(prem ? 'pwActive' : 'pwTitle')}</h1>${prem ? '' : `<p class="tsub">${t('pwText')}</p>`}
+      <div class="amsg ${ready || prem ? '' : 'info'}" id="pwMsg" role="status">${ready || prem ? '' : t('pwSoon')}</div>
       <ul class="pwf">${['pwF1', 'pwF2', 'pwF3', 'pwF4'].map(k => `<li><i>✓</i><span>${t(k)}</span></li>`).join('')}</ul>
-      <div class="pwprice"><b id="pwPrice">${esc(t('pwPrice', { price: webPrice() }))}</b><small>${t('pwCancel')}</small></div>
-      <div class="amsg" id="pwMsg" role="status"></div>
+      <div class="pwprice"><b id="pwPrice">${esc(t('pwOnce', { price: lsPrice() }))}</b><small>${t('pwLifetime')}</small><small class="pwdev">📱 ${t('pwDevNote')}</small></div>
     </div></div>
-    <div class="btns pwb"><button class="btn" id="pwBuy" ${prem ? 'hidden' : ''}>${t('pwBuy')}</button><button class="lnk" id="pwRestore">${t('pwRestore')}</button>
+    <div class="btns pwb"><button class="btn" id="pwBuy" ${prem ? 'hidden' : ''} ${ready ? '' : 'disabled'}>${ready ? esc(t('pwBuyOnce', { price: lsPrice() })) : t('pwSoonBtn')}</button><button class="lnk" id="pwRestore" ${prem ? 'hidden' : ''}>${t('pwHave')}</button>
       <div class="legal">${legalLinks()}</div></div>`);
   bindX(back);
-  const g = id => document.getElementById(id), say = (k, ok) => { const m = g('pwMsg'); if (m) { m.textContent = t(k); m.classList.toggle('ok', !!ok); } };
+  const g = id => document.getElementById(id), say = (k, ok, v) => { const m = g('pwMsg'); if (m) { m.className = 'amsg' + (ok ? ' ok' : ''); m.textContent = t(k, v); } };
   const done = () => { toast(esc(t('pwActive'))); later(back, 900); };
-  billing().then(svc => {
-    if (!g('pwBuy')) return;
-    if (!svc) {   // web / iOS / desktop: no Google Play Billing → no payments here
-      document.body.dataset.billing = 'none';
-      if (!prem) { g('pwBuy').className = 'btn ghost'; g('pwBuy').textContent = t(signedIn() ? 'pwRestore' : 'signIn'); g('pwRestore').hidden = true;
-        const m = g('pwMsg'); m.className = 'amsg info'; m.textContent = t('pwAndroid') + ' ' + t('pwWebHave'); }
-    } else {
-      document.body.dataset.billing = 'play';
-      playPrice().then(p => { if (p && g('pwPrice')) g('pwPrice').textContent = t('pwPrice', { price: p }); });
-    }
-  });
-  const needAcct = () => { authScreen(signedIn() ? 'in' : 'up', { text: t('pwSignInFirst') }); };
   g('pwBuy').onclick = async () => {
-    if (!signedIn()) return needAcct();
-    const svc = await billing(), btn = g('pwBuy');
-    busy(btn, true);
+    if (!ready) return;
+    if (!signedIn()) return authScreen('up', { text: t('pwSignInFirst') });
+    const btn = g('pwBuy'); busy(btn, true);
     try {
-      if (!svc) { await loadSB(); await loadProfile(); if (ACCESS.isPremium()) return done(); busy(btn, false); return say('pwNone'); }
-      if (await buyPremium()) return done();
-      busy(btn, false); say('pwNone');
-    } catch (e) { busy(btn, false); if (e && (e.name === 'AbortError' || e.code === 'aborted')) return; say(payErr(e)); }
+      if (!navigator.onLine) throw new Error('offline');
+      await loadSB(); const { data } = await sb.auth.getSession(); if (!data.session) { busy(btn, false); return authScreen('in', { text: t('pwSignInFirst') }); }
+      await openCheckout(data.session.user, () => { say('pwWait', true); waitPremium().then(ok => { if (!g('pwMsg')) return; if (ok) return done(); say('pwPending'); }); });
+      busy(btn, false);
+    } catch (e) { busy(btn, false); say(payErr(e)); }
   };
   g('pwRestore').onclick = async () => {
     if (!signedIn()) return authScreen('in', { text: t('pwSignInFirst') });
     const btn = g('pwRestore'); busy(btn, true);
-    try { if (await restorePremium()) return done(); busy(btn, false); say('pwNone'); }
-    catch (e) { busy(btn, false); say(payErr(e)); }
+    try { await restorePremium(); busy(btn, false);
+      if (ACCESS.isPremium()) return done();
+      if (ACCESS.owned()) return deviceScreen(lv);
+      say('pwNone');
+    } catch (e) { busy(btn, false); say(payErr(e)); }
   };
 }
+/* "Premium is on another phone": move it here (server allows once per 30 days). Free lessons + sync keep working. */
+function deviceScreen(lv, fromProfile) {
+  stopAudio();
+  const back = fromProfile ? profileScreen : () => (lv && LV[lv] ? levelScreen(lv) : home());
+  const d = R.dev || {}, here = ACCESS.isPremium(), fresh = d.uid === (R.acct && R.acct.uid) && d.at;
+  const lbl = `<bdi>${esc((d.other && d.other.label) || t('devUnknown'))}</bdi>`, seen = d.other && d.other.last_seen ? `<bdi>${esc(fmtWhen(d.other.last_seen))}</bdi>` : '–';
+  const moveOk = !here && d.other && d.canMove, wait = !here && d.other && !d.canMove && d.nextMove;
+  screen(`<div class="top"><button class="x" aria-label="${esc(t('back'))}">✕</button><div class="h2">📱 ${t(fromProfile ? 'devManage' : 'premium')}</div></div>
+    <div class="scroll"><div class="pw dev">
+      <div class="pwhero">${here ? '💎' : '📱'}</div><h1>${t(here ? 'devThis' : fresh && d.other ? 'devTitle' : 'devManage')}</h1>
+      ${here ? `<p class="tsub dlab"><bdi>${esc(deviceLabel())}</bdi></p>` : d.other ? `<p class="tsub" id="devOther">${t('devOther', { label: lbl, time: seen })}</p>` : ''}
+      <p class="pwdev">📱 ${t('pwDevNote')}</p>${here ? '' : `<p class="pwdev">✓ ${t('devFree')}</p>`}
+      <div class="amsg ${wait ? 'info' : ''}" id="devMsg" role="status">${wait ? t('devWait', { date: `<bdi>${esc(fmtDate(d.nextMove))}</bdi>` }) : (!fresh && !here ? t('devOffline') : '')}</div>
+    </div></div>
+    <div class="btns">${moveOk ? `<button class="btn" id="devMove">${t('devMove')}</button>` : ''}<button class="btn ghost" id="devCheck">${t('devCheck')}</button>
+      ${moveOk ? `<button class="lnk mut" id="devNow">${t('devNow')}</button>` : ''}</div>`);
+  bindX(back);
+  const g = id => document.getElementById(id), say = (k, ok) => { const m = g('devMsg'); if (m) { m.className = 'amsg' + (ok ? ' ok' : ''); m.textContent = t(k); } };
+  if (g('devNow')) g('devNow').onclick = back;
+  g('devCheck').onclick = async () => { const btn = g('devCheck'); busy(btn, true);
+    try { await deviceCheck(); deviceScreen(lv, fromProfile); } catch (e) { busy(btn, false); say(navigator.onLine ? 'pwFail' : 'devOffline'); } };
+  if (g('devMove')) g('devMove').onclick = async () => { const btn = g('devMove'); busy(btn, true);
+    try { await deviceCheck(true); busy(btn, false);
+      if (ACCESS.isPremium()) { toast(esc(t('devMoved'))); return fromProfile ? deviceScreen(lv, true) : later(back, 700); }
+      deviceScreen(lv, fromProfile);
+    } catch (e) { busy(btn, false); say(navigator.onLine ? 'pwFail' : 'devOffline'); } };
+}
+const fmtDate = v => { try { return new Intl.DateTimeFormat(LANG, { dateStyle: 'medium' }).format(new Date(v)); } catch (e) { return String(v).slice(0, 10); } };
+const fmtWhen = v => { try { return new Intl.DateTimeFormat(LANG, { dateStyle: 'short', timeStyle: 'short' }).format(new Date(v)); } catch (e) { return String(v).slice(0, 16); } };
 const legalLinks = () => `<a href="privacy.html" target="_blank" rel="noopener">${t('privacy')}</a><span aria-hidden="true"> · </span><a href="terms.html" target="_blank" rel="noopener">${t('terms')}</a>`;
 const lessonObj = (lv, i) => ({ id: lv + '-' + (i + 1), lv, i, title: lv + ' · ' + t('lessonN', { n: i + 1 }), words: LV[lv].lessons[i].map(id => W[id]) });
 
@@ -867,6 +895,7 @@ async function afterSignIn(quiet) {
   const { data } = await sb.auth.getSession(); user = data.session ? data.session.user : user;
   R.acct = Object.assign(R.acct || {}, { email: user.email, uid: user.id }); saveLocal();
   try { await syncAll(); await loadProfile(); } catch (e) { /* offline: stays dirty, retried later */ }
+  try { await deviceCheck(); } catch (e) {}
   if (!quiet) toast(esc(t('signedInMsg')));
   profileScreen();
 }
@@ -881,13 +910,13 @@ function profileScreen() {
       <div class="pcard"><div class="av">${esc(((a.name || a.email || '?').trim()[0] || '?').toUpperCase())}</div>
         <div class="pinfo"><label class="fld nm"><span>${t('nameLabel')}</span><span class="nrow"><input id="pName" type="text" dir="auto" maxlength="80" autocomplete="name" value="${esc(a.name || '')}"><button class="sbtn" id="pSave">${t('save')}</button></span></label>
         <div class="pmail" dir="ltr">${esc(a.email || '')}</div>
-        ${ACCESS.isPremium() ? `<div class="pprem">💎 ${t('premium')}</div>` : ''}
+        ${ACCESS.owned() ? `<div class="pprem">💎 ${t('premium')}${ACCESS.devOk() ? '' : ' · 📱'}</div>` : ''}
         <div class="psync ${a.dirty ? 'pend' : ''}" id="psync">${a.dirty ? '⏳ ' + t('syncPending') : (when ? '☁️ ' + t('syncedAt', { time: when }) : '')}</div></div></div>
       <div class="sect">${t('myCourses')}</div>
       <div class="plist">${codes.map(code => { const c = R.courses[code], n = Object.keys(c.words).filter(id => c.words[id].learnedAt).length;
         return `<div class="lang course pc">${flagImg(code)}<span class="lt2"><b>${esc(courseName(code))}</b><small>${t('wordsOfTotal', { a: n, b: TOTAL })} · 🔥 ${N(streakOf(c))} · ⚡ ${N(c.best60 || 0)}</small></span></div>`; }).join('')}</div>
     </div>
-    <div class="btns"><button class="btn ghost" id="pOut">${t('signOut')}</button><button class="lnk danger" id="pDel">${t('deleteAcct')}</button><div class="legal">${legalLinks()}</div></div>`);
+    <div class="btns">${ACCESS.owned() ? `<button class="btn ghost" id="pDev">📱 ${t('devManage')}</button>` : `<button class="lnk" id="pHave">💎 ${t('pwHave')}</button>`}<button class="btn ghost" id="pOut">${t('signOut')}</button><button class="lnk danger" id="pDel">${t('deleteAcct')}</button><div class="legal">${legalLinks()}</div></div>`);
   bindX(home);
   const g = id => document.getElementById(id);
   g('pSave').onclick = async () => {
@@ -899,12 +928,16 @@ function profileScreen() {
     const btn = g('pOut'); busy(btn, true);
     let r; try { r = await syncAll(); } catch (e) { busy(btn, false); toast(esc(t('errOffline'))); return; }
     try { await sb.auth.signOut({ scope: 'local' }); } catch (e) {}
-    user = null; R.acct = null; R.premium = false; R.premiumUntil = null;
+    user = null; R.acct = null; R.premium = false; R.premiumUntil = null; R.dev = null;
     if (r !== null) { R.courses = {}; R.cur = null; S = initCourse({}); }   // progress is safe in the cloud; if the session had expired, keep it locally
     saveLocal();
     afterLang();
   };
   g('pDel').onclick = deleteConfirm;
+  if (g('pDev')) g('pDev').onclick = () => { deviceScreen(null, true); if (navigator.onLine) deviceCheck().then(() => { if (document.getElementById('devCheck')) deviceScreen(null, true); }).catch(() => {}); };
+  if (g('pHave')) g('pHave').onclick = async () => { const btn = g('pHave'); busy(btn, true);
+    try { await restorePremium(); busy(btn, false); if (ACCESS.owned()) return ACCESS.devOk() ? (toast(esc(t('pwActive'))), profileScreen()) : deviceScreen(null, true); toast(esc(t('pwNone'))); }
+    catch (e) { busy(btn, false); toast(esc(t(payErr(e)))); } };
   if (navigator.onLine && (a.dirty || !a.lastSync || Date.now() - a.lastSync > 60000)) syncAll().then(r => { if (r !== null && document.getElementById('psync')) profileScreen(); }).catch(() => {});
 }
 function deleteConfirm() {
@@ -922,28 +955,100 @@ function deleteConfirm() {
       if (!r.ok) throw { status: r.status };
       try { await sb.auth.signOut({ scope: 'local' }); } catch (e) {}
       try { localStorage.removeItem(SB.store); } catch (e) {}
-      user = null; R.acct = null; R.premium = false; R.premiumUntil = null; saveLocal();
+      user = null; R.acct = null; R.premium = false; R.premiumUntil = null; R.dev = null; saveLocal();
       home(); toast(esc(t('deleted')));
     } catch (e) { busy(btn, false); toast(esc(errText(e))); }
   };
 }
-/* ---------- Google Play Billing (only inside the Android app = TWA): Digital Goods API + Payment Request ----------
-   Feature-detected; on the web billing() resolves null and the paywall says "available in the Android app".
-   Every purchase token is verified server-side by the verify-purchase Edge Function, which alone sets profiles.premium. */
-const PLAY = { method: 'https://play.google.com/billing', product: 'premium_monthly', usd: 4 };
+/* ---------- web purchase: Lemon Squeezy (merchant of record) one-time "$5 lifetime" ----------
+   LS.checkoutUrl = the product's checkout link from Lemon Squeezy (Products → Share → checkout URL, e.g.
+   https://STORE.lemonsqueezy.com/buy/VARIANT-UUID). Empty = payments not live: the paywall says "coming soon".
+   The checkout gets checkout[custom][user_id] + checkout[email]; the lemonsqueezy-webhook Edge Function verifies the signed
+   order_created / order_refunded webhooks and alone sets profiles.premium. The client never decides premium. */
+const LS = { checkoutUrl: '', usd: 5 };
+const lsPrice = () => { try { return new Intl.NumberFormat(LANG, { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 2 }).format(LS.usd); } catch (e) { return '$' + LS.usd; } };
+let lemonP = null;
+function loadLemon() {
+  if (!lemonP) lemonP = new Promise((ok, no) => { const sc = document.createElement('script'); sc.src = 'https://app.lemonsqueezy.com/js/lemon.js'; sc.defer = true;
+    sc.onload = () => { try { window.createLemonSqueezy && window.createLemonSqueezy(); } catch (e) {} window.LemonSqueezy ? ok(window.LemonSqueezy) : no(new Error('lemon')); };
+    sc.onerror = () => { lemonP = null; no(new Error('lemon')); }; document.head.appendChild(sc); });
+  return lemonP;
+}
+function checkoutLink(u, embed) {
+  const q = new URLSearchParams(); q.set('checkout[custom][user_id]', u.id); if (u.email) q.set('checkout[email]', u.email);
+  q.set('checkout[custom][lang]', LANG || ''); if (embed) q.set('embed', '1');
+  return LS.checkoutUrl + (LS.checkoutUrl.includes('?') ? '&' : '?') + q.toString();
+}
+async function openCheckout(u, onPaid) {
+  let fired = false; const paid = () => { if (!fired) { fired = true; onPaid(); } };
+  try {
+    const L = await loadLemon();
+    L.Setup({ eventHandler: e => { if (e && e.event === 'Checkout.Success') paid(); } });
+    L.Url.Open(checkoutLink(u, true));
+  } catch (e) {   // lemon.js blocked → hosted checkout in a new tab; check again when the user comes back
+    window.open(checkoutLink(u, false), '_blank', 'noopener');
+    const vis = () => { if (document.visibilityState === 'visible') { document.removeEventListener('visibilitychange', vis); paid(); } };
+    document.addEventListener('visibilitychange', vis);
+  }
+}
+/* after checkout: the webhook usually lands within seconds; poll the server ~90 s */
+async function waitPremium() {
+  for (let i = 0; i < 30; i++) {
+    try { await deviceCheck(); if (ACCESS.owned()) return true; } catch (e) {}
+    await new Promise(r => setTimeout(r, 3000));
+  }
+  return false;
+}
+/* one active device per account; the device id is a random UUID kept on this device */
+function deviceId() {
+  let id = null; try { id = localStorage.getItem('w3g-device'); } catch (e) {}
+  if (!/^[0-9a-f-]{36}$/i.test(id || '')) {
+    id = (crypto.randomUUID && crypto.randomUUID()) || 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => { const r = crypto.getRandomValues(new Uint8Array(1))[0] & 15; return (c === 'x' ? r : (r & 3) | 8).toString(16); });
+    try { localStorage.setItem('w3g-device', id); } catch (e) {}
+  }
+  return id;
+}
+function deviceLabel() {
+  const ua = navigator.userAgent || '';
+  const os = /Android/i.test(ua) ? 'Android' : /iPhone/i.test(ua) ? 'iPhone' : /iPad/i.test(ua) ? 'iPad' : /Windows/i.test(ua) ? 'Windows' : /Mac OS X|Macintosh/i.test(ua) ? 'Mac' : /CrOS/i.test(ua) ? 'ChromeOS' : /Linux/i.test(ua) ? 'Linux' : '';
+  const m = /Android[^;)]*;\s*([^;)]+?)(?:\sBuild|\))/i.exec(ua), model = m && !/^(K|wv|Linux)$/i.test(m[1].trim()) ? m[1].trim() : '';
+  const br = /SamsungBrowser/i.test(ua) ? 'Samsung Internet' : /EdgA?\//i.test(ua) ? 'Edge' : /OPR\//i.test(ua) ? 'Opera' : /Firefox|FxiOS/i.test(ua) ? 'Firefox' : /CriOS|Chrome/i.test(ua) ? 'Chrome' : /Safari/i.test(ua) ? 'Safari' : '';
+  return [model || os, br].filter(Boolean).join(' · ').slice(0, 80) || 'Browser';
+}
+let devChecking = null;
+function deviceCheck(claim) {
+  if (devChecking && !claim) return devChecking;
+  const run = (async () => {
+    await loadSB(); const { data } = await sb.auth.getSession(); if (!data.session) throw { code: 'no_session' };
+    const r = await fetch(SB.url + '/functions/v1/premium-device', { method: 'POST', headers: { Authorization: 'Bearer ' + data.session.access_token, apikey: SB.key, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ device_id: deviceId(), label: deviceLabel(), claim: !!claim }) });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok && r.status !== 429) throw { code: j.error || 'device_failed', status: r.status };
+    R.premium = !!j.premium; R.premiumUntil = j.premium_until || null;
+    R.dev = { uid: data.session.user.id, active: !!j.active, at: Date.now(), other: j.other || null, canMove: !!j.can_move, nextMove: j.next_move_at || null };
+    saveLocal(); return j;
+  })();
+  if (!claim) { devChecking = run; run.finally(() => { devChecking = null; }).catch(() => {}); }
+  return run;
+}
+const devStale = () => !R.dev || R.dev.uid !== (R.acct && R.acct.uid) || Date.now() - (R.dev.at || 0) > DEV_EVERY;
+function devTick() { if (signedIn() && navigator.onLine && document.visibilityState === 'visible' && devStale()) deviceCheck().catch(() => {}); }
+setInterval(devTick, DEV_EVERY);
+document.addEventListener('visibilitychange', devTick);
+async function restorePremium() { await loadSB(); await loadProfile(); await deviceCheck(); return ACCESS.isPremium(); }
+const payErr = e => (!navigator.onLine || (e && /offline/.test(e.message || ''))) ? 'errOffline' : 'pwFail';
+
+/* ---------- Google Play Billing: DORMANT (kept for a possible Android/TWA build; PLAY.enabled = false → billing() is null) ----------
+   Digital Goods API + Payment Request, verified server-side by the verify-purchase Edge Function (501 until configured). */
+const PLAY = { enabled: false, method: 'https://play.google.com/billing', product: 'premium_monthly', usd: 4 };
 let dgs = null, dgsTried = null;
 function billing() {
+  if (!PLAY.enabled) return Promise.resolve(null);
   if (!dgsTried) dgsTried = (async () => {
     try { if ('getDigitalGoodsService' in window && 'PaymentRequest' in window) dgs = await window.getDigitalGoodsService(PLAY.method); } catch (e) { dgs = null; }
     return dgs || null;
   })();
   return dgsTried;
-}
-const webPrice = () => { try { return new Intl.NumberFormat(LANG, { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 2 }).format(PLAY.usd); } catch (e) { return '$' + PLAY.usd; } };
-async function playPrice() {
-  const svc = await billing(); if (!svc) return null;
-  try { const [d] = await svc.getDetails([PLAY.product]); if (d && d.price) return new Intl.NumberFormat(LANG, { style: 'currency', currency: d.price.currency }).format(Number(d.price.value)); } catch (e) {}
-  return null;
 }
 async function verifyPurchase(token) {
   await loadSB(); const { data } = await sb.auth.getSession(); if (!data.session) throw { code: 'no_session' };
@@ -951,21 +1056,8 @@ async function verifyPurchase(token) {
   const j = await r.json().catch(() => ({}));
   if (!r.ok) throw { code: j.error || 'verify_failed', status: r.status };
   R.premium = !!j.premium; R.premiumUntil = j.expires_at || null; saveLocal();
-  return ACCESS.isPremium();
+  return ACCESS.owned();
 }
-async function buyPremium() {
-  const svc = await billing(); if (!svc) throw { code: 'no_billing' };
-  const req = new PaymentRequest([{ supportedMethods: PLAY.method, data: { sku: PLAY.product } }], { total: { label: 'Total', amount: { currency: 'USD', value: '0' } } });
-  const res = await req.show();
-  try { const ok = await verifyPurchase(res.details.purchaseToken); await res.complete(ok ? 'success' : 'fail'); return ok; }
-  catch (e) { try { await res.complete('fail'); } catch (x) {} throw e; }
-}
-async function restorePremium() {
-  const svc = await billing();
-  if (svc) { let ok = false; for (const p of await svc.listPurchases()) if (p.itemId === PLAY.product) ok = (await verifyPurchase(p.purchaseToken)) || ok; if (ok) return true; }
-  await loadSB(); await loadProfile(); return ACCESS.isPremium();   // bought on another device / account already premium
-}
-const payErr = e => (e && e.code === 'billing_not_configured') ? 'pwNotReady' : (!navigator.onLine ? 'errOffline' : 'pwFail');
 const acctOpen = () => signedIn() ? profileScreen() : authScreen('up');
 /* app open: restore session, handle auth links (email confirm / password recovery / OAuth), then sync */
 function acctBoot() {
@@ -979,7 +1071,7 @@ function acctBoot() {
     if (!user) { if (R.acct) { R.acct = null; saveLocal(); } return; }
     const first = !(R.acct && R.acct.uid === user.id);
     R.acct = Object.assign(R.acct || {}, { email: user.email, uid: user.id }); saveLocal();
-    return syncAll().then(ch => { loadProfile().then(() => billing()).then(svc => svc && restorePremium()).catch(() => {}); if (first && linked) { toast(esc(t('signedInMsg'))); } if (ch && $app.querySelector('.levels')) home(); });
+    return syncAll().then(ch => { loadProfile().then(() => deviceCheck()).catch(() => {}); if (first && linked) { toast(esc(t('signedInMsg'))); } if (ch && $app.querySelector('.levels')) home(); });
   }).catch(() => {});
 }
 window.addEventListener('online', () => { if (R.acct && R.acct.dirty) syncAll().catch(() => {}); });
@@ -988,7 +1080,7 @@ document.addEventListener('visibilitychange', () => { if (document.visibilitySta
 /* ---------- boot ---------- */
 let VERSION = 1;
 window.__app = { get S() { return S; }, get R() { return R; }, W, LV, M, home, DEBUG, levelScreen, lessonObj, settingsScreen, langPicker, ACCESS,
-  targetPicker, courseSwitcher, setCourse, COURSES, FREE, paywallScreen, billing, PLAY, checkReminder, setReminder, REM,
+  targetPicker, courseSwitcher, setCourse, COURSES, FREE, paywallScreen, deviceScreen, billing, PLAY, LS, deviceCheck, deviceId, deviceLabel, checkoutLink, checkReminder, setReminder, REM,
   save, acct: { SB, authScreen, profileScreen, deleteConfirm, syncAll, mergeCourse, loadSB, get user() { return user; }, get sb() { return sb; } },
   get lang() { return LANG; }, setLang: c => { R.lang = c; save(); return applyLang(c); }, t,
   cardFor: id => { const w = W[id]; learnCard({ L: lessonObj(w.level, w.li), seq: [w], i: 0, t0: 0 }); stopAudio(); },
