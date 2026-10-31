@@ -237,5 +237,6 @@
  "devUnknown": "nieznane urządzenie",
  "devFree": "Darmowe lekcje i synchronizacja nadal działają na tym telefonie.",
  "devCheck": "Sprawdź ponownie",
- "devNow": "Nie teraz"
+ "devNow": "Nie teraz",
+ "premLoading": "Pobieranie lekcji…"
 }

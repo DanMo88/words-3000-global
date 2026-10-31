@@ -234,5 +234,6 @@
  "devUnknown": "bilinmeyen cihaz",
  "devFree": "Ücretsiz dersler ve eşitleme bu telefonda da çalışır.",
  "devCheck": "Tekrar kontrol et",
- "devNow": "Şimdi değil"
+ "devNow": "Şimdi değil",
+ "premLoading": "Ders indiriliyor…"
 }

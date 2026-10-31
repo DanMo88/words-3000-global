@@ -215,3 +215,4 @@ devUnknown|dispositivo desconocido
 devFree|Las lecciones gratis y la sincronización siguen funcionando en este teléfono.
 devCheck|Comprobar de nuevo
 devNow|Ahora no
+premLoading|Descargando la lección…

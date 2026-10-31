@@ -231,5 +231,6 @@
  "devUnknown": "tuntematon laite",
  "devFree": "Ilmaiset oppitunnit ja synkronointi toimivat edelleen tässä puhelimessa.",
  "devCheck": "Tarkista uudelleen",
- "devNow": "Ei nyt"
+ "devNow": "Ei nyt",
+ "premLoading": "Oppituntia ladataan…"
 }

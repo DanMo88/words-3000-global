@@ -222,5 +222,6 @@
  "devUnknown": "未知设备",
  "devFree": "免费课程和同步在这部手机上照常可用。",
  "devCheck": "再次检查",
- "devNow": "以后再说"
+ "devNow": "以后再说",
+ "premLoading": "正在下载课程…"
 }

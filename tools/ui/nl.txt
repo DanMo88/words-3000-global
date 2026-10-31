@@ -215,3 +215,4 @@ devUnknown|onbekend apparaat
 devFree|Gratis lessen en synchronisatie werken nog steeds op deze telefoon.
 devCheck|Opnieuw controleren
 devNow|Niet nu
+premLoading|De les wordt gedownload…

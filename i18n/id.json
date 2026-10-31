@@ -222,5 +222,6 @@
  "devUnknown": "perangkat tak dikenal",
  "devFree": "Pelajaran gratis dan sinkronisasi tetap berjalan di ponsel ini.",
  "devCheck": "Periksa lagi",
- "devNow": "Nanti saja"
+ "devNow": "Nanti saja",
+ "premLoading": "Mengunduh pelajaran…"
 }

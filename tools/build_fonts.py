@@ -15,6 +15,9 @@ def walk(o):
     elif isinstance(o, list): [walk(v) for v in o]
 for f in glob.glob('i18n/*.json') + glob.glob('data/meanings/*/*.json'): walk(json.load(open(f)))
 for f in glob.glob('data/[AB]*.json'): walk(json.load(open(f)))
+PRIV = os.environ.get('W3G_PRIVATE')   # private full copy (premium meanings are not in this repo): REQUIRED so premium words never miss glyphs
+if not PRIV: raise SystemExit('set W3G_PRIVATE=/path/to/private/full-copy (premium meanings live outside the repo)')
+for f in glob.glob(PRIV + '/data/meanings/*/*.json') + glob.glob(PRIV + '/data/[AB]*.json'): walk(json.load(open(f)))
 text.update(chr(c) for c in range(0x20, 0x7f)); text.update(chr(c) for c in list(range(0xA0, 0x250)) + list(range(0x400, 0x460)));  # full Latin-1/Ext-A/B + basic Cyrillic so new meanings never miss glyphs
 text.update('–—‘’“”„«»…·•′″%‰№°×÷+−±')
 def ranges(cps):

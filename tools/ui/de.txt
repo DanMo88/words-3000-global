@@ -215,3 +215,4 @@ devUnknown|unbekanntes Gerät
 devFree|Kostenlose Lektionen und Synchronisierung funktionieren auf diesem Handy weiterhin.
 devCheck|Erneut prüfen
 devNow|Nicht jetzt
+premLoading|Lektion wird geladen…

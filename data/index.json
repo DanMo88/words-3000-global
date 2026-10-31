@@ -1,1 +1,1 @@
-{"version":41,"total":2973,"levels":[{"id":"A1","count":898,"available":true},{"id":"A2","count":789,"available":true},{"id":"B1","count":690,"available":true},{"id":"B2","count":596,"available":true}]}
+{"version":42,"total":2973,"levels":[{"id":"A1","count":898,"available":true,"lessons":90},{"id":"A2","count":789,"available":true,"lessons":79},{"id":"B1","count":690,"available":true,"lessons":69},{"id":"B2","count":596,"available":true,"lessons":60}],"free":5,"pv":1}

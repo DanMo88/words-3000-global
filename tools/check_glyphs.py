@@ -18,7 +18,8 @@ for l in langs:
     c = l['code']; texts = [l['name'], l['pick']]
     for v in json.load(open(f'i18n/{c}.json')).values():
         texts += list(v.values()) if isinstance(v, dict) else [v]
-    for f in glob.glob(f'data/meanings/{c}/*.json'):
+    PRIV = os.environ.get('W3G_PRIVATE', '')   # also check premium meanings (kept outside the repo)
+    for f in glob.glob(f'data/meanings/{c}/*.json') + (glob.glob(f'{PRIV}/data/meanings/{c}/*.json') if PRIV else []):
         texts += list(json.load(open(f)).values())
     texts += list(json.load(open('i18n/names.json')).get(c, {}).values())
     fonts = viz | w3g if c in ('fa', 'ar') else w3g

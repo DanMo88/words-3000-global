@@ -222,5 +222,6 @@
  "devUnknown": "thiết bị không xác định",
  "devFree": "Bài học miễn phí và đồng bộ vẫn hoạt động trên điện thoại này.",
  "devCheck": "Kiểm tra lại",
- "devNow": "Để sau"
+ "devNow": "Để sau",
+ "premLoading": "Đang tải bài học…"
 }

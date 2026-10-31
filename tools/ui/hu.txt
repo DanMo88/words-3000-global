@@ -215,3 +215,4 @@ devUnknown|ismeretlen eszköz
 devFree|Az ingyenes leckék és a szinkronizálás ezen a telefonon is működnek.
 devCheck|Újraellenőrzés
 devNow|Most nem
+premLoading|A lecke letöltése folyamatban…
