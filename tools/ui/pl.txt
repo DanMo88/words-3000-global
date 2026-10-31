@@ -127,3 +127,41 @@ newLanguage|Nowy język
 myCourses|Moje języki
 addLanguage|Dodaj nowy język
 langEnglishUS|Amerykański angielski
+acct|Konto
+acctGuestText|Załóż darmowe konto, aby zapisać postępy i korzystać z nich na wszystkich urządzeniach.
+signIn|Zaloguj się
+signUp|Załóż konto
+email|E-mail
+password|Hasło
+nameLabel|Imię
+pwHint|Co najmniej 8 znaków
+forgotPw|Nie pamiętasz hasła?
+googleBtn|Kontynuuj z Google
+guestContinue|Kontynuuj bez konta
+resetTitle|Resetowanie hasła
+resetText|Podaj swój e-mail, a wyślemy link do ustawienia nowego hasła.
+resetSend|Wyślij link
+resetSent|Jeśli istnieje konto z tym adresem, wysłaliśmy link do resetu.
+newPwSave|Zapisz nowe hasło
+pwSaved|Nowe hasło zostało zapisane.
+checkEmail|Prawie gotowe! Otwórz wiadomość wysłaną na {email}, potwierdź ją i zaloguj się.
+signedInMsg|Zalogowano. Postępy są zsynchronizowane ✓
+errGeneric|Coś poszło nie tak. Spróbuj ponownie.
+errOffline|Brak połączenia z internetem. Spróbuj ponownie, gdy będziesz online.
+errCreds|Nieprawidłowy e-mail lub hasło.
+errEmailTaken|Na ten adres jest już konto. Zaloguj się.
+errWeakPw|Hasło musi mieć co najmniej 8 znaków.
+errEmailInvalid|Podaj prawidłowy adres e-mail.
+errNotConfirmed|Najpierw potwierdź swój e-mail. Sprawdź skrzynkę.
+errRate|Zbyt wiele prób. Odczekaj kilka minut.
+syncedAt|Zsynchronizowano: {time}
+syncPending|Synchronizacja, gdy będziesz online
+save|Zapisz
+signOut|Wyloguj się
+deleteAcct|Usuń konto
+delTitle|Usunąć konto?
+delText|Twoje konto i wszystkie postępy zapisane online zostaną trwale usunięte. Tego nie da się cofnąć. Postępy na tym urządzeniu zostaną.
+delConfirm|Tak, usuń na zawsze
+cancel|Anuluj
+deleted|Twoje konto zostało usunięte.
+savePrompt|💾 Zapisz postępy: załóż darmowe konto

@@ -127,3 +127,41 @@ newLanguage|שפה חדשה
 myCourses|השפות שלי
 addLanguage|הוספת שפה חדשה
 langEnglishUS|אנגלית אמריקאית
+acct|חשבון
+acctGuestText|צרו חשבון חינמי כדי לשמור את ההתקדמות ולהשתמש בה בכל המכשירים.
+signIn|התחברות
+signUp|יצירת חשבון
+email|אימייל
+password|סיסמה
+nameLabel|שם
+pwHint|לפחות 8 תווים
+forgotPw|שכחת את הסיסמה?
+googleBtn|המשך עם Google
+guestContinue|המשך בלי חשבון
+resetTitle|איפוס סיסמה
+resetText|הזינו את האימייל ונשלח קישור להגדרת סיסמה חדשה.
+resetSend|שליחת קישור
+resetSent|אם קיים חשבון עם האימייל הזה, שלחנו קישור לאיפוס.
+newPwSave|שמירת סיסמה חדשה
+pwSaved|הסיסמה החדשה נשמרה.
+checkEmail|כמעט סיימנו! פתחו את האימייל שנשלח אל {email}, אשרו אותו ואז התחברו.
+signedInMsg|התחברת. ההתקדמות סונכרנה ✓
+errGeneric|משהו השתבש. נסו שוב.
+errOffline|אין חיבור לאינטרנט. נסו שוב כשתהיו מחוברים.
+errCreds|אימייל או סיסמה שגויים.
+errEmailTaken|לאימייל הזה כבר יש חשבון. נא להתחבר.
+errWeakPw|הסיסמה צריכה להכיל לפחות 8 תווים.
+errEmailInvalid|נא להזין כתובת אימייל תקינה.
+errNotConfirmed|קודם צריך לאשר את האימייל. בדקו את תיבת הדואר.
+errRate|יותר מדי ניסיונות. נא להמתין כמה דקות.
+syncedAt|סונכרן: {time}
+syncPending|יסונכרן כשתהיו מחוברים
+save|שמירה
+signOut|התנתקות
+deleteAcct|מחיקת החשבון
+delTitle|למחוק את החשבון?
+delText|החשבון וכל ההתקדמות שנשמרה ברשת יימחקו לצמיתות. אי אפשר לבטל את זה. ההתקדמות במכשיר הזה נשארת.
+delConfirm|כן, למחוק לצמיתות
+cancel|ביטול
+deleted|החשבון נמחק.
+savePrompt|💾 שמרו את ההתקדמות: צרו חשבון חינמי

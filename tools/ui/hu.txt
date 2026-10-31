@@ -127,3 +127,41 @@ newLanguage|Új nyelv
 myCourses|Nyelveim
 addLanguage|Új nyelv hozzáadása
 langEnglishUS|Amerikai angol
+acct|Fiók
+acctGuestText|Hozz létre ingyenes fiókot, hogy a haladásod megmaradjon, és minden eszközödön használhasd.
+signIn|Belépés
+signUp|Fiók létrehozása
+email|E-mail
+password|Jelszó
+nameLabel|Név
+pwHint|Legalább 8 karakter
+forgotPw|Elfelejtetted a jelszót?
+googleBtn|Folytatás Google-lel
+guestContinue|Folytatás fiók nélkül
+resetTitle|Jelszó visszaállítása
+resetText|Add meg az e-mail-címed, és küldünk egy linket az új jelszóhoz.
+resetSend|Link küldése
+resetSent|Ha van fiók ezzel az e-mail-címmel, elküldtük a visszaállító linket.
+newPwSave|Új jelszó mentése
+pwSaved|Az új jelszavad elmentve.
+checkEmail|Mindjárt kész! Nyisd meg a(z) {email} címre küldött e-mailt, erősítsd meg, majd lépj be.
+signedInMsg|Beléptél. A haladásod szinkronizálva ✓
+errGeneric|Hiba történt. Próbáld újra.
+errOffline|Nincs internetkapcsolat. Próbáld újra, ha online vagy.
+errCreds|Hibás e-mail-cím vagy jelszó.
+errEmailTaken|Ehhez az e-mail-címhez már tartozik fiók. Lépj be.
+errWeakPw|A jelszónak legalább 8 karakterből kell állnia.
+errEmailInvalid|Adj meg érvényes e-mail-címet.
+errNotConfirmed|Előbb erősítsd meg az e-mail-címed. Nézd meg a postafiókod.
+errRate|Túl sok próbálkozás. Várj pár percet.
+syncedAt|Szinkronizálva: {time}
+syncPending|Szinkronizál, amint online leszel
+save|Mentés
+signOut|Kijelentkezés
+deleteAcct|Fiók törlése
+delTitle|Törlöd a fiókodat?
+delText|A fiókod és az online mentett haladásod véglegesen törlődik. Ez nem vonható vissza. Az ezen az eszközön lévő haladás megmarad.
+delConfirm|Igen, végleges törlés
+cancel|Mégse
+deleted|A fiókodat töröltük.
+savePrompt|💾 Mentsd a haladásod: hozz létre ingyenes fiókot

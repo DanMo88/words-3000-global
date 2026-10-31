@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>Delete your account · English 3000 Words (Daniel Mozafari)</title>
+<link rel="icon" href="icons/icon-192.png">
+<style>
+@font-face{font-family:Vazirmatn;src:url(fonts/Vazirmatn-Regular.woff2) format("woff2");font-weight:400}
+@font-face{font-family:Vazirmatn;src:url(fonts/Vazirmatn-Bold.woff2) format("woff2");font-weight:700}
+*{box-sizing:border-box}
+body{margin:0;background:#f5f6ff;color:#1e1b4b;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Vazirmatn,sans-serif}
+main{max-width:640px;margin:0 auto;padding:24px 18px 60px}
+h1{font-size:26px;line-height:1.25;margin:8px 0 4px}h2{font-size:19px;margin:28px 0 8px}
+.sub{color:#6b7280;margin:0 0 16px}
+.card{background:#fff;border-radius:18px;padding:18px;box-shadow:0 2px 10px #4f46e510;margin:14px 0}
+ol,ul{padding-inline-start:22px;margin:6px 0}
+label{display:block;font-weight:700;margin:10px 0 4px}
+input,textarea{width:100%;font:inherit;padding:11px 12px;border:2px solid #e0e7ff;border-radius:12px;background:#fff;color:inherit}
+input:focus,textarea:focus{outline:0;border-color:#4f46e5}
+button{font:inherit;font-weight:700;border:0;border-radius:14px;padding:12px 18px;margin-top:14px;cursor:pointer;background:#4f46e5;color:#fff;width:100%}
+button.danger{background:#dc2626}button:disabled{opacity:.5}
+.msg{margin-top:10px;font-weight:600}.msg.ok{color:#16a34a}.msg.bad{color:#dc2626}
+.fa{direction:rtl;text-align:right;font-family:Vazirmatn,system-ui,sans-serif}
+.lang{display:flex;gap:8px;justify-content:flex-end}.lang a{color:#4f46e5;font-weight:700;text-decoration:none}
+small{color:#6b7280}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main>
+<div class="lang"><a href="#fa">فارسی</a> · <a href="#en">English</a></div>
+
+<section id="en">
+<h1>Delete your account</h1>
+<p class="sub"><b>English 3000 Words</b> (3000 Words) — app by Daniel Mozafari</p>
+<div class="card">
+<h2 style="margin-top:0">Option 1 — in the app</h2>
+<ol><li>Open the app and tap <b>👤</b> (Account) at the top of the home screen.</li>
+<li>Tap <b>Delete account</b>, then <b>Yes, delete permanently</b>.</li></ol>
+</div>
+<div class="card">
+<h2 style="margin-top:0">Option 2 — here on this page</h2>
+<p>Sign in with the email and password of your account, then delete it right away.</p>
+<form id="delForm">
+<label for="dEmail">Email</label><input id="dEmail" type="email" autocomplete="email" required dir="ltr">
+<label for="dPw">Password</label><input id="dPw" type="password" autocomplete="current-password" required dir="ltr">
+<button type="submit" id="dBtn" class="danger">Sign in and delete my account permanently</button>
+<div class="msg" id="dMsg" role="status"></div>
+</form>
+</div>
+<div class="card">
+<h2 style="margin-top:0">Option 3 — send a deletion request</h2>
+<p>Can't sign in (for example you signed up with Google or forgot your password)? Send a request and we will delete the account linked to this email within 30 days.</p>
+<form id="reqForm">
+<label for="rEmail">Email of the account</label><input id="rEmail" type="email" autocomplete="email" required dir="ltr">
+<label for="rNote">Message (optional)</label><textarea id="rNote" rows="3" maxlength="1000"></textarea>
+<button type="submit" id="rBtn">Send deletion request</button>
+<div class="msg" id="rMsg" role="status"></div>
+</form>
+</div>
+<h2>What is deleted</h2>
+<ul><li>Your account: email address, name and sign-in data.</li>
+<li>All learning progress saved online (learned words, lessons, streaks, records, placement result).</li></ul>
+<p>Deletion is permanent and happens immediately (options 1 and 2) or within 30 days (option 3). We keep no copy. Progress stored only on your own phone stays there until you uninstall the app or clear its data. If you have an active subscription, cancel it first in Google Play (Payments &amp; subscriptions → Subscriptions).</p>
+</section>
+
+<section id="fa" class="fa" lang="fa">
+<h1>حذف حساب کاربری</h1>
+<p class="sub"><b>English 3000 Words</b> (۳۰۰۰ لغت) — اپ ساخته‌ی Daniel Mozafari</p>
+<div class="card">
+<h2 style="margin-top:0">روش ۱ — داخل اپ</h2>
+<ol><li>اپ را باز کنید و بالای صفحه‌ی اصلی روی <b>👤</b> (حساب کاربری) بزنید.</li>
+<li><b>حذف حساب</b> و بعد <b>بله، برای همیشه حذف کن</b> را بزنید.</li></ol>
+</div>
+<div class="card">
+<h2 style="margin-top:0">روش ۲ — همین صفحه</h2>
+<p>در فرم انگلیسی بالا (روش ۲) با ایمیل و رمز حسابتان وارد شوید؛ حساب فوراً حذف می‌شود.</p>
+<h2>روش ۳ — درخواست حذف</h2>
+<p>اگر نمی‌توانید وارد شوید (مثلاً با گوگل ثبت‌نام کرده‌اید یا رمز را فراموش کرده‌اید)، فرم روش ۳ را با ایمیل حسابتان بفرستید؛ حساب ظرف ۳۰ روز حذف می‌شود.</p>
+</div>
+<h2>چه چیزهایی حذف می‌شود</h2>
+<ul><li>حساب کاربری: ایمیل، اسم و اطلاعات ورود.</li><li>همه‌ی پیشرفت آنلاین (لغت‌های یادگرفته، درس‌ها، روزهای پشت سر هم، رکوردها، نتیجه‌ی تعیین سطح).</li></ul>
+<p>حذف دائمی است و هیچ نسخه‌ای نگه داشته نمی‌شود. پیشرفتی که فقط روی گوشی خودتان است تا حذف اپ یا پاک کردن داده‌هایش می‌ماند. اگر اشتراک فعال دارید، اول آن را در Google Play لغو کنید.</p>
+</section>
+<p><small>English 3000 Words · <a href="./">Open the app</a></small></p>
+</main>
+<script src="vendor/supabase-2.118.0.js"></script>
+<script>
+(() => {
+  const URL_ = 'https://acwkuhudvmarssthibzf.supabase.co', KEY = 'sb_publishable_L-R_EwjjZHj0tBxbjqFkPg_XfXNIHvh';
+  const sb = supabase.createClient(URL_, KEY, { auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false } });
+  const $ = id => document.getElementById(id);
+  const say = (el, text, ok) => { el.textContent = text; el.className = 'msg ' + (ok ? 'ok' : 'bad'); };
+  $('delForm').onsubmit = async e => {
+    e.preventDefault(); const b = $('dBtn'); b.disabled = true; say($('dMsg'), '…', true);
+    try {
+      const { data, error } = await sb.auth.signInWithPassword({ email: $('dEmail').value.trim(), password: $('dPw').value });
+      if (error) throw new Error(error.code === 'invalid_credentials' ? 'Wrong email or password.' : error.message);
+      if (!confirm('Delete this account and all its progress permanently? This cannot be undone.')) { await sb.auth.signOut(); b.disabled = false; say($('dMsg'), ''); return; }
+      const r = await fetch(URL_ + '/functions/v1/delete-account', { method: 'POST', headers: { Authorization: 'Bearer ' + data.session.access_token, apikey: KEY } });
+      if (!r.ok) throw new Error('Deletion failed (' + r.status + '). Please send a request below.');
+      say($('dMsg'), '✓ Your account and all its data have been deleted.', true); $('delForm').reset();
+    } catch (err) { b.disabled = false; say($('dMsg'), err.message || 'Something went wrong.'); }
+  };
+  $('reqForm').onsubmit = async e => {
+    e.preventDefault(); const b = $('rBtn'); b.disabled = true;
+    try {
+      const { error } = await sb.from('deletion_requests').insert({ email: $('rEmail').value.trim().slice(0, 254), note: $('rNote').value.trim().slice(0, 1000) || null });
+      if (error) throw error;
+      say($('rMsg'), '✓ Request received. The account for this email will be deleted within 30 days.', true); $('reqForm').reset();
+    } catch (err) { b.disabled = false; say($('rMsg'), 'Could not send the request. Please try again.'); }
+  };
+})();
+</script>
+</body>
+</html>

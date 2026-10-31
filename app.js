@@ -72,14 +72,15 @@ if (!R || typeof R !== 'object' || !R.courses || typeof R.courses !== 'object') 
 Object.keys(R.courses).forEach(k => { if (!COURSES[k]) delete R.courses[k]; else initCourse(R.courses[k]); });
 if (!R.courses[R.cur]) R.cur = Object.keys(R.courses)[0] || null;
 S = R.cur ? R.courses[R.cur] : initCourse({});   // placeholder until a course is chosen (not saved)
-const save = () => { try { localStorage.setItem(KEY, JSON.stringify(R)); } catch (e) {} };
-save();
+const saveLocal = () => { try { localStorage.setItem(KEY, JSON.stringify(R)); } catch (e) {} };
+const save = () => { saveLocal(); if (R.acct && R.acct.uid) scheduleSync(); };   // signed in: push changes a few seconds after the last save
+saveLocal();
 function setCourse(code) {
   if (!COURSES[code]) return false;
   if (!R.courses[code]) R.courses[code] = initCourse({ added: Date.now() });
   R.cur = code; S = R.courses[code]; save(); return true;
 }
-const ws = id => (S.words[id] = S.words[id] || { miss: 0 });
+const ws = id => { const s = (S.words[id] = S.words[id] || { miss: 0 }); s.t = Date.now(); return s; };   // t = last change (sync merge)
 const dkey = d => d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
 function touchStreak() {
   const td = dkey(new Date()); if (S.streak.last === td) return;
@@ -139,13 +140,15 @@ function toast(msg) {
 }
 
 /* ---------- language picker (first run) + settings ---------- */
+let langTok = 0;   // a quick switch A→B must not let A's late response overwrite B's strings
 function applyLang(code) {
-  const li = langInfo(code) || LANGS[0]; LANG = li.code;
+  const li = langInfo(code) || LANGS[0]; LANG = li.code; const tok = ++langTok;
   const de = document.documentElement; de.lang = LANG; de.dir = li.dir;
   NF = new Intl.NumberFormat(li.num || LANG); PR = new Intl.PluralRules(LANG); try { COLL = new Intl.Collator(LANG); } catch (e) { COLL = new Intl.Collator('en'); }
   return Promise.all([
-    fetch('i18n/' + LANG + '.json?v=' + VERSION).then(r => r.json()).then(j => { L10N = j; }),
+    fetch('i18n/' + LANG + '.json?v=' + VERSION).then(r => r.json()).then(j => { if (tok === langTok) L10N = j; }),
     Promise.all(LEVEL_IDS.filter(lv => LV[lv] && LV[lv].available && (!li.meanings || li.meanings.includes(lv))).map(lv => fetch('data/meanings/' + LANG + '/' + lv + '.json?v=' + VERSION).then(r => r.ok ? r.json() : {}).catch(() => ({})))).then(arr => {
+      if (tok !== langTok) return;
       Object.keys(M).forEach(k => delete M[k]); arr.forEach(o => Object.assign(M, o));
     })
   ]).then(() => {
@@ -247,6 +250,15 @@ function courseSwitcher() {
 }
 
 /* ---------- home ---------- */
+/* header: if the install label + streak + account + settings don't fit next to the title, show the install button as an icon only */
+function fitHead() {
+  const h = $app.querySelector('.home-head'), r = h && h.querySelector('.hd-r'); if (!r) return;
+  r.classList.remove('compact');
+  const b = r.getBoundingClientRect(), over = h.scrollWidth > h.clientWidth + 1 || b.right > innerWidth + .5 || b.left < -.5;
+  if (over) r.classList.add('compact');
+}
+addEventListener('resize', fitHead);
+if (document.fonts && document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', fitHead);
 function home() {
   if (!R.cur) return targetPicker(true);
   stopAudio();
@@ -254,7 +266,7 @@ function home() {
   const rec = S.placement && S.placement.level;
   screen(`
     <div class="home-head"><div class="logo">${t('appName')}<small>${t('appSub')}</small></div>
-      <div class="hd-r"><button class="inst pwa-install" data-install title="${esc(t('installTitle'))}"><span class="ii">📲</span><span class="it">${t('install').replace(/^📲\s*/u, '')}</span></button><div class="streak" title="${esc(t('streakTitle'))}">🔥 ${N(streakNow())}</div><button class="gear" id="tSet" aria-label="${esc(t('settings'))}">⚙️</button></div></div>
+      <div class="hd-r"><button class="inst pwa-install" data-install title="${esc(t('installTitle'))}"><span class="ii">📲</span><span class="it">${t('install').replace(/^📲\s*/u, '')}</span></button><div class="streak" title="${esc(t('streakTitle'))}">🔥 ${N(streakNow())}</div><button class="gear acct ${!signedIn() && learnedIds().length ? 'dot' : ''}" id="tAcct" aria-label="${esc(t('acct'))}">👤</button><button class="gear" id="tSet" aria-label="${esc(t('settings'))}">⚙️</button></div></div>
     <div class="cbar"><button class="ccur" id="tCourse" aria-label="${esc(t('myCourses'))}">${flagImg(R.cur)}<b>${esc(courseName(R.cur))}</b><span class="car">▾</span></button><button class="cadd" id="tAdd">➕ ${t('newLanguage')}</button></div>
     <div class="prog"><div class="row"><span>${t('totalProgress')}</span><b>${t('wordsOfTotal', { a: learned, b: TOTAL })}</b></div>
       <div class="bar"><i style="width:${Math.max(learned / TOTAL * 100, learned ? 1 : 0)}%"></i></div></div>
@@ -271,12 +283,14 @@ function home() {
     </div>
     <button class="place" id="tPlace">${t('placeBtn')}${rec ? t('placeResult', { lv: '<span class="en">' + rec + '</span>' }) : t('placeDuration')}</button>
     ${DEBUG ? `<div class="dbg"><button id="dDue">debug: due now</button><button id="dLearn">debug: learn A1-1..3</button><button id="dReset">debug: reset</button></div>` : ''}`);
+  fitHead(); requestAnimationFrame(fitHead); if (document.fonts) document.fonts.ready.then(fitHead);
   $app.querySelectorAll('.lvl').forEach(b => b.onclick = () => { const lv = b.dataset.lv; if (LV[lv] && LV[lv].available) levelScreen(lv); });
   document.getElementById('tReview').onclick = reviewScreen;
   document.getElementById('tHard').onclick = hardScreen;
   document.getElementById('tQuick').onclick = quickIntro;
   document.getElementById('tPlace').onclick = () => placementIntro();
   document.getElementById('tSet').onclick = settingsScreen;
+  document.getElementById('tAcct').onclick = acctOpen;
   document.getElementById('tCourse').onclick = courseSwitcher;
   document.getElementById('tAdd').onclick = () => targetPicker(false, home);
   if (DEBUG) {
@@ -460,11 +474,13 @@ function doneScreen(icon, title, text, stats, chips, extraBtn, back) {
   stopAudio();
   screen(`<div class="done"><div class="big">${icon}</div><h1>${title}</h1><p>${text}</p>
     ${stats ? `<div class="stats">${stats.map(([b, s]) => `<div class="stat"><b>${b}</b><span>${s}</span></div>`).join('')}</div>` : ''}
+    ${!signedIn() && chips && chips.length ? `<button class="savep" id="saveP">${t('savePrompt')}</button>` : ''}
     ${chips && chips.length ? `<div class="chips">${chips.slice(0, 12).map(id => `<span class="chip"><span class="en">${esc(W[id].w)}</span> · <bdi>${esc(mean(id))}</bdi></span>`).join('')}</div>` : ''}
     </div>
     <div class="btns">${extraBtn ? `<button class="btn" id="extra">${extraBtn[0]}</button>` : ''}<button class="btn ${extraBtn ? 'ghost' : ''}" id="home">${back ? t('backToLessons') : t('backHome')}</button></div>`);
   document.getElementById('home').onclick = back || home;
   if (extraBtn) document.getElementById('extra').onclick = extraBtn[1];
+  const sp = document.getElementById('saveP'); if (sp) sp.onclick = () => authScreen('up');
   touchStreak();
 }
 
@@ -572,10 +588,263 @@ function runPlacement() {
     } });
 }
 
+/* ---------- accounts + sync (Supabase) ----------
+   Guests: everything works offline in localStorage (w3g-v2). Signed in: each course is a row in public.progress
+   (user_id, course, data jsonb); sync = pull all rows, merge with local per course, push what changed.
+   supabase-js is vendored and loaded only when needed (signed in, auth link in the URL, or account screens). */
+const SB = { url: 'https://acwkuhudvmarssthibzf.supabase.co', key: 'sb_publishable_L-R_EwjjZHj0tBxbjqFkPg_XfXNIHvh',
+  lib: 'vendor/supabase-2.118.0.js', google: false,   // google: set true once the Google provider is enabled in Supabase
+  store: 'sb-acwkuhudvmarssthibzf-auth-token' };
+const APP_URL = /github\.io$/.test(location.hostname) ? 'https://danmo88.github.io/words-3000-global/' : location.origin + location.pathname.replace(/index\.html$/, '');
+let sb = null, sbLoading = null, user = null, recovery = false, syncTimer = null, syncing = null;
+const hasSession = () => { try { return !!localStorage.getItem(SB.store); } catch (e) { return false; } };
+const signedIn = () => !!user || (hasSession() && !!(R.acct && R.acct.email));
+function loadSB() {
+  if (sb) return Promise.resolve(sb);
+  if (!sbLoading) sbLoading = new Promise((res, rej) => {
+    const s = document.createElement('script'); s.src = SB.lib; s.async = true;
+    s.onload = () => {
+      sb = window.supabase.createClient(SB.url, SB.key, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true, flowType: 'implicit', storageKey: SB.store } });
+      sb.auth.onAuthStateChange((ev, session) => { user = session ? session.user : null; if (ev === 'PASSWORD_RECOVERY') recovery = true; });
+      res(sb);
+    };
+    s.onerror = () => { sbLoading = null; s.remove(); rej(new Error('offline')); };
+    document.head.appendChild(s);
+  });
+  return sbLoading;
+}
+const stable = o => JSON.stringify(o, (k, v) => v && typeof v === 'object' && !Array.isArray(v) ? Object.keys(v).sort().reduce((a, x) => (a[x] = v[x], a), {}) : v);
+const dval = s => { if (!s) return 0; const [y, m, d] = String(s).split('-').map(Number); return new Date(y, m - 1, d).getTime(); };
+/* merge two copies of one course: union of words/lessons; per word the newer copy (t) wins but learnedAt stays the earliest;
+   streak from the copy with the later day (consecutive days chain up), best60 = max, newest placement */
+function mergeCourse(a, b) {
+  a = a || {}; b = b || {};
+  const m = Object.assign({}, b, a), wa = a.words || {}, wb = b.words || {};
+  m.words = {};
+  new Set([...Object.keys(wa), ...Object.keys(wb)]).forEach(id => {
+    const x = wa[id], y = wb[id];
+    if (!x || !y) { m.words[id] = Object.assign({}, x || y); return; }
+    const nx = (x.t || 0) >= (y.t || 0), w = Object.assign({}, nx ? y : x, nx ? x : y);
+    const la = [x.learnedAt, y.learnedAt].filter(Boolean); if (la.length) w.learnedAt = Math.min(...la);
+    m.words[id] = w;
+  });
+  const la = a.lessons || {}, lb = b.lessons || {}; m.lessons = {};
+  new Set([...Object.keys(la), ...Object.keys(lb)]).forEach(k => {
+    const x = la[k], y = lb[k]; if (!x || !y) { m.lessons[k] = Object.assign({}, x || y); return; }
+    m.lessons[k] = Object.assign({}, y, x, { done: !!(x.done || y.done) }); const at = [x.at, y.at].filter(Boolean); if (at.length) m.lessons[k].at = Math.min(...at);
+  });
+  const sa = a.streak || { count: 0, last: null }, sbb = b.streak || { count: 0, last: null };
+  const [hi, lo] = dval(sa.last) >= dval(sbb.last) ? [sa, sbb] : [sbb, sa];
+  let cnt = hi.count || 0;
+  if (dval(hi.last) === dval(lo.last)) cnt = Math.max(cnt, lo.count || 0);
+  else if (lo.last && dval(hi.last) - dval(lo.last) < DAY * 1.5) cnt = Math.max(cnt, (lo.count || 0) + 1);
+  m.streak = { count: cnt, last: hi.last || null };
+  m.best60 = Math.max(a.best60 || 0, b.best60 || 0);
+  const pa = a.placement, pb = b.placement; if (pa || pb) m.placement = (!pb || (pa && (pa.at || 0) >= (pb.at || 0))) ? pa : pb;
+  m.onboarded = !!(a.onboarded || b.onboarded) || undefined; if (!m.onboarded) delete m.onboarded;
+  const ad = [a.added, b.added].filter(Boolean); if (ad.length) m.added = Math.min(...ad);
+  return m;
+}
+function scheduleSync(ms) {
+  if (!signedIn()) return;
+  R.acct = R.acct || {}; R.acct.dirty = true;
+  clearTimeout(syncTimer); syncTimer = setTimeout(() => syncAll().catch(() => {}), ms == null ? 4000 : ms);
+}
+function syncAll() {
+  if (syncing) return syncing;
+  syncing = (async () => {
+    try {
+      await loadSB();
+      if (!user) { const { data } = await sb.auth.getSession(); user = data.session ? data.session.user : null; }
+      if (!user) return null;   // no valid session (expired/revoked)
+      const { data: rows, error } = await sb.from('progress').select('course,data');
+      if (error) throw error;
+      const remote = {}; (rows || []).forEach(r => { remote[r.course] = r.data || {}; });
+      const codes = new Set([...Object.keys(R.courses), ...Object.keys(remote).filter(c => COURSES[c])]);
+      const ups = []; let changed = false;
+      codes.forEach(c => {
+        const loc = R.courses[c], rem = remote[c], m = mergeCourse(loc, rem), ms = stable(m);
+        if (!loc) { R.courses[c] = initCourse(m); changed = true; }
+        else if (ms !== stable(loc)) { Object.keys(loc).forEach(k => delete loc[k]); Object.assign(loc, m); initCourse(loc); changed = true; }
+        if (!rem || ms !== stable(rem)) ups.push({ user_id: user.id, course: c, data: m });
+      });
+      if (ups.length) { const { error: e2 } = await sb.from('progress').upsert(ups); if (e2) throw e2; }
+      if (!R.cur || !R.courses[R.cur]) { R.cur = Object.keys(R.courses)[0] || null; changed = true; }
+      if (R.cur) S = R.courses[R.cur];
+      R.acct = Object.assign(R.acct || {}, { email: user.email, uid: user.id, lastSync: Date.now(), dirty: false });
+      saveLocal();
+      return changed;
+    } catch (e) { if (R.acct) { R.acct.dirty = true; saveLocal(); } throw e; }
+    finally { syncing = null; }
+  })();
+  return syncing;
+}
+async function loadProfile() {
+  const { data, error } = await sb.from('profiles').select('display_name,native_lang,premium').eq('id', user.id).maybeSingle();
+  if (error) throw error;
+  if (data) {
+    R.acct = Object.assign(R.acct || {}, { name: data.display_name || '' }); R.premium = !!data.premium;
+    if (R.lang && data.native_lang !== R.lang) await sb.from('profiles').update({ native_lang: R.lang }).eq('id', user.id);
+    saveLocal();
+  }
+  return data;
+}
+function errText(e) {
+  if (!navigator.onLine || (e && /fetch|network|offline|Load failed/i.test(e.message || ''))) return t('errOffline');
+  const c = (e && (e.code || e.error_code)) || '', m = (e && e.message) || '';
+  if (c === 'invalid_credentials' || /invalid login/i.test(m)) return t('errCreds');
+  if (c === 'user_already_exists' || c === 'email_exists' || /already registered/i.test(m)) return t('errEmailTaken');
+  if (c === 'weak_password' || /password should be/i.test(m)) return t('errWeakPw');
+  if (c === 'email_address_invalid' || c === 'validation_failed' || /invalid format|is invalid/i.test(m)) return t('errEmailInvalid');
+  if (c === 'email_not_confirmed' || /not confirmed/i.test(m)) return t('errNotConfirmed');
+  if (/rate_limit|too many/i.test(c + m) || (e && e.status === 429)) return t('errRate');
+  return t('errGeneric');
+}
+const field = (id, label, type, ac, extra) => `<label class="fld"><span>${label}</span><input id="${id}" type="${type}" autocomplete="${ac}" ${type === 'text' ? 'dir="auto"' : 'dir="ltr"'} spellcheck="false" autocapitalize="off" ${extra || ''}></label>`;
+function busy(btn, on) { if (btn) { btn.disabled = on; btn.classList.toggle('busy', on); } }
+/* sign in / sign up / forgot password (mode: in | up | reset | newpw) */
+function authScreen(mode, msg) {
+  stopAudio(); mode = mode || 'in';
+  const tabs = mode === 'in' || mode === 'up';
+  screen(`<div class="top"><button class="x" aria-label="${esc(t('back'))}">✕</button><div class="h2">${mode === 'reset' || mode === 'newpw' ? '🔑 ' + t('resetTitle') : '👤 ' + t('acct')}</div></div>
+    <div class="scroll"><form class="aform" id="af" novalidate>
+      ${tabs ? `<p class="tsub">${t('acctGuestText')}</p>
+      <div class="seg"><button type="button" class="${mode === 'in' ? 'on' : ''}" data-m="in">${t('signIn')}</button><button type="button" class="${mode === 'up' ? 'on' : ''}" data-m="up">${t('signUp')}</button></div>` : ''}
+      ${mode === 'reset' ? `<p class="tsub">${t('resetText')}</p>` : ''}
+      ${mode === 'up' ? field('fName', t('nameLabel'), 'text', 'name', 'maxlength="80"') : ''}
+      ${mode !== 'newpw' ? field('fEmail', t('email'), 'email', 'email', 'inputmode="email" maxlength="254"') : ''}
+      ${mode !== 'reset' ? field('fPw', t('password'), 'password', mode === 'in' ? 'current-password' : 'new-password', 'minlength="8" maxlength="72"') + (mode !== 'in' ? `<small class="hint">${t('pwHint')}</small>` : '') : ''}
+      <div class="amsg ${msg && msg.ok ? 'ok' : ''}" id="amsg" role="status">${msg ? esc(msg.text) : ''}</div>
+      <button class="btn" id="aGo" type="submit">${{ in: t('signIn'), up: t('signUp'), reset: t('resetSend'), newpw: t('newPwSave') }[mode]}</button>
+      ${mode === 'in' ? `<button type="button" class="lnk" id="aForgot">${t('forgotPw')}</button>` : ''}
+      ${tabs && SB.google ? `<div class="or"><span></span></div><button type="button" class="btn ghost gbtn" id="aGoogle"><b class="g">G</b> ${t('googleBtn')}</button>` : ''}
+      ${tabs ? `<button type="button" class="lnk mut" id="aGuest">${t('guestContinue')}</button>` : ''}
+      ${mode === 'reset' ? `<button type="button" class="lnk" id="aBack">${t('signIn')}</button>` : ''}
+    </form></div>`);
+  bindX(mode === 'reset' ? () => authScreen('in') : home);
+  $app.querySelectorAll('.seg button').forEach(b => b.onclick = () => authScreen(b.dataset.m));
+  const g = id => document.getElementById(id), say = (text, ok) => { const m = g('amsg'); m.textContent = text; m.classList.toggle('ok', !!ok); };
+  if (g('aForgot')) g('aForgot').onclick = () => authScreen('reset');
+  if (g('aBack')) g('aBack').onclick = () => authScreen('in');
+  if (g('aGuest')) g('aGuest').onclick = home;
+  if (g('aGoogle')) g('aGoogle').onclick = async () => { try { await loadSB(); const { error } = await sb.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: APP_URL } }); if (error) throw error; } catch (e) { say(errText(e)); } };
+  g('af').onsubmit = async ev => {
+    ev.preventDefault();
+    const btn = g('aGo'), email = g('fEmail') ? g('fEmail').value.trim() : '', pw = g('fPw') ? g('fPw').value : '';
+    if (g('fEmail') && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return say(t('errEmailInvalid'));
+    if (mode !== 'reset' && mode !== 'in' && pw.length < 8) return say(t('errWeakPw'));
+    if (mode === 'in' && !pw) return say(t('errCreds'));
+    if (!navigator.onLine) return say(t('errOffline'));
+    busy(btn, true); say('');
+    try {
+      await loadSB();
+      if (mode === 'in') {
+        const { data, error } = await sb.auth.signInWithPassword({ email, password: pw }); if (error) throw error;
+        user = data.user; await afterSignIn();
+      } else if (mode === 'up') {
+        const name = (g('fName').value || '').trim().slice(0, 80);
+        const { data, error } = await sb.auth.signUp({ email, password: pw, options: { emailRedirectTo: APP_URL, data: { display_name: name || null, native_lang: R.lang } } });
+        if (error) throw error;
+        if (data.user && Array.isArray(data.user.identities) && !data.user.identities.length) throw { code: 'user_already_exists' };
+        if (data.session) { user = data.user; await afterSignIn(); }
+        else { busy(btn, false); say(t('checkEmail', { email }), true); }
+      } else if (mode === 'reset') {
+        const { error } = await sb.auth.resetPasswordForEmail(email, { redirectTo: APP_URL }); if (error) throw error;
+        busy(btn, false); say(t('resetSent'), true);
+      } else if (mode === 'newpw') {
+        const { error } = await sb.auth.updateUser({ password: pw }); if (error) throw error;
+        recovery = false; toast(esc(t('pwSaved'))); await afterSignIn(true);
+      }
+    } catch (e) { busy(btn, false); say(errText(e)); }
+  };
+}
+async function afterSignIn(quiet) {
+  const { data } = await sb.auth.getSession(); user = data.session ? data.session.user : user;
+  R.acct = Object.assign(R.acct || {}, { email: user.email, uid: user.id }); saveLocal();
+  try { await syncAll(); await loadProfile(); } catch (e) { /* offline: stays dirty, retried later */ }
+  if (!quiet) toast(esc(t('signedInMsg')));
+  profileScreen();
+}
+function profileScreen() {
+  stopAudio();
+  if (!signedIn()) return authScreen('in');
+  const a = R.acct || {}, codes = Object.keys(R.courses).sort((x, y) => (R.courses[x].added || 0) - (R.courses[y].added || 0));
+  let when = '';
+  try { when = a.lastSync ? new Intl.DateTimeFormat(LANG, { dateStyle: 'short', timeStyle: 'short' }).format(a.lastSync) : ''; } catch (e) { when = ''; }
+  screen(`<div class="top"><button class="x" aria-label="${esc(t('back'))}">✕</button><div class="h2">👤 ${t('acct')}</div></div>
+    <div class="scroll">
+      <div class="pcard"><div class="av">${esc(((a.name || a.email || '?').trim()[0] || '?').toUpperCase())}</div>
+        <div class="pinfo"><label class="fld nm"><span>${t('nameLabel')}</span><span class="nrow"><input id="pName" type="text" dir="auto" maxlength="80" autocomplete="name" value="${esc(a.name || '')}"><button class="sbtn" id="pSave">${t('save')}</button></span></label>
+        <div class="pmail" dir="ltr">${esc(a.email || '')}</div>
+        <div class="psync ${a.dirty ? 'pend' : ''}" id="psync">${a.dirty ? '⏳ ' + t('syncPending') : (when ? '☁️ ' + t('syncedAt', { time: when }) : '')}</div></div></div>
+      <div class="sect">${t('myCourses')}</div>
+      <div class="plist">${codes.map(code => { const c = R.courses[code], n = Object.keys(c.words).filter(id => c.words[id].learnedAt).length;
+        return `<div class="lang course pc">${flagImg(code)}<span class="lt2"><b>${esc(courseName(code))}</b><small>${t('wordsOfTotal', { a: n, b: TOTAL })} · 🔥 ${N(streakOf(c))} · ⚡ ${N(c.best60 || 0)}</small></span></div>`; }).join('')}</div>
+    </div>
+    <div class="btns"><button class="btn ghost" id="pOut">${t('signOut')}</button><button class="lnk danger" id="pDel">${t('deleteAcct')}</button></div>`);
+  bindX(home);
+  const g = id => document.getElementById(id);
+  g('pSave').onclick = async () => {
+    const name = g('pName').value.trim().slice(0, 80), btn = g('pSave'); busy(btn, true);
+    try { await loadSB(); const { error } = await sb.from('profiles').update({ display_name: name || null }).eq('id', user.id); if (error) throw error;
+      R.acct.name = name; saveLocal(); toast('✓'); profileScreen(); } catch (e) { busy(btn, false); toast(esc(errText(e))); }
+  };
+  g('pOut').onclick = async () => {
+    const btn = g('pOut'); busy(btn, true);
+    let r; try { r = await syncAll(); } catch (e) { busy(btn, false); toast(esc(t('errOffline'))); return; }
+    try { await sb.auth.signOut({ scope: 'local' }); } catch (e) {}
+    user = null; R.acct = null; R.premium = false;
+    if (r !== null) { R.courses = {}; R.cur = null; S = initCourse({}); }   // progress is safe in the cloud; if the session had expired, keep it locally
+    saveLocal();
+    afterLang();
+  };
+  g('pDel').onclick = deleteConfirm;
+  if (navigator.onLine && (a.dirty || !a.lastSync || Date.now() - a.lastSync > 60000)) syncAll().then(r => { if (r !== null && document.getElementById('psync')) profileScreen(); }).catch(() => {});
+}
+function deleteConfirm() {
+  stopAudio();
+  screen(`<div class="top"><button class="x" aria-label="${esc(t('back'))}">✕</button><div class="h2">${t('deleteAcct')}</div></div>
+    <div class="done"><div class="big">⚠️</div><h1>${t('delTitle')}</h1><p>${t('delText')}</p><p class="pmail" dir="ltr">${esc((R.acct && R.acct.email) || '')}</p></div>
+    <div class="btns"><button class="btn danger" id="dYes">${t('delConfirm')}</button><button class="btn ghost" id="dNo">${t('cancel')}</button></div>`);
+  bindX(profileScreen); document.getElementById('dNo').onclick = profileScreen;
+  document.getElementById('dYes').onclick = async () => {
+    const btn = document.getElementById('dYes'); busy(btn, true);
+    try {
+      if (!navigator.onLine) throw new Error('offline');
+      await loadSB(); const { data } = await sb.auth.getSession(); if (!data.session) throw { code: 'no_session' };
+      const r = await fetch(SB.url + '/functions/v1/delete-account', { method: 'POST', headers: { Authorization: 'Bearer ' + data.session.access_token, apikey: SB.key } });
+      if (!r.ok) throw { status: r.status };
+      try { await sb.auth.signOut({ scope: 'local' }); } catch (e) {}
+      try { localStorage.removeItem(SB.store); } catch (e) {}
+      user = null; R.acct = null; R.premium = false; saveLocal();
+      home(); toast(esc(t('deleted')));
+    } catch (e) { busy(btn, false); toast(esc(errText(e))); }
+  };
+}
+const acctOpen = () => signedIn() ? profileScreen() : authScreen('up');
+/* app open: restore session, handle auth links (email confirm / password recovery / OAuth), then sync */
+function acctBoot() {
+  const linked = /access_token=|error_description=|type=recovery/.test(location.hash);
+  const isRec = /type=recovery/.test(location.hash);
+  if (!linked && !hasSession()) return;
+  loadSB().then(() => sb.auth.getSession()).then(({ data }) => {
+    user = data.session ? data.session.user : null;
+    if (linked) { const err = /error_description=([^&]+)/.exec(location.hash); history.replaceState(null, '', location.pathname + location.search); if (err && !user) { authScreen('in', { text: decodeURIComponent(err[1].replace(/\+/g, ' ')) }); return; } }
+    if (recovery || isRec) { recovery = true; return authScreen('newpw'); }
+    if (!user) { if (R.acct) { R.acct = null; saveLocal(); } return; }
+    const first = !(R.acct && R.acct.uid === user.id);
+    R.acct = Object.assign(R.acct || {}, { email: user.email, uid: user.id }); saveLocal();
+    return syncAll().then(ch => { loadProfile().catch(() => {}); if (first && linked) { toast(esc(t('signedInMsg'))); } if (ch && $app.querySelector('.levels')) home(); });
+  }).catch(() => {});
+}
+window.addEventListener('online', () => { if (R.acct && R.acct.dirty) syncAll().catch(() => {}); });
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden' && R.acct && R.acct.dirty && user) { clearTimeout(syncTimer); syncAll().catch(() => {}); } });
+
 /* ---------- boot ---------- */
 let VERSION = 1;
 window.__app = { get S() { return S; }, get R() { return R; }, W, LV, M, home, DEBUG, levelScreen, lessonObj, settingsScreen, langPicker, ACCESS,
   targetPicker, courseSwitcher, setCourse, COURSES,
+  save, acct: { SB, authScreen, profileScreen, deleteConfirm, syncAll, mergeCourse, loadSB, get user() { return user; }, get sb() { return sb; } },
   get lang() { return LANG; }, setLang: c => { R.lang = c; save(); return applyLang(c); }, t,
   cardFor: id => { const w = W[id]; learnCard({ L: lessonObj(w.level, w.li), seq: [w], i: 0, t0: 0 }); stopAudio(); },
   quizFor: (id, type) => { let n = 0; runQuiz({ mode: 'lesson', targets: [id], need: 1, pool: LV[W[id].level].lessons[W[id].li], next: () => n++ ? null : { id, type }, onDone: () => {} }); stopAudio(); clearTimers(); } };
@@ -593,7 +862,7 @@ fetch('data/index.json').then(r => r.json()).then(ix => {
 }).then(() => {
   const forced = params.get('lang');
   if (forced && langInfo(forced)) { R.lang = forced; save(); }
-  if (R.lang && langInfo(R.lang)) return applyLang(R.lang).then(afterLang);
-  langPicker(afterLang);
+  if (R.lang && langInfo(R.lang)) return applyLang(R.lang).then(afterLang).then(acctBoot);
+  langPicker(afterLang); acctBoot();
 }).catch(e => { $app.innerHTML = '<div class="empty">⚠️ ' + (L10N.loadError || 'Loading error · خطا در بارگذاری · خطأ في التحميل · Erreur de chargement') + '</div>'; console.error(e); });
 })();
