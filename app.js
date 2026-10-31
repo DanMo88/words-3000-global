@@ -203,6 +203,9 @@ function langPicker(onDone) {
 function settingsScreen() {
   stopAudio();
   screen(`<div class="top"><button class="x" aria-label="${esc(t('back'))}">✕</button><div class="h2">⚙️ ${t('settings')}</div></div>
+    <div class="remrow"><label class="sw"><input type="checkbox" id="remOn" ${REM().on ? 'checked' : ''}><i></i><span>⏰ ${t('reminder')}</span></label>
+      <label class="rtime"><span class="vh">${t('remTime')}</span><input type="time" id="remTime" value="${esc(REM().time)}" ${REM().on ? '' : 'disabled'}></label></div>
+    <div class="remnote" id="remNote">${REM().on ? remNote() : ''}</div>
     <div class="sect">${t('appLanguage')}</div>
     ${langGrid(LANG)}
     <div class="foot">${t('settingsNote')}</div>
@@ -210,7 +213,54 @@ function settingsScreen() {
     <div class="legal">${legalLinks()}</div>`);
   bindX(home); document.getElementById('home').onclick = home;
   bindLangGrid(code => { R.lang = code; save(); applyLang(R.lang).then(settingsScreen); });
+  const on = document.getElementById('remOn'), tm = document.getElementById('remTime');
+  on.onchange = () => setReminder(on.checked, tm.value);
+  tm.onchange = () => { if (on.checked && tm.value) setReminder(true, tm.value); };
 }
+
+/* ---------- daily reminder ----------
+   Honest + simple, no push server: the time lives only on this device (R.reminder).
+   - Notification Triggers (TimestampTrigger, only some Chromium builds) → real notifications scheduled for the next 7 days.
+   - Otherwise → an in-app reminder banner when the app is opened/resumed after the chosen time on a day without a lesson.
+   Reliable notifications at an exact time need the Android app (native/TWA scheduling) or Web Push with a server. */
+const REM = () => (R.reminder = Object.assign({ on: false, time: '19:00', shown: null }, R.reminder || {}));
+const hasTriggers = () => 'Notification' in window && 'showTrigger' in Notification.prototype && 'TimestampTrigger' in window;
+const remAt = (time, d) => { const [h, m] = String(time || '19:00').split(':').map(Number), x = new Date(d || Date.now()); x.setHours(h || 0, m || 0, 0, 0); return x; };
+const fmtTime = time => { try { return new Intl.DateTimeFormat(LANG, { hour: 'numeric', minute: '2-digit' }).format(remAt(time)); } catch (e) { return time; } };
+const remNote = () => ('Notification' in window && Notification.permission === 'denied') ? t('remDenied') : t(hasTriggers() ? 'remTrig' : 'remWeb');
+async function scheduleReminders() {
+  if (!hasTriggers() || !('serviceWorker' in navigator)) return false;
+  try {
+    const reg = await navigator.serviceWorker.ready;
+    (await reg.getNotifications({ tag: 'w3g-rem', includeTriggered: true })).forEach(n => n.close());
+    if (!REM().on || Notification.permission !== 'granted') return false;
+    for (let k = 0; k < 7; k++) {
+      const at = remAt(REM().time, Date.now() + k * DAY); if (at.getTime() <= Date.now()) continue;
+      await reg.showNotification(t('remTitle'), { body: t('remBody'), tag: 'w3g-rem', icon: 'icons/icon-192.png', badge: 'icons/icon-192.png', data: { url: './' }, showTrigger: new window.TimestampTrigger(at.getTime()) });
+    }
+    return true;
+  } catch (e) { return false; }
+}
+async function setReminder(on, time) {
+  const r = REM(); r.on = !!on; if (time) r.time = time; r.shown = on ? dkey(new Date()) : r.shown; save();
+  const tm = document.getElementById('remTime'); if (tm) tm.disabled = !on;
+  if (on && 'Notification' in window && Notification.permission === 'default') { try { await Notification.requestPermission(); } catch (e) {} }
+  await scheduleReminders();
+  const n = document.getElementById('remNote'); if (n) n.textContent = on ? remNote() : '';
+  toast(esc(on ? t('remSet', { time: fmtTime(r.time) }) : t('remOff')));
+}
+function checkReminder() {
+  const r = REM(); if (!r.on || !R.cur) return;
+  scheduleReminders();
+  const td = dkey(new Date());
+  if (r.shown === td || S.streak.last === td || Date.now() < remAt(r.time).getTime()) return;
+  r.shown = td; saveLocal();
+  document.querySelectorAll('.rembar').forEach(x => x.remove());
+  const b = document.createElement('button'); b.className = 'rembar'; b.setAttribute('role', 'status');
+  b.innerHTML = `<b>⏰ ${esc(t('remTitle'))}</b><span>${esc(t('remBody'))}</span>`;
+  b.onclick = () => b.remove(); document.body.appendChild(b); setTimeout(() => b.remove(), 9000);
+}
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && window.__app && window.__app.ready) checkReminder(); });
 
 /* ---------- target language (course) picker + switcher ---------- */
 const loadNames = () => NAMES ? Promise.resolve(NAMES) : fetch('i18n/names.json?v=' + VERSION).then(r => r.json()).then(j => (NAMES = j)).catch(() => (NAMES = {}));
@@ -938,14 +988,14 @@ document.addEventListener('visibilitychange', () => { if (document.visibilitySta
 /* ---------- boot ---------- */
 let VERSION = 1;
 window.__app = { get S() { return S; }, get R() { return R; }, W, LV, M, home, DEBUG, levelScreen, lessonObj, settingsScreen, langPicker, ACCESS,
-  targetPicker, courseSwitcher, setCourse, COURSES, FREE, paywallScreen, billing, PLAY,
+  targetPicker, courseSwitcher, setCourse, COURSES, FREE, paywallScreen, billing, PLAY, checkReminder, setReminder, REM,
   save, acct: { SB, authScreen, profileScreen, deleteConfirm, syncAll, mergeCourse, loadSB, get user() { return user; }, get sb() { return sb; } },
   get lang() { return LANG; }, setLang: c => { R.lang = c; save(); return applyLang(c); }, t,
   cardFor: id => { const w = W[id]; learnCard({ L: lessonObj(w.level, w.li), seq: [w], i: 0, t0: 0 }); stopAudio(); },
   quizFor: (id, type) => { let n = 0; runQuiz({ mode: 'lesson', targets: [id], need: 1, pool: LV[W[id].level].lessons[W[id].li], next: () => n++ ? null : { id, type }, onDone: () => {} }); stopAudio(); clearTimers(); } };
 window.__t = (k, v) => t(k, v);   // used by install.js
 const afterLang = () => R.cur && R.courses[R.cur] ? start() : targetPicker(true);
-const start = () => { window.__app.ready = true; if (!S.onboarded && !learnedIds().length) placementIntro(true); else { S.onboarded = true; save(); home(); } };
+const start = () => { window.__app.ready = true; if (!S.onboarded && !learnedIds().length) placementIntro(true); else { S.onboarded = true; save(); home(); } setTimeout(checkReminder, 1200); };
 fetch('data/index.json').then(r => r.json()).then(ix => {
   TOTAL = ix.total; VERSION = ix.version;
   ix.levels.forEach(l => LV[l.id] = { id: l.id, count: l.count, available: false, lessons: [] });
