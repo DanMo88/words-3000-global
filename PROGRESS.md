@@ -107,3 +107,9 @@ Legend: [x] done · [~] in progress · [ ] todo · (B) = needs backend (Supabase
 - [x] tests (local + live): webpay.js phase 1 75/0 + phase 2 10/0 (signed webhooks with a temporary app_secrets secret, now deleted → 501 again), paywall.js 241/0 (4 sizes) and live 73/0, render31 1240/0 at each of 360x640/390x844/412x915/768x1024, courses 1156/0, accounts 30/0, test.js fa/ar/he + zh/ja/hi + th/ru/de 26388/0 each (zh/ja/hi now passes with lower parallelism). Test users, test orders and the test secret deleted. Advisors: security only INFO app_secrets has RLS without policies (intended); performance clean.
 - Screenshots: /workspace/words-3000-global-test/webpay/ (box only).
 - Waiting for Daniel: checkout link, webhook signing secret (Supabase secret LEMONSQUEEZY_SIGNING_SECRET), optional store/variant ids — see store/LEMONSQUEEZY.md.
+
+# Premium content protection — started 2026-10-31 (Daniel: "انجام بده همرو")
+- [x] Supabase: tables content_lessons (278 lessons / 2773 words), content_meanings (124 rows = 31 langs × 4 levels), content_meta — RLS on, no grants to anon/authenticated (service role only). Private bucket premium-media: 6233 files (audio + example audio + images), 51.1 MB. DB total 19 MB (content 1.7 MB). Free tier: 500 MB DB / 1 GB storage.
+- [x] Edge Function premium-content (c6b1b11, verify_jwt): text + 10-min signed media URLs only for a signed-in Premium account on its active device (401 / 403 not_premium / 403 not_active_device otherwise).
+- [x] Verified before deleting from the repo: the 6233 deleted audio/img files match the bucket file list exactly (same md5 of the sorted name list); 2973 words total = 200 public + 2773 in content_lessons. Full sources kept on the box in /workspace/words-3000-private (not in git).
+- [ ] client + public data split (first 5 lessons per level stay public and offline) — in progress
