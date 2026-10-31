@@ -121,3 +121,11 @@ Legend: [x] done · [~] in progress · [ ] todo · (B) = needs backend (Supabase
 - [x] 547c7b7 client: LS.checkoutUrl = https://words3000global.lemonsqueezy.com/checkout/buy/1171dc65-1320-4eab-a7db-20f394c33677 → "Buy once · $5" active; checkout link carries checkout[custom][user_id] + checkout[email]. SW w3g-v20, app v13.
 - [x] Signed fake webhooks against the deployed function (test user, then cleaned): bad signature 401, other product / other store ignored, order_created paid → premium, replay idempotent, order_refunded → premium revoked, replay after refund stays refunded. webpay.js phase 1 77/0 + phase 2 10/0 with the real secret; paywall.js 257/0; render31 390x844 1240/0.
 - Note for a future Play release: inside the Android TWA the paywall now shows the web checkout (Play Billing is dormant). Google Play policy requires Play Billing for digital goods in Play apps — switch before publishing there.
+
+# Live check 2026-10-31 (SW w3g-v20) — DONE
+- Live: premium audio/text return 404 on GitHub Pages; free lesson audio 200; public meanings contain only free words.
+- Live tests: prem.js 54/0 (offline reload goes through the service worker; premium audio served from the per-user cache), paywall.js 257/0 (4 sizes), render31 390x844 1240/0, accounts.js 30/0, webpay.js phase 1 77/0 + phase 2 10/0 (real signing secret, signed fake orders).
+- Advisors: security = INFO "RLS enabled, no policy" on app_secrets/content_* (intended: service role only) + WARN leaked-password protection (paid-plan feature, left off); performance clean.
+- Sizes: DB 19 MB of 500 MB (content tables 1.7 MB); storage 51 MB of 1 GB (premium-media). Egress ≈ 51 MB for one user who downloads every premium lesson.
+- All test users, test orders, devices and deletion requests deleted. app_secrets keeps the real webhook secret.
+- **Needs Daniel's decision (not done): git history.** Commits before 32ad815 still contain all premium text/audio/images and are public. Removing them needs `git filter-repo` + force-push. Clones/forks and GitHub's cached commits can still hold copies, so assume the old data is already public. Waiting for approval.
