@@ -234,5 +234,6 @@
  "devUnknown": "ukendt enhed",
  "devFree": "Gratis lektioner og synkronisering virker stadig på denne telefon.",
  "devCheck": "Tjek igen",
- "devNow": "Ikke nu"
+ "devNow": "Ikke nu",
+ "premLoading": "Lektionen hentes…"
 }

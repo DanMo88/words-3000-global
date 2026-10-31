@@ -234,5 +234,6 @@
  "devUnknown": "appareil inconnu",
  "devFree": "Les leçons gratuites et la synchronisation fonctionnent toujours sur ce téléphone.",
  "devCheck": "Vérifier à nouveau",
- "devNow": "Pas maintenant"
+ "devNow": "Pas maintenant",
+ "premLoading": "Téléchargement de la leçon…"
 }

@@ -215,3 +215,4 @@ devUnknown|ukjent enhet
 devFree|Gratis leksjoner og synkronisering fungerer fortsatt på denne telefonen.
 devCheck|Sjekk igjen
 devNow|Ikke nå
+premLoading|Leksjonen lastes ned…

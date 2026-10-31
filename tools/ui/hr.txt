@@ -215,3 +215,4 @@ devUnknown|nepoznati uređaj
 devFree|Besplatne lekcije i sinkronizacija i dalje rade na ovom telefonu.
 devCheck|Provjeri ponovno
 devNow|Ne sada
+premLoading|Lekcija se preuzima…

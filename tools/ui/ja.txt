@@ -215,3 +215,4 @@ devUnknown|不明な端末
 devFree|無料レッスンと同期はこのスマホでも使えます。
 devCheck|もう一度確認
 devNow|今はしない
+premLoading|レッスンをダウンロード中…

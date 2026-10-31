@@ -105,7 +105,7 @@ const learnedIds = () => Object.keys(S.words).filter(id => S.words[id].learnedAt
 const dueIds = () => learnedIds().filter(id => S.words[id].due && S.words[id].due <= Date.now()).sort((a, b) => S.words[a].due - S.words[b].due);
 const hardIds = () => Object.keys(S.words).filter(id => W[id] && has(id) && S.words[id].miss >= 2).sort((a, b) => S.words[b].miss - S.words[a].miss);
 const lessonDone = (lv, i) => !!(S.lessons[lv + '-' + (i + 1)] && S.lessons[lv + '-' + (i + 1)].done);
-const lessonReady = (lv, i) => LV[lv].lessons[i].every(has);   // meanings exist in the current language
+const lessonReady = (lv, i) => { const ids = LV[lv].lessons[i]; return !ids || ids.every(has); };   // meanings exist in the current language (premium lessons not downloaded yet: decided when opened)
 const nextLessonIdx = lv => { const n = LV[lv].lessons.length; for (let i = 0; i < n; i++) if (!lessonDone(lv, i)) return i; return n; };
 const unlocked = (lv, i) => i === 0 || lessonDone(lv, i - 1) || lessonDone(lv, i);
 const learnedIn = lv => learnedIds().filter(id => W[id].level === lv).length;
@@ -135,9 +135,14 @@ function playSeq(srcs, cb) {
 }
 function stopAudio() { aToken++; aq = []; aCb = null; try { au.pause(); } catch (e) {} setPlaying(false); }
 function setPlaying(on) { document.querySelectorAll('.spk').forEach(b => b.classList.toggle('playing', on)); }
-const A = id => 'audio/' + id + '.mp3', AX = id => 'audio/' + id + '-ex.mp3', IMG = id => 'img/' + id + '.webp';
+const MP = (id, k) => k === 'img' ? 'img/' + id + '.webp' : 'audio/' + id + (k === 'ex' ? '-ex' : '') + '.mp3';
+const A = id => premUrl(id, 'a'), AX = id => premUrl(id, 'ex'), IMG = id => premUrl(id, 'img');
 const vibrate = ms => { try { navigator.vibrate && navigator.vibrate(ms); } catch (e) {} };
-function prefetchLesson(ids) { ids.forEach(id => { [A(id), AX(id)].concat(W[id].img ? [IMG(id)] : []).forEach(u => fetch(u).catch(() => {})); }); }
+function prefetchLesson(ids) {
+  const pub = ids.filter(id => !PREM.ids.has(id)), pre = ids.filter(id => PREM.ids.has(id));
+  pub.forEach(id => { [A(id), AX(id)].concat(W[id].img ? [IMG(id)] : []).forEach(u => fetch(u).catch(() => {})); });
+  return pre.length ? premMedia(pre).catch(() => {}) : Promise.resolve();
+}
 
 /* ---------- helpers ---------- */
 function screen(html) { clearTimers(); document.querySelectorAll('.toast').forEach(x => x.remove()); $app.innerHTML = '<div class="screen">' + html + '</div>'; }
@@ -162,7 +167,7 @@ function applyLang(code) {
     Promise.all(LEVEL_IDS.filter(lv => LV[lv] && LV[lv].available && (!li.meanings || li.meanings.includes(lv))).map(lv => fetch('data/meanings/' + LANG + '/' + lv + '.json?v=' + VERSION).then(r => r.ok ? r.json() : {}).catch(() => ({})))).then(arr => {
       if (tok !== langTok) return;
       Object.keys(M).forEach(k => delete M[k]); arr.forEach(o => Object.assign(M, o));
-    })
+    }).then(() => premMeanings())
   ]).then(() => {
     document.title = t('docTitle') + ' · English 3000 Words';
     const mt = document.querySelector('meta[name="apple-mobile-web-app-title"]'); if (mt) mt.content = '3000 Words';
@@ -387,8 +392,7 @@ function levelScreen(lv, page) {
     const i = +b.dataset.i;
     if (!unlocked(lv, i)) { b.classList.add('shake'); vibrate(60); later(() => b.classList.remove('shake'), 400); return; }
     if (!lessonReady(lv, i)) { toast(t('notTranslatedMsg', { lang: L10N._meaningLang || LANG })); return; }
-    if (!ACCESS.canOpen(lv, i)) return paywallScreen(lv, i);
-    startLesson(lessonObj(lv, i));
+    openLesson(lv, i);
   });
 }
 /* paywall: features, "$5 once" (Lemon Squeezy checkout), "I already bought", one-device note, legal links.
@@ -461,6 +465,20 @@ function deviceScreen(lv, fromProfile) {
 const fmtDate = v => { try { return new Intl.DateTimeFormat(LANG, { dateStyle: 'medium' }).format(new Date(v)); } catch (e) { return String(v).slice(0, 10); } };
 const fmtWhen = v => { try { return new Intl.DateTimeFormat(LANG, { dateStyle: 'short', timeStyle: 'short' }).format(new Date(v)); } catch (e) { return String(v).slice(0, 16); } };
 const legalLinks = () => `<a href="privacy.html" target="_blank" rel="noopener">${t('privacy')}</a><span aria-hidden="true"> · </span><a href="terms.html" target="_blank" rel="noopener">${t('terms')}</a>`;
+/* open a lesson: paywall / device check, download a premium lesson (text + audio/images) if needed, then start */
+async function openLesson(lv, i) {
+  if (!ACCESS.canOpen(lv, i)) return paywallScreen(lv, i);
+  if (!LV[lv].lessons[i]) {
+    if (!ACCESS.isPremium()) return ACCESS.owned() ? deviceScreen(lv) : paywallScreen(lv, i);
+    toast(esc(t('premLoading')));
+    try { await premLoad(true); } catch (e) {}
+    if (!LV[lv].lessons[i]) { document.querySelectorAll('.toast').forEach(x => x.remove()); return toast(esc(t(navigator.onLine ? 'pwFail' : 'devOffline'))); }
+  }
+  if (!lessonReady(lv, i)) return toast(t('notTranslatedMsg', { lang: L10N._meaningLang || LANG }));
+  const ids = LV[lv].lessons[i];
+  if (ids.some(id => PREM.ids.has(id))) await Promise.race([prefetchLesson(ids), new Promise(r => setTimeout(r, 8000))]);
+  startLesson(lessonObj(lv, i));
+}
 const lessonObj = (lv, i) => ({ id: lv + '-' + (i + 1), lv, i, title: lv + ' · ' + t('lessonN', { n: i + 1 }), words: LV[lv].lessons[i].map(id => W[id]) });
 
 /* ---------- learning phase ---------- */
@@ -600,7 +618,7 @@ function startLessonQuiz(run) {
     const lv = run.L.lv, ni = run.L.i + 1, hasNext = ni < LV[lv].lessons.length && lessonReady(lv, ni);
     doneScreen('🎉', t('lessonDone', { title: esc(run.L.title) }), t('lessonDoneText'),
       [[t('percent', { n: acc }), t('statAccuracy')], [N(st.wrong), t('statWrong')], [N(mins), t('statMinutes')]], ids,
-      hasNext ? [t('nextLesson'), () => ACCESS.canOpen(lv, ni) ? startLesson(lessonObj(lv, ni)) : paywallScreen(lv, ni)] : null, () => levelScreen(lv));
+      hasNext ? [t('nextLesson'), () => openLesson(lv, ni)] : null, () => levelScreen(lv));
   }});
 }
 function doneScreen(icon, title, text, stats, chips, extraBtn, back) {
@@ -896,6 +914,7 @@ async function afterSignIn(quiet) {
   R.acct = Object.assign(R.acct || {}, { email: user.email, uid: user.id }); saveLocal();
   try { await syncAll(); await loadProfile(); } catch (e) { /* offline: stays dirty, retried later */ }
   try { await deviceCheck(); } catch (e) {}
+  try { await premLoad(false); } catch (e) {}
   if (!quiet) toast(esc(t('signedInMsg')));
   profileScreen();
 }
@@ -928,6 +947,7 @@ function profileScreen() {
     const btn = g('pOut'); busy(btn, true);
     let r; try { r = await syncAll(); } catch (e) { busy(btn, false); toast(esc(t('errOffline'))); return; }
     try { await sb.auth.signOut({ scope: 'local' }); } catch (e) {}
+    await premPurge(R.acct && R.acct.uid).catch(() => {});
     user = null; R.acct = null; R.premium = false; R.premiumUntil = null; R.dev = null;
     if (r !== null) { R.courses = {}; R.cur = null; S = initCourse({}); }   // progress is safe in the cloud; if the session had expired, keep it locally
     saveLocal();
@@ -955,6 +975,7 @@ function deleteConfirm() {
       if (!r.ok) throw { status: r.status };
       try { await sb.auth.signOut({ scope: 'local' }); } catch (e) {}
       try { localStorage.removeItem(SB.store); } catch (e) {}
+      await premPurge(R.acct && R.acct.uid).catch(() => {});
       user = null; R.acct = null; R.premium = false; R.premiumUntil = null; R.dev = null; saveLocal();
       home(); toast(esc(t('deleted')));
     } catch (e) { busy(btn, false); toast(esc(errText(e))); }
@@ -1026,7 +1047,10 @@ function deviceCheck(claim) {
     if (!r.ok && r.status !== 429) throw { code: j.error || 'device_failed', status: r.status };
     R.premium = !!j.premium; R.premiumUntil = j.premium_until || null;
     R.dev = { uid: data.session.user.id, active: !!j.active, at: Date.now(), other: j.other || null, canMove: !!j.can_move, nextMove: j.next_move_at || null };
-    saveLocal(); return j;
+    saveLocal();
+    if (r.ok && !j.premium) premPurge(data.session.user.id).catch(() => {});   // refunded / no purchase: drop downloaded premium content
+    else if (ACCESS.isPremium()) premLoad(true).catch(() => {});
+    return j;
   })();
   if (!claim) { devChecking = run; run.finally(() => { devChecking = null; }).catch(() => {}); }
   return run;
@@ -1037,6 +1061,88 @@ setInterval(devTick, DEV_EVERY);
 document.addEventListener('visibilitychange', devTick);
 async function restorePremium() { await loadSB(); await loadProfile(); await deviceCheck(); return ACCESS.isPremium(); }
 const payErr = e => (!navigator.onLine || (e && /offline/.test(e.message || ''))) ? 'errOffline' : 'pwFail';
+
+/* ---------- premium content (lessons after the free ones) ----------
+   Not on GitHub Pages: served by the premium-content Edge Function only to a Premium account on its active device.
+   Text: { levels, meanings } → Cache Storage "w3g-prem-<uid>" (per user, survives SW updates) so learned premium words
+   keep working offline (review, hard words, 60-second game). Audio/images: private bucket premium-media, fetched with
+   10-minute signed URLs, stored in the same per-user cache under a virtual same-origin URL that sw.js serves
+   (…/__prem/<uid>/audio/<id>.mp3); without a controlling service worker blob: URLs are used instead. */
+const PREM = { ids: new Set(), from: {}, pv: 1, langs: new Set(), blob: {}, loading: null };
+const premUid = () => (R && R.acct && R.acct.uid) || null;
+const premBase = () => location.href.replace(/[?#].*$/, '').replace(/[^/]*$/, '');
+const premKey = (uid, p) => premBase() + '__prem/' + uid + '/' + p;
+const premCache = uid => ('caches' in window && uid) ? caches.open('w3g-prem-' + uid) : Promise.reject(new Error('no cache'));
+function premUrl(id, k) {
+  const p = MP(id, k), uid = premUid();
+  if (!PREM.ids.has(id) || !uid) return p;
+  return PREM.blob[p] || premKey(uid, p);
+}
+function premApply(lvs) {
+  Object.keys(lvs || {}).forEach(lv => { const L = LV[lv], x = lvs[lv]; if (!L || !x) return; PREM.from[lv] = x.from;
+    (x.lessons || []).forEach((ls, k) => { const li = x.from + k; if (!ls || li >= L.lessons.length) return;
+      L.lessons[li] = ls.map(([id, w, ex, img]) => { W[id] = { id, w, ex, img: !!img, level: lv, li }; PREM.ids.add(id); return id; }); }); });
+}
+const premApplyMeanings = ms => Object.keys(ms || {}).forEach(lv => Object.assign(M, ms[lv]));
+async function premCall(body) {
+  await loadSB(); const { data } = await sb.auth.getSession(); if (!data.session) throw { code: 'no_session' };
+  const r = await fetch(SB.url + '/functions/v1/premium-content', { method: 'POST', headers: { Authorization: 'Bearer ' + data.session.access_token, apikey: SB.key, 'Content-Type': 'application/json' },
+    body: JSON.stringify(Object.assign({ device_id: deviceId() }, body)) });
+  const j = await r.json().catch(() => ({})); if (!r.ok) throw { code: j.error || 'premium_failed', status: r.status }; return j;
+}
+/* cached text first (offline OK); net = also download what is missing when this is the active Premium device */
+function premLoad(net) {
+  const uid = premUid(); if (!uid) return Promise.resolve(false);
+  if (PREM.loading) return PREM.loading.then(() => net ? premLoad2(uid, true) : true);
+  return (PREM.loading = premLoad2(uid, net).finally(() => { PREM.loading = null; }));
+}
+async function premLoad2(uid, net) {
+  let c; try { c = await premCache(uid); } catch (e) { c = null; }
+  const get = async k => { if (!c) return null; const r = await c.match(premKey(uid, k)); return r ? r.json().catch(() => null) : null; };
+  const lang = LANG;
+  let tx = await get('text.json'), mx = lang ? await get('m-' + lang + '.json') : null;
+  if (tx && tx.pv !== PREM.pv) tx = null; if (mx && mx.pv !== PREM.pv) mx = null;
+  if (net && (!tx || (lang && !mx)) && ACCESS.isPremium() && navigator.onLine) {
+    const j = await premCall({ lang, levels: tx ? [] : LEVEL_IDS });
+    if (!tx) tx = { pv: PREM.pv, levels: j.levels };
+    if (lang) mx = { pv: PREM.pv, meanings: j.meanings || {} };
+    if (c) { await c.put(premKey(uid, 'text.json'), new Response(JSON.stringify(tx), { headers: { 'Content-Type': 'application/json' } }));
+      if (lang) await c.put(premKey(uid, 'm-' + lang + '.json'), new Response(JSON.stringify(mx), { headers: { 'Content-Type': 'application/json' } })); }
+  }
+  if (uid !== premUid()) return false;
+  if (tx) premApply(tx.levels);
+  if (mx && lang === LANG) { premApplyMeanings(mx.meanings); PREM.langs.add(lang); }
+  return !!tx;
+}
+/* after a language switch: re-add the premium meanings of the new language (cache, else network) */
+function premMeanings() {
+  if (!premUid()) return Promise.resolve();
+  return premLoad(false).catch(() => {}).then(() => { if (ACCESS.isPremium()) premLoad(true).catch(() => {}); });   // network part never blocks the UI
+}
+/* make sure audio/images of these premium words are in the per-user cache (downloaded with signed URLs) */
+async function premMedia(ids) {
+  const uid = premUid(); if (!uid) return;
+  const c = await premCache(uid);
+  const paths = []; ids.forEach(id => { const w = W[id]; if (!w || !PREM.ids.has(id)) return; paths.push(MP(id, 'a'), MP(id, 'ex')); if (w.img) paths.push(MP(id, 'img')); });
+  const miss = []; for (const p of paths) if (!(await c.match(premKey(uid, p)))) miss.push(p);
+  if (miss.length && ACCESS.isPremium() && navigator.onLine) {
+    for (let k = 0; k < miss.length; k += 150) {
+      const { urls } = await premCall({ media: miss.slice(k, k + 150) });
+      const q = Object.keys(urls || {});
+      await Promise.all(Array.from({ length: 6 }, async () => { while (q.length) { const p = q.shift();
+        try { const r = await fetch(urls[p]); if (r.ok) await c.put(premKey(uid, p), new Response(await r.blob(), { headers: { 'Content-Type': p.endsWith('.webp') ? 'image/webp' : 'audio/mpeg' } })); } catch (e) {} } }));
+    }
+  }
+  if (!(navigator.serviceWorker && navigator.serviceWorker.controller))   // no SW to serve the virtual URLs → blob: URLs
+    for (const p of paths) if (!PREM.blob[p]) { const r = await c.match(premKey(uid, p)); if (r) PREM.blob[p] = URL.createObjectURL(await r.blob()); }
+}
+/* sign-out, account deletion, refund: delete the user's premium cache and forget premium words in memory */
+async function premPurge(uid) {
+  Object.values(PREM.blob).forEach(u => { try { URL.revokeObjectURL(u); } catch (e) {} }); PREM.blob = {};
+  PREM.ids.forEach(id => { const w = W[id]; if (w && LV[w.level] && LV[w.level].lessons[w.li]) LV[w.level].lessons[w.li] = null; delete W[id]; delete M[id]; });
+  PREM.ids.clear(); PREM.langs.clear();
+  if (uid && 'caches' in window) await caches.delete('w3g-prem-' + uid);
+}
 
 /* ---------- Google Play Billing: DORMANT (kept for a possible Android/TWA build; PLAY.enabled = false → billing() is null) ----------
    Digital Goods API + Payment Request, verified server-side by the verify-purchase Edge Function (501 until configured). */
@@ -1080,7 +1186,7 @@ document.addEventListener('visibilitychange', () => { if (document.visibilitySta
 /* ---------- boot ---------- */
 let VERSION = 1;
 window.__app = { get S() { return S; }, get R() { return R; }, W, LV, M, home, DEBUG, levelScreen, lessonObj, settingsScreen, langPicker, ACCESS,
-  targetPicker, courseSwitcher, setCourse, COURSES, FREE, paywallScreen, deviceScreen, billing, PLAY, LS, deviceCheck, deviceId, deviceLabel, checkoutLink, checkReminder, setReminder, REM,
+  targetPicker, courseSwitcher, setCourse, COURSES, FREE, paywallScreen, deviceScreen, openLesson, prem: { PREM, load: premLoad, media: premMedia, purge: premPurge, apply: premApply, url: premUrl }, billing, PLAY, LS, deviceCheck, deviceId, deviceLabel, checkoutLink, checkReminder, setReminder, REM,
   save, acct: { SB, authScreen, profileScreen, deleteConfirm, syncAll, mergeCourse, loadSB, get user() { return user; }, get sb() { return sb; } },
   get lang() { return LANG; }, setLang: c => { R.lang = c; save(); return applyLang(c); }, t,
   cardFor: id => { const w = W[id]; learnCard({ L: lessonObj(w.level, w.li), seq: [w], i: 0, t0: 0 }); stopAudio(); },
@@ -1089,17 +1195,18 @@ window.__t = (k, v) => t(k, v);   // used by install.js
 const afterLang = () => R.cur && R.courses[R.cur] ? start() : targetPicker(true);
 const start = () => { window.__app.ready = true; if (!S.onboarded && !learnedIds().length) placementIntro(true); else { S.onboarded = true; save(); home(); } setTimeout(checkReminder, 1200); };
 fetch('data/index.json').then(r => r.json()).then(ix => {
-  TOTAL = ix.total; VERSION = ix.version;
+  TOTAL = ix.total; VERSION = ix.version; PREM.pv = ix.pv || 1;
   ix.levels.forEach(l => LV[l.id] = { id: l.id, count: l.count, available: false, lessons: [] });
   return Promise.all([
     fetch('i18n/langs.json?v=' + ix.version).then(r => r.json()).then(j => { LANGS = j.languages; ALIASES = j.aliases || {}; }),
     ...ix.levels.filter(l => l.available).map(l => fetch('data/' + l.id + '.json?v=' + ix.version).then(r => r.json()).then(d => {
-      const L = LV[l.id]; L.available = true; L.lessons = d.lessons.map((ls, li) => ls.map(([id, w, ex, img]) => { W[id] = { id, w, ex, img: !!img, level: l.id, li }; return id; }));
+      const L = LV[l.id]; L.available = true;
+      L.lessons = Array.from({ length: Math.max(d.n || 0, d.lessons.length) }, (_, li) => d.lessons[li] ? d.lessons[li].map(([id, w, ex, img]) => { W[id] = { id, w, ex, img: !!img, level: l.id, li }; return id; }) : null);
     }))]);
 }).then(() => {
   const forced = params.get('lang');
   if (forced && langInfo(forced)) { R.lang = forced; save(); }
-  if (R.lang && langInfo(R.lang)) return applyLang(R.lang).then(afterLang).then(acctBoot);
+  if (R.lang && langInfo(R.lang)) return applyLang(R.lang).then(() => premLoad(false).catch(() => {})).then(afterLang).then(acctBoot);
   langPicker(afterLang); acctBoot();
 }).catch(e => { $app.innerHTML = '<div class="empty">⚠️ ' + (L10N.loadError || 'Loading error · خطا در بارگذاری · خطأ في التحميل · Erreur de chargement') + '</div>'; console.error(e); });
 })();

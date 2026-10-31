@@ -1,11 +1,12 @@
 // HTML: network-first · JSON data: network-first · css/js/manifest: stale-while-revalidate
 // media (audio/img/fonts/icons): cache-on-demand · cross-origin: never touched
-const V = 'w3g-v18', MEDIA = 'w3g-media';
-const SHELL = ['./', 'index.html', 'style.css?v=10', 'app.js?v=11', 'fonts/w3g-fonts.css?v=5', 'fonts/w3g-latin.woff2', 'install.js?v=1', 'manifest.webmanifest', 'data/index.json', 'i18n/langs.json', 'flags/us.svg', 'vendor/supabase-2.118.0.js',
+// premium (…/__prem/<uid>/…): served only from the per-user cache w3g-prem-<uid>, which survives SW updates
+const V = 'w3g-v19', MEDIA = 'w3g-media';
+const SHELL = ['./', 'index.html', 'style.css?v=10', 'app.js?v=12', 'fonts/w3g-fonts.css?v=5', 'fonts/w3g-latin.woff2', 'install.js?v=1', 'manifest.webmanifest', 'data/index.json', 'i18n/langs.json', 'flags/us.svg', 'vendor/supabase-2.118.0.js',
   'fonts/Vazirmatn-Regular.woff2', 'fonts/Vazirmatn-Bold.woff2', 'fonts/Vazirmatn-Black.woff2',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-192.png', 'icons/maskable-512.png', 'icons/apple-touch-icon.png', 'audio/sfx-correct.mp3', 'audio/sfx-wrong.mp3'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
-self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('w3g') && k !== V && k !== MEDIA).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
+self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('w3g') && k !== V && k !== MEDIA && !k.startsWith('w3g-prem-')).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 async function ranged(req, res) {
   const range = req.headers.get('range'); if (!range || !res || res.status !== 200) return res;
   const buf = await res.arrayBuffer(); const m = /bytes=(\d*)-(\d*)/.exec(range);
@@ -16,6 +17,9 @@ async function ranged(req, res) {
 self.addEventListener('fetch', e => {
   const req = e.request; const url = new URL(req.url);
   if (req.method !== 'GET' || url.origin !== location.origin) return;
+  // premium audio/images: only from the signed-in user's own cache (the app downloads them with signed URLs); never from the network
+  const pm = /\/__prem\/([0-9a-f-]{36})\//.exec(url.pathname);
+  if (pm) { e.respondWith(caches.open('w3g-prem-' + pm[1]).then(c => c.match(url.origin + url.pathname)).then(r => r ? ranged(req, r) : new Response('', { status: 404 }))); return; }
   if (/\/(audio|img|fonts|icons)\//.test(url.pathname)) {
     e.respondWith((async () => {
       const key = url.origin + url.pathname;
