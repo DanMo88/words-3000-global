@@ -77,12 +77,14 @@ Legend: [x] done · [~] in progress · [ ] todo · (B) = needs backend (Supabase
 - Daniel must do (Supabase dashboard): Auth → URL Configuration: Site URL = https://danmo88.github.io/words-3000-global/ and add it to Redirect URLs; custom SMTP (default mailer only sends to project team members, only a few emails per hour); Google provider (client ID/secret from Google Cloud, redirect URI https://acwkuhudvmarssthibzf.supabase.co/auth/v1/callback), then set SB.google = true
 - Tests: words-3000-global-test/accounts.js (30 checks against the real project with 2 SQL-seeded disposable users; both are deleted by the test itself — in-app delete and delete page), render31.js now also covers sign-up/sign-in/reset/new-password/profile/pending/delete-confirm in all 31 languages
 
-## Phase 3 — before Google Play — TODO
-- [ ] 10. (B) $4/month subscription via Google Play Billing (server-side purchase verification)
-- [ ] 11. Paywall screen after the free lessons (open: 5 free lessons for the whole app or per level?)
-- [ ] 12. Privacy policy + terms pages
-- [ ] 13. Android package (TWA) assets: icon, screenshots, store texts in several languages (packaging/upload later)
-- [ ] 14. Daily reminder notification at a chosen time
+## Phase 3 — before Google Play — DONE (pending Daniel's review; no Play upload)
+- [x] 10. (B) Billing plumbing: Digital Goods API + Payment Request (feature-detected, only inside the Android TWA); web shows "available in the Android app" and takes no payments. Product id `premium_monthly`, $4/month. Edge Function `verify-purchase` (source in supabase/functions/) validates the Play token with a Google service account and sets profiles.premium/premium_until server-side only; DISABLED (501) until Daniel sets the secrets (store/README.md step 5). Table play_purchases (server-written, user can read own). Premium re-verified on every app open in the TWA.
+- [x] 11. Paywall after the free lessons: `FREE = { lessons: 5, per: 'app' }` in app.js (switch per → 'level' later). Counts completed lessons across all courses (per account when signed in, per device as guest); completed lessons stay open; 💎 on lessons that need Premium. Paywall: price, 4 features, subscribe / restore, privacy + terms links; guests are sent to sign-up first (premium is tied to the account). Premium flag only counts with an account.
+- [x] 12. privacy.html + terms.html (English + Persian), placeholder contact email clearly marked — Daniel must replace it. Linked from settings, profile, paywall, delete-account page.
+- [x] 13. TWA prep: manifest (id/scope/maskable checked, screenshots field, prefer_related_applications=false), store/listings (en-US, fa-IR, ar, es-ES, de-DE, ru-RU, tr-TR, pt-BR; limits checked), store/screenshots 1080×1920 for fa/ar/es/de/ru/tr, feature graphic 1024×500, .well-known/assetlinks.json template (must be served at https://danmo88.github.io/.well-known/ → needs repo DanMo88/danmo88.github.io or a custom domain). Steps in store/README.md.
+- [x] 14. Daily reminder in settings (switch + time, stored on device only). Notification Triggers where supported (next 7 days scheduled via the SW); otherwise an in-app banner when the app is opened after that time on a day without a lesson. Exact-time notifications need the Android app or Web Push (not set up).
+- Strings: tools/ui_phase3.txt (29 keys × 31 languages) → merge_ui_block.py → build_ui.py; fonts rebuilt, GLYPHS OK.
+- Tests: words-3000-global-test/paywall.js (4 sizes × fa/de/ar/ru + real accounts: simulated TWA purchase → verify-purchase 501, server-side premium, expiry, reminder, legal pages); render31 now covers paywall (guest/signed-in/premium), premium profile, reminder settings and banner; test.js checks the paywall on lesson 11.
 
 ## Phase 2 — work log (started 2026-10-31 09:20)
 - Supabase project: words-3000-global, ref acwkuhudvmarssthibzf, eu-central-1, org DanMo88 (free plan, $0). URL https://acwkuhudvmarssthibzf.supabase.co ; frontend key = publishable key (sb_publishable_…, safe to commit). NEVER commit the service role key.

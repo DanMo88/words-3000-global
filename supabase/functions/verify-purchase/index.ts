@@ -49,14 +49,14 @@ async function googleToken(sa: { client_email: string; private_key: string }) {
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors(req) });
   if (req.method !== "POST") return json(req, { error: "method_not_allowed" }, 405);
-  const pkg = Deno.env.get("PLAY_PACKAGE_NAME"), saRaw = Deno.env.get("GOOGLE_SERVICE_ACCOUNT_JSON");
-  if (Deno.env.get("PLAY_VERIFY_ENABLED") !== "true" || !pkg || !saRaw) return json(req, { error: "billing_not_configured" }, 501);
-
   const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!, { auth: { persistSession: false } });
   const jwt = (req.headers.get("authorization") || "").replace(/^Bearer\s+/i, "");
-  const { data: u, error: ue } = await admin.auth.getUser(jwt);
+  const { data: u, error: ue } = jwt ? await admin.auth.getUser(jwt) : { data: null, error: true };
   if (ue || !u?.user) return json(req, { error: "not_signed_in" }, 401);
   const uid = u.user.id;
+
+  const pkg = Deno.env.get("PLAY_PACKAGE_NAME"), saRaw = Deno.env.get("GOOGLE_SERVICE_ACCOUNT_JSON");
+  if (Deno.env.get("PLAY_VERIFY_ENABLED") !== "true" || !pkg || !saRaw) return json(req, { error: "billing_not_configured" }, 501);
 
   let body: { purchaseToken?: string; productId?: string };
   try { body = await req.json(); } catch { return json(req, { error: "bad_json" }, 400); }
