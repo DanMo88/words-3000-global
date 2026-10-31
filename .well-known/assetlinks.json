@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.danmo88.words3000",
+      "sha256_cert_fingerprints": [
+        "REPLACE_WITH_PLAY_APP_SIGNING_SHA256_FINGERPRINT (Play Console > Setup > App integrity > App signing key certificate)",
+        "REPLACE_WITH_UPLOAD_KEY_SHA256_FINGERPRINT (optional, for testing builds signed with your upload key)"
+      ]
+    }
+  }
+]

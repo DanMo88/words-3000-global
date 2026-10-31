@@ -41,8 +41,32 @@
       "type": "image/png"
     }
   ],
-  "description": "Learn the 3000 most important American English words (Oxford 3000, A1–B2) in your own language.",
+  "description": "Learn the 3000 most important American English words (Oxford 3000 list, A1–B2) in your own language.",
   "categories": [
     "education"
+  ],
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "store/screenshots/es/1-home.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Home: levels A1–B2 and your progress"
+    },
+    {
+      "src": "store/screenshots/es/2-learn.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Learn each word with a picture, example and audio"
+    },
+    {
+      "src": "store/screenshots/es/3-quiz.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Practise with quick quizzes"
+    }
   ]
 }
