@@ -1,6 +1,6 @@
 // HTML: network-first · JSON data: network-first · css/js/manifest: stale-while-revalidate
 // media (audio/img/fonts/icons): cache-on-demand · cross-origin: never touched
-const V = 'w3g-v15', MEDIA = 'w3g-media';
+const V = 'w3g-v16', MEDIA = 'w3g-media';
 const SHELL = ['./', 'index.html', 'style.css?v=9', 'app.js?v=10', 'fonts/w3g-fonts.css?v=5', 'fonts/w3g-latin.woff2', 'install.js?v=1', 'manifest.webmanifest', 'data/index.json', 'i18n/langs.json', 'flags/us.svg', 'vendor/supabase-2.118.0.js',
   'fonts/Vazirmatn-Regular.woff2', 'fonts/Vazirmatn-Bold.woff2', 'fonts/Vazirmatn-Black.woff2',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-192.png', 'icons/maskable-512.png', 'icons/apple-touch-icon.png', 'audio/sfx-correct.mp3', 'audio/sfx-wrong.mp3'];
