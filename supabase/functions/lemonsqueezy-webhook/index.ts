@@ -3,7 +3,8 @@
 // DISABLED (501) until a signing secret exists:
 //   - preferred: Edge Function secret LEMONSQUEEZY_SIGNING_SECRET (Supabase dashboard → Edge Functions → Secrets)
 //   - or a row in public.app_secrets (key 'lemonsqueezy_signing_secret'), readable only with the service role
-// Optional secrets: LEMONSQUEEZY_STORE_ID / LEMONSQUEEZY_VARIANT_ID (orders for other stores/products are ignored).
+// Only orders for store 511779 (words3000global) + product 1489846 ("$5 lifetime") are accepted; others are ignored.
+// Optional env overrides: LEMONSQUEEZY_STORE_ID / LEMONSQUEEZY_PRODUCT_ID. The variant id is not required (default variant).
 // Handles: order_created (status "paid") → purchases row + profiles.premium = true, premium_until = null (lifetime)
 //          order_refunded → purchases.status = "refunded" + premium revoked unless another paid purchase exists.
 // Idempotent: purchases.order_id is the primary key; replays do not change the result.
@@ -51,9 +52,9 @@ Deno.serve(async (req) => {
   let ev: any; try { ev = JSON.parse(raw); } catch { return json({ error: "bad_json" }, 400); }
   const name = ev?.meta?.event_name, a = ev?.data?.attributes || {}, orderId = String(ev?.data?.id || "");
   if (ev?.data?.type !== "orders" || !orderId) return json({ ignored: name || "unknown" });
-  const store = Deno.env.get("LEMONSQUEEZY_STORE_ID"), variant = Deno.env.get("LEMONSQUEEZY_VARIANT_ID");
+  const store = Deno.env.get("LEMONSQUEEZY_STORE_ID") || "511779", product = Deno.env.get("LEMONSQUEEZY_PRODUCT_ID") || "1489846";
   const variantId = String(a?.first_order_item?.variant_id ?? "");
-  if ((store && String(a.store_id) !== store) || (variant && variantId !== variant)) return json({ ignored: "other_product" });
+  if (String(a.store_id ?? "") !== store || String(a?.first_order_item?.product_id ?? "") !== product) return json({ ignored: "other_product" });
 
   let uid = String(ev?.meta?.custom_data?.user_id || "");
   if (!UUID.test(uid)) uid = "";
